@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DenTech
 {
-    public partial class WIN_Login : Form
+    public partial class WIN_GLO_Principal : Form
     {
-        public WIN_Login()
+        public WIN_GLO_Principal()
         {
             InitializeComponent();
-        }
-
-        private void IMG_Logo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

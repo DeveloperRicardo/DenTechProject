@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using DenTech.Properties;
 
 namespace DenTech
 {
@@ -14,9 +16,23 @@ namespace DenTech
         [STAThread]
         static void Main()
         {
+            //if (Settings.Default.Testing == true)
+            //{
+                if (File.Exists(Environment.CurrentDirectory + @"\ConexionDenTech.ini"))
+                {
+                    Settings.Default.ConexionGuardada = true;
+                }
+            //}
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WIN_Login());
+            if (Settings.Default.ConexionGuardada == true)
+            {
+                FormsApplication.Run(new WIN_GLO_Login());
+            }
+            else
+            {
+                FormsApplication.Run(new WIN_GLO_Login_F());
+            }
         }
     }
 }
