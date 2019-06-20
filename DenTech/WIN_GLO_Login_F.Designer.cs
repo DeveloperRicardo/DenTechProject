@@ -74,7 +74,7 @@
             this.BTN_Cancelar.Location = new System.Drawing.Point(270, 182);
             this.BTN_Cancelar.Name = "BTN_Cancelar";
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cancelar.TabIndex = 13;
+            this.BTN_Cancelar.TabIndex = 7;
             this.BTN_Cancelar.UseVisualStyleBackColor = false;
             this.BTN_Cancelar.Click += new System.EventHandler(this.BTN_Cancelar_Click);
             // 
@@ -87,7 +87,7 @@
             this.BTN_Aceptar.Location = new System.Drawing.Point(212, 182);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Aceptar.TabIndex = 12;
+            this.BTN_Aceptar.TabIndex = 6;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 
@@ -97,7 +97,7 @@
             this.EDT_Usuario.Location = new System.Drawing.Point(145, 58);
             this.EDT_Usuario.Name = "EDT_Usuario";
             this.EDT_Usuario.Size = new System.Drawing.Size(177, 25);
-            this.EDT_Usuario.TabIndex = 11;
+            this.EDT_Usuario.TabIndex = 1;
             // 
             // STC_Campo
             // 
@@ -115,7 +115,8 @@
             this.EDT_Contrasena.Location = new System.Drawing.Point(145, 89);
             this.EDT_Contrasena.Name = "EDT_Contrasena";
             this.EDT_Contrasena.Size = new System.Drawing.Size(177, 25);
-            this.EDT_Contrasena.TabIndex = 15;
+            this.EDT_Contrasena.TabIndex = 2;
+            this.EDT_Contrasena.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -133,7 +134,7 @@
             this.EDT_Servidor.Location = new System.Drawing.Point(145, 120);
             this.EDT_Servidor.Name = "EDT_Servidor";
             this.EDT_Servidor.Size = new System.Drawing.Size(177, 25);
-            this.EDT_Servidor.TabIndex = 17;
+            this.EDT_Servidor.TabIndex = 3;
             // 
             // label2
             // 
@@ -151,7 +152,7 @@
             this.EDT_BaseDatos.Location = new System.Drawing.Point(145, 151);
             this.EDT_BaseDatos.Name = "EDT_BaseDatos";
             this.EDT_BaseDatos.Size = new System.Drawing.Size(177, 25);
-            this.EDT_BaseDatos.TabIndex = 19;
+            this.EDT_BaseDatos.TabIndex = 4;
             // 
             // label3
             // 
@@ -175,7 +176,7 @@
             this.BTN_ProbarConexion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_ProbarConexion.Name = "BTN_ProbarConexion";
             this.BTN_ProbarConexion.Size = new System.Drawing.Size(97, 41);
-            this.BTN_ProbarConexion.TabIndex = 40;
+            this.BTN_ProbarConexion.TabIndex = 5;
             this.BTN_ProbarConexion.Text = "Probar Conexión";
             this.BTN_ProbarConexion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_ProbarConexion.UseVisualStyleBackColor = false;
@@ -205,7 +206,8 @@
             this.MinimizeBox = false;
             this.Name = "WIN_GLO_Login_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Conexión a Servidor";
+            this.Text = "DenTech - Conexión a Servidor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CerrarVentana);
             this.PNL_Banner.ResumeLayout(false);
             this.PNL_Banner.PerformLayout();
             this.ResumeLayout(false);

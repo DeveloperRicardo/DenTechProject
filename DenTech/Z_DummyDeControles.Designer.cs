@@ -50,9 +50,15 @@
             this.COL_Columna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Columna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_Boton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BTN_BotonMenu = new System.Windows.Forms.Button();
             this.PNL_Banner.SuspendLayout();
             this.GP_Opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaNombre)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BTN_Agregar
@@ -300,12 +306,66 @@
             this.BTN_Boton.Text = "Botón";
             this.BTN_Boton.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(48, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 32);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Título";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(423, 193);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(346, 44);
+            this.panel1.TabIndex = 34;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(428, 195);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 41);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // BTN_BotonMenu
+            // 
+            this.BTN_BotonMenu.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_BotonMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BTN_BotonMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_BotonMenu.FlatAppearance.BorderSize = 2;
+            this.BTN_BotonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_BotonMenu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_BotonMenu.Image = ((System.Drawing.Image)(resources.GetObject("BTN_BotonMenu.Image")));
+            this.BTN_BotonMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_BotonMenu.Location = new System.Drawing.Point(423, 243);
+            this.BTN_BotonMenu.Name = "BTN_BotonMenu";
+            this.BTN_BotonMenu.Size = new System.Drawing.Size(180, 179);
+            this.BTN_BotonMenu.TabIndex = 38;
+            this.BTN_BotonMenu.Text = "Imagen 128x128";
+            this.BTN_BotonMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_BotonMenu.UseVisualStyleBackColor = false;
+            // 
             // Z_DummyDeControles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTN_BotonMenu);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.BTN_Boton);
             this.Controls.Add(this.DGV_TablaNombre);
             this.Controls.Add(this.button1);
@@ -325,6 +385,9 @@
             this.GP_Opciones.ResumeLayout(false);
             this.GP_Opciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaNombre)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,5 +413,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Columna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Columna2;
         private System.Windows.Forms.Button BTN_Boton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BTN_BotonMenu;
     }
 }
