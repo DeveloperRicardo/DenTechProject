@@ -57,17 +57,17 @@
             this.PNL_Banner.Controls.Add(this.STC_Titulo);
             this.PNL_Banner.Location = new System.Drawing.Point(0, 0);
             this.PNL_Banner.Name = "PNL_Banner";
-            this.PNL_Banner.Size = new System.Drawing.Size(801, 44);
+            this.PNL_Banner.Size = new System.Drawing.Size(805, 44);
             this.PNL_Banner.TabIndex = 4;
             // 
             // STC_Titulo
             // 
             this.STC_Titulo.AutoSize = true;
-            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STC_Titulo.ForeColor = System.Drawing.Color.White;
             this.STC_Titulo.Location = new System.Drawing.Point(7, 6);
             this.STC_Titulo.Name = "STC_Titulo";
-            this.STC_Titulo.Size = new System.Drawing.Size(122, 32);
+            this.STC_Titulo.Size = new System.Drawing.Size(117, 32);
             this.STC_Titulo.TabIndex = 4;
             this.STC_Titulo.Text = "Pacientes";
             // 
@@ -77,7 +77,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(734, 281);
+            this.button1.Location = new System.Drawing.Point(736, 276);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 52);
             this.button1.TabIndex = 4;
@@ -93,13 +93,14 @@
             this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
             this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(675, 132);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(677, 132);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Eliminar.TabIndex = 3;
             this.BTN_Eliminar.Text = "Eliminar";
             this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Eliminar.UseVisualStyleBackColor = false;
+            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
             // 
             // BTN_Modificar
             // 
@@ -110,7 +111,7 @@
             this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
             this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(675, 94);
+            this.BTN_Modificar.Location = new System.Drawing.Point(677, 94);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Modificar.TabIndex = 2;
@@ -128,7 +129,7 @@
             this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
             this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(675, 56);
+            this.BTN_Agregar.Location = new System.Drawing.Point(677, 56);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Agregar.TabIndex = 1;
@@ -142,11 +143,11 @@
             this.DGV_TablaPacientes.AllowUserToAddRows = false;
             this.DGV_TablaPacientes.AllowUserToDeleteRows = false;
             this.DGV_TablaPacientes.AllowUserToOrderColumns = true;
-            this.DGV_TablaPacientes.BackgroundColor = System.Drawing.Color.DarkGray;
-            this.DGV_TablaPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGV_TablaPacientes.BackgroundColor = System.Drawing.Color.White;
+            this.DGV_TablaPacientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -182,11 +183,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.DGV_TablaPacientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_TablaPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_TablaPacientes.Size = new System.Drawing.Size(656, 215);
+            this.DGV_TablaPacientes.Size = new System.Drawing.Size(658, 215);
             this.DGV_TablaPacientes.TabIndex = 0;
             // 
             // COL_IdPaciente
             // 
+            this.COL_IdPaciente.DataPropertyName = "Id_Paciente";
             this.COL_IdPaciente.Frozen = true;
             this.COL_IdPaciente.HeaderText = "IdPaciente";
             this.COL_IdPaciente.Name = "COL_IdPaciente";
@@ -195,6 +197,7 @@
             // 
             // COL_Nombre
             // 
+            this.COL_Nombre.DataPropertyName = "NombreCompleto";
             this.COL_Nombre.Frozen = true;
             this.COL_Nombre.HeaderText = "Nombre";
             this.COL_Nombre.Name = "COL_Nombre";
@@ -203,6 +206,7 @@
             // 
             // COL_Edad
             // 
+            this.COL_Edad.DataPropertyName = "Edad";
             this.COL_Edad.HeaderText = "Edad";
             this.COL_Edad.Name = "COL_Edad";
             this.COL_Edad.ReadOnly = true;
@@ -210,6 +214,7 @@
             // 
             // COL_TipoSangre
             // 
+            this.COL_TipoSangre.DataPropertyName = "Tipo";
             this.COL_TipoSangre.HeaderText = "Tipo Sangre";
             this.COL_TipoSangre.Name = "COL_TipoSangre";
             this.COL_TipoSangre.ReadOnly = true;
@@ -217,6 +222,7 @@
             // 
             // COL_Telefono
             // 
+            this.COL_Telefono.DataPropertyName = "Telefono";
             this.COL_Telefono.HeaderText = "Teléfono";
             this.COL_Telefono.Name = "COL_Telefono";
             this.COL_Telefono.ReadOnly = true;
@@ -224,6 +230,7 @@
             // 
             // COL_TelEmergencia
             // 
+            this.COL_TelEmergencia.DataPropertyName = "Tel_Emergencia";
             this.COL_TelEmergencia.HeaderText = "Tel. Emer.";
             this.COL_TelEmergencia.Name = "COL_TelEmergencia";
             this.COL_TelEmergencia.ReadOnly = true;
@@ -233,8 +240,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(798, 340);
+            this.ClientSize = new System.Drawing.Size(802, 340);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
@@ -242,8 +250,10 @@
             this.Controls.Add(this.DGV_TablaPacientes);
             this.Controls.Add(this.PNL_Banner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "WIN_CAT_Pacientes_T";
-            this.Text = "Catálogo Pacientes";
+            this.Text = "DenTech - Catálogo Pacientes";
+            this.Load += new System.EventHandler(this.WIN_CAT_Pacientes_T_Load);
             this.PNL_Banner.ResumeLayout(false);
             this.PNL_Banner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaPacientes)).EndInit();

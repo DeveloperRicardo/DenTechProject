@@ -54,6 +54,42 @@
     <Compile Include="MetodosGlobales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WIN_CAT_Expediente_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Expediente_F.Designer.cs">
+      <DependentUpon>WIN_CAT_Expediente_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIN_CAT_Expediente_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Expediente_T.Designer.cs">
+      <DependentUpon>WIN_CAT_Expediente_T.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIN_CAT_Pacientes_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Pacientes_F.Designer.cs">
+      <DependentUpon>WIN_CAT_Pacientes_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIN_CAT_Pacientes_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Pacientes_T.Designer.cs">
+      <DependentUpon>WIN_CAT_Pacientes_T.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIN_CAT_Usuarios_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Usuarios_F.Designer.cs">
+      <DependentUpon>WIN_CAT_Usuarios_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIN_CAT_Usuarios_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Usuarios_T.Designer.cs">
+      <DependentUpon>WIN_CAT_Usuarios_T.cs</DependentUpon>
+    </Compile>
     <Compile Include="WIN_GLO_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +123,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WIN_CAT_Expediente_F.resx">
+      <DependentUpon>WIN_CAT_Expediente_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Expediente_T.resx">
+      <DependentUpon>WIN_CAT_Expediente_T.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Pacientes_F.resx">
+      <DependentUpon>WIN_CAT_Pacientes_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Pacientes_T.resx">
+      <DependentUpon>WIN_CAT_Pacientes_T.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Usuarios_F.resx">
+      <DependentUpon>WIN_CAT_Usuarios_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Usuarios_T.resx">
+      <DependentUpon>WIN_CAT_Usuarios_T.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WIN_GLO_Login.resx">
       <DependentUpon>WIN_GLO_Login.cs</DependentUpon>
     </EmbeddedResource>
