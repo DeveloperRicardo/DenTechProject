@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>LogoD.ico</ApplicationIcon>
+    <ApplicationIcon>LogoD2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,6 +54,7 @@
     <Compile Include="MetodosGlobales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="WIN_CAT_Expediente_F.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +67,8 @@
     <Compile Include="WIN_CAT_Expediente_T.Designer.cs">
       <DependentUpon>WIN_CAT_Expediente_T.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> b5f80fa7ac78dedef51b07b86247a2919382c472
     <Compile Include="WIN_CAT_Pacientes_F.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,12 +126,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="WIN_CAT_Expediente_F.resx">
       <DependentUpon>WIN_CAT_Expediente_F.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Expediente_T.resx">
       <DependentUpon>WIN_CAT_Expediente_T.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> b5f80fa7ac78dedef51b07b86247a2919382c472
     <EmbeddedResource Include="WIN_CAT_Pacientes_F.resx">
       <DependentUpon>WIN_CAT_Pacientes_F.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +175,7 @@
   <ItemGroup>
     <Content Include="DHD.ico" />
     <Content Include="LogoD.ico" />
+    <Content Include="LogoD2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -64,6 +64,7 @@ namespace DenTech
                 if (ExisteUsuario)
                 {
                     WIN_GLO_Principal Principal = new WIN_GLO_Principal();
+                    Settings.Default.NombreUsuario = COMBO_Usuario.Text;
                     Principal.Show();
                     this.Close();
                 }
@@ -79,7 +80,7 @@ namespace DenTech
 
         private void BTN_Config_Click(object sender, EventArgs e)
         {
-            WIN_GLO_Login_F LoginF = new WIN_GLO_Login_F();
+            WIN_GLO_Login_F LoginF = new WIN_GLO_Login_F(true);
             LoginF.Show();
             if (Settings.Default.ConexionValida == true)
             {
