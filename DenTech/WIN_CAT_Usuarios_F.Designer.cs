@@ -62,11 +62,11 @@
             // STC_Titulo
             // 
             this.STC_Titulo.AutoSize = true;
-            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STC_Titulo.ForeColor = System.Drawing.Color.White;
             this.STC_Titulo.Location = new System.Drawing.Point(7, 6);
             this.STC_Titulo.Name = "STC_Titulo";
-            this.STC_Titulo.Size = new System.Drawing.Size(114, 32);
+            this.STC_Titulo.Size = new System.Drawing.Size(108, 32);
             this.STC_Titulo.TabIndex = 4;
             this.STC_Titulo.Text = "Usuarios";
             // 
@@ -193,8 +193,9 @@
             this.COMBO_TipoUsuario.FormattingEnabled = true;
             this.COMBO_TipoUsuario.Items.AddRange(new object[] {
             "Administrador",
-            "Dentista",
-            "Recepcionista"});
+            "Odontólogo",
+            "Recepcionista",
+            "Intendente"});
             this.COMBO_TipoUsuario.Location = new System.Drawing.Point(126, 218);
             this.COMBO_TipoUsuario.Name = "COMBO_TipoUsuario";
             this.COMBO_TipoUsuario.Size = new System.Drawing.Size(232, 25);
@@ -214,6 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(374, 323);
             this.Controls.Add(this.STC_TipoUsuario);
@@ -232,8 +234,9 @@
             this.Controls.Add(this.STC_Usuario);
             this.Controls.Add(this.PNL_Banner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "WIN_CAT_Usuarios_F";
-            this.Text = "Catálogo Usuarios";
+            this.Text = "DenTech - Catálogo Usuarios";
             this.Load += new System.EventHandler(this.WIN_USU_Usuarios_F_Load);
             this.PNL_Banner.ResumeLayout(false);
             this.PNL_Banner.PerformLayout();

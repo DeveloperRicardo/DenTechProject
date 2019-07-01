@@ -50,7 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.BTN_Aceptar = new System.Windows.Forms.Button();
             this.STC_TipoSangre = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.COMBO_TipoSangre = new System.Windows.Forms.ComboBox();
             this.PNL_Banner.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,11 +68,11 @@
             // STC_Titulo
             // 
             this.STC_Titulo.AutoSize = true;
-            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STC_Titulo.ForeColor = System.Drawing.Color.White;
             this.STC_Titulo.Location = new System.Drawing.Point(7, 6);
             this.STC_Titulo.Name = "STC_Titulo";
-            this.STC_Titulo.Size = new System.Drawing.Size(122, 32);
+            this.STC_Titulo.Size = new System.Drawing.Size(117, 32);
             this.STC_Titulo.TabIndex = 4;
             this.STC_Titulo.Text = "Pacientes";
             // 
@@ -262,26 +262,27 @@
             this.STC_TipoSangre.TabIndex = 24;
             this.STC_TipoSangre.Text = "Tipo Sangre:";
             // 
-            // comboBox1
+            // COMBO_TipoSangre
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.COMBO_TipoSangre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.COMBO_TipoSangre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.COMBO_TipoSangre.FormattingEnabled = true;
+            this.COMBO_TipoSangre.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.comboBox1.Location = new System.Drawing.Point(464, 119);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(45, 25);
-            this.comboBox1.TabIndex = 5;
+            this.COMBO_TipoSangre.Location = new System.Drawing.Point(464, 119);
+            this.COMBO_TipoSangre.Name = "COMBO_TipoSangre";
+            this.COMBO_TipoSangre.Size = new System.Drawing.Size(45, 25);
+            this.COMBO_TipoSangre.TabIndex = 5;
             // 
             // WIN_CAT_Pacientes_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(675, 324);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.COMBO_TipoSangre);
             this.Controls.Add(this.STC_TipoSangre);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_Aceptar);
@@ -303,8 +304,9 @@
             this.Controls.Add(this.STC_Nombre);
             this.Controls.Add(this.PNL_Banner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "WIN_CAT_Pacientes_F";
-            this.Text = "Catálogo Pacientes";
+            this.Text = "DenTech - Catálogo Pacientes";
             this.Load += new System.EventHandler(this.WIN_CAT_Pacientes_F_Load);
             this.PNL_Banner.ResumeLayout(false);
             this.PNL_Banner.PerformLayout();
@@ -336,6 +338,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BTN_Aceptar;
         private System.Windows.Forms.Label STC_TipoSangre;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox COMBO_TipoSangre;
     }
 }
