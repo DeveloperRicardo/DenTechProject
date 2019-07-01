@@ -63,8 +63,10 @@ namespace DenTech
                 ExisteUsuario = Convert.ToBoolean(comando.ExecuteScalar());
                 if (ExisteUsuario)
                 {
-                    WIN_GLO_Principal Principal = new WIN_GLO_Principal();
+                    comando.CommandText = "SELECT Tipo_Usuario FROM EMPLEADOS WHERE Id_Empleado = '" + COMBO_Usuario.SelectedValue + "'";
+                    Settings.Default.TipoUsuario = Convert.ToInt16(comando.ExecuteScalar());
                     Settings.Default.NombreUsuario = COMBO_Usuario.Text;
+                    WIN_GLO_Principal Principal = new WIN_GLO_Principal();
                     Principal.Show();
                     this.Close();
                 }
