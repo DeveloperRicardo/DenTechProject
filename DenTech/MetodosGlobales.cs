@@ -104,7 +104,7 @@ namespace DenTech
                         }
                         if (!ExisteSANGRE)
                         {
-                            QryTablas += "CREATE TABLE SANGRE(Id_Sangre int primary key identity, Descripcion varchar(3), TipoSangre int)";
+                            QryTablas += "CREATE TABLE SANGRE(Id_Sangre int primary key identity, Descripcion varchar(3))";
                         }
                         if (!ExistePACIENTES)
                         {
@@ -124,7 +124,7 @@ namespace DenTech
                         if (!ExisteEXPEDIENTE)
                         {
                             QryTablas += "CREATE TABLE EXPEDIENTE(Id_Expediente int primary key identity, Id_Empleado int foreign key references EMPLEADOS(Id_Empleado) on update cascade on delete cascade," +
-                                         "Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade, Enfermedad varchar(100), Alergia varchar(100));";
+                                         "Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade, Enfermedad varchar(100), Alergia varchar(100), Fecha date);";
                         }
                         if (!ExisteRECETA)
                         {
@@ -142,19 +142,19 @@ namespace DenTech
                     NumSangre = Convert.ToInt32(Query.ExecuteScalar());
                     if (NumUsuarios == 0)
                     {
-                        Query.CommandText = "INSERT INTO EMPLEADOS VALUES('admin','admin','admin','admin','admin',1);";
+                        Query.CommandText = "INSERT INTO EMPLEADOS VALUES('admin','admin','admin','admin','admin',0);";
                         Query.ExecuteNonQuery();
                     }
                     if (NumSangre == 0)
                     {
-                        Query.CommandText = "INSERT INTO SANGRE VALUES('A+',1);"+
-                                            "INSERT INTO SANGRE VALUES('A-',2);" +
-                                            "INSERT INTO SANGRE VALUES('B+',3);" +
-                                            "INSERT INTO SANGRE VALUES('B-',4);" +
-                                            "INSERT INTO SANGRE VALUES('AB+',5);" +
-                                            "INSERT INTO SANGRE VALUES('AB-',6);" +
-                                            "INSERT INTO SANGRE VALUES('O+',7);" +
-                                            "INSERT INTO SANGRE VALUES('O-',8);";
+                        Query.CommandText = "INSERT INTO SANGRE VALUES('A+');"+
+                                            "INSERT INTO SANGRE VALUES('A-');" +
+                                            "INSERT INTO SANGRE VALUES('B+');" +
+                                            "INSERT INTO SANGRE VALUES('B-');" +
+                                            "INSERT INTO SANGRE VALUES('AB+');" +
+                                            "INSERT INTO SANGRE VALUES('AB-');" +
+                                            "INSERT INTO SANGRE VALUES('O+');" +
+                                            "INSERT INTO SANGRE VALUES('O-');";
                         Query.ExecuteNonQuery();
                     }
                     Miconexion.Close();

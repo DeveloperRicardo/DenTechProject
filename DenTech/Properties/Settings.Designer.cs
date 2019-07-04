@@ -70,5 +70,17 @@ namespace DenTech.Properties {
                 this["NombreUsuario"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int TipoUsuario {
+            get {
+                return ((int)(this["TipoUsuario"]));
+            }
+            set {
+                this["TipoUsuario"] = value;
+            }
+        }
     }
 }

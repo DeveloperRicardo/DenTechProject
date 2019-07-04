@@ -1,7 +1,12 @@
+CREATE DATABASE DENTECHBD
+USE DENTECHBD
+USE BANCO_BC
+
 CREATE TABLE EMPLEADOS(Id_Empleado int primary key identity, Usuario varchar(30),Nombre varchar(20),ApellidoP varchar(12), ApellidoM varchar(12), Password varchar(20),
 Tipo_Usuario int)
 
-CREATE TABLE SANGRE(Id_Sangre int primary key identity, Descripcion varchar(3),TipoSangre int)
+CREATE TABLE SANGRE(Id_Sangre int primary key identity, Descripcion varchar(3))
+DROP SANGRE
 
 CREATE TABLE PACIENTES(Id_Paciente int primary key identity, Id_Sangre int foreign key references SANGRE(Id_Sangre) on update cascade on delete cascade,
 Nombre varchar(20),ApellidoP varchar(12),ApellidoM varchar(12), Edad int,Sexo int, Direccion varchar(30),Telefono varchar(10),Tel_Emergencia varchar(10))
@@ -12,17 +17,28 @@ Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade 
 CREATE TABLE HISTORIAL(Id_Historial int primary key identity, Id_Cita int foreign key references CITAS(Id_Cita) on update cascade on delete cascade, Fecha_Mod date)
 
 CREATE TABLE EXPEDIENTE(Id_Expediente int primary key identity, Id_Empleado int foreign key references EMPLEADOS(Id_Empleado) on update cascade on delete cascade,
-Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade, Enfermedad varchar(100), Alergia varchar(100))
+Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade, Enfermedad varchar(100), Alergia varchar(100), Fecha date)
 
 CREATE TABLE RECETA(Id_Receta int primary key identity, Id_Empleado int foreign key references EMPLEADOS(Id_Empleado) on update cascade on delete cascade,
 Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade,Diagnostico varchar(100), Medicamento varchar(100),
 Tratamiento varchar(100),Fecha_Inicio date, Fecha_Final date, Fecha_Diag date)
 
-INSERT INTO SANGRE VALUES('A+',1);
-INSERT INTO SANGRE VALUES('A-',2);
-INSERT INTO SANGRE VALUES('B+',3);
-INSERT INTO SANGRE VALUES('B-',4);
-INSERT INTO SANGRE VALUES('AB+',5);
-INSERT INTO SANGRE VALUES('AB-',6);
-INSERT INTO SANGRE VALUES('O+',7);
-INSERT INTO SANGRE VALUES('O-',8);
+CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int)
+
+INSERT INTO SANGRE VALUES('A+');
+INSERT INTO SANGRE VALUES('A-');
+INSERT INTO SANGRE VALUES('B+');
+INSERT INTO SANGRE VALUES('B-');
+INSERT INTO SANGRE VALUES('AB+');
+INSERT INTO SANGRE VALUES('AB-');
+INSERT INTO SANGRE VALUES('O+');
+INSERT INTO SANGRE VALUES('O-');
+
+SELECT * FROM INVENTARIO
+SELECT Id_Inventario, Descripcion, Cantidad, Fecha_Inicio, Fecha_Final FROM INVENTARIO
+
+select * from empleados
+
+INSERT INTO EMPLEADOS VALUES('Intendente','Intendente','Intendente','Intendente','123456','3')
+
+Select * from SANGRE

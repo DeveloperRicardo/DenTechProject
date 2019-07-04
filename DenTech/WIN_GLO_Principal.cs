@@ -17,6 +17,11 @@ namespace DenTech
         {
             InitializeComponent();
         }
+        private void Hora_Tick(object sender, EventArgs e)
+        {
+            STC_Dia.Text = "Fecha: "+DateTime.Now.ToShortDateString();
+            STC_Hora.Text = DateTime.Now.ToLongTimeString();
+        }
 
         private void WIN_GLO_Principal_Load(object sender, EventArgs e)
         {
@@ -33,6 +38,12 @@ namespace DenTech
         {
             WIN_CAT_Pacientes_T Pacientes = new WIN_CAT_Pacientes_T();
             Pacientes.Show();
+        }
+
+        private void BTN_Inventario_Click(object sender, EventArgs e)
+        {
+            WIN_CAT_Inventario_T Inventario = new WIN_CAT_Inventario_T();
+            Inventario.Show();
         }
     }
 }

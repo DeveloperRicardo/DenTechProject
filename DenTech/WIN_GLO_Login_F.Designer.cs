@@ -57,11 +57,11 @@
             // STC_Titulo
             // 
             this.STC_Titulo.AutoSize = true;
-            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STC_Titulo.ForeColor = System.Drawing.Color.White;
             this.STC_Titulo.Location = new System.Drawing.Point(7, 6);
             this.STC_Titulo.Name = "STC_Titulo";
-            this.STC_Titulo.Size = new System.Drawing.Size(247, 32);
+            this.STC_Titulo.Size = new System.Drawing.Size(235, 32);
             this.STC_Titulo.TabIndex = 4;
             this.STC_Titulo.Text = "Conexión a Servidor";
             // 
