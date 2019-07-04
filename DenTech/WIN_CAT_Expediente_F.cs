@@ -25,5 +25,16 @@ namespace DenTech
         {
 
         }
+
+        private void STC_NombreCompleto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Evento del botón Cerrar
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.Close(); // Se cierra la ventana
+        }
     }
 }

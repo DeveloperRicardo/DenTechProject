@@ -55,7 +55,7 @@
             this.PNL_Banner.Controls.Add(this.STC_Titulo);
             this.PNL_Banner.Location = new System.Drawing.Point(0, 0);
             this.PNL_Banner.Name = "PNL_Banner";
-            this.PNL_Banner.Size = new System.Drawing.Size(687, 44);
+            this.PNL_Banner.Size = new System.Drawing.Size(682, 44);
             this.PNL_Banner.TabIndex = 4;
             // 
             // STC_Titulo
@@ -92,7 +92,7 @@
             this.COL_Tipo});
             this.DGV_TablaUsuarios.EnableHeadersVisualStyles = false;
             this.DGV_TablaUsuarios.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_TablaUsuarios.Location = new System.Drawing.Point(14, 58);
+            this.DGV_TablaUsuarios.Location = new System.Drawing.Point(11, 51);
             this.DGV_TablaUsuarios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaUsuarios.Name = "DGV_TablaUsuarios";
             this.DGV_TablaUsuarios.ReadOnly = true;
@@ -159,7 +159,7 @@
             this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
             this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(559, 134);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(556, 127);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Eliminar.TabIndex = 36;
@@ -177,7 +177,7 @@
             this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
             this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(559, 96);
+            this.BTN_Modificar.Location = new System.Drawing.Point(556, 89);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Modificar.TabIndex = 35;
@@ -195,7 +195,7 @@
             this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
             this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(559, 58);
+            this.BTN_Agregar.Location = new System.Drawing.Point(556, 51);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Agregar.TabIndex = 34;
@@ -210,7 +210,7 @@
             this.BTN_Cancelar.FlatAppearance.BorderSize = 0;
             this.BTN_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cancelar.Image")));
-            this.BTN_Cancelar.Location = new System.Drawing.Point(618, 282);
+            this.BTN_Cancelar.Location = new System.Drawing.Point(615, 282);
             this.BTN_Cancelar.Name = "BTN_Cancelar";
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Cancelar.TabIndex = 38;
@@ -223,7 +223,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(684, 346);
+            this.ClientSize = new System.Drawing.Size(679, 346);
             this.Controls.Add(this.BTN_Cancelar);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);

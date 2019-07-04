@@ -252,6 +252,7 @@
             this.Controls.Add(this.BTN_Agregar);
             this.Controls.Add(this.DGV_TablaExpediente);
             this.Controls.Add(this.PNL_Banner);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "WIN_CAT_Expediente_T";
             this.Text = "DenTech - Catálogo Expediente";
