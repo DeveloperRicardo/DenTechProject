@@ -102,8 +102,9 @@ namespace DenTech
                 "   When 6 Then 'AB-'\n" +
                 "   When 7 Then 'O+'\n" +
                 "   When 8 Then 'O-'\n" +
+                "END,\n" +
                 "Telefono,\n" +
-                "Tel_Emergencia,\n" +
+                "Tel_Emergencia\n" +
                 "From PACIENTES";
             cmd.ExecuteNonQuery(); // Se ejecuta
 
