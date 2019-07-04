@@ -80,8 +80,8 @@ namespace DenTech
         // Evento del botón Seleccionar
         private void BTN_Seleccionar_Click(object sender, EventArgs e)
         {
-            if (DGV_TablaSeleccion.RowCount != 0)
-                return (int)DGV_TablaSeleccion.CurrentRow.Cells[0].Value;
+           // if (DGV_TablaSeleccion.RowCount != 0)
+                //return (int)DGV_TablaSeleccion.CurrentRow.Cells[0].Value;
         }
     }
 }
