@@ -65,7 +65,7 @@
     </Compile>
     <Compile Include="WIN_CAT_Inventario_T.Designer.cs">
       <DependentUpon>WIN_CAT_Inventario_T.cs</DependentUpon>
-    </Compile>      
+    </Compile>
     <Compile Include="WIN_CAT_Expediente_F.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +77,12 @@
     </Compile>
     <Compile Include="WIN_CAT_Expediente_T.Designer.cs">
       <DependentUpon>WIN_CAT_Expediente_T.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIN_CAT_Odontograma_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Odontograma_F.Designer.cs">
+      <DependentUpon>WIN_CAT_Odontograma_F.cs</DependentUpon>
     </Compile>
     <Compile Include="WIN_CAT_Pacientes_F.cs">
       <SubType>Form</SubType>
@@ -126,6 +132,12 @@
     <Compile Include="WIN_GLO_Principal.Designer.cs">
       <DependentUpon>WIN_GLO_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="WIN_CAT_Odontograma_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Odontograma_T.Designer.cs">
+      <DependentUpon>WIN_CAT_Odontograma_T.cs</DependentUpon>
+    </Compile>
     <Compile Include="Z_DummyDeControles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +165,9 @@
     <EmbeddedResource Include="WIN_CAT_Expediente_T.resx">
       <DependentUpon>WIN_CAT_Expediente_T.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Odontograma_F.resx">
+      <DependentUpon>WIN_CAT_Odontograma_F.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Pacientes_F.resx">
       <DependentUpon>WIN_CAT_Pacientes_F.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_GLO_Principal.resx">
       <DependentUpon>WIN_GLO_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Odontograma_T.resx">
+      <DependentUpon>WIN_CAT_Odontograma_T.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Z_DummyDeControles.resx">
       <DependentUpon>Z_DummyDeControles.cs</DependentUpon>
