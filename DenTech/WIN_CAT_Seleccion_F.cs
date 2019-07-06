@@ -17,6 +17,12 @@ namespace DenTech
         ConexionSQL BD = new ConexionSQL();
         int gnOpcion = 0;
 
+        // Propiedades
+        private int ReturnId;
+
+        // Propiedades encapsuladas
+        public int _ReturnId { get => ReturnId; set => ReturnId = value; }
+
         public WIN_CAT_Seleccion_F(int pOpcion)
         {
             InitializeComponent();
@@ -31,12 +37,30 @@ namespace DenTech
             {
                 // Verifica el valor del parámetro y asigna información correspondiente
                 if (gnOpcion == 1)
-                    STC_Titulo.Text = "Usuarios";
+                    STC_Titulo.Text = "Seleccionar Usuarios";
                 else
-                    STC_Titulo.Text = "Pacientes";
+                    STC_Titulo.Text = "Seleccionar Pacientes";
 
                 Refrescar();
             }
+        }
+
+        // Evento del botón Seleccionar
+        private void BTN_Seleccionar_Click(object sender, EventArgs e)
+        {
+            // Verifica que la tabla tenga información
+            if (DGV_TablaSeleccion.RowCount == 0)
+                return;
+
+            // Se asigna el id seleccionado y se cierra la ventana
+            this.ReturnId = (int)DGV_TablaSeleccion.CurrentRow.Cells[0].Value;
+            this.Close();
+        }
+
+        // Evento del botón Cancelar
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.Close(); // Se cierra la ventana
         }
 
         // Método Refrescar
@@ -51,13 +75,13 @@ namespace DenTech
             // Revisa como estructurar el query
             if (gnOpcion == 1)
                 cmd.CommandText = "Select\n" +
-                "Id_Empleado,\n" +
+                "Id_Empleado as Id,\n" +
                 "NombreCompleto = (EMPLEADOS.Nombre + ' ' + EMPLEADOS.ApellidoP + ' ' + EMPLEADOS.ApellidoM)\n" +
                 "From EMPLEADOS" +
                 "Where EMPLEADOS.Tipo_Usuario = 2";
             else
                 cmd.CommandText = "Select\n" +
-                "Id_Paciente,\n" +
+                "Id_Paciente as Id,\n" +
                 "NombreCompleto = (PACIENTES.Nombre + ' ' + PACIENTES.ApellidoP + ' ' + PACIENTES.ApellidoM)\n" +
                 "From PACIENTES";
 
@@ -69,19 +93,6 @@ namespace DenTech
 
             // Se inserta la información en el DataGridView
             DGV_TablaSeleccion.DataSource = Data;
-        }
-
-        // Evento del botón Cancelar
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            this.Close(); // Se cierra la ventana
-        }
-
-        // Evento del botón Seleccionar
-        private void BTN_Seleccionar_Click(object sender, EventArgs e)
-        {
-           // if (DGV_TablaSeleccion.RowCount != 0)
-                //return (int)DGV_TablaSeleccion.CurrentRow.Cells[0].Value;
         }
     }
 }

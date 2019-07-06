@@ -60,7 +60,7 @@
             this.PNL_Banner.Controls.Add(this.STC_Titulo);
             this.PNL_Banner.Location = new System.Drawing.Point(0, 0);
             this.PNL_Banner.Name = "PNL_Banner";
-            this.PNL_Banner.Size = new System.Drawing.Size(490, 44);
+            this.PNL_Banner.Size = new System.Drawing.Size(471, 44);
             this.PNL_Banner.TabIndex = 5;
             // 
             // STC_Titulo
@@ -78,19 +78,21 @@
             // 
             this.STC_Odontologo.AutoSize = true;
             this.STC_Odontologo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_Odontologo.Location = new System.Drawing.Point(12, 68);
+            this.STC_Odontologo.Location = new System.Drawing.Point(11, 68);
             this.STC_Odontologo.Name = "STC_Odontologo";
             this.STC_Odontologo.Size = new System.Drawing.Size(94, 20);
             this.STC_Odontologo.TabIndex = 7;
             this.STC_Odontologo.Text = "Odontólogo:";
+            this.STC_Odontologo.Click += new System.EventHandler(this.STC_Odontologo_Click);
             // 
             // EDT_Odontologo
             // 
             this.EDT_Odontologo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EDT_Odontologo.Location = new System.Drawing.Point(119, 66);
+            this.EDT_Odontologo.Location = new System.Drawing.Point(118, 66);
             this.EDT_Odontologo.Name = "EDT_Odontologo";
             this.EDT_Odontologo.Size = new System.Drawing.Size(105, 25);
             this.EDT_Odontologo.TabIndex = 8;
+            this.EDT_Odontologo.TextChanged += new System.EventHandler(this.EDT_Odontologo_TextChanged);
             // 
             // BTN_Odontologo
             // 
@@ -100,19 +102,20 @@
             this.BTN_Odontologo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Odontologo.Font = new System.Drawing.Font("Rockwell", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Odontologo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Odontologo.Location = new System.Drawing.Point(232, 66);
+            this.BTN_Odontologo.Location = new System.Drawing.Point(231, 66);
             this.BTN_Odontologo.Name = "BTN_Odontologo";
             this.BTN_Odontologo.Size = new System.Drawing.Size(29, 25);
             this.BTN_Odontologo.TabIndex = 34;
             this.BTN_Odontologo.Text = "...";
             this.BTN_Odontologo.UseVisualStyleBackColor = false;
+            this.BTN_Odontologo.Click += new System.EventHandler(this.BTN_Odontologo_Click);
             // 
             // PANEL_Odontologo
             // 
             this.PANEL_Odontologo.BackColor = System.Drawing.Color.Azure;
             this.PANEL_Odontologo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PANEL_Odontologo.Controls.Add(this.STC_NombreOdontologo);
-            this.PANEL_Odontologo.Location = new System.Drawing.Point(119, 97);
+            this.PANEL_Odontologo.Location = new System.Drawing.Point(118, 97);
             this.PANEL_Odontologo.Name = "PANEL_Odontologo";
             this.PANEL_Odontologo.Size = new System.Drawing.Size(341, 25);
             this.PANEL_Odontologo.TabIndex = 35;
@@ -134,7 +137,7 @@
             this.PANEL_Paciente.BackColor = System.Drawing.Color.Azure;
             this.PANEL_Paciente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PANEL_Paciente.Controls.Add(this.STC_NombrePaciente);
-            this.PANEL_Paciente.Location = new System.Drawing.Point(119, 168);
+            this.PANEL_Paciente.Location = new System.Drawing.Point(118, 168);
             this.PANEL_Paciente.Name = "PANEL_Paciente";
             this.PANEL_Paciente.Size = new System.Drawing.Size(341, 25);
             this.PANEL_Paciente.TabIndex = 39;
@@ -158,17 +161,18 @@
             this.BTN_Paciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Paciente.Font = new System.Drawing.Font("Rockwell", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Paciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Paciente.Location = new System.Drawing.Point(232, 137);
+            this.BTN_Paciente.Location = new System.Drawing.Point(231, 137);
             this.BTN_Paciente.Name = "BTN_Paciente";
             this.BTN_Paciente.Size = new System.Drawing.Size(29, 25);
             this.BTN_Paciente.TabIndex = 38;
             this.BTN_Paciente.Text = "...";
             this.BTN_Paciente.UseVisualStyleBackColor = false;
+            this.BTN_Paciente.Click += new System.EventHandler(this.BTN_Paciente_Click);
             // 
             // EDT_Paciente
             // 
             this.EDT_Paciente.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EDT_Paciente.Location = new System.Drawing.Point(119, 137);
+            this.EDT_Paciente.Location = new System.Drawing.Point(118, 137);
             this.EDT_Paciente.Name = "EDT_Paciente";
             this.EDT_Paciente.Size = new System.Drawing.Size(105, 25);
             this.EDT_Paciente.TabIndex = 37;
@@ -177,7 +181,7 @@
             // 
             this.STC_Paciente.AutoSize = true;
             this.STC_Paciente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_Paciente.Location = new System.Drawing.Point(12, 139);
+            this.STC_Paciente.Location = new System.Drawing.Point(11, 139);
             this.STC_Paciente.Name = "STC_Paciente";
             this.STC_Paciente.Size = new System.Drawing.Size(67, 20);
             this.STC_Paciente.TabIndex = 36;
@@ -187,7 +191,7 @@
             // 
             this.STC_Enfermedad.AutoSize = true;
             this.STC_Enfermedad.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_Enfermedad.Location = new System.Drawing.Point(12, 201);
+            this.STC_Enfermedad.Location = new System.Drawing.Point(11, 201);
             this.STC_Enfermedad.Name = "STC_Enfermedad";
             this.STC_Enfermedad.Size = new System.Drawing.Size(93, 20);
             this.STC_Enfermedad.TabIndex = 40;
@@ -196,7 +200,7 @@
             // EDT_Enfermedad
             // 
             this.EDT_Enfermedad.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EDT_Enfermedad.Location = new System.Drawing.Point(119, 199);
+            this.EDT_Enfermedad.Location = new System.Drawing.Point(118, 199);
             this.EDT_Enfermedad.Name = "EDT_Enfermedad";
             this.EDT_Enfermedad.Size = new System.Drawing.Size(341, 25);
             this.EDT_Enfermedad.TabIndex = 41;
@@ -204,7 +208,7 @@
             // EDT_Alergias
             // 
             this.EDT_Alergias.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EDT_Alergias.Location = new System.Drawing.Point(119, 230);
+            this.EDT_Alergias.Location = new System.Drawing.Point(118, 230);
             this.EDT_Alergias.Name = "EDT_Alergias";
             this.EDT_Alergias.Size = new System.Drawing.Size(341, 25);
             this.EDT_Alergias.TabIndex = 43;
@@ -213,7 +217,7 @@
             // 
             this.STC_Alergia.AutoSize = true;
             this.STC_Alergia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_Alergia.Location = new System.Drawing.Point(12, 232);
+            this.STC_Alergia.Location = new System.Drawing.Point(11, 232);
             this.STC_Alergia.Name = "STC_Alergia";
             this.STC_Alergia.Size = new System.Drawing.Size(76, 20);
             this.STC_Alergia.TabIndex = 42;
@@ -225,7 +229,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(408, 261);
+            this.button1.Location = new System.Drawing.Point(407, 261);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 52);
             this.button1.TabIndex = 45;
@@ -238,7 +242,7 @@
             this.BTN_Aceptar.FlatAppearance.BorderSize = 0;
             this.BTN_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Aceptar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Aceptar.Image")));
-            this.BTN_Aceptar.Location = new System.Drawing.Point(350, 261);
+            this.BTN_Aceptar.Location = new System.Drawing.Point(349, 261);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Aceptar.TabIndex = 44;
@@ -250,7 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(489, 332);
+            this.ClientSize = new System.Drawing.Size(470, 319);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_Aceptar);
             this.Controls.Add(this.EDT_Alergias);
