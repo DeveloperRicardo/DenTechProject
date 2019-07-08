@@ -73,8 +73,8 @@ namespace DenTech
             {
                 using (SqlConnection Miconexion = new SqlConnection(Parametros))
                 {
-                    bool ExistePACIENTES = false, ExisteEMPLEADOS = false, ExisteCITAS = false,
-                        ExisteHISTORIAL = false, ExisteSANGRE = false, ExisteEXPEDIENTE = false, ExisteRECETA = false;
+                    bool ExistePACIENTES = false, ExisteEMPLEADOS = false, ExisteCITAS = false, ExisteHISTORIAL = false, 
+                        ExisteSANGRE = false, ExisteEXPEDIENTE = false, ExisteRECETA = false, ExisteINVENTARIO = false;
                     int NumUsuarios = 0, NumSangre = 0;
                     Miconexion.Open();
                     SqlCommand Query = Miconexion.CreateCommand();
@@ -93,7 +93,9 @@ namespace DenTech
                     ExisteEXPEDIENTE = Convert.ToBoolean(Query.ExecuteScalar());
                     Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'RECETA') SELECT 'true' ELSE SELECT 'false'";
                     ExisteRECETA = Convert.ToBoolean(Query.ExecuteScalar());
-                    if (!ExistePACIENTES || !ExisteEMPLEADOS || !ExisteCITAS || !ExisteHISTORIAL || !ExisteSANGRE || !ExisteEXPEDIENTE || !ExisteRECETA)
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INVENTARIO') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteINVENTARIO = Convert.ToBoolean(Query.ExecuteScalar());
+                    if (!ExistePACIENTES || !ExisteEMPLEADOS || !ExisteCITAS || !ExisteHISTORIAL || !ExisteSANGRE || !ExisteEXPEDIENTE || !ExisteRECETA || !ExisteINVENTARIO)
                     {
                         MessageBox.Show("Se crearan las tablas faltantes en la base de datos.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         string QryTablas = "";
@@ -131,6 +133,10 @@ namespace DenTech
                             QryTablas += "CREATE TABLE RECETA(Id_Receta int primary key identity, Id_Empleado int foreign key references EMPLEADOS(Id_Empleado) on update cascade on delete cascade," +
                                          "Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade,Diagnostico varchar(100), Medicamento varchar(100)," +
                                          "Tratamiento varchar(100),Fecha_Inicio date, Fecha_Final date, Fecha_Diag date);";
+                        }
+                        if (!ExisteINVENTARIO)
+                        {
+                            QryTablas += "CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int)";
                         }
                         Query.CommandText = QryTablas;
                         Query.ExecuteNonQuery();

@@ -11,7 +11,7 @@ using DenTech.Properties;
 
 namespace DenTech
 {
-    public partial class WIN_GLO_Principal : Form
+    public partial class WIN_GLO_Principal : WIN_Template
     {
         public WIN_GLO_Principal()
         {
@@ -25,25 +25,34 @@ namespace DenTech
 
         private void WIN_GLO_Principal_Load(object sender, EventArgs e)
         {
-            STC_NombreUsuario.Text = Settings.Default.NombreUsuario;
+            TituloVentana += "Menú Principal";
+            TituloBanner = Settings.Default.NombreUsuario;
         }
 
         private void BTN_Empleados_Click(object sender, EventArgs e)
         {
-            WIN_CAT_Usuarios_T Empleados = new WIN_CAT_Usuarios_T();
-            Empleados.Show();
+            var form = Application.OpenForms.OfType<WIN_CAT_Usuarios_T>().FirstOrDefault();
+            WIN_CAT_Usuarios_T frm = form ?? new WIN_CAT_Usuarios_T();
+            frm.MdiParent = formsPanel1.MdiForm;
+            frm.Show();
+            // WIN_CAT_Usuarios_T Empleados = new WIN_CAT_Usuarios_T();
+            // Empleados.Show();
         }
 
         private void BTN_Pacientes_Click(object sender, EventArgs e)
         {
-            WIN_CAT_Pacientes_T Pacientes = new WIN_CAT_Pacientes_T();
-            Pacientes.Show();
+            var form = Application.OpenForms.OfType<WIN_CAT_Pacientes_T>().FirstOrDefault();
+            WIN_CAT_Pacientes_T frm = form ?? new WIN_CAT_Pacientes_T();
+            frm.MdiParent = formsPanel1.MdiForm;
+            frm.Show();
         }
 
         private void BTN_Inventario_Click(object sender, EventArgs e)
         {
-            WIN_CAT_Inventario_T Inventario = new WIN_CAT_Inventario_T();
-            Inventario.Show();
+            var form = Application.OpenForms.OfType<WIN_CAT_Inventario_T>().FirstOrDefault();
+            WIN_CAT_Inventario_T frm = form ?? new WIN_CAT_Inventario_T();
+            frm.MdiParent = formsPanel1.MdiForm;
+            frm.Show();
         }
     }
 }

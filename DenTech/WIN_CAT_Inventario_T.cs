@@ -12,7 +12,7 @@ using DenTech.Properties;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_Inventario_T : Form
+    public partial class WIN_CAT_Inventario_T : WIN_Template
     {
         ConexionSQL BD = new ConexionSQL();
         public WIN_CAT_Inventario_T()
@@ -100,6 +100,8 @@ namespace DenTech
             // Verifica qe la conexión sea exitosa
             if (BD.Conexion(true))
                 Refrescar();
+            TituloVentana += "Inventario";
+            TituloBanner = "Inventario";
         }
     }
 }

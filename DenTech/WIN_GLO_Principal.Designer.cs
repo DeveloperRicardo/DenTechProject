@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_GLO_Principal));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.STC_NombreUsuario = new System.Windows.Forms.Label();
             this.BTN_Citas = new System.Windows.Forms.Button();
             this.BTN_Pacientes = new System.Windows.Forms.Button();
             this.BTN_Inventario = new System.Windows.Forms.Button();
@@ -43,31 +40,10 @@
             this.STC_Dia = new System.Windows.Forms.Label();
             this.STC_Hora = new System.Windows.Forms.Label();
             this.Panel_General = new System.Windows.Forms.FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.formsPanel1 = new DenTech.FormsPanel();
             this.panel2.SuspendLayout();
             this.Panel_General.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightSeaGreen;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel1.Controls.Add(this.STC_NombreUsuario);
-            this.panel1.Name = "panel1";
-            // 
-            // STC_NombreUsuario
-            // 
-            resources.ApplyResources(this.STC_NombreUsuario, "STC_NombreUsuario");
-            this.STC_NombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.STC_NombreUsuario.Name = "STC_NombreUsuario";
             // 
             // BTN_Citas
             // 
@@ -149,21 +125,26 @@
             this.Panel_General.Controls.Add(this.BTN_Inventario);
             this.Panel_General.Name = "Panel_General";
             // 
+            // formsPanel1
+            // 
+            this.formsPanel1.ActiveMDIWnd = null;
+            resources.ApplyResources(this.formsPanel1, "formsPanel1");
+            this.formsPanel1.Name = "formsPanel1";
+            // 
             // WIN_GLO_Principal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.formsPanel1);
             this.Controls.Add(this.Panel_General);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "WIN_GLO_Principal";
             this.Load += new System.EventHandler(this.WIN_GLO_Principal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.Panel_General, 0);
+            this.Controls.SetChildIndex(this.formsPanel1, 0);
             this.panel2.ResumeLayout(false);
             this.Panel_General.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -171,10 +152,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label STC_NombreUsuario;
         private System.Windows.Forms.Button BTN_Citas;
         private System.Windows.Forms.Button BTN_Pacientes;
         private System.Windows.Forms.Button BTN_Inventario;
@@ -185,5 +162,6 @@
         private System.Windows.Forms.Label STC_Dia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel Panel_General;
+        private FormsPanel formsPanel1;
     }
 }
