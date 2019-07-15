@@ -15,6 +15,7 @@ namespace DenTech
     {
         // Variables globales
         ConexionSQL BD = new ConexionSQL();
+        MetodosGlobales MG = new MetodosGlobales();
         int gnIdExpediente = 0;
 
         public WIN_CAT_Expediente_F(int pIdExpediente = 0)
@@ -124,6 +125,47 @@ namespace DenTech
         private void EDT_Odontologo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTN_Aceptar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Método ValidarCampos
+        private void ValidarCampos()
+        {
+            // Valida que el campo Odontólogo tenga información
+            if (EDT_Odontologo.Text == "")
+            {
+                MG.Mensajes(3, "Odontólogo");
+                EDT_Odontologo.Focus();
+                return;
+            }
+
+            // Valida que el campo Paciente tenga información
+            if (EDT_Paciente.Text == "")
+            {
+                MG.Mensajes(3, "Paciente");
+                EDT_Paciente.Focus();
+                return;
+            }
+
+            // Valida que el campo Enfermedades tenga información
+            if (EDT_Enfermedad.Text == "")
+            {
+                MG.Mensajes(3, "Enfermedades");
+                EDT_Enfermedad.Focus();
+                return;
+            }
+
+            // Valida que el campo Alergias tenga información
+            if (EDT_Alergias.Text == "")
+            {
+                MG.Mensajes(3, "Alergias");
+                EDT_Alergias.Focus();
+                return;
+            }
         }
     }
 }

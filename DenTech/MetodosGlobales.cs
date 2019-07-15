@@ -11,7 +11,7 @@ namespace DenTech
     public class MetodosGlobales
     {
         #region Mensajes
-        public void Mensajes(int Mensaje)
+        public void Mensajes(int Mensaje, string Campo = "")
         {
             switch (Mensaje)
             {
@@ -22,7 +22,7 @@ namespace DenTech
                     MessageBox.Show("Conexión no exitosa.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 3:
-                    MessageBox.Show("Los campos no pueden estar vacios.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El campo " + Campo + " no puede ir vacío.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 4:
                     MessageBox.Show("Ya existen todas las tablas.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);

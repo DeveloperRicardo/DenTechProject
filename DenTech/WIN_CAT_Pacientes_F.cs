@@ -112,9 +112,9 @@ namespace DenTech
             {
                 // Se abre la conexión y se estructura el query para agregar el registro
                 SqlCommand cmd = BD.conexion.CreateCommand();
-                cmd.CommandText = "Update EMPLEADOS " +
+                cmd.CommandText = "Update PACIENTES " +
                     "Set Nombre = '" + EDT_Nombre.Text + "', ApellidoP = '" + EDT_ApellidoP.Text + "', ApellidoM = '" + EDT_ApellidoM.Text + "', Edad = '" + EDT_Edad.Text + "', Sexo = '" + COMBO_Sexo.SelectedIndex + "', Id_Sangre = '" + COMBO_TipoSangre.SelectedIndex + "', Telefono = '" + EDT_Telefono + "', Tel_Emergencia = '" + EDT_TelefonoEm.Text + "', Direccion = '" + EDT_Direccion.Text + "' " +
-                    "Where Id_Empleado = " + gnIdPaciente;
+                    "Where Id_Servicios = " + gnIdPaciente;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro modificado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

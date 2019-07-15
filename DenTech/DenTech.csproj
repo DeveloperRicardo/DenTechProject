@@ -108,6 +108,18 @@
     <Compile Include="WIN_CAT_Seleccion_F.Designer.cs">
       <DependentUpon>WIN_CAT_Seleccion_F.cs</DependentUpon>
     </Compile>
+    <Compile Include="WIN_CAT_Servicios_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Servicios_F.Designer.cs">
+      <DependentUpon>WIN_CAT_Servicios_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIN_CAT_Servicios_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Servicios_T.Designer.cs">
+      <DependentUpon>WIN_CAT_Servicios_T.cs</DependentUpon>
+    </Compile>
     <Compile Include="WIN_CAT_Usuarios_F.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Seleccion_F.resx">
       <DependentUpon>WIN_CAT_Seleccion_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Servicios_F.resx">
+      <DependentUpon>WIN_CAT_Servicios_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Servicios_T.resx">
+      <DependentUpon>WIN_CAT_Servicios_T.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Usuarios_F.resx">
       <DependentUpon>WIN_CAT_Usuarios_F.cs</DependentUpon>
