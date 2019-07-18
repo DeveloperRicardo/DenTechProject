@@ -77,8 +77,8 @@ namespace DenTech
                 cmd.CommandText = "Select\n" +
                 "Id_Empleado as Id,\n" +
                 "NombreCompleto = (EMPLEADOS.Nombre + ' ' + EMPLEADOS.ApellidoP + ' ' + EMPLEADOS.ApellidoM)\n" +
-                "From EMPLEADOS" +
-                "Where EMPLEADOS.Tipo_Usuario = 2";
+                "From EMPLEADOS\n" +
+                "Where EMPLEADOS.Tipo_Usuario = 1";
             else
                 cmd.CommandText = "Select\n" +
                 "Id_Paciente as Id,\n" +

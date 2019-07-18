@@ -92,7 +92,7 @@ namespace DenTech
                 "Id_Servicios,\n" +
                 "Descripcion,\n" +
                 "Precio\n" +
-                "From SERVICIOS" +
+                "From SERVICIOS\n" +
                 "Order By Descripcion Asc";
             cmd.ExecuteNonQuery(); // Se ejecuta
 

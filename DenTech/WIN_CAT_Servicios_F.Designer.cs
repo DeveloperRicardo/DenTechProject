@@ -137,6 +137,7 @@
             this.Controls.Add(this.EDT_Servicio);
             this.Controls.Add(this.STC_Servicio);
             this.Controls.Add(this.PNL_Banner);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WIN_CAT_Servicios_F";
             this.Text = "DenTech - Catálogo Servicios";
             this.Load += new System.EventHandler(this.WIN_CAT_Servicios_F_Load);

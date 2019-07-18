@@ -189,6 +189,7 @@
             // 
             // COMBO_TipoUsuario
             // 
+            this.COMBO_TipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.COMBO_TipoUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.COMBO_TipoUsuario.FormattingEnabled = true;
             this.COMBO_TipoUsuario.Items.AddRange(new object[] {
@@ -237,6 +238,7 @@
             this.MaximizeBox = false;
             this.Name = "WIN_CAT_Usuarios_F";
             this.Text = "DenTech - Catálogo Usuarios";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.WIN_USU_Usuarios_F_Load);
             this.PNL_Banner.ResumeLayout(false);
             this.PNL_Banner.PerformLayout();

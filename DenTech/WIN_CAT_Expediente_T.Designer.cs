@@ -45,6 +45,8 @@
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.BTN_Cerrar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.PNL_Banner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).BeginInit();
             this.SuspendLayout();
@@ -232,12 +234,44 @@
             this.BTN_Cerrar.FlatAppearance.BorderSize = 0;
             this.BTN_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cerrar.Image")));
-            this.BTN_Cerrar.Location = new System.Drawing.Point(1023, 281);
+            this.BTN_Cerrar.Location = new System.Drawing.Point(1023, 342);
             this.BTN_Cerrar.Name = "BTN_Cerrar";
             this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Cerrar.TabIndex = 40;
             this.BTN_Cerrar.UseVisualStyleBackColor = false;
             this.BTN_Cerrar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(964, 165);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 32);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "General";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(964, 203);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 32);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "Dental";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // WIN_CAT_Expediente_T
             // 
@@ -245,7 +279,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1089, 342);
+            this.ClientSize = new System.Drawing.Size(1089, 406);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_Cerrar);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
@@ -279,5 +315,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Enfermedad;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Alergia;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Fecha;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

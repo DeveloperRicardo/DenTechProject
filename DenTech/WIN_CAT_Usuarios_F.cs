@@ -58,7 +58,7 @@ namespace DenTech
                         EDT_ApellidoP.Text = Reader[2].ToString();
                         EDT_ApellidoM.Text = Reader[3].ToString();
                         EDT_Password.Text = Reader[4].ToString();
-                        COMBO_TipoUsuario.SelectedIndex = Int32.Parse(Reader[5].ToString());
+                        COMBO_TipoUsuario.SelectedValue = Int32.Parse(Reader[5].ToString());
                     }
                     Reader.Close(); // Se libera
                 }

@@ -37,8 +37,8 @@ namespace DenTech
                     SqlCommand cmd = BD.conexion.CreateCommand();
                     cmd.CommandText = "Select \n" +
                         "Descripcion, \n" +
-                        "Precio, \n" +
-                        "From SERVICIOS " +
+                        "Precio \n" +
+                        "From SERVICIOS\n" +
                         "Where SERVICIOS.Id_Servicios = " + gnIdServicio;
 
                     // Ejecuta el query y almacena los datos consultados

@@ -41,6 +41,8 @@
             this.STC_Hora = new System.Windows.Forms.Label();
             this.Panel_General = new System.Windows.Forms.FlowLayoutPanel();
             this.formsPanel1 = new DenTech.FormsPanel();
+            this.BTN_Servicios = new System.Windows.Forms.Button();
+            this.BTN_Expediente = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.Panel_General.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +125,8 @@
             this.Panel_General.Controls.Add(this.BTN_Pacientes);
             this.Panel_General.Controls.Add(this.BTN_Citas);
             this.Panel_General.Controls.Add(this.BTN_Inventario);
+            this.Panel_General.Controls.Add(this.BTN_Servicios);
+            this.Panel_General.Controls.Add(this.BTN_Expediente);
             this.Panel_General.Name = "Panel_General";
             // 
             // formsPanel1
@@ -130,6 +134,26 @@
             this.formsPanel1.ActiveMDIWnd = null;
             resources.ApplyResources(this.formsPanel1, "formsPanel1");
             this.formsPanel1.Name = "formsPanel1";
+            // 
+            // BTN_Servicios
+            // 
+            this.BTN_Servicios.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.BTN_Servicios, "BTN_Servicios");
+            this.BTN_Servicios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Servicios.FlatAppearance.BorderSize = 2;
+            this.BTN_Servicios.Name = "BTN_Servicios";
+            this.BTN_Servicios.UseVisualStyleBackColor = false;
+            this.BTN_Servicios.Click += new System.EventHandler(this.BTN_Servicios_Click);
+            // 
+            // BTN_Expediente
+            // 
+            this.BTN_Expediente.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.BTN_Expediente, "BTN_Expediente");
+            this.BTN_Expediente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Expediente.FlatAppearance.BorderSize = 2;
+            this.BTN_Expediente.Name = "BTN_Expediente";
+            this.BTN_Expediente.UseVisualStyleBackColor = false;
+            this.BTN_Expediente.Click += new System.EventHandler(this.BTN_Expediente_Click);
             // 
             // WIN_GLO_Principal
             // 
@@ -162,6 +186,8 @@
         private System.Windows.Forms.Label STC_Dia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel Panel_General;
-        private FormsPanel formsPanel1;
+        public FormsPanel formsPanel1;
+        private System.Windows.Forms.Button BTN_Servicios;
+        private System.Windows.Forms.Button BTN_Expediente;
     }
 }

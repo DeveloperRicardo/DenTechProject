@@ -38,7 +38,7 @@ namespace DenTech
                 return;
 
             // Se insatncia un objeto de tipo ventana para abrirla y refrescar la tabla
-            WIN_CAT_Expediente_F Window = new WIN_CAT_Expediente_F();
+            WIN_CAT_Expediente_F Window = new WIN_CAT_Expediente_F((int)DGV_TablaExpediente.CurrentRow.Cells[0].Value);
             Window.ShowDialog();
             Refrescar();
         }
@@ -55,7 +55,7 @@ namespace DenTech
             {
                 // Se estructura el query para eliminar el registro
                 SqlCommand cmd = BD.conexion.CreateCommand();
-                cmd.CommandText = "Delete From EMPLEADOS Where Id_Empleado = " + (int)DGV_TablaExpediente.CurrentRow.Cells[0].Value;
+                cmd.CommandText = "Delete From EXPEDIENTE Where Id_Expediente = " + (int)DGV_TablaExpediente.CurrentRow.Cells[0].Value;
                 cmd.ExecuteNonQuery(); // Se ejecuta
 
                 // Se confirma la eliminación del registro y se actualiza la información de la tabla
@@ -94,10 +94,10 @@ namespace DenTech
                 "Paciente = (PACIENTES.Nombre + ' ' + PACIENTES.ApellidoP + ' ' + PACIENTES.ApellidoM),\n" +
                 "EXPEDIENTE.Enfermedad,\n" +
                 "EXPEDIENTE.Alergia,\n" +
-                "EXPEDIENTE.Fecha,\n" +
-                "From EXPEDIENTE" +
-                "Left Join EMPLEADOS on EMPLEADOS.Id_Empleado = EXPEDIENTE.Id_Empleado" +
-                "Left Join PACIENTES on PACIENTES.Id_Paciente = EXPEDIENTE.Id_Paciente" +
+                "EXPEDIENTE.Fecha\n" +
+                "From EXPEDIENTE\n" +
+                "Left Join EMPLEADOS on EMPLEADOS.Id_Empleado = EXPEDIENTE.Id_Empleado\n" +
+                "Left Join PACIENTES on PACIENTES.Id_Paciente = EXPEDIENTE.Id_Paciente\n" +
                 "Order By Expediente.Fecha Desc";
             cmd.ExecuteNonQuery(); // Se ejecuta
 

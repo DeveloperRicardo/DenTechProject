@@ -17,6 +17,8 @@ namespace DenTech
         ConexionSQL BD = new ConexionSQL();
         MetodosGlobales MG = new MetodosGlobales();
         int gnIdExpediente = 0;
+        int gnIdOdontologo = 0;
+        int gnIdPaciente = 0;
 
         public WIN_CAT_Expediente_F(int pIdExpediente = 0)
         {
@@ -29,10 +31,81 @@ namespace DenTech
         {
             // Verifica si se puede conectar con la base de datos
             if (BD.Conexion(true))
-            {
-                // Se limpian los campos
-                STC_NombreOdontologo.Text = "";
-                STC_NombrePaciente.Text = "";
+            {// Verifica que tenga información de un usuario existente
+                if (gnIdExpediente != 0)
+                {
+                    // Se estructura el query
+                    SqlCommand cmd = BD.conexion.CreateCommand();
+                    cmd.CommandText = "Select \n" +
+                        "Id_Empleado, \n" +
+                        "Id_Paciente, \n" +
+                        "Enfermedad, \n" +
+                        "Alergia, \n" +
+                        "Fecha \n" +
+                        "From EXPEDIENTE\n" +
+                        "Where EXPEDIENTE.Id_Expediente = " + gnIdExpediente;
+
+                    // Ejecuta el query y almacena los datos consultados
+                    SqlDataReader Reader = cmd.ExecuteReader();
+                    Reader.Read();
+
+                    // Revisa si cuenta con información
+                    if (Reader.HasRows)
+                    {
+                        gnIdOdontologo = Convert.ToInt16(Reader[0]);
+                        gnIdPaciente = Convert.ToInt16(Reader[1]);
+                        EDT_Enfermedad.Text = Reader[2].ToString();
+                        EDT_Alergias.Text = Reader[3].ToString();
+                        DT_Fecha.Value = Convert.ToDateTime(Reader[4]);
+                        Reader.Close(); // Se libera
+
+                        // Se estructura el query
+                        cmd.CommandText = "Select " +
+                            "Usuario, " +
+                            "NombreCompleto = (Nombre + ' ' + ApellidoP + ' ' + ApellidoM) " +
+                            "From EMPLEADOS " +
+                            "Where Id_Empleado = " + gnIdOdontologo;
+
+                        // Ejecuta el query y almacena los datos consultados
+                        SqlDataReader Reader2 = cmd.ExecuteReader();
+                        Reader2.Read();
+
+                        // Revisa si cuenta con información
+                        if (Reader2.HasRows)
+                        {
+                            // Inserta la información a los controles
+                            EDT_Odontologo.Text = Reader2[0].ToString();
+                            STC_NombreOdontologo.Text = Reader2[1].ToString();
+                        }
+                        Reader2.Close(); // Se libera
+
+                        //Paciente
+                        cmd.CommandText = "Select " +
+                            "Nombre, " +
+                            "NombreCompleto = (Nombre + ' ' + ApellidoP + ' ' + ApellidoM) " +
+                            "From PACIENTES " +
+                            "Where Id_Paciente = " +gnIdPaciente;
+
+                        // Ejecuta el query y almacena los datos consultados
+                        SqlDataReader Reader3 = cmd.ExecuteReader();
+                        Reader3.Read();
+
+                        // Revisa si cuenta con información
+                        if (Reader3.HasRows)
+                        {
+                            // Inserta la información a los controles
+                            EDT_Paciente.Text = Reader3[0].ToString();
+                            STC_NombrePaciente.Text = Reader3[1].ToString();
+                        }
+                        Reader3.Close(); // Se libera
+                    }
+
+                }
+                else {
+                    // Se limpian los campos
+                    STC_NombreOdontologo.Text = "";
+                    STC_NombrePaciente.Text = "";
+                }
             }
         }
 
@@ -48,18 +121,18 @@ namespace DenTech
             // Se insatncia un objeto de tipo ventana para abrirla y se obtiene el Id del usuario deseado
             WIN_CAT_Seleccion_F Window = new WIN_CAT_Seleccion_F(1);
             Window.ShowDialog();
-            int IdOdontologo = Window._ReturnId;
+            gnIdOdontologo = Window._ReturnId;
 
             // Verifica si se puede conectar con la base de datos
-            if (BD.Conexion(true))
-            {
+//            if (BD.Conexion(true))
+//            {
                 // Se estructura el query
                 SqlCommand cmd = BD.conexion.CreateCommand();
                 cmd.CommandText = "Select " +
                     "Usuario, " +
-                    "NombreCompleto = (Nombre + ' ' + ApellidoP + ' ' + ApellidoM), " +
+                    "NombreCompleto = (Nombre + ' ' + ApellidoP + ' ' + ApellidoM) " +
                     "From EMPLEADOS " +
-                    "Where Id_Empleado = " + IdOdontologo;
+                    "Where Id_Empleado = " + gnIdOdontologo;
 
                 // Ejecuta el query y almacena los datos consultados
                 SqlDataReader Reader = cmd.ExecuteReader();
@@ -73,7 +146,7 @@ namespace DenTech
                     STC_NombreOdontologo.Text = Reader[1].ToString();
                 }
                 Reader.Close(); // Se libera
-            }
+         //   }
         }
 
         private void BTN_Paciente_Click(object sender, EventArgs e)
@@ -81,18 +154,18 @@ namespace DenTech
             // Se insatncia un objeto de tipo ventana para abrirla y se obtiene el Id del usuario deseado
             WIN_CAT_Seleccion_F Window = new WIN_CAT_Seleccion_F(2);
             Window.ShowDialog();
-            int IdPaciente = Window._ReturnId;
+            gnIdPaciente = Window._ReturnId;
 
             // Verifica si se puede conectar con la base de datos
-            if (BD.Conexion(true))
-            {
+//            if (BD.Conexion(true))
+//            {
                 // Se estructura el query
                 SqlCommand cmd = BD.conexion.CreateCommand();
                 cmd.CommandText = "Select " +
                     "Nombre, " +
-                    "NombreCompleto = (Nombre + ' ' + ApellidoP + ' ' + ApellidoM), " +
+                    "NombreCompleto = (Nombre + ' ' + ApellidoP + ' ' + ApellidoM) " +
                     "From PACIENTES " +
-                    "Where Id_Paciente = " + IdPaciente;
+                    "Where Id_Paciente = " + gnIdPaciente;
 
                 // Ejecuta el query y almacena los datos consultados
                 SqlDataReader Reader = cmd.ExecuteReader();
@@ -106,7 +179,7 @@ namespace DenTech
                     STC_NombrePaciente.Text = Reader[1].ToString();
                 }
                 Reader.Close(); // Se libera
-            }
+           // }
         }
 
         #region Eventos innecesarios
@@ -129,7 +202,32 @@ namespace DenTech
 
         private void BTN_Aceptar_Click(object sender, EventArgs e)
         {
+            // Revisa los campos
+            ValidarCampos();
 
+            // Verifica si el registro se creará o se modificará
+            if (gnIdExpediente == 0)
+            {
+                // Se abre la conexión y se estructura el query para agregar el registro
+                SqlCommand cmd = BD.conexion.CreateCommand();
+                cmd.CommandText = "Insert Into EXPEDIENTE(Id_Empleado, Id_Paciente, Enfermedad, Alergia, Fecha) " +
+                    "Values(" + gnIdOdontologo + ", " + gnIdPaciente + ", '" + EDT_Enfermedad.Text + "', '" + EDT_Alergias.Text + "', '" + DT_Fecha.Value + "')";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Registro agregado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else // Registro existente, se modificará
+            {
+                // Se abre la conexión y se estructura el query para agregar el registro
+                SqlCommand cmd = BD.conexion.CreateCommand();
+                cmd.CommandText = "Update EXPEDIENTE " +
+                    "Set Id_Empleado = " + gnIdOdontologo + ", Id_Paciente = " + gnIdPaciente + ", Enfermedad = '" + EDT_Enfermedad.Text + "', Alergia = '" + EDT_Alergias.Text +
+                    "', Fecha = '" + DT_Fecha.Value + "' Where Id_Expediente = " + gnIdExpediente;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Registro modificado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            // Cierra la ventana
+            this.Close();
         }
 
         // Método ValidarCampos

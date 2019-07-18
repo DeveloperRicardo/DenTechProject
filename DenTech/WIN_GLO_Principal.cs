@@ -54,5 +54,21 @@ namespace DenTech
             frm.MdiParent = formsPanel1.MdiForm;
             frm.Show();
         }
+
+        private void BTN_Servicios_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<WIN_CAT_Servicios_T>().FirstOrDefault();
+            WIN_CAT_Servicios_T frm = form ?? new WIN_CAT_Servicios_T();
+            frm.MdiParent = formsPanel1.MdiForm;
+            frm.Show();
+        }
+
+        private void BTN_Expediente_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<WIN_CAT_Expediente_T>().FirstOrDefault();
+            WIN_CAT_Expediente_T frm = form ?? new WIN_CAT_Expediente_T();
+            frm.MdiParent = formsPanel1.MdiForm;
+            frm.Show();
+        }
     }
 }

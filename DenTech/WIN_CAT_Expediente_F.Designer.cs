@@ -47,6 +47,8 @@
             this.STC_Alergia = new System.Windows.Forms.Label();
             this.BTN_Cancelar = new System.Windows.Forms.Button();
             this.BTN_Aceptar = new System.Windows.Forms.Button();
+            this.DT_Fecha = new System.Windows.Forms.DateTimePicker();
+            this.STC_Fecha = new System.Windows.Forms.Label();
             this.PNL_Banner.SuspendLayout();
             this.PANEL_Odontologo.SuspendLayout();
             this.PANEL_Paciente.SuspendLayout();
@@ -101,12 +103,11 @@
             this.BTN_Odontologo.FlatAppearance.BorderSize = 2;
             this.BTN_Odontologo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Odontologo.Font = new System.Drawing.Font("Rockwell", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Odontologo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Odontologo.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Odontologo.Image")));
             this.BTN_Odontologo.Location = new System.Drawing.Point(253, 66);
             this.BTN_Odontologo.Name = "BTN_Odontologo";
             this.BTN_Odontologo.Size = new System.Drawing.Size(29, 25);
             this.BTN_Odontologo.TabIndex = 34;
-            this.BTN_Odontologo.Text = "...";
             this.BTN_Odontologo.UseVisualStyleBackColor = false;
             this.BTN_Odontologo.Click += new System.EventHandler(this.BTN_Odontologo_Click);
             // 
@@ -160,12 +161,11 @@
             this.BTN_Paciente.FlatAppearance.BorderSize = 2;
             this.BTN_Paciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Paciente.Font = new System.Drawing.Font("Rockwell", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Paciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Paciente.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Paciente.Image")));
             this.BTN_Paciente.Location = new System.Drawing.Point(253, 128);
             this.BTN_Paciente.Name = "BTN_Paciente";
             this.BTN_Paciente.Size = new System.Drawing.Size(29, 25);
             this.BTN_Paciente.TabIndex = 38;
-            this.BTN_Paciente.Text = "...";
             this.BTN_Paciente.UseVisualStyleBackColor = false;
             this.BTN_Paciente.Click += new System.EventHandler(this.BTN_Paciente_Click);
             // 
@@ -229,7 +229,7 @@
             this.BTN_Cancelar.FlatAppearance.BorderSize = 0;
             this.BTN_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cancelar.Image")));
-            this.BTN_Cancelar.Location = new System.Drawing.Point(429, 261);
+            this.BTN_Cancelar.Location = new System.Drawing.Point(429, 292);
             this.BTN_Cancelar.Name = "BTN_Cancelar";
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Cancelar.TabIndex = 45;
@@ -242,12 +242,31 @@
             this.BTN_Aceptar.FlatAppearance.BorderSize = 0;
             this.BTN_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Aceptar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Aceptar.Image")));
-            this.BTN_Aceptar.Location = new System.Drawing.Point(371, 261);
+            this.BTN_Aceptar.Location = new System.Drawing.Point(371, 292);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Aceptar.TabIndex = 44;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
+            // 
+            // DT_Fecha
+            // 
+            this.DT_Fecha.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.DT_Fecha.Location = new System.Drawing.Point(133, 252);
+            this.DT_Fecha.Name = "DT_Fecha";
+            this.DT_Fecha.Size = new System.Drawing.Size(232, 25);
+            this.DT_Fecha.TabIndex = 47;
+            this.DT_Fecha.Value = new System.DateTime(2019, 6, 24, 0, 0, 0, 0);
+            // 
+            // STC_Fecha
+            // 
+            this.STC_Fecha.AutoSize = true;
+            this.STC_Fecha.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Fecha.Location = new System.Drawing.Point(9, 255);
+            this.STC_Fecha.Name = "STC_Fecha";
+            this.STC_Fecha.Size = new System.Drawing.Size(50, 20);
+            this.STC_Fecha.TabIndex = 46;
+            this.STC_Fecha.Text = "Fecha:";
             // 
             // WIN_CAT_Expediente_F
             // 
@@ -255,7 +274,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(493, 319);
+            this.ClientSize = new System.Drawing.Size(493, 356);
+            this.Controls.Add(this.DT_Fecha);
+            this.Controls.Add(this.STC_Fecha);
             this.Controls.Add(this.BTN_Cancelar);
             this.Controls.Add(this.BTN_Aceptar);
             this.Controls.Add(this.EDT_Alergias);
@@ -307,5 +328,7 @@
         private System.Windows.Forms.Label STC_Alergia;
         private System.Windows.Forms.Button BTN_Cancelar;
         private System.Windows.Forms.Button BTN_Aceptar;
+        private System.Windows.Forms.DateTimePicker DT_Fecha;
+        private System.Windows.Forms.Label STC_Fecha;
     }
 }

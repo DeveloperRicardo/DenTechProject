@@ -85,7 +85,7 @@ namespace DenTech
                         EDT_TelefonoEm.Text = Reader[7].ToString();
                         EDT_Direccion.Text = Reader[8].ToString();
                         COMBO_Sexo.SelectedIndex = Int32.Parse(Reader[4].ToString());
-                        COMBO_TipoSangre.SelectedIndex = Int32.Parse(Reader[5].ToString());
+                        COMBO_TipoSangre.SelectedValue = Int32.Parse(Reader[5].ToString());
                     }
                     Reader.Close(); // Se libera
                 }
@@ -104,7 +104,7 @@ namespace DenTech
                 // Se abre la conexión y se estructura el query para agregar el registro
                 SqlCommand cmd = BD.conexion.CreateCommand();
                 cmd.CommandText = "Insert Into PACIENTES(Nombre, ApellidoP, ApellidoM, Edad, Sexo, Id_Sangre, Telefono, Tel_Emergencia, Direccion) " +
-                    "Values('" + EDT_Nombre.Text + "', '" + EDT_ApellidoP.Text + "', '" + EDT_ApellidoM.Text + "', '" + EDT_Edad.Text + "', '" + COMBO_Sexo.SelectedIndex + "', '" + COMBO_TipoSangre.SelectedIndex + "', '" + EDT_Telefono.Text + "', '" + EDT_TelefonoEm.Text + "', '" + EDT_Direccion.Text + "')";
+                    "Values('" + EDT_Nombre.Text + "', '" + EDT_ApellidoP.Text + "', '" + EDT_ApellidoM.Text + "', '" + EDT_Edad.Text + "', '" + COMBO_Sexo.SelectedIndex + "', '" + COMBO_TipoSangre.SelectedValue + "', '" + EDT_Telefono.Text + "', '" + EDT_TelefonoEm.Text + "', '" + EDT_Direccion.Text + "')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro agregado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -113,8 +113,8 @@ namespace DenTech
                 // Se abre la conexión y se estructura el query para agregar el registro
                 SqlCommand cmd = BD.conexion.CreateCommand();
                 cmd.CommandText = "Update PACIENTES " +
-                    "Set Nombre = '" + EDT_Nombre.Text + "', ApellidoP = '" + EDT_ApellidoP.Text + "', ApellidoM = '" + EDT_ApellidoM.Text + "', Edad = '" + EDT_Edad.Text + "', Sexo = '" + COMBO_Sexo.SelectedIndex + "', Id_Sangre = '" + COMBO_TipoSangre.SelectedIndex + "', Telefono = '" + EDT_Telefono + "', Tel_Emergencia = '" + EDT_TelefonoEm.Text + "', Direccion = '" + EDT_Direccion.Text + "' " +
-                    "Where Id_Servicios = " + gnIdPaciente;
+                    "Set Nombre = '" + EDT_Nombre.Text + "', ApellidoP = '" + EDT_ApellidoP.Text + "', ApellidoM = '" + EDT_ApellidoM.Text + "', Edad = '" + EDT_Edad.Text + "', Sexo = '" + COMBO_Sexo.SelectedIndex + "', Id_Sangre = '" + COMBO_TipoSangre.SelectedValue + "', Telefono = '" + EDT_Telefono.Text + "', Tel_Emergencia = '" + EDT_TelefonoEm.Text + "', Direccion = '" + EDT_Direccion.Text + "' " +
+                    "Where Id_Paciente = " + gnIdPaciente;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro modificado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
