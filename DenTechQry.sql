@@ -1,12 +1,10 @@
 CREATE DATABASE DENTECHBD
 USE DENTECHBD
-USE BANCO_BC
 
 CREATE TABLE EMPLEADOS(Id_Empleado int primary key identity, Usuario varchar(30),Nombre varchar(20),ApellidoP varchar(12), ApellidoM varchar(12), Password varchar(20),
 Tipo_Usuario int)
 
 CREATE TABLE SANGRE(Id_Sangre int primary key identity, Descripcion varchar(3))
-DROP SANGRE
 
 CREATE TABLE PACIENTES(Id_Paciente int primary key identity, Id_Sangre int foreign key references SANGRE(Id_Sangre) on update cascade on delete cascade,
 Nombre varchar(20),ApellidoP varchar(12),ApellidoM varchar(12), Edad int,Sexo int, Direccion varchar(30),Telefono varchar(10),Tel_Emergencia varchar(10))
@@ -25,6 +23,8 @@ Tratamiento varchar(100),Fecha_Inicio date, Fecha_Final date, Fecha_Diag date)
 
 CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int)
 
+CREATE TABLE SERVICIOS(Id_Servicios int primary key identity, Descripcion varchar(100),Precio decimal(10,2))
+
 INSERT INTO SANGRE VALUES('A+');
 INSERT INTO SANGRE VALUES('A-');
 INSERT INTO SANGRE VALUES('B+');
@@ -33,12 +33,3 @@ INSERT INTO SANGRE VALUES('AB+');
 INSERT INTO SANGRE VALUES('AB-');
 INSERT INTO SANGRE VALUES('O+');
 INSERT INTO SANGRE VALUES('O-');
-
-SELECT * FROM INVENTARIO
-SELECT Id_Inventario, Descripcion, Cantidad, Fecha_Inicio, Fecha_Final FROM INVENTARIO
-
-select * from empleados
-
-INSERT INTO EMPLEADOS VALUES('Intendente','Intendente','Intendente','Intendente','123456','3')
-
-Select * from SANGRE

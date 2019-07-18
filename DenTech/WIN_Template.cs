@@ -41,12 +41,12 @@ namespace DenTech
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                TB_Maximizar.Image = System.Drawing.Image.FromFile(@"D:\Desktop\Maximize 1.png");
+                TB_Maximizar.Image = System.Drawing.Image.FromFile(@"D:\Desktop\ControlBox Visual Studio\Maximize 1.png");
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
-                TB_Maximizar.Image = System.Drawing.Image.FromFile(@"D:\Desktop\Maximize 2.png");
+                TB_Maximizar.Image = System.Drawing.Image.FromFile(@"D:\Desktop\ControlBox Visual Studio\Maximize 2.png");
             }
         }
 
