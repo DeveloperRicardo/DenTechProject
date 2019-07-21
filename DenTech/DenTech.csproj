@@ -36,6 +36,9 @@
     <ApplicationIcon>LogoD2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -223,6 +226,12 @@
     <EmbeddedResource Include="WIN_CAT_Pacientes_T.resx">
       <DependentUpon>WIN_CAT_Pacientes_T.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Recetas_F.resx">
+      <DependentUpon>WIN_CAT_Recetas_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Recetas_T.resx">
+      <DependentUpon>WIN_CAT_Recetas_T.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Seleccion_F.resx">
       <DependentUpon>WIN_CAT_Seleccion_F.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +268,7 @@
     <EmbeddedResource Include="Z_DummyDeControles.resx">
       <DependentUpon>Z_DummyDeControles.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
