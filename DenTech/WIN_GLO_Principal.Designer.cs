@@ -40,9 +40,9 @@
             this.STC_Dia = new System.Windows.Forms.Label();
             this.STC_Hora = new System.Windows.Forms.Label();
             this.Panel_General = new System.Windows.Forms.FlowLayoutPanel();
-            this.formsPanel1 = new DenTech.FormsPanel();
             this.BTN_Servicios = new System.Windows.Forms.Button();
             this.BTN_Expediente = new System.Windows.Forms.Button();
+            this.PNL_Ventanas = new DenTech.FormsPanel();
             this.panel2.SuspendLayout();
             this.Panel_General.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,7 @@
             this.BTN_Citas.FlatAppearance.BorderSize = 2;
             this.BTN_Citas.Name = "BTN_Citas";
             this.BTN_Citas.UseVisualStyleBackColor = false;
+            this.BTN_Citas.Click += new System.EventHandler(this.BTN_Citas_Click);
             // 
             // BTN_Pacientes
             // 
@@ -129,12 +130,6 @@
             this.Panel_General.Controls.Add(this.BTN_Expediente);
             this.Panel_General.Name = "Panel_General";
             // 
-            // formsPanel1
-            // 
-            this.formsPanel1.ActiveMDIWnd = null;
-            resources.ApplyResources(this.formsPanel1, "formsPanel1");
-            this.formsPanel1.Name = "formsPanel1";
-            // 
             // BTN_Servicios
             // 
             this.BTN_Servicios.BackColor = System.Drawing.Color.Transparent;
@@ -155,12 +150,18 @@
             this.BTN_Expediente.UseVisualStyleBackColor = false;
             this.BTN_Expediente.Click += new System.EventHandler(this.BTN_Expediente_Click);
             // 
+            // PNL_Ventanas
+            // 
+            this.PNL_Ventanas.ActiveMDIWnd = null;
+            resources.ApplyResources(this.PNL_Ventanas, "PNL_Ventanas");
+            this.PNL_Ventanas.Name = "PNL_Ventanas";
+            // 
             // WIN_GLO_Principal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.formsPanel1);
+            this.Controls.Add(this.PNL_Ventanas);
             this.Controls.Add(this.Panel_General);
             this.Controls.Add(this.panel2);
             this.MaximizeBox = false;
@@ -168,7 +169,7 @@
             this.Load += new System.EventHandler(this.WIN_GLO_Principal_Load);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.Panel_General, 0);
-            this.Controls.SetChildIndex(this.formsPanel1, 0);
+            this.Controls.SetChildIndex(this.PNL_Ventanas, 0);
             this.panel2.ResumeLayout(false);
             this.Panel_General.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -186,7 +187,7 @@
         private System.Windows.Forms.Label STC_Dia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel Panel_General;
-        public FormsPanel formsPanel1;
+        public FormsPanel PNL_Ventanas;
         private System.Windows.Forms.Button BTN_Servicios;
         private System.Windows.Forms.Button BTN_Expediente;
     }
