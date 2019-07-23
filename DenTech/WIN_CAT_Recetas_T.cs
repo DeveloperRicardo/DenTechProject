@@ -15,7 +15,7 @@ namespace DenTech
     public partial class WIN_CAT_Recetas_T : Form
     {
         ConexionSQL BD = new ConexionSQL();
-        public WIN_CAT_Recetas_T()
+        public WIN_CAT_Recetas_T(int IdPaciente)
         {
             InitializeComponent();
         }
