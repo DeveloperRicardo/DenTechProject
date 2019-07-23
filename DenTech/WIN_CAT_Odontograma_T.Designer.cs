@@ -218,6 +218,7 @@
             this.Name = "WIN_CAT_Odontograma_T";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DenTech - Odontograma";
+            this.Load += new System.EventHandler(this.WIN_CAT_Odontograma_T_Load);
             this.PNL_Banner.ResumeLayout(false);
             this.PNL_Banner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaNombre)).EndInit();

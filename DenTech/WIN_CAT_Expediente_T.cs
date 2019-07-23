@@ -108,5 +108,39 @@ namespace DenTech
             // Se inserta la información en el DataGridView
             DGV_TablaExpediente.DataSource = Data;
         }
+
+        private void BTN_General_Click(object sender, EventArgs e)
+        {
+            // Verifica que la tabla tenga información
+            if (DGV_TablaExpediente.RowCount == 0)
+                return;
+
+            Menu_General.Show(BTN_General, new Point(0, BTN_General.Height));
+        }
+
+        private void OP_Recetas_Click(object sender, EventArgs e)
+        {
+            // Se insatncia un objeto de tipo ventana para abrirla y refrescar la tabla
+            WIN_CAT_Recetas_T Window = new WIN_CAT_Recetas_T((int)DGV_TablaExpediente.CurrentRow.Cells[0].Value);
+            Window.ShowDialog();
+            Refrescar();
+        }
+
+        private void BTN_Dental_Click(object sender, EventArgs e)
+        {
+            Menu_Dental.Show(BTN_Dental, new Point(0, BTN_Dental.Height));
+        }
+
+        private void OP_Odontograma_Click(object sender, EventArgs e)
+        {
+            // Verifica que la tabla tenga información
+            if (DGV_TablaExpediente.RowCount == 0)
+                return;
+
+            // Se insatncia un objeto de tipo ventana para abrirla y refrescar la tabla
+            WIN_CAT_Odontograma_T Window = new WIN_CAT_Odontograma_T((int)DGV_TablaExpediente.CurrentRow.Cells[0].Value);
+            Window.ShowDialog();
+            Refrescar();
+        }
     }
 }
