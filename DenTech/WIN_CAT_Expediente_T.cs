@@ -94,7 +94,8 @@ namespace DenTech
                 "Paciente = (PACIENTES.Nombre + ' ' + PACIENTES.ApellidoP + ' ' + PACIENTES.ApellidoM),\n" +
                 "EXPEDIENTE.Enfermedad,\n" +
                 "EXPEDIENTE.Alergia,\n" +
-                "EXPEDIENTE.Fecha\n" +
+                "EXPEDIENTE.Fecha,\n" +
+                "EXPEDIENTE.Id_Paciente\n" +
                 "From EXPEDIENTE\n" +
                 "Left Join EMPLEADOS on EMPLEADOS.Id_Empleado = EXPEDIENTE.Id_Empleado\n" +
                 "Left Join PACIENTES on PACIENTES.Id_Paciente = EXPEDIENTE.Id_Paciente\n" +
@@ -121,7 +122,7 @@ namespace DenTech
         private void OP_Recetas_Click(object sender, EventArgs e)
         {
             // Se insatncia un objeto de tipo ventana para abrirla y refrescar la tabla
-            WIN_CAT_Recetas_T Window = new WIN_CAT_Recetas_T((int)DGV_TablaExpediente.CurrentRow.Cells[0].Value);
+            WIN_CAT_Recetas_T Window = new WIN_CAT_Recetas_T((int)DGV_TablaExpediente.CurrentRow.Cells[6].Value);
             Window.ShowDialog();
             Refrescar();
         }
@@ -138,7 +139,7 @@ namespace DenTech
                 return;
 
             // Se insatncia un objeto de tipo ventana para abrirla y refrescar la tabla
-            WIN_CAT_Odontograma_T Window = new WIN_CAT_Odontograma_T((int)DGV_TablaExpediente.CurrentRow.Cells[0].Value);
+            WIN_CAT_Odontograma_T Window = new WIN_CAT_Odontograma_T((int)DGV_TablaExpediente.CurrentRow.Cells[6].Value);
             Window.ShowDialog();
             Refrescar();
         }
