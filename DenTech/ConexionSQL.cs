@@ -18,6 +18,7 @@ namespace DenTech
         #region Iniciar y Cerrar Conexion
         public bool Conexion(bool Iniciar)
         {
+            conexion = new SqlConnection(File.ReadAllText(Environment.CurrentDirectory + @"\ConexionDentech.ini"));
             Exito = false;
             switch (Iniciar)
             {
