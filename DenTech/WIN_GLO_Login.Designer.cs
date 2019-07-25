@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_GLO_Login));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PNL_Banner = new System.Windows.Forms.Panel();
             this.BTN_Config = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,18 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.EDT_Contrasena = new System.Windows.Forms.TextBox();
             this.COMBO_Usuario = new System.Windows.Forms.ComboBox();
-            this.DGV_Login = new System.Windows.Forms.DataGridView();
-            this.COL_Inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PNL_Banner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Login)).BeginInit();
             this.SuspendLayout();
             // 
             // PNL_Banner
             // 
             this.PNL_Banner.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.PNL_Banner.Controls.Add(this.DGV_Login);
             this.PNL_Banner.Controls.Add(this.BTN_Config);
             this.PNL_Banner.Controls.Add(this.pictureBox1);
             this.PNL_Banner.Location = new System.Drawing.Point(0, 0);
@@ -141,69 +133,6 @@
             this.COMBO_Usuario.Size = new System.Drawing.Size(322, 45);
             this.COMBO_Usuario.TabIndex = 1;
             // 
-            // DGV_Login
-            // 
-            this.DGV_Login.AllowUserToAddRows = false;
-            this.DGV_Login.AllowUserToDeleteRows = false;
-            this.DGV_Login.AllowUserToOrderColumns = true;
-            this.DGV_Login.BackgroundColor = System.Drawing.Color.White;
-            this.DGV_Login.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Login.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGV_Login.ColumnHeadersHeight = 30;
-            this.DGV_Login.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.COL_Inventario,
-            this.COL_Producto});
-            this.DGV_Login.EnableHeadersVisualStyles = false;
-            this.DGV_Login.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_Login.Location = new System.Drawing.Point(3, 5);
-            this.DGV_Login.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DGV_Login.Name = "DGV_Login";
-            this.DGV_Login.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Login.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_Login.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_Login.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.DGV_Login.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Login.Size = new System.Drawing.Size(126, 116);
-            this.DGV_Login.TabIndex = 46;
-            this.DGV_Login.TabStop = false;
-            // 
-            // COL_Inventario
-            // 
-            this.COL_Inventario.DataPropertyName = "Id_Empleado";
-            this.COL_Inventario.Frozen = true;
-            this.COL_Inventario.HeaderText = "IdEmpleado";
-            this.COL_Inventario.Name = "COL_Inventario";
-            this.COL_Inventario.ReadOnly = true;
-            this.COL_Inventario.Visible = false;
-            // 
-            // COL_Producto
-            // 
-            this.COL_Producto.DataPropertyName = "Usuario";
-            this.COL_Producto.Frozen = true;
-            this.COL_Producto.HeaderText = "Usuario";
-            this.COL_Producto.Name = "COL_Producto";
-            this.COL_Producto.ReadOnly = true;
-            this.COL_Producto.Width = 360;
-            // 
             // WIN_GLO_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,7 +155,6 @@
             this.Load += new System.EventHandler(this.WIN_GLO_Login_Load);
             this.PNL_Banner.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Login)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,8 +170,5 @@
         private System.Windows.Forms.TextBox EDT_Contrasena;
         private System.Windows.Forms.ComboBox COMBO_Usuario;
         private System.Windows.Forms.Button BTN_Config;
-        private System.Windows.Forms.DataGridView DGV_Login;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Inventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Producto;
     }
 }

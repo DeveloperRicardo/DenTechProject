@@ -37,7 +37,6 @@ namespace DenTech
                 SqlDataAdapter adaptador = new SqlDataAdapter();
                 adaptador.SelectCommand = comando;
                 adaptador.Fill(ds);
-                DGV_Login.DataSource = ds;
                 COMBO_Usuario.DataSource = ds;
                 COMBO_Usuario.ValueMember = "Id_Empleado";
                 COMBO_Usuario.DisplayMember = "Usuario";
