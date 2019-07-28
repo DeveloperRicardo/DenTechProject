@@ -12,7 +12,7 @@ namespace DenTech
 {
     public partial class WIN_CAT_Odontograma_F : Form
     {
-        public WIN_CAT_Odontograma_F()
+        public WIN_CAT_Odontograma_F(int IdOdontograma = 0)
         {
             InitializeComponent();
         }

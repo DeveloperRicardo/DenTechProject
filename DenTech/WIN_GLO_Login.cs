@@ -28,8 +28,8 @@ namespace DenTech
         }
         public void Conexion()
         {
-//            if (BD.Conexion(true))
-//            {
+            if (BD.Conexion(true))
+            {
                 ds.Clear();
                 BD.conexion.CreateCommand();
                 SqlCommand comando = BD.conexion.CreateCommand();
@@ -40,17 +40,16 @@ namespace DenTech
                 COMBO_Usuario.DataSource = ds;
                 COMBO_Usuario.ValueMember = "Id_Empleado";
                 COMBO_Usuario.DisplayMember = "Usuario";
-                //COMBO_Usuario.Refresh();
-                //DGV_Login.Refresh();
-//            }
-//            else
-//            {
-//                COMBO_Usuario.Enabled = false;
-//                EDT_Contrasena.Enabled = false;
-//                BTN_Acceder.Enabled = false;
+                COMBO_Usuario.Refresh();
+            }
+            else
+            {
+                COMBO_Usuario.Enabled = false;
+                EDT_Contrasena.Enabled = false;
+                BTN_Acceder.Enabled = false;
                 //IMG_Icono.Visible = true;
                 //STC_MensajeConexion.Visible = true;
-//            }
+            }
         }
 
         private void BTN_Acceder_Click(object sender, EventArgs e)
