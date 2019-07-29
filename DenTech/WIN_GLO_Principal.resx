@@ -520,7 +520,10 @@
     <value>2</value>
   </data>
   <data name="Panel_General.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="Panel_General.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="BTN_Servicios.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
@@ -648,10 +651,10 @@
     <value>5</value>
   </data>
   <data name="Panel_General.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 73</value>
+    <value>6, 70</value>
   </data>
   <data name="Panel_General.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 642</value>
+    <value>110, 642</value>
   </data>
   <data name="Panel_General.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -668,28 +671,28 @@
   <data name="&gt;&gt;Panel_General.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="formsPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="PNL_Ventanas.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="formsPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 73</value>
+  <data name="PNL_Ventanas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 73</value>
   </data>
-  <data name="formsPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1120, 642</value>
+  <data name="PNL_Ventanas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1131, 642</value>
   </data>
-  <data name="formsPanel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="PNL_Ventanas.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="&gt;&gt;formsPanel1.Name" xml:space="preserve">
-    <value>formsPanel1</value>
+  <data name="&gt;&gt;PNL_Ventanas.Name" xml:space="preserve">
+    <value>PNL_Ventanas</value>
   </data>
-  <data name="&gt;&gt;formsPanel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;PNL_Ventanas.Type" xml:space="preserve">
     <value>DenTech.FormsPanel, DenTech, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;formsPanel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PNL_Ventanas.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;formsPanel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PNL_Ventanas.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

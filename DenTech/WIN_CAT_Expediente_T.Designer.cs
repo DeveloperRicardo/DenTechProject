@@ -28,27 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Expediente_T));
             this.PNL_Banner = new System.Windows.Forms.Panel();
             this.STC_Titulo = new System.Windows.Forms.Label();
             this.DGV_TablaExpediente = new System.Windows.Forms.DataGridView();
+            this.BTN_Eliminar = new System.Windows.Forms.Button();
+            this.BTN_Modificar = new System.Windows.Forms.Button();
+            this.BTN_Agregar = new System.Windows.Forms.Button();
+            this.BTN_Cerrar = new System.Windows.Forms.Button();
+            this.BTN_General = new System.Windows.Forms.Button();
+            this.BTN_Dental = new System.Windows.Forms.Button();
+            this.Menu_General = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OP_Recetas = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Dental = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OP_Odontograma = new System.Windows.Forms.ToolStripMenuItem();
             this.COL_IdExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Enfermedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Alergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BTN_Eliminar = new System.Windows.Forms.Button();
-            this.BTN_Modificar = new System.Windows.Forms.Button();
-            this.BTN_Agregar = new System.Windows.Forms.Button();
-            this.BTN_Cerrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.IdPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PNL_Banner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).BeginInit();
+            this.Menu_General.SuspendLayout();
+            this.Menu_Dental.SuspendLayout();
             this.SuspendLayout();
             // 
             // PNL_Banner
@@ -80,14 +88,14 @@
             this.DGV_TablaExpediente.AllowUserToOrderColumns = true;
             this.DGV_TablaExpediente.BackgroundColor = System.Drawing.Color.White;
             this.DGV_TablaExpediente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaExpediente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaExpediente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGV_TablaExpediente.ColumnHeadersHeight = 30;
             this.DGV_TablaExpediente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_IdExpediente,
@@ -95,84 +103,32 @@
             this.COL_Paciente,
             this.COL_Enfermedad,
             this.COL_Alergia,
-            this.COL_Fecha});
+            this.COL_Fecha,
+            this.IdPaciente});
             this.DGV_TablaExpediente.EnableHeadersVisualStyles = false;
             this.DGV_TablaExpediente.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DGV_TablaExpediente.Location = new System.Drawing.Point(13, 51);
             this.DGV_TablaExpediente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaExpediente.Name = "DGV_TablaExpediente";
             this.DGV_TablaExpediente.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaExpediente.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaExpediente.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DGV_TablaExpediente.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_TablaExpediente.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_TablaExpediente.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DGV_TablaExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaExpediente.Size = new System.Drawing.Size(945, 215);
             this.DGV_TablaExpediente.TabIndex = 34;
-            // 
-            // COL_IdExpediente
-            // 
-            this.COL_IdExpediente.DataPropertyName = "Id_Expediente";
-            this.COL_IdExpediente.Frozen = true;
-            this.COL_IdExpediente.HeaderText = "IdExpediente";
-            this.COL_IdExpediente.Name = "COL_IdExpediente";
-            this.COL_IdExpediente.ReadOnly = true;
-            this.COL_IdExpediente.Visible = false;
-            // 
-            // COL_IdEmpleado
-            // 
-            this.COL_IdEmpleado.DataPropertyName = "Odontologo";
-            this.COL_IdEmpleado.Frozen = true;
-            this.COL_IdEmpleado.HeaderText = "Odontólogo";
-            this.COL_IdEmpleado.Name = "COL_IdEmpleado";
-            this.COL_IdEmpleado.ReadOnly = true;
-            this.COL_IdEmpleado.Width = 250;
-            // 
-            // COL_Paciente
-            // 
-            this.COL_Paciente.DataPropertyName = "Paciente";
-            this.COL_Paciente.Frozen = true;
-            this.COL_Paciente.HeaderText = "Paciente";
-            this.COL_Paciente.Name = "COL_Paciente";
-            this.COL_Paciente.ReadOnly = true;
-            this.COL_Paciente.Width = 250;
-            // 
-            // COL_Enfermedad
-            // 
-            this.COL_Enfermedad.DataPropertyName = "Enfermedad";
-            this.COL_Enfermedad.Frozen = true;
-            this.COL_Enfermedad.HeaderText = "Enfermedad(es)";
-            this.COL_Enfermedad.Name = "COL_Enfermedad";
-            this.COL_Enfermedad.ReadOnly = true;
-            this.COL_Enfermedad.Width = 170;
-            // 
-            // COL_Alergia
-            // 
-            this.COL_Alergia.DataPropertyName = "Alergia";
-            this.COL_Alergia.Frozen = true;
-            this.COL_Alergia.HeaderText = "Alergia(s)";
-            this.COL_Alergia.Name = "COL_Alergia";
-            this.COL_Alergia.ReadOnly = true;
-            this.COL_Alergia.Width = 170;
-            // 
-            // COL_Fecha
-            // 
-            this.COL_Fecha.DataPropertyName = "Fecha";
-            this.COL_Fecha.Frozen = true;
-            this.COL_Fecha.HeaderText = "Fecha";
-            this.COL_Fecha.Name = "COL_Fecha";
-            this.COL_Fecha.ReadOnly = true;
             // 
             // BTN_Eliminar
             // 
@@ -241,37 +197,129 @@
             this.BTN_Cerrar.UseVisualStyleBackColor = false;
             this.BTN_Cerrar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // BTN_General
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(964, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 32);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "General";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.BTN_General.BackColor = System.Drawing.Color.White;
+            this.BTN_General.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_General.FlatAppearance.BorderSize = 2;
+            this.BTN_General.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_General.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_General.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_General.Location = new System.Drawing.Point(964, 165);
+            this.BTN_General.Name = "BTN_General";
+            this.BTN_General.Size = new System.Drawing.Size(111, 32);
+            this.BTN_General.TabIndex = 41;
+            this.BTN_General.Text = "General";
+            this.BTN_General.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_General.UseVisualStyleBackColor = false;
+            this.BTN_General.Click += new System.EventHandler(this.BTN_General_Click);
             // 
-            // button2
+            // BTN_Dental
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(964, 203);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 32);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "Dental";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.BTN_Dental.BackColor = System.Drawing.Color.White;
+            this.BTN_Dental.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Dental.FlatAppearance.BorderSize = 2;
+            this.BTN_Dental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Dental.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Dental.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Dental.Location = new System.Drawing.Point(964, 203);
+            this.BTN_Dental.Name = "BTN_Dental";
+            this.BTN_Dental.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Dental.TabIndex = 42;
+            this.BTN_Dental.Text = "Dental";
+            this.BTN_Dental.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Dental.UseVisualStyleBackColor = false;
+            this.BTN_Dental.Click += new System.EventHandler(this.BTN_Dental_Click);
+            // 
+            // Menu_General
+            // 
+            this.Menu_General.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OP_Recetas});
+            this.Menu_General.Name = "Menu_General";
+            this.Menu_General.Size = new System.Drawing.Size(181, 48);
+            // 
+            // OP_Recetas
+            // 
+            this.OP_Recetas.Name = "OP_Recetas";
+            this.OP_Recetas.Size = new System.Drawing.Size(180, 22);
+            this.OP_Recetas.Text = "Recetas";
+            this.OP_Recetas.Click += new System.EventHandler(this.OP_Recetas_Click);
+            // 
+            // Menu_Dental
+            // 
+            this.Menu_Dental.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OP_Odontograma});
+            this.Menu_Dental.Name = "contextMenuStrip1";
+            this.Menu_Dental.Size = new System.Drawing.Size(150, 26);
+            // 
+            // OP_Odontograma
+            // 
+            this.OP_Odontograma.Name = "OP_Odontograma";
+            this.OP_Odontograma.Size = new System.Drawing.Size(149, 22);
+            this.OP_Odontograma.Text = "Odontograma";
+            this.OP_Odontograma.Click += new System.EventHandler(this.OP_Odontograma_Click);
+            // 
+            // COL_IdExpediente
+            // 
+            this.COL_IdExpediente.DataPropertyName = "Id_Expediente";
+            this.COL_IdExpediente.Frozen = true;
+            this.COL_IdExpediente.HeaderText = "IdExpediente";
+            this.COL_IdExpediente.Name = "COL_IdExpediente";
+            this.COL_IdExpediente.ReadOnly = true;
+            this.COL_IdExpediente.Visible = false;
+            // 
+            // COL_IdEmpleado
+            // 
+            this.COL_IdEmpleado.DataPropertyName = "Odontologo";
+            this.COL_IdEmpleado.Frozen = true;
+            this.COL_IdEmpleado.HeaderText = "Odontólogo";
+            this.COL_IdEmpleado.Name = "COL_IdEmpleado";
+            this.COL_IdEmpleado.ReadOnly = true;
+            this.COL_IdEmpleado.Width = 250;
+            // 
+            // COL_Paciente
+            // 
+            this.COL_Paciente.DataPropertyName = "Paciente";
+            this.COL_Paciente.Frozen = true;
+            this.COL_Paciente.HeaderText = "Paciente";
+            this.COL_Paciente.Name = "COL_Paciente";
+            this.COL_Paciente.ReadOnly = true;
+            this.COL_Paciente.Width = 250;
+            // 
+            // COL_Enfermedad
+            // 
+            this.COL_Enfermedad.DataPropertyName = "Enfermedad";
+            this.COL_Enfermedad.Frozen = true;
+            this.COL_Enfermedad.HeaderText = "Enfermedad(es)";
+            this.COL_Enfermedad.Name = "COL_Enfermedad";
+            this.COL_Enfermedad.ReadOnly = true;
+            this.COL_Enfermedad.Width = 170;
+            // 
+            // COL_Alergia
+            // 
+            this.COL_Alergia.DataPropertyName = "Alergia";
+            this.COL_Alergia.Frozen = true;
+            this.COL_Alergia.HeaderText = "Alergia(s)";
+            this.COL_Alergia.Name = "COL_Alergia";
+            this.COL_Alergia.ReadOnly = true;
+            this.COL_Alergia.Width = 170;
+            // 
+            // COL_Fecha
+            // 
+            this.COL_Fecha.DataPropertyName = "Fecha";
+            this.COL_Fecha.Frozen = true;
+            this.COL_Fecha.HeaderText = "Fecha";
+            this.COL_Fecha.Name = "COL_Fecha";
+            this.COL_Fecha.ReadOnly = true;
+            // 
+            // IdPaciente
+            // 
+            this.IdPaciente.DataPropertyName = "Id_Paciente";
+            this.IdPaciente.Frozen = true;
+            this.IdPaciente.HeaderText = "IdPaciente";
+            this.IdPaciente.Name = "IdPaciente";
+            this.IdPaciente.ReadOnly = true;
+            this.IdPaciente.Visible = false;
             // 
             // WIN_CAT_Expediente_T
             // 
@@ -280,8 +328,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1089, 406);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BTN_Dental);
+            this.Controls.Add(this.BTN_General);
             this.Controls.Add(this.BTN_Cerrar);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
@@ -296,6 +344,8 @@
             this.PNL_Banner.ResumeLayout(false);
             this.PNL_Banner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).EndInit();
+            this.Menu_General.ResumeLayout(false);
+            this.Menu_Dental.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -309,13 +359,18 @@
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;
         private System.Windows.Forms.Button BTN_Cerrar;
+        private System.Windows.Forms.Button BTN_General;
+        private System.Windows.Forms.Button BTN_Dental;
+        private System.Windows.Forms.ContextMenuStrip Menu_General;
+        private System.Windows.Forms.ToolStripMenuItem OP_Recetas;
+        private System.Windows.Forms.ContextMenuStrip Menu_Dental;
+        private System.Windows.Forms.ToolStripMenuItem OP_Odontograma;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdExpediente;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Paciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Enfermedad;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Alergia;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Fecha;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPaciente;
     }
 }

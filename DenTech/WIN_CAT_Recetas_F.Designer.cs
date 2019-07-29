@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // WIN_CAT_Recetas_F
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "WIN_CAT_Recetas_F";
+            this.Name = "WIN_CAT_Recetas_F";
+            this.Text = "DenTech - Recetas";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

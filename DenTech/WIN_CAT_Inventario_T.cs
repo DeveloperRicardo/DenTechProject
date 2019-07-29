@@ -14,6 +14,7 @@ namespace DenTech
 {
     public partial class WIN_CAT_Inventario_T : WIN_Template
     {
+        WIN_GLO_Principal Principal = new WIN_GLO_Principal();
         ConexionSQL BD = new ConexionSQL();
         public WIN_CAT_Inventario_T()
         {
@@ -22,8 +23,12 @@ namespace DenTech
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
-            WIN_CAT_Inventario_F window = new WIN_CAT_Inventario_F();
-            window.ShowDialog();
+            //WIN_CAT_Inventario_F window = new WIN_CAT_Inventario_F();
+            //window.ShowDialog();
+            var form = Application.OpenForms.OfType<WIN_CAT_Inventario_F>().FirstOrDefault();
+            WIN_CAT_Inventario_F frm = form ?? new WIN_CAT_Inventario_F();
+            frm.MdiParent = Principal.PNL_Ventanas.MdiForm;
+            frm.ShowDialog();
             Refrescar();
         }
 

@@ -11,7 +11,7 @@ namespace DenTech
     public class MetodosGlobales
     {
         #region Mensajes
-        public void Mensajes(int Mensaje, string Campo = "")
+        public void Mensajes(int Mensaje, string Excepcion = "")
         {
             switch (Mensaje)
             {
@@ -19,10 +19,10 @@ namespace DenTech
                     MessageBox.Show("Conexión exitosa.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case 2:
-                    MessageBox.Show("Conexión no exitosa.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Conexión no exitosa.\n\nDetalles del error:\n"+Excepcion, "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 3:
-                    MessageBox.Show("El campo " + Campo + " no puede ir vacío.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Los campos no pueden estar vacíos.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 4:
                     MessageBox.Show("Ya existen todas las tablas.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -57,9 +57,9 @@ namespace DenTech
                     Miconexion.Close();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Mensajes(2);
+                Mensajes(2, ex.Message);
                 Conexion = false;
             }
             return Conexion;
@@ -183,9 +183,9 @@ namespace DenTech
                     Miconexion.Close();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Mensajes(2);
+                Mensajes(2,ex.Message);
             }
         }
         #endregion
