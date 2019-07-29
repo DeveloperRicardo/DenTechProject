@@ -202,6 +202,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="WIN_CAT_Citas_F.resx">
+      <DependentUpon>WIN_CAT_Citas_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Citas_T.resx">
+      <DependentUpon>WIN_CAT_Citas_T.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Inventario_F.resx">
       <DependentUpon>WIN_CAT_Inventario_F.cs</DependentUpon>
     </EmbeddedResource>
