@@ -89,8 +89,14 @@ namespace DenTech
 
             // Se estructura el query
             cmd.CommandText = "Select " +
-                "Id_Cita, Id_Empleado, Id_Paciente, Fecha_Cita " +
-                "From CITAS Order By Fecha_Cita Desc";
+                "Id_Cita,  " +
+                "NombreOdontologo = (EMPLEADOS.Nombre + ' ' + EMPLEADOS.ApellidoP + ' ' + EMPLEADOS.ApellidoM), " +
+                "NombrePaciente = (PACIENTES.Nombre + ' ' + PACIENTES.ApellidoP + ' ' + PACIENTES.ApellidoM), " +
+                "Fecha_Cita " +
+                "From CITAS " +
+                "Left Join EMPLEADOS on EMPLEADOS.Id_Empleado = CITAS.Id_Empleado " +
+                "Left Join PACIENTES on PACIENTES.Id_Paciente = CITAS.Id_Paciente " +
+                "Order By Fecha_Cita Desc";
             cmd.ExecuteNonQuery(); // Se ejecuta
 
             // Se crea un adaptador de sql, guardará el data source que contiene la información de la consulta

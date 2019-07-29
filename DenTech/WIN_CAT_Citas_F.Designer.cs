@@ -183,11 +183,12 @@
             // EDT_Fecha
             // 
             this.EDT_Fecha.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.EDT_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.EDT_Fecha.Location = new System.Drawing.Point(135, 180);
             this.EDT_Fecha.Name = "EDT_Fecha";
-            this.EDT_Fecha.Size = new System.Drawing.Size(257, 25);
+            this.EDT_Fecha.Size = new System.Drawing.Size(112, 25);
             this.EDT_Fecha.TabIndex = 49;
-            this.EDT_Fecha.Value = new System.DateTime(2019, 6, 24, 0, 0, 0, 0);
+            this.EDT_Fecha.Value = new System.DateTime(2019, 7, 28, 0, 0, 0, 0);
             // 
             // STC_Fecha
             // 

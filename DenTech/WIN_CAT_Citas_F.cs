@@ -53,16 +53,18 @@ namespace DenTech
                         gnIdOdontologo = Convert.ToInt32(Reader[0].ToString());
                         gnIdPaciente = Convert.ToInt32(Reader[1].ToString());
                         EDT_Fecha.Value = Convert.ToDateTime(Reader[2]);
-                        
+                        Reader.Close(); // Se libera
+
                         // Busca al odontólogo, se estructura el query
-                        cmd.CommandText = "Select " +
+                        SqlCommand cmd2 = BD.conexion.CreateCommand();
+                        cmd2.CommandText = "Select " +
                             "Usuario, " +
                             "NombreCompleto = (Nombre + ' ' + ApellidoP + ' ' + ApellidoM) " +
                             "From EMPLEADOS " +
                             "Where Id_Empleado = " + gnIdOdontologo;
 
                         // Ejecuta el query y almacena los datos consultados
-                        SqlDataReader Reader2 = cmd.ExecuteReader();
+                        SqlDataReader Reader2 = cmd2.ExecuteReader();
                         Reader2.Read();
 
                         // Revisa si cuenta con información
@@ -81,14 +83,15 @@ namespace DenTech
                         Reader2.Close(); // Se libera
 
                         // Busca al paciente, se estrutura el query
-                        cmd.CommandText = "Select " +
+                        SqlCommand cmd3 = BD.conexion.CreateCommand();
+                        cmd3.CommandText = "Select " +
                             "Nombre, " +
                             "NombreCompleto = (Nombre + ' ' + ApellidoP + ' ' + ApellidoM) " +
                             "From PACIENTES " +
                             "Where Id_Paciente = " + gnIdPaciente;
 
                         // Ejecuta el query y almacena los datos consultados
-                        SqlDataReader Reader3 = cmd.ExecuteReader();
+                        SqlDataReader Reader3 = cmd3.ExecuteReader();
                         Reader3.Read();
 
                         // Revisamos si cuenta con información
@@ -106,7 +109,6 @@ namespace DenTech
                         }
                         Reader3.Close(); // Se libera
                     }
-                    Reader.Close(); // Se libera
                 }
                 else
                 {
@@ -203,7 +205,7 @@ namespace DenTech
                 // Se abre la conexión y se estructura el query para agregar el registro
                 SqlCommand cmd = BD.conexion.CreateCommand();
                 cmd.CommandText = "Insert Into CITAS(Id_Empleado, Id_Paciente, Fecha_Cita) Values(" +
-                    gnIdOdontologo + ", " + gnIdPaciente + ", '" + EDT_Fecha.Value + "')";
+                    gnIdOdontologo + ", " + gnIdPaciente + ", '" + EDT_Fecha.Value.ToString("yyyy-MM-dd") + "')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro agregado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -214,7 +216,7 @@ namespace DenTech
                 cmd.CommandText = "Update CITAS Set " +
                     "Id_Empleado = " + gnIdOdontologo + ", " +
                     "Id_Paciente = " + gnIdPaciente + ", " +
-                    "Fecha_Cita = '" + EDT_Fecha.Value + "' " +
+                    "Fecha_Cita = '" + EDT_Fecha.Value.ToString("yyyy-MM-dd") + "' " +
                     "Where Id_Cita = " + gnIdCita;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro modificado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
