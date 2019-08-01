@@ -26,7 +26,8 @@ Tratamiento varchar(100),Fecha_Inicio date, Fecha_Final date, Fecha_Diag date)
 
 CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int)
 
-
+CREATE TABLE ODONTOGRAMA(Id_Odontograma int primary key identity, Id_Paciente foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade,
+Fecha_Registro date, Descripcion varchar(100), )
 INSERT INTO SANGRE VALUES('A+');
 INSERT INTO SANGRE VALUES('A-');
 INSERT INTO SANGRE VALUES('B+');
@@ -35,3 +36,5 @@ INSERT INTO SANGRE VALUES('AB+');
 INSERT INTO SANGRE VALUES('AB-');
 INSERT INTO SANGRE VALUES('O+');
 INSERT INTO SANGRE VALUES('O-');
+
+select * from EMPLEADOS

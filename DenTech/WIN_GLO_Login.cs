@@ -16,6 +16,7 @@ namespace DenTech
     {
         MetodosGlobales Glo = new MetodosGlobales();
         ConexionSQL BD = new ConexionSQL();
+        DataTable ds = new DataTable();
         public WIN_GLO_Login()
         {
             InitializeComponent();
@@ -29,16 +30,17 @@ namespace DenTech
         {
             if (BD.Conexion(true))
             {
+                ds.Clear();
                 BD.conexion.CreateCommand();
                 SqlCommand comando = BD.conexion.CreateCommand();
                 comando.CommandText = "SELECT Id_Empleado, Usuario FROM EMPLEADOS";
                 SqlDataAdapter adaptador = new SqlDataAdapter();
                 adaptador.SelectCommand = comando;
-                var ds = new DataTable();
                 adaptador.Fill(ds);
                 COMBO_Usuario.DataSource = ds;
                 COMBO_Usuario.ValueMember = "Id_Empleado";
                 COMBO_Usuario.DisplayMember = "Usuario";
+                COMBO_Usuario.Refresh();
             }
             else
             {
@@ -83,10 +85,19 @@ namespace DenTech
         private void BTN_Config_Click(object sender, EventArgs e)
         {
             WIN_GLO_Login_F LoginF = new WIN_GLO_Login_F(true);
-            LoginF.Show();
+            LoginF.ShowDialog();
             if (Settings.Default.ConexionValida == true)
             {
-                this.Refresh();
+                //ds.Clear();
+                //COMBO_Usuario.DataSource = null;
+                //COMBO_Usuario.ValueMember = null;
+                //COMBO_Usuario.DisplayMember = null;
+                //COMBO_Usuario.Refresh();
+                ////                BD.Conexion(false);
+                if (BD.Conexion(true))
+                {
+                    Conexion();
+                }
             }
         }
         //Método que verifica que los campos tengan información
