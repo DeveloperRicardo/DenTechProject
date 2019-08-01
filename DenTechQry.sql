@@ -6,7 +6,10 @@ Tipo_Usuario int)
 
 CREATE TABLE SANGRE(Id_Sangre int primary key identity, Descripcion varchar(3))
 
-CREATE TABLE SERVICIOS(Id_Servicios int primary key identity, Descripcion varchar(100),Precio decimal(10,2))
+CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int)
+
+CREATE TABLE SERVICIOS(Id_Servicios int primary key identity, Id_Inventario int foreign key references INVENTARIO(Id_Inventario) on update cascade on delete cascade,
+Descripcion varchar(100),Precio decimal(10,2))
 
 CREATE TABLE PACIENTES(Id_Paciente int primary key identity, Id_Sangre int foreign key references SANGRE(Id_Sangre) on update cascade on delete cascade,
 Nombre varchar(20),ApellidoP varchar(12),ApellidoM varchar(12), Edad int,Sexo int, Direccion varchar(30),Telefono varchar(10),Tel_Emergencia varchar(10))
@@ -28,6 +31,11 @@ CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varc
 
 CREATE TABLE ODONTOGRAMA(Id_Odontograma int primary key identity, Id_Paciente foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade,
 Fecha_Registro date, Descripcion varchar(100), )
+
+--TABLA DE ANTECEDENTES
+
+--TABLA DE ARCHIVOS ADJUNTOS
+
 INSERT INTO SANGRE VALUES('A+');
 INSERT INTO SANGRE VALUES('A-');
 INSERT INTO SANGRE VALUES('B+');
