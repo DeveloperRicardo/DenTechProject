@@ -76,6 +76,12 @@
     <Compile Include="WIN_CAT_Citas_T.Designer.cs">
       <DependentUpon>WIN_CAT_Citas_T.cs</DependentUpon>
     </Compile>
+    <Compile Include="WIN_CAT_Diente_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_Diente_F.Designer.cs">
+      <DependentUpon>WIN_CAT_Diente_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="WIN_CAT_Inventario_F.cs">
       <SubType>Form</SubType>
     </Compile>
