@@ -90,6 +90,7 @@ namespace DenTech
             // Se estructura el query
             cmd.CommandText = "Select " +
                 "Id_Cita,  " +
+                "CITAS.Id_Paciente,  " +
                 "NombreOdontologo = (EMPLEADOS.Nombre + ' ' + EMPLEADOS.ApellidoP + ' ' + EMPLEADOS.ApellidoM), " +
                 "NombrePaciente = (PACIENTES.Nombre + ' ' + PACIENTES.ApellidoP + ' ' + PACIENTES.ApellidoM), " +
                 "Fecha_Cita " +
@@ -105,6 +106,18 @@ namespace DenTech
 
             // Se inserta la información en el DataGridView
             DGV_TablaCitas.DataSource = Data;
+        }
+
+        private void BTN_Recetas_Click(object sender, EventArgs e)
+        {
+            // Verifica que la tabla tenga información
+            if (DGV_TablaCitas.RowCount == 0)
+                return;
+
+            // Se insatncia un objeto de tipo ventana para abrirla y refrescar la tabla
+            WIN_CAT_Recetas_T Window = new WIN_CAT_Recetas_T((int)DGV_TablaCitas.CurrentRow.Cells[1].Value);
+            Window.ShowDialog();
+            Refrescar();
         }
     }
 }

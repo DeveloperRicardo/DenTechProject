@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Citas_T));
             this.PNL_Banner = new System.Windows.Forms.Panel();
             this.STC_Titulo = new System.Windows.Forms.Label();
             this.DGV_TablaCitas = new System.Windows.Forms.DataGridView();
-            this.COL_IdCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Odontologo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.BTN_Recetas = new System.Windows.Forms.Button();
+            this.COL_IdCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Odontologo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PNL_Banner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaCitas)).BeginInit();
             this.SuspendLayout();
@@ -76,17 +78,18 @@
             this.DGV_TablaCitas.AllowUserToOrderColumns = true;
             this.DGV_TablaCitas.BackgroundColor = System.Drawing.Color.White;
             this.DGV_TablaCitas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.DGV_TablaCitas.ColumnHeadersHeight = 30;
             this.DGV_TablaCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_IdCita,
+            this.IdPaciente,
             this.COL_Odontologo,
             this.COL_Paciente,
             this.COL_Fecha});
@@ -96,59 +99,24 @@
             this.DGV_TablaCitas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaCitas.Name = "DGV_TablaCitas";
             this.DGV_TablaCitas.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.DGV_TablaCitas.RowHeadersVisible = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_TablaCitas.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_TablaCitas.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DGV_TablaCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaCitas.Size = new System.Drawing.Size(625, 211);
             this.DGV_TablaCitas.TabIndex = 33;
-            // 
-            // COL_IdCita
-            // 
-            this.COL_IdCita.DataPropertyName = "Id_Cita";
-            this.COL_IdCita.Frozen = true;
-            this.COL_IdCita.HeaderText = "IdCitas";
-            this.COL_IdCita.Name = "COL_IdCita";
-            this.COL_IdCita.ReadOnly = true;
-            this.COL_IdCita.Visible = false;
-            // 
-            // COL_Odontologo
-            // 
-            this.COL_Odontologo.DataPropertyName = "NombreOdontologo";
-            this.COL_Odontologo.Frozen = true;
-            this.COL_Odontologo.HeaderText = "Odontólogo";
-            this.COL_Odontologo.Name = "COL_Odontologo";
-            this.COL_Odontologo.ReadOnly = true;
-            this.COL_Odontologo.Width = 250;
-            // 
-            // COL_Paciente
-            // 
-            this.COL_Paciente.DataPropertyName = "NombrePaciente";
-            this.COL_Paciente.Frozen = true;
-            this.COL_Paciente.HeaderText = "Paciente";
-            this.COL_Paciente.Name = "COL_Paciente";
-            this.COL_Paciente.ReadOnly = true;
-            this.COL_Paciente.Width = 250;
-            // 
-            // COL_Fecha
-            // 
-            this.COL_Fecha.DataPropertyName = "Fecha_Cita";
-            this.COL_Fecha.HeaderText = "Fecha";
-            this.COL_Fecha.Name = "COL_Fecha";
-            this.COL_Fecha.ReadOnly = true;
-            this.COL_Fecha.Width = 120;
             // 
             // BTN_Eliminar
             // 
@@ -217,18 +185,81 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // BTN_Recetas
+            // 
+            this.BTN_Recetas.BackColor = System.Drawing.Color.White;
+            this.BTN_Recetas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Recetas.FlatAppearance.BorderSize = 2;
+            this.BTN_Recetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Recetas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Recetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Recetas.Location = new System.Drawing.Point(643, 165);
+            this.BTN_Recetas.Name = "BTN_Recetas";
+            this.BTN_Recetas.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Recetas.TabIndex = 39;
+            this.BTN_Recetas.Text = "Recetas";
+            this.BTN_Recetas.UseVisualStyleBackColor = false;
+            this.BTN_Recetas.Click += new System.EventHandler(this.BTN_Recetas_Click);
+            // 
+            // COL_IdCita
+            // 
+            this.COL_IdCita.DataPropertyName = "Id_Cita";
+            this.COL_IdCita.Frozen = true;
+            this.COL_IdCita.HeaderText = "IdCitas";
+            this.COL_IdCita.Name = "COL_IdCita";
+            this.COL_IdCita.ReadOnly = true;
+            this.COL_IdCita.Visible = false;
+            // 
+            // IdPaciente
+            // 
+            this.IdPaciente.DataPropertyName = "Id_Paciente";
+            this.IdPaciente.Frozen = true;
+            this.IdPaciente.HeaderText = "IdPaciente";
+            this.IdPaciente.Name = "IdPaciente";
+            this.IdPaciente.ReadOnly = true;
+            this.IdPaciente.Visible = false;
+            // 
+            // COL_Odontologo
+            // 
+            this.COL_Odontologo.DataPropertyName = "NombreOdontologo";
+            this.COL_Odontologo.Frozen = true;
+            this.COL_Odontologo.HeaderText = "Odontólogo";
+            this.COL_Odontologo.Name = "COL_Odontologo";
+            this.COL_Odontologo.ReadOnly = true;
+            this.COL_Odontologo.Width = 250;
+            // 
+            // COL_Paciente
+            // 
+            this.COL_Paciente.DataPropertyName = "NombrePaciente";
+            this.COL_Paciente.Frozen = true;
+            this.COL_Paciente.HeaderText = "Paciente";
+            this.COL_Paciente.Name = "COL_Paciente";
+            this.COL_Paciente.ReadOnly = true;
+            this.COL_Paciente.Width = 250;
+            // 
+            // COL_Fecha
+            // 
+            this.COL_Fecha.DataPropertyName = "Fecha_Cita";
+            this.COL_Fecha.HeaderText = "Fecha";
+            this.COL_Fecha.Name = "COL_Fecha";
+            this.COL_Fecha.ReadOnly = true;
+            this.COL_Fecha.Width = 120;
+            // 
             // WIN_CAT_Citas_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(767, 336);
+            this.Controls.Add(this.BTN_Recetas);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.BTN_Agregar);
             this.Controls.Add(this.DGV_TablaCitas);
             this.Controls.Add(this.PNL_Banner);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WIN_CAT_Citas_T";
             this.Text = "DenTech - Catálogo Citas";
             this.Load += new System.EventHandler(this.WIN_CAT_Citas_T_Load);
@@ -244,13 +275,15 @@
         private System.Windows.Forms.Panel PNL_Banner;
         private System.Windows.Forms.Label STC_Titulo;
         private System.Windows.Forms.DataGridView DGV_TablaCitas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdCita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Odontologo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Paciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Fecha;
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTN_Recetas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdCita;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Odontologo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Paciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Fecha;
     }
 }

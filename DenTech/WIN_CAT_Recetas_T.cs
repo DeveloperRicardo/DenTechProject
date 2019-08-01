@@ -14,9 +14,11 @@ namespace DenTech
 {
     public partial class WIN_CAT_Recetas_T : Form
     {
+        int IdPaciente = 0;
         ConexionSQL BD = new ConexionSQL();
-        public WIN_CAT_Recetas_T(int IdPaciente)
+        public WIN_CAT_Recetas_T(int Id_Paciente)
         {
+            IdPaciente = Id_Paciente;
             InitializeComponent();
         }
 
@@ -29,7 +31,7 @@ namespace DenTech
         {
             BD.conexion.CreateCommand();
             SqlCommand cmd = BD.conexion.CreateCommand();
-            string query = "select RECETA.Diagnostico,RECETA.Medicamento,RECETA.Tratamiento,RECETA.Fecha_Inicio,RECETA.Fecha_Final,RECETA.Fecha_Diag from RECETA";
+            string query = "select RECETA.Diagnostico,RECETA.Medicamento,RECETA.Tratamiento,RECETA.Fecha_Inicio,RECETA.Fecha_Final,RECETA.Fecha_Diag from RECETA WHERE Id_Paciente = " + IdPaciente;
             switch (Settings.Default.TipoUsuario)
             {
                 case 1:
