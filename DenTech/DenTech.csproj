@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -217,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Citas_T.resx">
       <DependentUpon>WIN_CAT_Citas_T.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Diente_F.resx">
+      <DependentUpon>WIN_CAT_Diente_F.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Inventario_F.resx">
       <DependentUpon>WIN_CAT_Inventario_F.cs</DependentUpon>

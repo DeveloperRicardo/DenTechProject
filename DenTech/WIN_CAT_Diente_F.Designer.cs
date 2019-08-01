@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // WIN_CAT_Diente_F
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "WIN_CAT_Diente_F";
+            this.Name = "WIN_CAT_Diente_F";
+            this.Load += new System.EventHandler(this.WIN_CAT_Diente_F_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
