@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_Citas_F : Form
+    public partial class WIN_CAT_Citas_F : WIN_Template
     {
         // Variables y objetos globales
         int gnIdCita = 0, gnIdOdontologo = 0, gnIdPaciente = 0;

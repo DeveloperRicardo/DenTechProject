@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_Odontograma_T : Form
+    public partial class WIN_CAT_Odontograma_T : WIN_Template
     {
         public WIN_CAT_Odontograma_T(int IdPaciente = 0)
         {

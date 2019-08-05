@@ -53,7 +53,7 @@
             this.BTN_Cerrar.FlatAppearance.BorderSize = 0;
             this.BTN_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cerrar.Image")));
-            this.BTN_Cerrar.Location = new System.Drawing.Point(306, 228);
+            this.BTN_Cerrar.Location = new System.Drawing.Point(306, 249);
             this.BTN_Cerrar.Name = "BTN_Cerrar";
             this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Cerrar.TabIndex = 32;
@@ -66,7 +66,7 @@
             this.BTN_Aceptar.FlatAppearance.BorderSize = 0;
             this.BTN_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Aceptar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Aceptar.Image")));
-            this.BTN_Aceptar.Location = new System.Drawing.Point(248, 228);
+            this.BTN_Aceptar.Location = new System.Drawing.Point(248, 249);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Aceptar.TabIndex = 31;
@@ -77,7 +77,7 @@
             // 
             this.STC_FechaFinal.AutoSize = true;
             this.STC_FechaFinal.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_FechaFinal.Location = new System.Drawing.Point(17, 188);
+            this.STC_FechaFinal.Location = new System.Drawing.Point(17, 209);
             this.STC_FechaFinal.Name = "STC_FechaFinal";
             this.STC_FechaFinal.Size = new System.Drawing.Size(85, 20);
             this.STC_FechaFinal.TabIndex = 30;
@@ -87,7 +87,7 @@
             // 
             this.STC_FechaInicio.AutoSize = true;
             this.STC_FechaInicio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_FechaInicio.Location = new System.Drawing.Point(17, 157);
+            this.STC_FechaInicio.Location = new System.Drawing.Point(17, 178);
             this.STC_FechaInicio.Name = "STC_FechaInicio";
             this.STC_FechaInicio.Size = new System.Drawing.Size(90, 20);
             this.STC_FechaInicio.TabIndex = 29;
@@ -97,7 +97,7 @@
             // 
             this.STC_Cantidad.AutoSize = true;
             this.STC_Cantidad.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_Cantidad.Location = new System.Drawing.Point(17, 96);
+            this.STC_Cantidad.Location = new System.Drawing.Point(17, 117);
             this.STC_Cantidad.Name = "STC_Cantidad";
             this.STC_Cantidad.Size = new System.Drawing.Size(72, 20);
             this.STC_Cantidad.TabIndex = 28;
@@ -107,7 +107,7 @@
             // 
             this.STC_Nombre.AutoSize = true;
             this.STC_Nombre.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_Nombre.Location = new System.Drawing.Point(17, 65);
+            this.STC_Nombre.Location = new System.Drawing.Point(17, 86);
             this.STC_Nombre.Name = "STC_Nombre";
             this.STC_Nombre.Size = new System.Drawing.Size(67, 20);
             this.STC_Nombre.TabIndex = 27;
@@ -116,7 +116,7 @@
             // EDT_Nombre
             // 
             this.EDT_Nombre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EDT_Nombre.Location = new System.Drawing.Point(126, 63);
+            this.EDT_Nombre.Location = new System.Drawing.Point(126, 84);
             this.EDT_Nombre.Name = "EDT_Nombre";
             this.EDT_Nombre.Size = new System.Drawing.Size(232, 25);
             this.EDT_Nombre.TabIndex = 23;
@@ -146,7 +146,7 @@
             // DT_FechaInicio
             // 
             this.DT_FechaInicio.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.DT_FechaInicio.Location = new System.Drawing.Point(126, 157);
+            this.DT_FechaInicio.Location = new System.Drawing.Point(126, 178);
             this.DT_FechaInicio.Name = "DT_FechaInicio";
             this.DT_FechaInicio.Size = new System.Drawing.Size(232, 25);
             this.DT_FechaInicio.TabIndex = 33;
@@ -155,7 +155,7 @@
             // DT_FechaFinal
             // 
             this.DT_FechaFinal.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.DT_FechaFinal.Location = new System.Drawing.Point(126, 188);
+            this.DT_FechaFinal.Location = new System.Drawing.Point(126, 209);
             this.DT_FechaFinal.Name = "DT_FechaFinal";
             this.DT_FechaFinal.Size = new System.Drawing.Size(232, 25);
             this.DT_FechaFinal.TabIndex = 34;
@@ -163,7 +163,7 @@
             // NUD_Cantidad
             // 
             this.NUD_Cantidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NUD_Cantidad.Location = new System.Drawing.Point(126, 95);
+            this.NUD_Cantidad.Location = new System.Drawing.Point(126, 116);
             this.NUD_Cantidad.Name = "NUD_Cantidad";
             this.NUD_Cantidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.NUD_Cantidad.Size = new System.Drawing.Size(55, 25);
@@ -174,7 +174,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 128);
+            this.label1.Location = new System.Drawing.Point(17, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 39;
@@ -188,7 +188,7 @@
             this.COMBO_Opcion.Items.AddRange(new object[] {
             "Clínica",
             "Intendencia"});
-            this.COMBO_Opcion.Location = new System.Drawing.Point(126, 126);
+            this.COMBO_Opcion.Location = new System.Drawing.Point(126, 147);
             this.COMBO_Opcion.Name = "COMBO_Opcion";
             this.COMBO_Opcion.Size = new System.Drawing.Size(232, 25);
             this.COMBO_Opcion.TabIndex = 38;
@@ -199,7 +199,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(379, 295);
+            this.ClientSize = new System.Drawing.Size(379, 310);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.COMBO_Opcion);
             this.Controls.Add(this.NUD_Cantidad);
@@ -217,8 +217,22 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "WIN_CAT_Inventario_F";
-            this.Text = "DenTech - Inventario";
+            this.TituloBanner = "Inventario";
+            this.TituloVentana = "      DenTech - Inventario";
             this.Load += new System.EventHandler(this.WIN_CAT_Inventario_F_Load);
+            this.Controls.SetChildIndex(this.PNL_Banner, 0);
+            this.Controls.SetChildIndex(this.EDT_Nombre, 0);
+            this.Controls.SetChildIndex(this.STC_Nombre, 0);
+            this.Controls.SetChildIndex(this.STC_Cantidad, 0);
+            this.Controls.SetChildIndex(this.STC_FechaInicio, 0);
+            this.Controls.SetChildIndex(this.STC_FechaFinal, 0);
+            this.Controls.SetChildIndex(this.BTN_Aceptar, 0);
+            this.Controls.SetChildIndex(this.BTN_Cerrar, 0);
+            this.Controls.SetChildIndex(this.DT_FechaInicio, 0);
+            this.Controls.SetChildIndex(this.DT_FechaFinal, 0);
+            this.Controls.SetChildIndex(this.NUD_Cantidad, 0);
+            this.Controls.SetChildIndex(this.COMBO_Opcion, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.PNL_Banner.ResumeLayout(false);
             this.PNL_Banner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Cantidad)).EndInit();

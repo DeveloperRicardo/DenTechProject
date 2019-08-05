@@ -105,8 +105,6 @@ namespace DenTech
             // Verifica qe la conexión sea exitosa
             if (BD.Conexion(true))
                 Refrescar();
-            TituloVentana += "Inventario";
-            TituloBanner = "Inventario";
         }
     }
 }

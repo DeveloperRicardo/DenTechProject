@@ -224,6 +224,8 @@
             this.Controls.Add(this.BTN_Cerrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WIN_CAT_Inventario_T";
+            this.TituloBanner = "Inventario";
+            this.TituloVentana = "      DenTech - Inventario";
             this.Load += new System.EventHandler(this.WIN_CAT_Inventario_T_Load);
             this.Controls.SetChildIndex(this.BTN_Cerrar, 0);
             this.Controls.SetChildIndex(this.DGV_TablaProducto, 0);

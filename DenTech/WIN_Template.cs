@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Resources;
 
 namespace DenTech
 {
@@ -14,6 +15,7 @@ namespace DenTech
     {
         private Point pos = Point.Empty;
         private bool move = false;
+        string resName = "";
         public WIN_Template()
         {
             InitializeComponent();
@@ -41,12 +43,16 @@ namespace DenTech
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                TB_Maximizar.Image = System.Drawing.Image.FromFile(@"D:\Desktop\ControlBox Visual Studio\Maximize 1.png");
+                resName = $"Maximize1"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
+                TB_Maximizar.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
+                //TB_Maximizar.Image = System.Drawing.Image.FromFile(@"D:\Desktop\ControlBox Visual Studio\Maximize 1.png");
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
-                TB_Maximizar.Image = System.Drawing.Image.FromFile(@"D:\Desktop\ControlBox Visual Studio\Maximize 2.png");
+                resName = $"Maximize2"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
+                TB_Maximizar.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
+                //TB_Maximizar.Image = System.Drawing.Image.FromFile(@"D:\Desktop\ControlBox Visual Studio\Maximize 2.png");
             }
         }
 

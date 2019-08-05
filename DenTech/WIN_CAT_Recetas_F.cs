@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_Recetas_F : Form
+    public partial class WIN_CAT_Recetas_F : WIN_Template
     {
         public WIN_CAT_Recetas_F()
         {

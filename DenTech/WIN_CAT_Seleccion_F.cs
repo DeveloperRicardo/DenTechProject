@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_Seleccion_F : Form
+    public partial class WIN_CAT_Seleccion_F : WIN_Template
     {
         // Variables y objetos globales
         ConexionSQL BD = new ConexionSQL();
@@ -37,9 +37,9 @@ namespace DenTech
             {
                 // Verifica el valor del parámetro y asigna información correspondiente
                 if (gnOpcion == 1)
-                    STC_Titulo.Text = "Seleccionar Usuarios";
+                    TituloBanner = "Seleccionar Usuarios";
                 else
-                    STC_Titulo.Text = "Seleccionar Pacientes";
+                    TituloBanner = "Seleccionar Pacientes";
 
                 Refrescar();
             }

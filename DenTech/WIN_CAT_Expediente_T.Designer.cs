@@ -33,19 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Expediente_T));
-            this.PNL_Banner = new System.Windows.Forms.Panel();
-            this.STC_Titulo = new System.Windows.Forms.Label();
             this.DGV_TablaExpediente = new System.Windows.Forms.DataGridView();
-            this.BTN_Eliminar = new System.Windows.Forms.Button();
-            this.BTN_Modificar = new System.Windows.Forms.Button();
-            this.BTN_Agregar = new System.Windows.Forms.Button();
-            this.BTN_Cerrar = new System.Windows.Forms.Button();
-            this.BTN_General = new System.Windows.Forms.Button();
-            this.BTN_Dental = new System.Windows.Forms.Button();
-            this.Menu_General = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.OP_Recetas = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menu_Dental = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.OP_Odontograma = new System.Windows.Forms.ToolStripMenuItem();
             this.COL_IdExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,33 +41,18 @@
             this.COL_Alergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PNL_Banner.SuspendLayout();
+            this.BTN_Eliminar = new System.Windows.Forms.Button();
+            this.BTN_Modificar = new System.Windows.Forms.Button();
+            this.BTN_Agregar = new System.Windows.Forms.Button();
+            this.BTN_Cerrar = new System.Windows.Forms.Button();
+            this.BTN_General = new System.Windows.Forms.Button();
+            this.BTN_Dental = new System.Windows.Forms.Button();
+            this.Menu_General = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Menu_Dental = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OP_Odontograma = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).BeginInit();
-            this.Menu_General.SuspendLayout();
             this.Menu_Dental.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PNL_Banner
-            // 
-            this.PNL_Banner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PNL_Banner.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.PNL_Banner.Controls.Add(this.STC_Titulo);
-            this.PNL_Banner.Location = new System.Drawing.Point(0, 0);
-            this.PNL_Banner.Name = "PNL_Banner";
-            this.PNL_Banner.Size = new System.Drawing.Size(1092, 44);
-            this.PNL_Banner.TabIndex = 5;
-            // 
-            // STC_Titulo
-            // 
-            this.STC_Titulo.AutoSize = true;
-            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_Titulo.ForeColor = System.Drawing.Color.White;
-            this.STC_Titulo.Location = new System.Drawing.Point(7, 6);
-            this.STC_Titulo.Name = "STC_Titulo";
-            this.STC_Titulo.Size = new System.Drawing.Size(135, 32);
-            this.STC_Titulo.TabIndex = 4;
-            this.STC_Titulo.Text = "Expediente";
             // 
             // DGV_TablaExpediente
             // 
@@ -107,7 +80,7 @@
             this.IdPaciente});
             this.DGV_TablaExpediente.EnableHeadersVisualStyles = false;
             this.DGV_TablaExpediente.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_TablaExpediente.Location = new System.Drawing.Point(13, 51);
+            this.DGV_TablaExpediente.Location = new System.Drawing.Point(13, 76);
             this.DGV_TablaExpediente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaExpediente.Name = "DGV_TablaExpediente";
             this.DGV_TablaExpediente.ReadOnly = true;
@@ -129,135 +102,6 @@
             this.DGV_TablaExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaExpediente.Size = new System.Drawing.Size(945, 215);
             this.DGV_TablaExpediente.TabIndex = 34;
-            // 
-            // BTN_Eliminar
-            // 
-            this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
-            this.BTN_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Eliminar.FlatAppearance.BorderSize = 2;
-            this.BTN_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
-            this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(964, 127);
-            this.BTN_Eliminar.Name = "BTN_Eliminar";
-            this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Eliminar.TabIndex = 39;
-            this.BTN_Eliminar.Text = "Eliminar";
-            this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Eliminar.UseVisualStyleBackColor = false;
-            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
-            // 
-            // BTN_Modificar
-            // 
-            this.BTN_Modificar.BackColor = System.Drawing.Color.White;
-            this.BTN_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Modificar.FlatAppearance.BorderSize = 2;
-            this.BTN_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
-            this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(964, 89);
-            this.BTN_Modificar.Name = "BTN_Modificar";
-            this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Modificar.TabIndex = 38;
-            this.BTN_Modificar.Text = "Modificar";
-            this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Modificar.UseVisualStyleBackColor = false;
-            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
-            // 
-            // BTN_Agregar
-            // 
-            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
-            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
-            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
-            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(964, 51);
-            this.BTN_Agregar.Name = "BTN_Agregar";
-            this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Agregar.TabIndex = 37;
-            this.BTN_Agregar.Text = "Agregar";
-            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Agregar.UseVisualStyleBackColor = false;
-            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
-            // 
-            // BTN_Cerrar
-            // 
-            this.BTN_Cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_Cerrar.FlatAppearance.BorderSize = 0;
-            this.BTN_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cerrar.Image")));
-            this.BTN_Cerrar.Location = new System.Drawing.Point(1023, 342);
-            this.BTN_Cerrar.Name = "BTN_Cerrar";
-            this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cerrar.TabIndex = 40;
-            this.BTN_Cerrar.UseVisualStyleBackColor = false;
-            this.BTN_Cerrar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // BTN_General
-            // 
-            this.BTN_General.BackColor = System.Drawing.Color.White;
-            this.BTN_General.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_General.FlatAppearance.BorderSize = 2;
-            this.BTN_General.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_General.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_General.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_General.Location = new System.Drawing.Point(964, 165);
-            this.BTN_General.Name = "BTN_General";
-            this.BTN_General.Size = new System.Drawing.Size(111, 32);
-            this.BTN_General.TabIndex = 41;
-            this.BTN_General.Text = "General";
-            this.BTN_General.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_General.UseVisualStyleBackColor = false;
-            this.BTN_General.Click += new System.EventHandler(this.BTN_General_Click);
-            // 
-            // BTN_Dental
-            // 
-            this.BTN_Dental.BackColor = System.Drawing.Color.White;
-            this.BTN_Dental.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Dental.FlatAppearance.BorderSize = 2;
-            this.BTN_Dental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Dental.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Dental.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Dental.Location = new System.Drawing.Point(964, 203);
-            this.BTN_Dental.Name = "BTN_Dental";
-            this.BTN_Dental.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Dental.TabIndex = 42;
-            this.BTN_Dental.Text = "Dental";
-            this.BTN_Dental.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Dental.UseVisualStyleBackColor = false;
-            this.BTN_Dental.Click += new System.EventHandler(this.BTN_Dental_Click);
-            // 
-            // Menu_General
-            // 
-            this.Menu_General.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.OP_Recetas});
-            this.Menu_General.Name = "Menu_General";
-            this.Menu_General.Size = new System.Drawing.Size(181, 48);
-            // 
-            // OP_Recetas
-            // 
-            this.OP_Recetas.Name = "OP_Recetas";
-            this.OP_Recetas.Size = new System.Drawing.Size(180, 22);
-            this.OP_Recetas.Text = "Recetas";
-            this.OP_Recetas.Click += new System.EventHandler(this.OP_Recetas_Click);
-            // 
-            // Menu_Dental
-            // 
-            this.Menu_Dental.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.OP_Odontograma});
-            this.Menu_Dental.Name = "contextMenuStrip1";
-            this.Menu_Dental.Size = new System.Drawing.Size(150, 26);
-            // 
-            // OP_Odontograma
-            // 
-            this.OP_Odontograma.Name = "OP_Odontograma";
-            this.OP_Odontograma.Size = new System.Drawing.Size(149, 22);
-            this.OP_Odontograma.Text = "Odontograma";
-            this.OP_Odontograma.Click += new System.EventHandler(this.OP_Odontograma_Click);
             // 
             // COL_IdExpediente
             // 
@@ -321,13 +165,133 @@
             this.IdPaciente.ReadOnly = true;
             this.IdPaciente.Visible = false;
             // 
+            // BTN_Eliminar
+            // 
+            this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
+            this.BTN_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Eliminar.FlatAppearance.BorderSize = 2;
+            this.BTN_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
+            this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Eliminar.Location = new System.Drawing.Point(964, 152);
+            this.BTN_Eliminar.Name = "BTN_Eliminar";
+            this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Eliminar.TabIndex = 39;
+            this.BTN_Eliminar.Text = "Eliminar";
+            this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Eliminar.UseVisualStyleBackColor = false;
+            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
+            // 
+            // BTN_Modificar
+            // 
+            this.BTN_Modificar.BackColor = System.Drawing.Color.White;
+            this.BTN_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Modificar.FlatAppearance.BorderSize = 2;
+            this.BTN_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
+            this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Modificar.Location = new System.Drawing.Point(964, 114);
+            this.BTN_Modificar.Name = "BTN_Modificar";
+            this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Modificar.TabIndex = 38;
+            this.BTN_Modificar.Text = "Modificar";
+            this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Modificar.UseVisualStyleBackColor = false;
+            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
+            // 
+            // BTN_Agregar
+            // 
+            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
+            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
+            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
+            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Agregar.Location = new System.Drawing.Point(964, 76);
+            this.BTN_Agregar.Name = "BTN_Agregar";
+            this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Agregar.TabIndex = 37;
+            this.BTN_Agregar.Text = "Agregar";
+            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Agregar.UseVisualStyleBackColor = false;
+            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
+            // 
+            // BTN_Cerrar
+            // 
+            this.BTN_Cerrar.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_Cerrar.FlatAppearance.BorderSize = 0;
+            this.BTN_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cerrar.Image")));
+            this.BTN_Cerrar.Location = new System.Drawing.Point(1023, 367);
+            this.BTN_Cerrar.Name = "BTN_Cerrar";
+            this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
+            this.BTN_Cerrar.TabIndex = 40;
+            this.BTN_Cerrar.UseVisualStyleBackColor = false;
+            this.BTN_Cerrar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BTN_General
+            // 
+            this.BTN_General.BackColor = System.Drawing.Color.White;
+            this.BTN_General.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_General.FlatAppearance.BorderSize = 2;
+            this.BTN_General.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_General.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_General.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_General.Location = new System.Drawing.Point(964, 190);
+            this.BTN_General.Name = "BTN_General";
+            this.BTN_General.Size = new System.Drawing.Size(111, 32);
+            this.BTN_General.TabIndex = 41;
+            this.BTN_General.Text = "General";
+            this.BTN_General.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_General.UseVisualStyleBackColor = false;
+            this.BTN_General.Click += new System.EventHandler(this.BTN_General_Click);
+            // 
+            // BTN_Dental
+            // 
+            this.BTN_Dental.BackColor = System.Drawing.Color.White;
+            this.BTN_Dental.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Dental.FlatAppearance.BorderSize = 2;
+            this.BTN_Dental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Dental.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Dental.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Dental.Location = new System.Drawing.Point(964, 228);
+            this.BTN_Dental.Name = "BTN_Dental";
+            this.BTN_Dental.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Dental.TabIndex = 42;
+            this.BTN_Dental.Text = "Dental";
+            this.BTN_Dental.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Dental.UseVisualStyleBackColor = false;
+            this.BTN_Dental.Click += new System.EventHandler(this.BTN_Dental_Click);
+            // 
+            // Menu_General
+            // 
+            this.Menu_General.Name = "Menu_General";
+            this.Menu_General.Size = new System.Drawing.Size(181, 26);
+            // 
+            // Menu_Dental
+            // 
+            this.Menu_Dental.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OP_Odontograma});
+            this.Menu_Dental.Name = "contextMenuStrip1";
+            this.Menu_Dental.Size = new System.Drawing.Size(150, 26);
+            // 
+            // OP_Odontograma
+            // 
+            this.OP_Odontograma.Name = "OP_Odontograma";
+            this.OP_Odontograma.Size = new System.Drawing.Size(149, 22);
+            this.OP_Odontograma.Text = "Odontograma";
+            this.OP_Odontograma.Click += new System.EventHandler(this.OP_Odontograma_Click);
+            // 
             // WIN_CAT_Expediente_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1089, 406);
+            this.ClientSize = new System.Drawing.Size(1089, 429);
             this.Controls.Add(this.BTN_Dental);
             this.Controls.Add(this.BTN_General);
             this.Controls.Add(this.BTN_Cerrar);
@@ -335,25 +299,26 @@
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.BTN_Agregar);
             this.Controls.Add(this.DGV_TablaExpediente);
-            this.Controls.Add(this.PNL_Banner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "WIN_CAT_Expediente_T";
-            this.Text = "DenTech - Catálogo Expediente";
+            this.TituloBanner = "Expediente";
+            this.TituloVentana = "      DenTech - Expediente";
             this.Load += new System.EventHandler(this.WIN_CAT_Expediente_T_Load);
-            this.PNL_Banner.ResumeLayout(false);
-            this.PNL_Banner.PerformLayout();
+            this.Controls.SetChildIndex(this.DGV_TablaExpediente, 0);
+            this.Controls.SetChildIndex(this.BTN_Agregar, 0);
+            this.Controls.SetChildIndex(this.BTN_Modificar, 0);
+            this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
+            this.Controls.SetChildIndex(this.BTN_Cerrar, 0);
+            this.Controls.SetChildIndex(this.BTN_General, 0);
+            this.Controls.SetChildIndex(this.BTN_Dental, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).EndInit();
-            this.Menu_General.ResumeLayout(false);
             this.Menu_Dental.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel PNL_Banner;
-        private System.Windows.Forms.Label STC_Titulo;
         private System.Windows.Forms.DataGridView DGV_TablaExpediente;
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
@@ -362,7 +327,6 @@
         private System.Windows.Forms.Button BTN_General;
         private System.Windows.Forms.Button BTN_Dental;
         private System.Windows.Forms.ContextMenuStrip Menu_General;
-        private System.Windows.Forms.ToolStripMenuItem OP_Recetas;
         private System.Windows.Forms.ContextMenuStrip Menu_Dental;
         private System.Windows.Forms.ToolStripMenuItem OP_Odontograma;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdExpediente;

@@ -12,7 +12,7 @@ using DenTech.Properties;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_Inventario_F : Form
+    public partial class WIN_CAT_Inventario_F : WIN_Template
     {
         MetodosGlobales Glo = new MetodosGlobales();
         ConexionSQL BD = new ConexionSQL();

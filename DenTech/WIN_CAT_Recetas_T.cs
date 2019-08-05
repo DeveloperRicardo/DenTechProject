@@ -12,7 +12,7 @@ using DenTech.Properties;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_Recetas_T : Form
+    public partial class WIN_CAT_Recetas_T : WIN_Template
     {
         int IdPaciente = 0;
         ConexionSQL BD = new ConexionSQL();

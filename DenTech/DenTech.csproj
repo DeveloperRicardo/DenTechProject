@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -302,6 +303,16 @@
     <Content Include="DHD.ico" />
     <Content Include="LogoD.ico" />
     <Content Include="LogoD2.ico" />
+    <None Include="Resources\Implante.png" />
+    <None Include="Resources\Extraccion.png" />
+    <None Include="Resources\Diente Superior.png" />
+    <None Include="Resources\Diente implementacion Realizado.png" />
+    <None Include="Resources\Diente implementacion Pendiente.png" />
+    <None Include="Resources\Diente extraccion Realizado.png" />
+    <None Include="Resources\Diente extraccion Pendiente.png" />
+    <None Include="Resources\Diente abajo.png" />
+    <None Include="Resources\Maximize 2.png" />
+    <None Include="Resources\Maximize 1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

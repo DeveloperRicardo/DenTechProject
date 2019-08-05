@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Usuarios_T));
-            this.PNL_Banner = new System.Windows.Forms.Panel();
-            this.STC_Titulo = new System.Windows.Forms.Label();
             this.DGV_TablaUsuarios = new System.Windows.Forms.DataGridView();
             this.COL_IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,31 +41,8 @@
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.BTN_Cancelar = new System.Windows.Forms.Button();
-            this.PNL_Banner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaUsuarios)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PNL_Banner
-            // 
-            this.PNL_Banner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PNL_Banner.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.PNL_Banner.Controls.Add(this.STC_Titulo);
-            this.PNL_Banner.Location = new System.Drawing.Point(0, 0);
-            this.PNL_Banner.Name = "PNL_Banner";
-            this.PNL_Banner.Size = new System.Drawing.Size(682, 44);
-            this.PNL_Banner.TabIndex = 4;
-            // 
-            // STC_Titulo
-            // 
-            this.STC_Titulo.AutoSize = true;
-            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_Titulo.ForeColor = System.Drawing.Color.White;
-            this.STC_Titulo.Location = new System.Drawing.Point(7, 6);
-            this.STC_Titulo.Name = "STC_Titulo";
-            this.STC_Titulo.Size = new System.Drawing.Size(108, 32);
-            this.STC_Titulo.TabIndex = 4;
-            this.STC_Titulo.Text = "Usuarios";
             // 
             // DGV_TablaUsuarios
             // 
@@ -92,7 +67,7 @@
             this.COL_Tipo});
             this.DGV_TablaUsuarios.EnableHeadersVisualStyles = false;
             this.DGV_TablaUsuarios.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_TablaUsuarios.Location = new System.Drawing.Point(11, 51);
+            this.DGV_TablaUsuarios.Location = new System.Drawing.Point(12, 76);
             this.DGV_TablaUsuarios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaUsuarios.Name = "DGV_TablaUsuarios";
             this.DGV_TablaUsuarios.ReadOnly = true;
@@ -159,7 +134,7 @@
             this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
             this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(556, 127);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(557, 152);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Eliminar.TabIndex = 36;
@@ -177,7 +152,7 @@
             this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
             this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(556, 89);
+            this.BTN_Modificar.Location = new System.Drawing.Point(557, 114);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Modificar.TabIndex = 35;
@@ -195,7 +170,7 @@
             this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
             this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(556, 51);
+            this.BTN_Agregar.Location = new System.Drawing.Point(557, 76);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Agregar.TabIndex = 34;
@@ -210,7 +185,7 @@
             this.BTN_Cancelar.FlatAppearance.BorderSize = 0;
             this.BTN_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cancelar.Image")));
-            this.BTN_Cancelar.Location = new System.Drawing.Point(615, 282);
+            this.BTN_Cancelar.Location = new System.Drawing.Point(616, 307);
             this.BTN_Cancelar.Name = "BTN_Cancelar";
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Cancelar.TabIndex = 38;
@@ -223,29 +198,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(679, 346);
+            this.ClientSize = new System.Drawing.Size(679, 364);
             this.Controls.Add(this.BTN_Cancelar);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.BTN_Agregar);
             this.Controls.Add(this.DGV_TablaUsuarios);
-            this.Controls.Add(this.PNL_Banner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "WIN_CAT_Usuarios_T";
-            this.Text = "DenTech - Catálogo Usuarios";
+            this.TituloBanner = "Usuarios";
+            this.TituloVentana = "      DenTech - Usuarios";
             this.Load += new System.EventHandler(this.WIN_CAT_Usuarios_T_Load);
-            this.PNL_Banner.ResumeLayout(false);
-            this.PNL_Banner.PerformLayout();
+            this.Controls.SetChildIndex(this.DGV_TablaUsuarios, 0);
+            this.Controls.SetChildIndex(this.BTN_Agregar, 0);
+            this.Controls.SetChildIndex(this.BTN_Modificar, 0);
+            this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
+            this.Controls.SetChildIndex(this.BTN_Cancelar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel PNL_Banner;
-        private System.Windows.Forms.Label STC_Titulo;
         private System.Windows.Forms.DataGridView DGV_TablaUsuarios;
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
