@@ -80,6 +80,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RecetaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RecetaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecetaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Receta_Reporte.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -343,7 +348,7 @@
     <None Include="RecetaDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RecetaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>RecetaDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="RecetaDataSet.xss">
       <DependentUpon>RecetaDataSet.xsd</DependentUpon>

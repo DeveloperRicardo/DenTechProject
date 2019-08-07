@@ -2,15 +2,17 @@
 {
 }
 
-namespace DenTech {
-    
-    
-    public partial class RecetaDataSet {
+namespace DenTech
+{
+
+
+    public partial class RecePD
+    {
     }
 }
 namespace DenTech {
     
     
-    public partial class RecetaDataSet {
+    public partial class RecePD {
     }
 }

@@ -50,9 +50,26 @@ namespace DenTech
 
         private void BTN_Boton_Click(object sender, EventArgs e)
         {
-
+            RecetaDataSet datos = Reportear();
+            WIN_CAT_Recetas_F frm = new WIN_CAT_Recetas_F(datos);
+            frm.Show();
         }
-
+        private RecetaDataSet Reportear()
+        {
+            RecetaDataSet reporte = new RecetaDataSet();
+            foreach (DataGridViewRow row in DGV_TablaReceta.Rows)
+            {
+                RecetaDataSet.RecetaDataSetRow recetaRow = reporte._RecetaDataSet.NewRecetaDataSetRow();
+                recetaRow.Diagnostico = Convert.ToString(row.Cells["Diagnostico"].Value);
+                recetaRow.Medicamento = Convert.ToString(row.Cells["COL_Columna2"].Value);
+                recetaRow.Tratamiento = Convert.ToString(row.Cells["Column1"].Value);
+                recetaRow.Fecha_Inicio = Convert.ToString(row.Cells["Fecha_Inicio"].Value);
+                recetaRow.Fecha_Final = Convert.ToString(row.Cells["Fecha_Final"].Value);
+                recetaRow.Fecha_Diag = Convert.ToString(row.Cells["Fecha_Diag"].Value);
+                reporte._RecetaDataSet.AddRecetaDataSetRow(recetaRow);
+            }
+            return reporte;
+        }
         private void WIN_CAT_Recetas_T_Load(object sender, EventArgs e)
         {
             if (BD.Conexion(true))

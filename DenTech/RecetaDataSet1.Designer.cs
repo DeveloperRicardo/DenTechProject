@@ -22,15 +22,15 @@ namespace DenTech {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("RecetaDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class RecePD : global::System.Data.DataSet {
+    public partial class RecetaDataSet : global::System.Data.DataSet {
         
-        private DataTable1DataTable tableDataTable1;
+        private RecetaDataSetDataTable tableRecetaDataSet;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public RecePD() {
+        public RecetaDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DenTech {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected RecePD(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected RecetaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DenTech {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["RecetaDataSet"] != null)) {
+                    base.Tables.Add(new RecetaDataSetDataTable(ds.Tables["RecetaDataSet"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DenTech {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTable1DataTable DataTable1 {
+        public RecetaDataSetDataTable _RecetaDataSet {
             get {
-                return this.tableDataTable1;
+                return this.tableRecetaDataSet;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DenTech {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            RecePD cln = ((RecePD)(base.Clone()));
+            RecetaDataSet cln = ((RecetaDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DenTech {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["RecetaDataSet"] != null)) {
+                    base.Tables.Add(new RecetaDataSetDataTable(ds.Tables["RecetaDataSet"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DenTech {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
+            this.tableRecetaDataSet = ((RecetaDataSetDataTable)(base.Tables["RecetaDataSet"]));
             if ((initTable == true)) {
-                if ((this.tableDataTable1 != null)) {
-                    this.tableDataTable1.InitVars();
+                if ((this.tableRecetaDataSet != null)) {
+                    this.tableRecetaDataSet.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace DenTech {
             this.Namespace = "http://tempuri.org/RecetaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDataTable1 = new DataTable1DataTable();
-            base.Tables.Add(this.tableDataTable1);
+            this.tableRecetaDataSet = new RecetaDataSetDataTable();
+            base.Tables.Add(this.tableRecetaDataSet);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeDataTable1() {
+        private bool ShouldSerialize_RecetaDataSet() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DenTech {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            RecePD ds = new RecePD();
+            RecetaDataSet ds = new RecetaDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace DenTech {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
+        public delegate void RecetaDataSetRowChangeEventHandler(object sender, RecetaDataSetRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
+        public partial class RecetaDataSetDataTable : global::System.Data.TypedTableBase<RecetaDataSetRow> {
             
             private global::System.Data.DataColumn columnId_Receta;
             
@@ -287,10 +287,16 @@ namespace DenTech {
             
             private global::System.Data.DataColumn columnTratamiento;
             
+            private global::System.Data.DataColumn columnFecha_Inicio;
+            
+            private global::System.Data.DataColumn columnFecha_Final;
+            
+            private global::System.Data.DataColumn columnFecha_Diag;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1DataTable() {
-                this.TableName = "DataTable1";
+            public RecetaDataSetDataTable() {
+                this.TableName = "RecetaDataSet";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +304,7 @@ namespace DenTech {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataTable1DataTable(global::System.Data.DataTable table) {
+            internal RecetaDataSetDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +321,7 @@ namespace DenTech {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected RecetaDataSetDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -354,6 +360,30 @@ namespace DenTech {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Fecha_InicioColumn {
+                get {
+                    return this.columnFecha_Inicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Fecha_FinalColumn {
+                get {
+                    return this.columnFecha_Final;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Fecha_DiagColumn {
+                get {
+                    return this.columnFecha_Diag;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -363,48 +393,51 @@ namespace DenTech {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row this[int index] {
+            public RecetaDataSetRow this[int index] {
                 get {
-                    return ((DataTable1Row)(this.Rows[index]));
+                    return ((RecetaDataSetRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
+            public event RecetaDataSetRowChangeEventHandler RecetaDataSetRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
+            public event RecetaDataSetRowChangeEventHandler RecetaDataSetRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
+            public event RecetaDataSetRowChangeEventHandler RecetaDataSetRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
+            public event RecetaDataSetRowChangeEventHandler RecetaDataSetRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddDataTable1Row(DataTable1Row row) {
+            public void AddRecetaDataSetRow(RecetaDataSetRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string Id_Receta, string Diagnostico, string Medicamento, string Tratamiento) {
-                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
+            public RecetaDataSetRow AddRecetaDataSetRow(string Id_Receta, string Diagnostico, string Medicamento, string Tratamiento, string Fecha_Inicio, string Fecha_Final, string Fecha_Diag) {
+                RecetaDataSetRow rowRecetaDataSetRow = ((RecetaDataSetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id_Receta,
                         Diagnostico,
                         Medicamento,
-                        Tratamiento};
-                rowDataTable1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTable1Row);
-                return rowDataTable1Row;
+                        Tratamiento,
+                        Fecha_Inicio,
+                        Fecha_Final,
+                        Fecha_Diag};
+                rowRecetaDataSetRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRecetaDataSetRow);
+                return rowRecetaDataSetRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
+                RecetaDataSetDataTable cln = ((RecetaDataSetDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,7 +445,7 @@ namespace DenTech {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTable1DataTable();
+                return new RecetaDataSetDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -422,6 +455,9 @@ namespace DenTech {
                 this.columnDiagnostico = base.Columns["Diagnostico"];
                 this.columnMedicamento = base.Columns["Medicamento"];
                 this.columnTratamiento = base.Columns["Tratamiento"];
+                this.columnFecha_Inicio = base.Columns["Fecha_Inicio"];
+                this.columnFecha_Final = base.Columns["Fecha_Final"];
+                this.columnFecha_Diag = base.Columns["Fecha_Diag"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -435,32 +471,40 @@ namespace DenTech {
                 base.Columns.Add(this.columnMedicamento);
                 this.columnTratamiento = new global::System.Data.DataColumn("Tratamiento", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTratamiento);
+                this.columnFecha_Inicio = new global::System.Data.DataColumn("Fecha_Inicio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Inicio);
+                this.columnFecha_Final = new global::System.Data.DataColumn("Fecha_Final", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Final);
+                this.columnFecha_Diag = new global::System.Data.DataColumn("Fecha_Diag", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Diag);
+                this.ExtendedProperties.Add("Generator_TablePropName", "_RecetaDataSet");
+                this.ExtendedProperties.Add("Generator_UserTableName", "RecetaDataSet");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row NewDataTable1Row() {
-                return ((DataTable1Row)(this.NewRow()));
+            public RecetaDataSetRow NewRecetaDataSetRow() {
+                return ((RecetaDataSetRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTable1Row(builder);
+                return new RecetaDataSetRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTable1Row);
+                return typeof(RecetaDataSetRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTable1RowChanged != null)) {
-                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.RecetaDataSetRowChanged != null)) {
+                    this.RecetaDataSetRowChanged(this, new RecetaDataSetRowChangeEvent(((RecetaDataSetRow)(e.Row)), e.Action));
                 }
             }
             
@@ -468,8 +512,8 @@ namespace DenTech {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTable1RowChanging != null)) {
-                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.RecetaDataSetRowChanging != null)) {
+                    this.RecetaDataSetRowChanging(this, new RecetaDataSetRowChangeEvent(((RecetaDataSetRow)(e.Row)), e.Action));
                 }
             }
             
@@ -477,8 +521,8 @@ namespace DenTech {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTable1RowDeleted != null)) {
-                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.RecetaDataSetRowDeleted != null)) {
+                    this.RecetaDataSetRowDeleted(this, new RecetaDataSetRowChangeEvent(((RecetaDataSetRow)(e.Row)), e.Action));
                 }
             }
             
@@ -486,14 +530,14 @@ namespace DenTech {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTable1RowDeleting != null)) {
-                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.RecetaDataSetRowDeleting != null)) {
+                    this.RecetaDataSetRowDeleting(this, new RecetaDataSetRowChangeEvent(((RecetaDataSetRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveDataTable1Row(DataTable1Row row) {
+            public void RemoveRecetaDataSetRow(RecetaDataSetRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -502,7 +546,7 @@ namespace DenTech {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                RecePD ds = new RecePD();
+                RecetaDataSet ds = new RecetaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -520,7 +564,7 @@ namespace DenTech {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTable1DataTable";
+                attribute2.FixedValue = "RecetaDataSetDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -564,15 +608,15 @@ namespace DenTech {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTable1Row : global::System.Data.DataRow {
+        public partial class RecetaDataSetRow : global::System.Data.DataRow {
             
-            private DataTable1DataTable tableDataTable1;
+            private RecetaDataSetDataTable tableRecetaDataSet;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
+            internal RecetaDataSetRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
+                this.tableRecetaDataSet = ((RecetaDataSetDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -580,14 +624,14 @@ namespace DenTech {
             public string Id_Receta {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.Id_RecetaColumn]));
+                        return ((string)(this[this.tableRecetaDataSet.Id_RecetaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Id_Receta\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Id_Receta\' in table \'RecetaDataSet\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.Id_RecetaColumn] = value;
+                    this[this.tableRecetaDataSet.Id_RecetaColumn] = value;
                 }
             }
             
@@ -596,14 +640,14 @@ namespace DenTech {
             public string Diagnostico {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.DiagnosticoColumn]));
+                        return ((string)(this[this.tableRecetaDataSet.DiagnosticoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Diagnostico\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Diagnostico\' in table \'RecetaDataSet\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.DiagnosticoColumn] = value;
+                    this[this.tableRecetaDataSet.DiagnosticoColumn] = value;
                 }
             }
             
@@ -612,14 +656,14 @@ namespace DenTech {
             public string Medicamento {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.MedicamentoColumn]));
+                        return ((string)(this[this.tableRecetaDataSet.MedicamentoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Medicamento\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Medicamento\' in table \'RecetaDataSet\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.MedicamentoColumn] = value;
+                    this[this.tableRecetaDataSet.MedicamentoColumn] = value;
                 }
             }
             
@@ -628,63 +672,147 @@ namespace DenTech {
             public string Tratamiento {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.TratamientoColumn]));
+                        return ((string)(this[this.tableRecetaDataSet.TratamientoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tratamiento\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tratamiento\' in table \'RecetaDataSet\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.TratamientoColumn] = value;
+                    this[this.tableRecetaDataSet.TratamientoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Fecha_Inicio {
+                get {
+                    try {
+                        return ((string)(this[this.tableRecetaDataSet.Fecha_InicioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fecha_Inicio\' in table \'RecetaDataSet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRecetaDataSet.Fecha_InicioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Fecha_Final {
+                get {
+                    try {
+                        return ((string)(this[this.tableRecetaDataSet.Fecha_FinalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fecha_Final\' in table \'RecetaDataSet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRecetaDataSet.Fecha_FinalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Fecha_Diag {
+                get {
+                    try {
+                        return ((string)(this[this.tableRecetaDataSet.Fecha_DiagColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fecha_Diag\' in table \'RecetaDataSet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRecetaDataSet.Fecha_DiagColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsId_RecetaNull() {
-                return this.IsNull(this.tableDataTable1.Id_RecetaColumn);
+                return this.IsNull(this.tableRecetaDataSet.Id_RecetaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetId_RecetaNull() {
-                this[this.tableDataTable1.Id_RecetaColumn] = global::System.Convert.DBNull;
+                this[this.tableRecetaDataSet.Id_RecetaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDiagnosticoNull() {
-                return this.IsNull(this.tableDataTable1.DiagnosticoColumn);
+                return this.IsNull(this.tableRecetaDataSet.DiagnosticoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDiagnosticoNull() {
-                this[this.tableDataTable1.DiagnosticoColumn] = global::System.Convert.DBNull;
+                this[this.tableRecetaDataSet.DiagnosticoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsMedicamentoNull() {
-                return this.IsNull(this.tableDataTable1.MedicamentoColumn);
+                return this.IsNull(this.tableRecetaDataSet.MedicamentoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetMedicamentoNull() {
-                this[this.tableDataTable1.MedicamentoColumn] = global::System.Convert.DBNull;
+                this[this.tableRecetaDataSet.MedicamentoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsTratamientoNull() {
-                return this.IsNull(this.tableDataTable1.TratamientoColumn);
+                return this.IsNull(this.tableRecetaDataSet.TratamientoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetTratamientoNull() {
-                this[this.tableDataTable1.TratamientoColumn] = global::System.Convert.DBNull;
+                this[this.tableRecetaDataSet.TratamientoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFecha_InicioNull() {
+                return this.IsNull(this.tableRecetaDataSet.Fecha_InicioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFecha_InicioNull() {
+                this[this.tableRecetaDataSet.Fecha_InicioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFecha_FinalNull() {
+                return this.IsNull(this.tableRecetaDataSet.Fecha_FinalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFecha_FinalNull() {
+                this[this.tableRecetaDataSet.Fecha_FinalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFecha_DiagNull() {
+                return this.IsNull(this.tableRecetaDataSet.Fecha_DiagColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFecha_DiagNull() {
+                this[this.tableRecetaDataSet.Fecha_DiagColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -692,22 +820,22 @@ namespace DenTech {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class DataTable1RowChangeEvent : global::System.EventArgs {
+        public class RecetaDataSetRowChangeEvent : global::System.EventArgs {
             
-            private DataTable1Row eventRow;
+            private RecetaDataSetRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
+            public RecetaDataSetRowChangeEvent(RecetaDataSetRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row Row {
+            public RecetaDataSetRow Row {
                 get {
                     return this.eventRow;
                 }
