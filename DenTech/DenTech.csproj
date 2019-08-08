@@ -91,6 +91,12 @@
       <DependentUpon>Receta_Reporte.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="WIN_CAT_ArchivosAdjuntos_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_ArchivosAdjuntos_T.Designer.cs">
+      <DependentUpon>WIN_CAT_ArchivosAdjuntos_T.cs</DependentUpon>
+    </Compile>
     <Compile Include="WIN_CAT_Citas_F.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     <EmbeddedResource Include="Receta_Reporte.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Receta_Reporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_ArchivosAdjuntos_T.resx">
+      <DependentUpon>WIN_CAT_ArchivosAdjuntos_T.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Citas_F.resx">
       <DependentUpon>WIN_CAT_Citas_F.cs</DependentUpon>
