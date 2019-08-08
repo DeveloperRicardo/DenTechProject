@@ -223,6 +223,12 @@
     <Compile Include="WIN_CAT_Odontograma_T.Designer.cs">
       <DependentUpon>WIN_CAT_Odontograma_T.cs</DependentUpon>
     </Compile>
+    <Compile Include="WIN_Template_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_Template_F.Designer.cs">
+      <DependentUpon>WIN_Template_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="WIN_Template.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Odontograma_T.resx">
       <DependentUpon>WIN_CAT_Odontograma_T.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_Template_F.resx">
+      <DependentUpon>WIN_Template_F.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_Template.resx">
       <DependentUpon>WIN_Template.cs</DependentUpon>

@@ -40,7 +40,7 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 69);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(600, 297);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(916, 386);
             this.crystalReportViewer1.TabIndex = 6;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
@@ -48,12 +48,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Cerrar = true;
+            this.ClientSize = new System.Drawing.Size(916, 455);
             this.Controls.Add(this.crystalReportViewer1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WIN_CAT_Recetas_F";
             this.TituloBanner = "Recetas";
             this.TituloVentana = "      DenTech - Recetas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.WIN_CAT_Recetas_F_Load);
             this.Controls.SetChildIndex(this.crystalReportViewer1, 0);
             this.ResumeLayout(false);

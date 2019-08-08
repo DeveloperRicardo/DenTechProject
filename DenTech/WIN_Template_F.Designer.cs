@@ -1,6 +1,6 @@
 ﻿namespace DenTech
 {
-    partial class WIN_Template
+    partial class WIN_Template_F
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_Template));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_Template_F));
             this.PNL_TitleBar = new System.Windows.Forms.Panel();
             this.TB_Icono = new System.Windows.Forms.PictureBox();
             this.TB_Titulo = new System.Windows.Forms.Label();
@@ -106,6 +106,7 @@
             this.TB_Minimizar.TabIndex = 2;
             this.TB_Minimizar.TabStop = false;
             this.TB_Minimizar.UseVisualStyleBackColor = true;
+            this.TB_Minimizar.Visible = false;
             this.TB_Minimizar.Click += new System.EventHandler(this.TB_Minimizar_Click);
             // 
             // TB_Maximizar
@@ -121,6 +122,7 @@
             this.TB_Maximizar.TabIndex = 1;
             this.TB_Maximizar.TabStop = false;
             this.TB_Maximizar.UseVisualStyleBackColor = true;
+            this.TB_Maximizar.Visible = false;
             this.TB_Maximizar.Click += new System.EventHandler(this.TB_Minimizar_Click);
             // 
             // TB_Cerrar
@@ -160,7 +162,7 @@
             this.STC_TituloBanner.TabIndex = 4;
             this.STC_TituloBanner.Text = "Título";
             // 
-            // WIN_Template
+            // WIN_Template_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,7 +172,7 @@
             this.Controls.Add(this.PNL_Banner);
             this.Controls.Add(this.PNL_TitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "WIN_Template";
+            this.Name = "WIN_Template_F";
             this.PNL_TitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TB_Icono)).EndInit();
             this.PNL_TBBotones.ResumeLayout(false);

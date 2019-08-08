@@ -578,6 +578,19 @@
         o6/K///boml/AWmLwVKnnTwVAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="BTN_Cancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAahJREFUSEudVqFSxDAQjUQikUgkBtpgioMmzIA8iUQikTgkEtlPQCKRSCQDbafy
+        JBIJ+3KbmTTZS1vezJu53u6+3SS7adUU2lpf9UY/9bV+HdHqprN6NVTVDrvOB4I6W962dfFNQr85trb4
+        aW35MFxWuxyex3ChD0j4QxLLEcVQslOWkYHtmFN1jp0prlluDFc5LVcKWspkJdjz1upBcJxMKPlgFwZz
+        tMfySuFAYyeP3JZBnN1Se60fnfim+nEVtJo1xzlISUJxoLPFe+wznBX7VL1exQYQARzrECaJxem/F28b
+        0eg7RT+axMCUkswWB2kgFU+l7ECMk4Qg+3ZxIhpHSd0TU0pC/2fFPZFgLRlCxtsCzCkMRIu+SQZPSdxj
+        KgmKV70pniUjKB1ocvCZJPBVXV3eSMZct8xNgltWYaRTw3QrzknydX5cummmh9EshAnoeWu3hEmSaccM
+        eGAVEA0d8DzVACCSSFfJpzk5ZPkNtl0Z/yKuCAk4FDFgGRuWk4GVxNu1gPcskwfebrn5iImzoqLy72MJ
+        OCi8OOgQk48A15b0OZMXVuoP8Cm6MFyJ8O0AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAlpYAAAEAIABwawEAFgAAACgAAACWAAAALAEAAAEAIAAAAAAAkF8BAMIOAADCDgAAAAAAAAAA

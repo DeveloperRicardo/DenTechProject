@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_Expediente_F : WIN_Template
+    public partial class WIN_CAT_Expediente_F : WIN_Template_F
     {
         // Variables globales
         ConexionSQL BD = new ConexionSQL();

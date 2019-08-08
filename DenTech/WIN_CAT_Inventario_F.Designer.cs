@@ -36,14 +36,11 @@
             this.STC_Cantidad = new System.Windows.Forms.Label();
             this.STC_Nombre = new System.Windows.Forms.Label();
             this.EDT_Nombre = new System.Windows.Forms.TextBox();
-            this.PNL_Banner = new System.Windows.Forms.Panel();
-            this.STC_Titulo = new System.Windows.Forms.Label();
             this.DT_FechaInicio = new System.Windows.Forms.DateTimePicker();
             this.DT_FechaFinal = new System.Windows.Forms.DateTimePicker();
             this.NUD_Cantidad = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.COMBO_Opcion = new System.Windows.Forms.ComboBox();
-            this.PNL_Banner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Cantidad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,28 +118,6 @@
             this.EDT_Nombre.Size = new System.Drawing.Size(232, 25);
             this.EDT_Nombre.TabIndex = 23;
             // 
-            // PNL_Banner
-            // 
-            this.PNL_Banner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PNL_Banner.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.PNL_Banner.Controls.Add(this.STC_Titulo);
-            this.PNL_Banner.Location = new System.Drawing.Point(0, 0);
-            this.PNL_Banner.Name = "PNL_Banner";
-            this.PNL_Banner.Size = new System.Drawing.Size(380, 44);
-            this.PNL_Banner.TabIndex = 20;
-            // 
-            // STC_Titulo
-            // 
-            this.STC_Titulo.AutoSize = true;
-            this.STC_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_Titulo.ForeColor = System.Drawing.Color.White;
-            this.STC_Titulo.Location = new System.Drawing.Point(7, 6);
-            this.STC_Titulo.Name = "STC_Titulo";
-            this.STC_Titulo.Size = new System.Drawing.Size(126, 32);
-            this.STC_Titulo.TabIndex = 4;
-            this.STC_Titulo.Text = "Inventario";
-            // 
             // DT_FechaInicio
             // 
             this.DT_FechaInicio.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -199,6 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(379, 310);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.COMBO_Opcion);
@@ -212,7 +188,6 @@
             this.Controls.Add(this.STC_Cantidad);
             this.Controls.Add(this.STC_Nombre);
             this.Controls.Add(this.EDT_Nombre);
-            this.Controls.Add(this.PNL_Banner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -220,7 +195,6 @@
             this.TituloBanner = "Inventario";
             this.TituloVentana = "      DenTech - Inventario";
             this.Load += new System.EventHandler(this.WIN_CAT_Inventario_F_Load);
-            this.Controls.SetChildIndex(this.PNL_Banner, 0);
             this.Controls.SetChildIndex(this.EDT_Nombre, 0);
             this.Controls.SetChildIndex(this.STC_Nombre, 0);
             this.Controls.SetChildIndex(this.STC_Cantidad, 0);
@@ -233,8 +207,6 @@
             this.Controls.SetChildIndex(this.NUD_Cantidad, 0);
             this.Controls.SetChildIndex(this.COMBO_Opcion, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.PNL_Banner.ResumeLayout(false);
-            this.PNL_Banner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -249,8 +221,6 @@
         private System.Windows.Forms.Label STC_Cantidad;
         private System.Windows.Forms.Label STC_Nombre;
         private System.Windows.Forms.TextBox EDT_Nombre;
-        private System.Windows.Forms.Panel PNL_Banner;
-        private System.Windows.Forms.Label STC_Titulo;
         private System.Windows.Forms.DateTimePicker DT_FechaInicio;
         private System.Windows.Forms.DateTimePicker DT_FechaFinal;
         private System.Windows.Forms.NumericUpDown NUD_Cantidad;

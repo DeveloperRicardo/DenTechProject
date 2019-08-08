@@ -161,10 +161,10 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Cerrar = true;
             this.Controls.Add(this.PNL_Ventanas);
             this.Controls.Add(this.Panel_General);
             this.Controls.Add(this.panel2);
-            this.MaximizeBox = false;
             this.Name = "WIN_GLO_Principal";
             this.Load += new System.EventHandler(this.WIN_GLO_Principal_Load);
             this.Controls.SetChildIndex(this.panel2, 0);

@@ -28,25 +28,28 @@ namespace DenTech
         }
         public void Conexion()
         {
-            if (BD.Conexion(true))
+            if (!BD.Conexion(true))
             {
-                ds.Clear();
-                BD.conexion.CreateCommand();
-                SqlCommand comando = BD.conexion.CreateCommand();
-                comando.CommandText = "SELECT Id_Empleado, Usuario FROM EMPLEADOS";
-                SqlDataAdapter adaptador = new SqlDataAdapter();
-                adaptador.SelectCommand = comando;
-                adaptador.Fill(ds);
-                COMBO_Usuario.DataSource = ds;
-                COMBO_Usuario.ValueMember = "Id_Empleado";
-                COMBO_Usuario.DisplayMember = "Usuario";
-                COMBO_Usuario.Refresh();
+                EDT_Usuario.Enabled = false;
+                EDT_Contrasena.Enabled = false;
+                BTN_Acceder.Enabled = false;
+                //ds.Clear();
+                //BD.conexion.CreateCommand();
+                //SqlCommand comando = BD.conexion.CreateCommand();
+                //comando.CommandText = "SELECT Id_Empleado, Usuario FROM EMPLEADOS";
+                //SqlDataAdapter adaptador = new SqlDataAdapter();
+                //adaptador.SelectCommand = comando;
+                //adaptador.Fill(ds);
+                //COMBO_Usuario.DataSource = ds;
+                //COMBO_Usuario.ValueMember = "Id_Empleado";
+                //COMBO_Usuario.DisplayMember = "Usuario";
+                //COMBO_Usuario.Refresh();
             }
             else
             {
-                COMBO_Usuario.Enabled = false;
-                EDT_Contrasena.Enabled = false;
-                BTN_Acceder.Enabled = false;
+                //COMBO_Usuario.Enabled = false;
+
+
                 //IMG_Icono.Visible = true;
                 //STC_MensajeConexion.Visible = true;
             }
@@ -61,13 +64,13 @@ namespace DenTech
                 // Se busca en la base de datos
                 BD.conexion.CreateCommand();
                 SqlCommand comando = BD.conexion.CreateCommand();
-                comando.CommandText = "IF EXISTS(SELECT * FROM EMPLEADOS WHERE Id_Empleado = '" + COMBO_Usuario.SelectedValue + "' AND Password = '" + EDT_Contrasena.Text + "') SELECT 'true' ELSE SELECT 'false'";
+                comando.CommandText = "IF EXISTS(SELECT * FROM EMPLEADOS WHERE Usuario = '" + EDT_Usuario.Text + "' AND Password = '" + EDT_Contrasena.Text + "') SELECT 'true' ELSE SELECT 'false'";
                 ExisteUsuario = Convert.ToBoolean(comando.ExecuteScalar());
                 if (ExisteUsuario)
                 {
-                    comando.CommandText = "SELECT Tipo_Usuario FROM EMPLEADOS WHERE Id_Empleado = '" + COMBO_Usuario.SelectedValue + "'";
+                    comando.CommandText = "SELECT Tipo_Usuario FROM EMPLEADOS WHERE Usuario = '" + EDT_Usuario.Text + "'";
                     Settings.Default.TipoUsuario = Convert.ToInt16(comando.ExecuteScalar());
-                    Settings.Default.NombreUsuario = COMBO_Usuario.Text;
+                    Settings.Default.NombreUsuario = EDT_Usuario.Text;
                     WIN_GLO_Principal Principal = new WIN_GLO_Principal();
                     Principal.Show();
                     this.Close();
@@ -104,10 +107,25 @@ namespace DenTech
         private bool ValidarCampos()
         {
             // Verifica que los campos tengan información en ellos
-            if (COMBO_Usuario.Text == null || EDT_Contrasena.Text == "")
+            if (EDT_Usuario.Text == null || EDT_Contrasena.Text == "")
                 return false;
             else
                 return true;
+        }
+
+        private void EDT_Contrasena_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void Acceder()
+        {
+
+        }
+
+        private void BTN_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

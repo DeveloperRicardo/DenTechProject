@@ -36,7 +36,8 @@
             this.STC_Campo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.EDT_Contrasena = new System.Windows.Forms.TextBox();
-            this.COMBO_Usuario = new System.Windows.Forms.ComboBox();
+            this.EDT_Usuario = new System.Windows.Forms.TextBox();
+            this.BTN_Cancelar = new System.Windows.Forms.Button();
             this.PNL_Banner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +63,7 @@
             this.BTN_Config.Location = new System.Drawing.Point(299, 5);
             this.BTN_Config.Name = "BTN_Config";
             this.BTN_Config.Size = new System.Drawing.Size(45, 44);
-            this.BTN_Config.TabIndex = 13;
+            this.BTN_Config.TabIndex = 5;
             this.BTN_Config.UseVisualStyleBackColor = false;
             this.BTN_Config.Click += new System.EventHandler(this.BTN_Config_Click);
             // 
@@ -88,7 +89,7 @@
             this.BTN_Acceder.Location = new System.Drawing.Point(223, 450);
             this.BTN_Acceder.Name = "BTN_Acceder";
             this.BTN_Acceder.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Acceder.TabIndex = 3;
+            this.BTN_Acceder.TabIndex = 4;
             this.BTN_Acceder.Text = "Acceder";
             this.BTN_Acceder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Acceder.UseVisualStyleBackColor = false;
@@ -123,35 +124,56 @@
             this.EDT_Contrasena.TabIndex = 2;
             this.EDT_Contrasena.UseSystemPasswordChar = true;
             // 
-            // COMBO_Usuario
+            // EDT_Usuario
             // 
-            this.COMBO_Usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.COMBO_Usuario.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.COMBO_Usuario.FormattingEnabled = true;
-            this.COMBO_Usuario.Location = new System.Drawing.Point(12, 279);
-            this.COMBO_Usuario.Name = "COMBO_Usuario";
-            this.COMBO_Usuario.Size = new System.Drawing.Size(322, 45);
-            this.COMBO_Usuario.TabIndex = 1;
+            this.EDT_Usuario.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.EDT_Usuario.Location = new System.Drawing.Point(12, 279);
+            this.EDT_Usuario.Name = "EDT_Usuario";
+            this.EDT_Usuario.Size = new System.Drawing.Size(322, 43);
+            this.EDT_Usuario.TabIndex = 1;
+            // 
+            // BTN_Cancelar
+            // 
+            this.BTN_Cancelar.BackColor = System.Drawing.Color.White;
+            this.BTN_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Cancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Cancelar.FlatAppearance.BorderSize = 2;
+            this.BTN_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Cancelar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cancelar.Image")));
+            this.BTN_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Cancelar.Location = new System.Drawing.Point(106, 450);
+            this.BTN_Cancelar.Name = "BTN_Cancelar";
+            this.BTN_Cancelar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Cancelar.TabIndex = 3;
+            this.BTN_Cancelar.Text = "Salir     ";
+            this.BTN_Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Cancelar.UseVisualStyleBackColor = false;
+            this.BTN_Cancelar.Click += new System.EventHandler(this.BTN_Cancelar_Click);
             // 
             // WIN_GLO_Login
             // 
+            this.AcceptButton = this.BTN_Acceder;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.BTN_Cancelar;
             this.ClientSize = new System.Drawing.Size(346, 497);
-            this.Controls.Add(this.COMBO_Usuario);
+            this.ControlBox = false;
+            this.Controls.Add(this.BTN_Cancelar);
+            this.Controls.Add(this.EDT_Usuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BTN_Acceder);
             this.Controls.Add(this.EDT_Contrasena);
             this.Controls.Add(this.STC_Campo);
             this.Controls.Add(this.PNL_Banner);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "WIN_GLO_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DenTech - Login";
             this.Load += new System.EventHandler(this.WIN_GLO_Login_Load);
             this.PNL_Banner.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -168,7 +190,8 @@
         private System.Windows.Forms.Label STC_Campo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox EDT_Contrasena;
-        private System.Windows.Forms.ComboBox COMBO_Usuario;
         private System.Windows.Forms.Button BTN_Config;
+        private System.Windows.Forms.TextBox EDT_Usuario;
+        private System.Windows.Forms.Button BTN_Cancelar;
     }
 }

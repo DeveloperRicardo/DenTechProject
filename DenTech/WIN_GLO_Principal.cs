@@ -35,6 +35,7 @@ namespace DenTech
             WIN_CAT_Usuarios_T frm = form ?? new WIN_CAT_Usuarios_T();
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
+            frm.Focus();
             // WIN_CAT_Usuarios_T Empleados = new WIN_CAT_Usuarios_T();
             // Empleados.Show();
         }
@@ -45,6 +46,7 @@ namespace DenTech
             WIN_CAT_Pacientes_T frm = form ?? new WIN_CAT_Pacientes_T();
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
+            frm.Focus();
         }
 
         private void BTN_Inventario_Click(object sender, EventArgs e)
@@ -53,6 +55,7 @@ namespace DenTech
             WIN_CAT_Inventario_T frm = form ?? new WIN_CAT_Inventario_T();
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
+            frm.Focus();
         }
 
         private void BTN_Servicios_Click(object sender, EventArgs e)
@@ -61,6 +64,7 @@ namespace DenTech
             WIN_CAT_Servicios_T frm = form ?? new WIN_CAT_Servicios_T();
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
+            frm.Focus();
         }
 
         private void BTN_Expediente_Click(object sender, EventArgs e)
@@ -69,6 +73,7 @@ namespace DenTech
             WIN_CAT_Expediente_T frm = form ?? new WIN_CAT_Expediente_T();
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
+            frm.Focus();
         }
 
         private void BTN_Citas_Click(object sender, EventArgs e)
@@ -77,6 +82,7 @@ namespace DenTech
             WIN_CAT_Citas_T frm = form ?? new WIN_CAT_Citas_T();
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
+            frm.Focus();
         }
     }
 }

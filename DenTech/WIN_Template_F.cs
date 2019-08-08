@@ -11,12 +11,12 @@ using System.Resources;
 
 namespace DenTech
 {
-    public partial class WIN_Template : Form
+    public partial class WIN_Template_F : Form
     {
         private Point pos = Point.Empty;
         private bool move = false;
         string resName = "";
-        public WIN_Template()
+        public WIN_Template_F()
         {
             InitializeComponent();
         }

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace DenTech
 {
-    public partial class WIN_GLO_Login_F : Form
+    public partial class WIN_GLO_Login_F : WIN_Template_F
     {
         bool Modificar = false;
         string conexion = "";
