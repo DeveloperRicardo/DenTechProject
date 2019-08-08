@@ -121,7 +121,7 @@
             this.TB_Maximizar.TabIndex = 1;
             this.TB_Maximizar.TabStop = false;
             this.TB_Maximizar.UseVisualStyleBackColor = true;
-            this.TB_Maximizar.Click += new System.EventHandler(this.TB_Minimizar_Click);
+            this.TB_Maximizar.Click += new System.EventHandler(this.TB_Maximizar_Click);
             // 
             // TB_Cerrar
             // 
