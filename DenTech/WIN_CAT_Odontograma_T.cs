@@ -7,19 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DenTech
 {
     public partial class WIN_CAT_Odontograma_T : WIN_Template
     {
+        ConexionSQL BD = new ConexionSQL();
+        int gnIdPaciente = 0;
         public WIN_CAT_Odontograma_T(int IdPaciente = 0)
         {
             InitializeComponent();
+            gnIdPaciente = IdPaciente;
         }
 
         private void WIN_CAT_Odontograma_T_Load(object sender, EventArgs e)
         {
-
+            // Verifica qe la conexión sea exitosa
+            if (BD.Conexion(true))
+                Refrescar();
         }
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
@@ -32,29 +38,20 @@ namespace DenTech
         // Método que refresca el data grid view
         private void Refrescar()
         {
-            //BD.conexion.CreateCommand();
-            //SqlCommand cmd = BD.conexion.CreateCommand();
-            //string query = "SELECT Id_Inventario, Descripcion, Cantidad, Fecha_Inicio, Fecha_Final FROM INVENTARIO";
-            //switch (Settings.Default.TipoUsuario)
-            //{
-            //    case 1:
-            //        BTN_Agregar.Visible = false;
-            //        BTN_Eliminar.Visible = false;
-            //        query += " WHERE Tipo_Producto = '0'";
-            //        break;
-            //    case 3:
-            //        BTN_Agregar.Visible = false;
-            //        BTN_Eliminar.Visible = false;
-            //        query += " WHERE Tipo_Producto = '1'";
-            //        break;
-            //}
-            //cmd.CommandText = query;
-            //cmd.ExecuteNonQuery();
-            //SqlDataAdapter Adaptador = new SqlDataAdapter();
-            //Adaptador.SelectCommand = cmd;
-            //var Data = new DataTable();
-            //Adaptador.Fill(Data);
-            //DGV_TablaNombre.DataSource = Data;
+            BD.conexion.CreateCommand();
+            SqlCommand cmd = BD.conexion.CreateCommand();
+            cmd.CommandText = "SELECT \n" +
+                        "Id_Odontograma, \n" +
+                        "Fecha_Registro, \n" +
+                        "Descripcion \n" +
+                        "FROM ODONTOGRAMA \n" +
+                        "WHERE ODONTOGRAMA.Id_Paciente = " + gnIdPaciente;
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter Adaptador = new SqlDataAdapter();
+            Adaptador.SelectCommand = cmd;
+            var Data = new DataTable();
+            Adaptador.Fill(Data);
+            DGV_TablaNombre.DataSource = Data;
         }
 
         private void BTN_Modificar_Click(object sender, EventArgs e)

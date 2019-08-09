@@ -63,9 +63,9 @@ namespace DenTech.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Dienteabajo {
+        internal static System.Drawing.Bitmap _11 {
             get {
-                object obj = ResourceManager.GetObject("Dienteabajo", resourceCulture);
+                object obj = ResourceManager.GetObject("11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace DenTech.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DienteextraccionPendiente {
+        internal static System.Drawing.Bitmap Diente_abajo {
             get {
-                object obj = ResourceManager.GetObject("DienteextraccionPendiente", resourceCulture);
+                object obj = ResourceManager.GetObject("Diente_abajo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace DenTech.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DienteextraccionRealizado {
+        internal static System.Drawing.Bitmap Diente_extraccion_Pendiente {
             get {
-                object obj = ResourceManager.GetObject("DienteextraccionRealizado", resourceCulture);
+                object obj = ResourceManager.GetObject("Diente_extraccion_Pendiente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace DenTech.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DienteimplementacionPendiente {
+        internal static System.Drawing.Bitmap Diente_extraccion_Realizado {
             get {
-                object obj = ResourceManager.GetObject("DienteimplementacionPendiente", resourceCulture);
+                object obj = ResourceManager.GetObject("Diente_extraccion_Realizado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace DenTech.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DienteimplementacionRealizado {
+        internal static System.Drawing.Bitmap Diente_implementacion_Pendiente {
             get {
-                object obj = ResourceManager.GetObject("DienteimplementacionRealizado", resourceCulture);
+                object obj = ResourceManager.GetObject("Diente_implementacion_Pendiente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,19 @@ namespace DenTech.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DienteSuperior {
+        internal static System.Drawing.Bitmap Diente_implementacion_Realizado {
             get {
-                object obj = ResourceManager.GetObject("DienteSuperior", resourceCulture);
+                object obj = ResourceManager.GetObject("Diente_implementacion_Realizado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Diente_Superior {
+            get {
+                object obj = ResourceManager.GetObject("Diente_Superior", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

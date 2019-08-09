@@ -29,8 +29,18 @@ Tratamiento varchar(100),Fecha_Inicio date, Fecha_Final date, Fecha_Diag date)
 
 CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int)
 
-CREATE TABLE ODONTOGRAMA(Id_Odontograma int primary key identity, Id_Paciente foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade,
-Fecha_Registro date, Descripcion varchar(100), )
+CREATE TABLE ODONTOGRAMA(Id_Odontograma int primary key identity, Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade,
+Fecha_Registro date, Descripcion varchar(100))
+
+CREATE TABLE DIENTE(Id_Diente int primary key identity, Id_Odontograma int foreign key references ODONTOGRAMA(Id_Odontograma) on update cascade on delete cascade,
+NumDiente int, SuperiorArriba int, SuperiorIzq int, SuperiorDer int, SuperiorAbajo int, LateralArriba int, LateralAbajo int)
+
+CREATE TABLE DETALLEDIENTE(Id_Detalle int primary key identity, ID_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade,
+Descripcion varchar(255))
+
+DROP TABLE DETALLEDIENTE
+DROP TABLE DIENTE
+DROP TABLE ODONTOGRAMA
 
 --TABLA DE ANTECEDENTES
 
