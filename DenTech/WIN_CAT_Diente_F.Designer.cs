@@ -46,6 +46,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::DenTech.Properties.Resources.Diente_Superior;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(15, 108);
             this.pictureBox1.Name = "pictureBox1";
@@ -55,6 +56,7 @@
             // 
             // IMG_LateralAbajo
             // 
+            this.IMG_LateralAbajo.BackgroundImage = global::DenTech.Properties.Resources.Diente_abajo;
             this.IMG_LateralAbajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.IMG_LateralAbajo.Location = new System.Drawing.Point(15, 350);
             this.IMG_LateralAbajo.Name = "IMG_LateralAbajo";
@@ -85,6 +87,7 @@
             // BTN_Implante
             // 
             this.BTN_Implante.BackColor = System.Drawing.Color.White;
+            this.BTN_Implante.BackgroundImage = global::DenTech.Properties.Resources.Implante;
             this.BTN_Implante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTN_Implante.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BTN_Implante.FlatAppearance.BorderSize = 2;
@@ -100,6 +103,7 @@
             // BTN_Extraccion
             // 
             this.BTN_Extraccion.BackColor = System.Drawing.Color.White;
+            this.BTN_Extraccion.BackgroundImage = global::DenTech.Properties.Resources.Extraccion;
             this.BTN_Extraccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTN_Extraccion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BTN_Extraccion.FlatAppearance.BorderSize = 2;
