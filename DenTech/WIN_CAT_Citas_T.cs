@@ -15,6 +15,7 @@ namespace DenTech
     {
         // Variables y objetos globales
         ConexionSQL BD = new ConexionSQL();
+        List<FlowLayoutPanel> Lista = new List<FlowLayoutPanel>();
 
         public WIN_CAT_Citas_T()
         {
@@ -26,7 +27,12 @@ namespace DenTech
         {
             // Verifica si se puede conectar con la base de datos
             if (BD.Conexion(true))
+            {
+                // Genera los cuadros del mes y agrega la información
+                GenerarCuadros(42);
                 Refrescar();
+            }
+                
         }
 
         // Evento del botón Agregar
@@ -108,6 +114,7 @@ namespace DenTech
             DGV_TablaCitas.DataSource = Data;
         }
 
+        // Evento del botón Recetas
         private void BTN_Recetas_Click(object sender, EventArgs e)
         {
             // Verifica que la tabla tenga información
@@ -118,6 +125,36 @@ namespace DenTech
             WIN_CAT_Recetas_T Window = new WIN_CAT_Recetas_T((int)DGV_TablaCitas.CurrentRow.Cells[1].Value);
             Window.ShowDialog();
             Refrescar();
+        }
+
+        // Método GenerarCuadros
+        private void GenerarCuadros(int NumDias)
+        {
+            // Se limpia el control y el objeto
+            LAYOUT_Cuerpo.Controls.Clear();
+            Lista.Clear();
+
+            // Clico que se repetirá por el número de días indicado
+            for (int i = 1; i < NumDias; i++)
+            {
+                // Se instancia objeto de tipo Layout
+                FlowLayoutPanel Cuadro = new FlowLayoutPanel();
+
+                // Se agrega información a sus propiedades
+                Cuadro.Name = $"LAYOUT_Dia{i}";
+                Cuadro.Size = new Size(132, 71);
+                Cuadro.BackColor = Color.White;
+                Cuadro.BorderStyle = BorderStyle.FixedSingle;
+                LAYOUT_Cuerpo.Controls.Add(Cuadro);
+            }
+        }
+
+
+
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }
