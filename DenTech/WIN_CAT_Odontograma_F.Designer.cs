@@ -97,6 +97,8 @@
             this.STC_Campo = new System.Windows.Forms.Label();
             this.BTN_Cancelar = new System.Windows.Forms.Button();
             this.BTN_Aceptar = new System.Windows.Forms.Button();
+            this.DT_FechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.STC_FechaInicio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BTN_Diente11
@@ -115,6 +117,7 @@
             this.BTN_Diente11.TabIndex = 39;
             this.BTN_Diente11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente11.UseVisualStyleBackColor = false;
+            this.BTN_Diente11.Click += new System.EventHandler(this.BTN_Diente11_Click);
             // 
             // BTN_Diente12
             // 
@@ -132,6 +135,7 @@
             this.BTN_Diente12.TabIndex = 40;
             this.BTN_Diente12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente12.UseVisualStyleBackColor = false;
+            this.BTN_Diente12.Click += new System.EventHandler(this.BTN_Diente12_Click);
             // 
             // BTN_Diente13
             // 
@@ -149,6 +153,7 @@
             this.BTN_Diente13.TabIndex = 41;
             this.BTN_Diente13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente13.UseVisualStyleBackColor = false;
+            this.BTN_Diente13.Click += new System.EventHandler(this.BTN_Diente13_Click);
             // 
             // BTN_Diente14
             // 
@@ -166,6 +171,7 @@
             this.BTN_Diente14.TabIndex = 42;
             this.BTN_Diente14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente14.UseVisualStyleBackColor = false;
+            this.BTN_Diente14.Click += new System.EventHandler(this.BTN_Diente14_Click);
             // 
             // BTN_Diente15
             // 
@@ -183,6 +189,7 @@
             this.BTN_Diente15.TabIndex = 43;
             this.BTN_Diente15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente15.UseVisualStyleBackColor = false;
+            this.BTN_Diente15.Click += new System.EventHandler(this.BTN_Diente15_Click);
             // 
             // BTN_Diente16
             // 
@@ -200,6 +207,7 @@
             this.BTN_Diente16.TabIndex = 44;
             this.BTN_Diente16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente16.UseVisualStyleBackColor = false;
+            this.BTN_Diente16.Click += new System.EventHandler(this.BTN_Diente16_Click);
             // 
             // BTN_Diente17
             // 
@@ -217,6 +225,7 @@
             this.BTN_Diente17.TabIndex = 45;
             this.BTN_Diente17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente17.UseVisualStyleBackColor = false;
+            this.BTN_Diente17.Click += new System.EventHandler(this.BTN_Diente17_Click);
             // 
             // BTN_Diente18
             // 
@@ -234,6 +243,7 @@
             this.BTN_Diente18.TabIndex = 46;
             this.BTN_Diente18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente18.UseVisualStyleBackColor = false;
+            this.BTN_Diente18.Click += new System.EventHandler(this.BTN_Diente18_Click);
             // 
             // label1
             // 
@@ -411,6 +421,7 @@
             this.BTN_Diente21.TabIndex = 62;
             this.BTN_Diente21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente21.UseVisualStyleBackColor = false;
+            this.BTN_Diente21.Click += new System.EventHandler(this.BTN_Diente21_Click);
             // 
             // BTN_Diente22
             // 
@@ -428,6 +439,7 @@
             this.BTN_Diente22.TabIndex = 61;
             this.BTN_Diente22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente22.UseVisualStyleBackColor = false;
+            this.BTN_Diente22.Click += new System.EventHandler(this.BTN_Diente22_Click);
             // 
             // BTN_Diente23
             // 
@@ -445,6 +457,7 @@
             this.BTN_Diente23.TabIndex = 60;
             this.BTN_Diente23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente23.UseVisualStyleBackColor = false;
+            this.BTN_Diente23.Click += new System.EventHandler(this.BTN_Diente23_Click);
             // 
             // BTN_Diente24
             // 
@@ -462,6 +475,7 @@
             this.BTN_Diente24.TabIndex = 59;
             this.BTN_Diente24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente24.UseVisualStyleBackColor = false;
+            this.BTN_Diente24.Click += new System.EventHandler(this.BTN_Diente24_Click);
             // 
             // BTN_Diente25
             // 
@@ -479,6 +493,7 @@
             this.BTN_Diente25.TabIndex = 58;
             this.BTN_Diente25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente25.UseVisualStyleBackColor = false;
+            this.BTN_Diente25.Click += new System.EventHandler(this.BTN_Diente25_Click);
             // 
             // BTN_Diente26
             // 
@@ -496,6 +511,7 @@
             this.BTN_Diente26.TabIndex = 57;
             this.BTN_Diente26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente26.UseVisualStyleBackColor = false;
+            this.BTN_Diente26.Click += new System.EventHandler(this.BTN_Diente26_Click);
             // 
             // BTN_Diente27
             // 
@@ -513,6 +529,7 @@
             this.BTN_Diente27.TabIndex = 56;
             this.BTN_Diente27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente27.UseVisualStyleBackColor = false;
+            this.BTN_Diente27.Click += new System.EventHandler(this.BTN_Diente27_Click);
             // 
             // BTN_Diente28
             // 
@@ -530,6 +547,7 @@
             this.BTN_Diente28.TabIndex = 55;
             this.BTN_Diente28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente28.UseVisualStyleBackColor = false;
+            this.BTN_Diente28.Click += new System.EventHandler(this.BTN_Diente28_Click);
             // 
             // label17
             // 
@@ -627,6 +645,7 @@
             this.BTN_Diente31.TabIndex = 94;
             this.BTN_Diente31.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente31.UseVisualStyleBackColor = false;
+            this.BTN_Diente31.Click += new System.EventHandler(this.BTN_Diente31_Click);
             // 
             // BTN_Diente32
             // 
@@ -644,6 +663,7 @@
             this.BTN_Diente32.TabIndex = 93;
             this.BTN_Diente32.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente32.UseVisualStyleBackColor = false;
+            this.BTN_Diente32.Click += new System.EventHandler(this.BTN_Diente32_Click);
             // 
             // BTN_Diente33
             // 
@@ -661,6 +681,7 @@
             this.BTN_Diente33.TabIndex = 92;
             this.BTN_Diente33.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente33.UseVisualStyleBackColor = false;
+            this.BTN_Diente33.Click += new System.EventHandler(this.BTN_Diente33_Click);
             // 
             // BTN_Diente34
             // 
@@ -678,6 +699,7 @@
             this.BTN_Diente34.TabIndex = 91;
             this.BTN_Diente34.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente34.UseVisualStyleBackColor = false;
+            this.BTN_Diente34.Click += new System.EventHandler(this.BTN_Diente34_Click);
             // 
             // BTN_Diente35
             // 
@@ -695,6 +717,7 @@
             this.BTN_Diente35.TabIndex = 90;
             this.BTN_Diente35.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente35.UseVisualStyleBackColor = false;
+            this.BTN_Diente35.Click += new System.EventHandler(this.BTN_Diente35_Click);
             // 
             // BTN_Diente36
             // 
@@ -712,6 +735,7 @@
             this.BTN_Diente36.TabIndex = 89;
             this.BTN_Diente36.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente36.UseVisualStyleBackColor = false;
+            this.BTN_Diente36.Click += new System.EventHandler(this.BTN_Diente36_Click);
             // 
             // BTN_Diente37
             // 
@@ -729,6 +753,7 @@
             this.BTN_Diente37.TabIndex = 88;
             this.BTN_Diente37.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente37.UseVisualStyleBackColor = false;
+            this.BTN_Diente37.Click += new System.EventHandler(this.BTN_Diente37_Click);
             // 
             // BTN_Diente38
             // 
@@ -746,6 +771,7 @@
             this.BTN_Diente38.TabIndex = 87;
             this.BTN_Diente38.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente38.UseVisualStyleBackColor = false;
+            this.BTN_Diente38.Click += new System.EventHandler(this.BTN_Diente38_Click);
             // 
             // label25
             // 
@@ -861,6 +887,7 @@
             this.BTN_Diente47.TabIndex = 77;
             this.BTN_Diente47.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente47.UseVisualStyleBackColor = false;
+            this.BTN_Diente47.Click += new System.EventHandler(this.BTN_Diente47_Click);
             // 
             // BTN_Diente46
             // 
@@ -878,6 +905,7 @@
             this.BTN_Diente46.TabIndex = 76;
             this.BTN_Diente46.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente46.UseVisualStyleBackColor = false;
+            this.BTN_Diente46.Click += new System.EventHandler(this.BTN_Diente46_Click);
             // 
             // BTN_Diente45
             // 
@@ -895,6 +923,7 @@
             this.BTN_Diente45.TabIndex = 75;
             this.BTN_Diente45.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente45.UseVisualStyleBackColor = false;
+            this.BTN_Diente45.Click += new System.EventHandler(this.BTN_Diente45_Click);
             // 
             // BTN_Diente44
             // 
@@ -912,6 +941,7 @@
             this.BTN_Diente44.TabIndex = 74;
             this.BTN_Diente44.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente44.UseVisualStyleBackColor = false;
+            this.BTN_Diente44.Click += new System.EventHandler(this.BTN_Diente44_Click);
             // 
             // BTN_Diente43
             // 
@@ -929,6 +959,7 @@
             this.BTN_Diente43.TabIndex = 73;
             this.BTN_Diente43.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente43.UseVisualStyleBackColor = false;
+            this.BTN_Diente43.Click += new System.EventHandler(this.BTN_Diente43_Click);
             // 
             // BTN_Diente42
             // 
@@ -946,6 +977,7 @@
             this.BTN_Diente42.TabIndex = 72;
             this.BTN_Diente42.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente42.UseVisualStyleBackColor = false;
+            this.BTN_Diente42.Click += new System.EventHandler(this.BTN_Diente42_Click);
             // 
             // BTN_Diente41
             // 
@@ -963,13 +995,14 @@
             this.BTN_Diente41.TabIndex = 71;
             this.BTN_Diente41.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente41.UseVisualStyleBackColor = false;
+            this.BTN_Diente41.Click += new System.EventHandler(this.BTN_Diente41_Click);
             // 
             // EDT_Descripcion
             // 
             this.EDT_Descripcion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Descripcion.Location = new System.Drawing.Point(100, 77);
             this.EDT_Descripcion.Name = "EDT_Descripcion";
-            this.EDT_Descripcion.Size = new System.Drawing.Size(945, 25);
+            this.EDT_Descripcion.Size = new System.Drawing.Size(612, 25);
             this.EDT_Descripcion.TabIndex = 104;
             // 
             // STC_Campo
@@ -1006,6 +1039,25 @@
             this.BTN_Aceptar.TabIndex = 105;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             // 
+            // DT_FechaInicio
+            // 
+            this.DT_FechaInicio.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.DT_FechaInicio.Location = new System.Drawing.Point(814, 77);
+            this.DT_FechaInicio.Name = "DT_FechaInicio";
+            this.DT_FechaInicio.Size = new System.Drawing.Size(232, 25);
+            this.DT_FechaInicio.TabIndex = 108;
+            this.DT_FechaInicio.Value = new System.DateTime(2019, 6, 24, 0, 0, 0, 0);
+            // 
+            // STC_FechaInicio
+            // 
+            this.STC_FechaInicio.AutoSize = true;
+            this.STC_FechaInicio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_FechaInicio.Location = new System.Drawing.Point(718, 79);
+            this.STC_FechaInicio.Name = "STC_FechaInicio";
+            this.STC_FechaInicio.Size = new System.Drawing.Size(90, 20);
+            this.STC_FechaInicio.TabIndex = 107;
+            this.STC_FechaInicio.Text = "Fecha Inicio:";
+            // 
             // WIN_CAT_Odontograma_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1014,6 +1066,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(1056, 619);
+            this.Controls.Add(this.DT_FechaInicio);
+            this.Controls.Add(this.STC_FechaInicio);
             this.Controls.Add(this.BTN_Cancelar);
             this.Controls.Add(this.BTN_Aceptar);
             this.Controls.Add(this.EDT_Descripcion);
@@ -1156,6 +1210,8 @@
             this.Controls.SetChildIndex(this.EDT_Descripcion, 0);
             this.Controls.SetChildIndex(this.BTN_Aceptar, 0);
             this.Controls.SetChildIndex(this.BTN_Cancelar, 0);
+            this.Controls.SetChildIndex(this.STC_FechaInicio, 0);
+            this.Controls.SetChildIndex(this.DT_FechaInicio, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1230,5 +1286,7 @@
         private System.Windows.Forms.Label STC_Campo;
         private System.Windows.Forms.Button BTN_Cancelar;
         private System.Windows.Forms.Button BTN_Aceptar;
+        private System.Windows.Forms.DateTimePicker DT_FechaInicio;
+        private System.Windows.Forms.Label STC_FechaInicio;
     }
 }

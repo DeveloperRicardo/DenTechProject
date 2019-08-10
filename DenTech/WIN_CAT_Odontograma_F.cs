@@ -86,6 +86,261 @@ namespace DenTech
             }
         }
 
+        #region Dientes 11-18
+        private void BTN_Diente11_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[0]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente12_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[1]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente13_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[2]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente14_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[3]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente15_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[4]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente16_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[5]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente17_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[6]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente18_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[7]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+        #endregion
+
+        #region Dientes 21-28
+        private void BTN_Diente21_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[8]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente22_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[9]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente23_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[10]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente24_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[11]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente25_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[12]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente26_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[13]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente27_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[14]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente28_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[15]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+        #endregion
+
+        #region Dientes 31-38
+        private void BTN_Diente31_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[16]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente32_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[17]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente33_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[18]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente34_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[19]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente35_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[20]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente36_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[21]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente37_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[22]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente38_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[23]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+        #endregion
+
+        #region Dientes 41-48
+        private void BTN_Diente41_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[24]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente42_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[25]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente43_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[26]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente44_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[27]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente45_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[28]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente46_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[29]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
+        private void BTN_Diente47_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla
+            WIN_CAT_Diente_F Window = new WIN_CAT_Diente_F(gnIdDiente[30]);
+            Window.ShowDialog();
+            //Refrescar();
+        }
+
         private void BTN_Diente48_Click(object sender, EventArgs e)
         {
             // Se instancia un objeto de tipo ventana para abrirla
@@ -93,5 +348,6 @@ namespace DenTech
             Window.ShowDialog();
             //Refrescar();
         }
+        #endregion
     }
 }
