@@ -72,6 +72,11 @@
     <Compile Include="Parametros_Crystal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RecetaDataSet.cs">
       <DependentUpon>RecetaDataSet.xsd</DependentUpon>
     </Compile>
@@ -249,14 +254,9 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Receta_Reporte.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Receta_Reporte.cs</LastGenOutput>
@@ -360,6 +360,14 @@
     <Content Include="DHD.ico" />
     <Content Include="LogoD.ico" />
     <Content Include="LogoD2.ico" />
+    <None Include="Resources\Implante.png" />
+    <None Include="Resources\Extraccion.png" />
+    <None Include="Resources\Diente Superior.png" />
+    <None Include="Resources\Diente implementacion Realizado.png" />
+    <None Include="Resources\Diente implementacion Pendiente.png" />
+    <None Include="Resources\Diente extraccion Realizado.png" />
+    <None Include="Resources\Diente extraccion Pendiente.png" />
+    <None Include="Resources\Diente abajo.png" />
     <None Include="RecetaDataSet.xsc">
       <DependentUpon>RecetaDataSet.xsd</DependentUpon>
     </None>
@@ -371,14 +379,6 @@
     <None Include="RecetaDataSet.xss">
       <DependentUpon>RecetaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Resources\Implante.png" />
-    <None Include="Resources\Extraccion.png" />
-    <None Include="Resources\Diente Superior.png" />
-    <None Include="Resources\Diente implementacion Realizado.png" />
-    <None Include="Resources\Diente implementacion Pendiente.png" />
-    <None Include="Resources\Diente extraccion Realizado.png" />
-    <None Include="Resources\Diente extraccion Pendiente.png" />
-    <None Include="Resources\Diente abajo.png" />
     <None Include="Resources\Maximize 2.png" />
     <None Include="Resources\Maximize 1.png" />
   </ItemGroup>

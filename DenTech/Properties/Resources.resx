@@ -118,34 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DienteSuperior" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Diente Superior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Extraccion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Extraccion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diente_extraccion_Pendiente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diente extraccion Pendiente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Maximize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Maximize 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DienteextraccionRealizado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Diente extraccion Realizado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DienteimplementacionPendiente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Diente implementacion Pendiente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DienteimplementacionRealizado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Diente implementacion Realizado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maximize2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maximize 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Dienteabajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Diente_abajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diente abajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DienteextraccionPendiente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Diente extraccion Pendiente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Extraccion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Extraccion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Diente_implementacion_Realizado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diente implementacion Realizado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Implante" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Implante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diente_Superior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diente Superior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diente_extraccion_Realizado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diente extraccion Realizado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diente_implementacion_Pendiente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diente implementacion Pendiente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maximize2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maximize 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

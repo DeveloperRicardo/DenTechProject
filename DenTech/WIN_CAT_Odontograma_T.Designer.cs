@@ -33,13 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Odontograma_T));
             this.DGV_TablaNombre = new System.Windows.Forms.DataGridView();
-            this.COL_IdOdontograma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Columna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PANEL_Botones = new System.Windows.Forms.FlowLayoutPanel();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Cancelar = new System.Windows.Forms.Button();
+            this.COL_IdOdontograma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaNombre)).BeginInit();
             this.PANEL_Botones.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +63,8 @@
             this.DGV_TablaNombre.ColumnHeadersHeight = 30;
             this.DGV_TablaNombre.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_IdOdontograma,
-            this.COL_Columna1});
+            this.COL_Descripcion,
+            this.COL_FechaRegistro});
             this.DGV_TablaNombre.EnableHeadersVisualStyles = false;
             this.DGV_TablaNombre.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DGV_TablaNombre.Location = new System.Drawing.Point(8, 76);
@@ -87,22 +89,6 @@
             this.DGV_TablaNombre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaNombre.Size = new System.Drawing.Size(539, 215);
             this.DGV_TablaNombre.TabIndex = 33;
-            // 
-            // COL_IdOdontograma
-            // 
-            this.COL_IdOdontograma.Frozen = true;
-            this.COL_IdOdontograma.HeaderText = "IdOdontograma";
-            this.COL_IdOdontograma.Name = "COL_IdOdontograma";
-            this.COL_IdOdontograma.ReadOnly = true;
-            this.COL_IdOdontograma.Visible = false;
-            // 
-            // COL_Columna1
-            // 
-            this.COL_Columna1.Frozen = true;
-            this.COL_Columna1.HeaderText = "Fecha de Registro";
-            this.COL_Columna1.Name = "COL_Columna1";
-            this.COL_Columna1.ReadOnly = true;
-            this.COL_Columna1.Width = 538;
             // 
             // PANEL_Botones
             // 
@@ -180,12 +166,39 @@
             this.BTN_Cancelar.TabIndex = 48;
             this.BTN_Cancelar.UseVisualStyleBackColor = false;
             // 
+            // COL_IdOdontograma
+            // 
+            this.COL_IdOdontograma.DataPropertyName = "Id_Odontograma";
+            this.COL_IdOdontograma.Frozen = true;
+            this.COL_IdOdontograma.HeaderText = "IdOdontograma";
+            this.COL_IdOdontograma.Name = "COL_IdOdontograma";
+            this.COL_IdOdontograma.ReadOnly = true;
+            this.COL_IdOdontograma.Visible = false;
+            // 
+            // COL_Descripcion
+            // 
+            this.COL_Descripcion.DataPropertyName = "Descripcion";
+            this.COL_Descripcion.Frozen = true;
+            this.COL_Descripcion.HeaderText = "Descripción";
+            this.COL_Descripcion.Name = "COL_Descripcion";
+            this.COL_Descripcion.ReadOnly = true;
+            // 
+            // COL_FechaRegistro
+            // 
+            this.COL_FechaRegistro.DataPropertyName = "Fecha_Registro";
+            this.COL_FechaRegistro.Frozen = true;
+            this.COL_FechaRegistro.HeaderText = "Fecha de Registro";
+            this.COL_FechaRegistro.Name = "COL_FechaRegistro";
+            this.COL_FechaRegistro.ReadOnly = true;
+            this.COL_FechaRegistro.Width = 538;
+            // 
             // WIN_CAT_Odontograma_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(679, 368);
             this.Controls.Add(this.BTN_Cancelar);
             this.Controls.Add(this.PANEL_Botones);
@@ -208,12 +221,13 @@
 
         #endregion
         private System.Windows.Forms.DataGridView DGV_TablaNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdOdontograma;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Columna1;
         private System.Windows.Forms.FlowLayoutPanel PANEL_Botones;
         private System.Windows.Forms.Button BTN_Agregar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Cancelar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdOdontograma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_FechaRegistro;
     }
 }
