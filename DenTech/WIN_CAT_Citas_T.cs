@@ -16,6 +16,7 @@ namespace DenTech
         // Variables y objetos globales
         ConexionSQL BD = new ConexionSQL();
         List<FlowLayoutPanel> Lista = new List<FlowLayoutPanel>();
+        DateTime Hoy = DateTime.Today;
 
         public WIN_CAT_Citas_T()
         {
@@ -30,9 +31,9 @@ namespace DenTech
             {
                 // Genera los cuadros del mes y agrega la información
                 GenerarCuadros(42);
+                AgregarNumeroDia(5, 31);
                 Refrescar();
             }
-                
         }
 
         // Evento del botón Agregar
@@ -135,7 +136,7 @@ namespace DenTech
             Lista.Clear();
 
             // Clico que se repetirá por el número de días indicado
-            for (int i = 1; i < NumDias; i++)
+            for (int i = 1; i <= NumDias; i++)
             {
                 // Se instancia objeto de tipo Layout
                 FlowLayoutPanel Cuadro = new FlowLayoutPanel();
@@ -146,6 +147,30 @@ namespace DenTech
                 Cuadro.BackColor = Color.White;
                 Cuadro.BorderStyle = BorderStyle.FixedSingle;
                 LAYOUT_Cuerpo.Controls.Add(Cuadro);
+                Lista.Add(Cuadro);
+            }
+        }
+
+        // Método AgregarNumeroDia
+        private void AgregarNumeroDia(int DiaI, int DiaF)
+        {
+            // Variable
+            int Dia = 1;
+
+            // Ciclo que se repetirá por la cantidad de registros en la lista
+            for (int i = 1; i <= DiaF; i++)
+            {
+                // Se instancia objeto de tipo Label
+                Label Static = new Label();
+
+                // Se agregan las propiedades del objeto
+                Static.Name = $"STC_DiaNum{i}";
+                Static.AutoSize = false;
+                Static.TextAlign = ContentAlignment.MiddleRight;
+                Static.Size = new Size(119, 25);
+                Static.Text = Dia.ToString();
+                Lista[(i - 2) + DiaI].Controls.Add(Static);
+                Dia++;
             }
         }
 

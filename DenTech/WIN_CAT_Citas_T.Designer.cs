@@ -303,7 +303,6 @@
             // LAYOUT_Cuerpo
             // 
             this.LAYOUT_Cuerpo.Controls.Add(this.PANEL_CuadroDia);
-            this.LAYOUT_Cuerpo.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.LAYOUT_Cuerpo.Location = new System.Drawing.Point(12, 163);
             this.LAYOUT_Cuerpo.Name = "LAYOUT_Cuerpo";
             this.LAYOUT_Cuerpo.Size = new System.Drawing.Size(966, 441);
