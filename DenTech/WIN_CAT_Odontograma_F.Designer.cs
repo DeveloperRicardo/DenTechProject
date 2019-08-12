@@ -97,8 +97,7 @@
             this.STC_Campo = new System.Windows.Forms.Label();
             this.BTN_Cancelar = new System.Windows.Forms.Button();
             this.BTN_Aceptar = new System.Windows.Forms.Button();
-            this.DT_FechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.STC_FechaInicio = new System.Windows.Forms.Label();
+            this.STC_FechaRegistro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BTN_Diente11
@@ -109,7 +108,7 @@
             this.BTN_Diente11.FlatAppearance.BorderSize = 2;
             this.BTN_Diente11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente11.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente11.Image")));
+            this.BTN_Diente11.Image = global::DenTech.Properties.Resources.Diente_11;
             this.BTN_Diente11.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente11.Location = new System.Drawing.Point(463, 136);
             this.BTN_Diente11.Name = "BTN_Diente11";
@@ -127,7 +126,7 @@
             this.BTN_Diente12.FlatAppearance.BorderSize = 2;
             this.BTN_Diente12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente12.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente12.Image")));
+            this.BTN_Diente12.Image = global::DenTech.Properties.Resources.Diente_12;
             this.BTN_Diente12.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente12.Location = new System.Drawing.Point(397, 136);
             this.BTN_Diente12.Name = "BTN_Diente12";
@@ -145,7 +144,7 @@
             this.BTN_Diente13.FlatAppearance.BorderSize = 2;
             this.BTN_Diente13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente13.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente13.Image")));
+            this.BTN_Diente13.Image = global::DenTech.Properties.Resources.Diente_13;
             this.BTN_Diente13.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente13.Location = new System.Drawing.Point(333, 136);
             this.BTN_Diente13.Name = "BTN_Diente13";
@@ -163,7 +162,7 @@
             this.BTN_Diente14.FlatAppearance.BorderSize = 2;
             this.BTN_Diente14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente14.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente14.Image")));
+            this.BTN_Diente14.Image = global::DenTech.Properties.Resources.Diente_14;
             this.BTN_Diente14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente14.Location = new System.Drawing.Point(269, 136);
             this.BTN_Diente14.Name = "BTN_Diente14";
@@ -181,7 +180,7 @@
             this.BTN_Diente15.FlatAppearance.BorderSize = 2;
             this.BTN_Diente15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente15.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente15.Image")));
+            this.BTN_Diente15.Image = global::DenTech.Properties.Resources.Diente_15;
             this.BTN_Diente15.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente15.Location = new System.Drawing.Point(205, 136);
             this.BTN_Diente15.Name = "BTN_Diente15";
@@ -199,7 +198,7 @@
             this.BTN_Diente16.FlatAppearance.BorderSize = 2;
             this.BTN_Diente16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente16.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente16.Image")));
+            this.BTN_Diente16.Image = global::DenTech.Properties.Resources.Diente_16;
             this.BTN_Diente16.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente16.Location = new System.Drawing.Point(141, 136);
             this.BTN_Diente16.Name = "BTN_Diente16";
@@ -217,7 +216,7 @@
             this.BTN_Diente17.FlatAppearance.BorderSize = 2;
             this.BTN_Diente17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente17.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente17.Image")));
+            this.BTN_Diente17.Image = global::DenTech.Properties.Resources.Diente_17;
             this.BTN_Diente17.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente17.Location = new System.Drawing.Point(77, 136);
             this.BTN_Diente17.Name = "BTN_Diente17";
@@ -235,9 +234,9 @@
             this.BTN_Diente18.FlatAppearance.BorderSize = 2;
             this.BTN_Diente18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente18.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente18.Image")));
+            this.BTN_Diente18.Image = global::DenTech.Properties.Resources.Diente_18;
             this.BTN_Diente18.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_Diente18.Location = new System.Drawing.Point(13, 136);
+            this.BTN_Diente18.Location = new System.Drawing.Point(12, 136);
             this.BTN_Diente18.Name = "BTN_Diente18";
             this.BTN_Diente18.Size = new System.Drawing.Size(58, 193);
             this.BTN_Diente18.TabIndex = 46;
@@ -413,7 +412,7 @@
             this.BTN_Diente21.FlatAppearance.BorderSize = 2;
             this.BTN_Diente21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente21.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente21.Image")));
+            this.BTN_Diente21.Image = global::DenTech.Properties.Resources.Diente_21;
             this.BTN_Diente21.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente21.Location = new System.Drawing.Point(538, 136);
             this.BTN_Diente21.Name = "BTN_Diente21";
@@ -431,7 +430,7 @@
             this.BTN_Diente22.FlatAppearance.BorderSize = 2;
             this.BTN_Diente22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente22.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente22.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente22.Image")));
+            this.BTN_Diente22.Image = global::DenTech.Properties.Resources.Diente_22;
             this.BTN_Diente22.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente22.Location = new System.Drawing.Point(602, 136);
             this.BTN_Diente22.Name = "BTN_Diente22";
@@ -449,7 +448,7 @@
             this.BTN_Diente23.FlatAppearance.BorderSize = 2;
             this.BTN_Diente23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente23.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente23.Image")));
+            this.BTN_Diente23.Image = global::DenTech.Properties.Resources.Diente_23;
             this.BTN_Diente23.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente23.Location = new System.Drawing.Point(666, 136);
             this.BTN_Diente23.Name = "BTN_Diente23";
@@ -467,7 +466,7 @@
             this.BTN_Diente24.FlatAppearance.BorderSize = 2;
             this.BTN_Diente24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente24.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente24.Image")));
+            this.BTN_Diente24.Image = global::DenTech.Properties.Resources.Diente_24;
             this.BTN_Diente24.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente24.Location = new System.Drawing.Point(730, 136);
             this.BTN_Diente24.Name = "BTN_Diente24";
@@ -485,7 +484,7 @@
             this.BTN_Diente25.FlatAppearance.BorderSize = 2;
             this.BTN_Diente25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente25.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente25.Image")));
+            this.BTN_Diente25.Image = global::DenTech.Properties.Resources.Diente_25;
             this.BTN_Diente25.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente25.Location = new System.Drawing.Point(794, 136);
             this.BTN_Diente25.Name = "BTN_Diente25";
@@ -503,7 +502,7 @@
             this.BTN_Diente26.FlatAppearance.BorderSize = 2;
             this.BTN_Diente26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente26.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente26.Image")));
+            this.BTN_Diente26.Image = global::DenTech.Properties.Resources.Diente_26;
             this.BTN_Diente26.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente26.Location = new System.Drawing.Point(858, 136);
             this.BTN_Diente26.Name = "BTN_Diente26";
@@ -521,7 +520,7 @@
             this.BTN_Diente27.FlatAppearance.BorderSize = 2;
             this.BTN_Diente27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente27.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente27.Image")));
+            this.BTN_Diente27.Image = global::DenTech.Properties.Resources.Diente_27;
             this.BTN_Diente27.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente27.Location = new System.Drawing.Point(922, 136);
             this.BTN_Diente27.Name = "BTN_Diente27";
@@ -539,7 +538,7 @@
             this.BTN_Diente28.FlatAppearance.BorderSize = 2;
             this.BTN_Diente28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente28.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente28.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente28.Image")));
+            this.BTN_Diente28.Image = global::DenTech.Properties.Resources.Diente_28;
             this.BTN_Diente28.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente28.Location = new System.Drawing.Point(986, 136);
             this.BTN_Diente28.Name = "BTN_Diente28";
@@ -637,7 +636,7 @@
             this.BTN_Diente31.FlatAppearance.BorderSize = 2;
             this.BTN_Diente31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente31.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente31.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente31.Image")));
+            this.BTN_Diente31.Image = global::DenTech.Properties.Resources.Diente_31;
             this.BTN_Diente31.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente31.Location = new System.Drawing.Point(539, 344);
             this.BTN_Diente31.Name = "BTN_Diente31";
@@ -655,7 +654,7 @@
             this.BTN_Diente32.FlatAppearance.BorderSize = 2;
             this.BTN_Diente32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente32.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente32.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente32.Image")));
+            this.BTN_Diente32.Image = global::DenTech.Properties.Resources.Diente_32;
             this.BTN_Diente32.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente32.Location = new System.Drawing.Point(603, 344);
             this.BTN_Diente32.Name = "BTN_Diente32";
@@ -673,7 +672,7 @@
             this.BTN_Diente33.FlatAppearance.BorderSize = 2;
             this.BTN_Diente33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente33.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente33.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente33.Image")));
+            this.BTN_Diente33.Image = global::DenTech.Properties.Resources.Diente_33;
             this.BTN_Diente33.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente33.Location = new System.Drawing.Point(667, 344);
             this.BTN_Diente33.Name = "BTN_Diente33";
@@ -691,7 +690,7 @@
             this.BTN_Diente34.FlatAppearance.BorderSize = 2;
             this.BTN_Diente34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente34.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente34.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente34.Image")));
+            this.BTN_Diente34.Image = global::DenTech.Properties.Resources.Diente_34;
             this.BTN_Diente34.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente34.Location = new System.Drawing.Point(731, 344);
             this.BTN_Diente34.Name = "BTN_Diente34";
@@ -709,7 +708,7 @@
             this.BTN_Diente35.FlatAppearance.BorderSize = 2;
             this.BTN_Diente35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente35.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente35.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente35.Image")));
+            this.BTN_Diente35.Image = global::DenTech.Properties.Resources.Diente_35;
             this.BTN_Diente35.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente35.Location = new System.Drawing.Point(795, 344);
             this.BTN_Diente35.Name = "BTN_Diente35";
@@ -727,7 +726,7 @@
             this.BTN_Diente36.FlatAppearance.BorderSize = 2;
             this.BTN_Diente36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente36.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente36.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente36.Image")));
+            this.BTN_Diente36.Image = global::DenTech.Properties.Resources.Diente_36;
             this.BTN_Diente36.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente36.Location = new System.Drawing.Point(859, 344);
             this.BTN_Diente36.Name = "BTN_Diente36";
@@ -745,7 +744,7 @@
             this.BTN_Diente37.FlatAppearance.BorderSize = 2;
             this.BTN_Diente37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente37.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente37.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente37.Image")));
+            this.BTN_Diente37.Image = global::DenTech.Properties.Resources.Diente_37;
             this.BTN_Diente37.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente37.Location = new System.Drawing.Point(923, 344);
             this.BTN_Diente37.Name = "BTN_Diente37";
@@ -763,7 +762,7 @@
             this.BTN_Diente38.FlatAppearance.BorderSize = 2;
             this.BTN_Diente38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente38.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente38.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente38.Image")));
+            this.BTN_Diente38.Image = global::DenTech.Properties.Resources.Diente_38;
             this.BTN_Diente38.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente38.Location = new System.Drawing.Point(987, 344);
             this.BTN_Diente38.Name = "BTN_Diente38";
@@ -861,7 +860,7 @@
             this.BTN_Diente48.FlatAppearance.BorderSize = 2;
             this.BTN_Diente48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente48.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente48.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente48.Image")));
+            this.BTN_Diente48.Image = global::DenTech.Properties.Resources.Diente_48;
             this.BTN_Diente48.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente48.Location = new System.Drawing.Point(14, 344);
             this.BTN_Diente48.Name = "BTN_Diente48";
@@ -879,7 +878,7 @@
             this.BTN_Diente47.FlatAppearance.BorderSize = 2;
             this.BTN_Diente47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente47.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente47.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente47.Image")));
+            this.BTN_Diente47.Image = global::DenTech.Properties.Resources.Diente_47;
             this.BTN_Diente47.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente47.Location = new System.Drawing.Point(78, 344);
             this.BTN_Diente47.Name = "BTN_Diente47";
@@ -897,7 +896,7 @@
             this.BTN_Diente46.FlatAppearance.BorderSize = 2;
             this.BTN_Diente46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente46.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente46.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente46.Image")));
+            this.BTN_Diente46.Image = global::DenTech.Properties.Resources.Diente_46;
             this.BTN_Diente46.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente46.Location = new System.Drawing.Point(142, 344);
             this.BTN_Diente46.Name = "BTN_Diente46";
@@ -915,7 +914,7 @@
             this.BTN_Diente45.FlatAppearance.BorderSize = 2;
             this.BTN_Diente45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente45.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente45.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente45.Image")));
+            this.BTN_Diente45.Image = global::DenTech.Properties.Resources.Diente_45;
             this.BTN_Diente45.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente45.Location = new System.Drawing.Point(206, 344);
             this.BTN_Diente45.Name = "BTN_Diente45";
@@ -933,7 +932,7 @@
             this.BTN_Diente44.FlatAppearance.BorderSize = 2;
             this.BTN_Diente44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente44.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente44.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente44.Image")));
+            this.BTN_Diente44.Image = global::DenTech.Properties.Resources.Diente_44;
             this.BTN_Diente44.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente44.Location = new System.Drawing.Point(270, 344);
             this.BTN_Diente44.Name = "BTN_Diente44";
@@ -951,7 +950,7 @@
             this.BTN_Diente43.FlatAppearance.BorderSize = 2;
             this.BTN_Diente43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente43.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente43.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente43.Image")));
+            this.BTN_Diente43.Image = global::DenTech.Properties.Resources.Diente_43;
             this.BTN_Diente43.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente43.Location = new System.Drawing.Point(334, 344);
             this.BTN_Diente43.Name = "BTN_Diente43";
@@ -969,7 +968,7 @@
             this.BTN_Diente42.FlatAppearance.BorderSize = 2;
             this.BTN_Diente42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente42.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente42.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente42.Image")));
+            this.BTN_Diente42.Image = global::DenTech.Properties.Resources.Diente_42;
             this.BTN_Diente42.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente42.Location = new System.Drawing.Point(398, 344);
             this.BTN_Diente42.Name = "BTN_Diente42";
@@ -987,7 +986,7 @@
             this.BTN_Diente41.FlatAppearance.BorderSize = 2;
             this.BTN_Diente41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Diente41.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Diente41.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Diente41.Image")));
+            this.BTN_Diente41.Image = global::DenTech.Properties.Resources.Diente_41;
             this.BTN_Diente41.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Diente41.Location = new System.Drawing.Point(464, 344);
             this.BTN_Diente41.Name = "BTN_Diente41";
@@ -1002,7 +1001,7 @@
             this.EDT_Descripcion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Descripcion.Location = new System.Drawing.Point(100, 77);
             this.EDT_Descripcion.Name = "EDT_Descripcion";
-            this.EDT_Descripcion.Size = new System.Drawing.Size(612, 25);
+            this.EDT_Descripcion.Size = new System.Drawing.Size(745, 25);
             this.EDT_Descripcion.TabIndex = 104;
             // 
             // STC_Campo
@@ -1026,6 +1025,7 @@
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Cancelar.TabIndex = 106;
             this.BTN_Cancelar.UseVisualStyleBackColor = false;
+            this.BTN_Cancelar.Click += new System.EventHandler(this.BTN_Cancelar_Click);
             // 
             // BTN_Aceptar
             // 
@@ -1039,24 +1039,15 @@
             this.BTN_Aceptar.TabIndex = 105;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             // 
-            // DT_FechaInicio
+            // STC_FechaRegistro
             // 
-            this.DT_FechaInicio.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.DT_FechaInicio.Location = new System.Drawing.Point(814, 77);
-            this.DT_FechaInicio.Name = "DT_FechaInicio";
-            this.DT_FechaInicio.Size = new System.Drawing.Size(232, 25);
-            this.DT_FechaInicio.TabIndex = 108;
-            this.DT_FechaInicio.Value = new System.DateTime(2019, 6, 24, 0, 0, 0, 0);
-            // 
-            // STC_FechaInicio
-            // 
-            this.STC_FechaInicio.AutoSize = true;
-            this.STC_FechaInicio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_FechaInicio.Location = new System.Drawing.Point(718, 79);
-            this.STC_FechaInicio.Name = "STC_FechaInicio";
-            this.STC_FechaInicio.Size = new System.Drawing.Size(90, 20);
-            this.STC_FechaInicio.TabIndex = 107;
-            this.STC_FechaInicio.Text = "Fecha Inicio:";
+            this.STC_FechaRegistro.AutoSize = true;
+            this.STC_FechaRegistro.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_FechaRegistro.Location = new System.Drawing.Point(851, 79);
+            this.STC_FechaRegistro.Name = "STC_FechaRegistro";
+            this.STC_FechaRegistro.Size = new System.Drawing.Size(134, 20);
+            this.STC_FechaRegistro.TabIndex = 107;
+            this.STC_FechaRegistro.Text = "Fecha de Registro: ";
             // 
             // WIN_CAT_Odontograma_F
             // 
@@ -1066,8 +1057,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(1056, 619);
-            this.Controls.Add(this.DT_FechaInicio);
-            this.Controls.Add(this.STC_FechaInicio);
+            this.Controls.Add(this.STC_FechaRegistro);
             this.Controls.Add(this.BTN_Cancelar);
             this.Controls.Add(this.BTN_Aceptar);
             this.Controls.Add(this.EDT_Descripcion);
@@ -1139,6 +1129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "WIN_CAT_Odontograma_F";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.TituloBanner = "Odontograma";
             this.TituloVentana = "      DenTech - Odontograma";
             this.Load += new System.EventHandler(this.WIN_CAT_Odontograma_F_Load);
@@ -1210,8 +1201,7 @@
             this.Controls.SetChildIndex(this.EDT_Descripcion, 0);
             this.Controls.SetChildIndex(this.BTN_Aceptar, 0);
             this.Controls.SetChildIndex(this.BTN_Cancelar, 0);
-            this.Controls.SetChildIndex(this.STC_FechaInicio, 0);
-            this.Controls.SetChildIndex(this.DT_FechaInicio, 0);
+            this.Controls.SetChildIndex(this.STC_FechaRegistro, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1286,7 +1276,6 @@
         private System.Windows.Forms.Label STC_Campo;
         private System.Windows.Forms.Button BTN_Cancelar;
         private System.Windows.Forms.Button BTN_Aceptar;
-        private System.Windows.Forms.DateTimePicker DT_FechaInicio;
-        private System.Windows.Forms.Label STC_FechaInicio;
+        private System.Windows.Forms.Label STC_FechaRegistro;
     }
 }

@@ -144,6 +144,12 @@
     <Compile Include="WIN_CAT_Expediente_T.Designer.cs">
       <DependentUpon>WIN_CAT_Expediente_T.cs</DependentUpon>
     </Compile>
+    <Compile Include="WIN_CAT_OdontogramaN_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_CAT_OdontogramaN_F.Designer.cs">
+      <DependentUpon>WIN_CAT_OdontogramaN_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="WIN_CAT_Odontograma_F.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     <EmbeddedResource Include="WIN_CAT_Expediente_T.resx">
       <DependentUpon>WIN_CAT_Expediente_T.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_OdontogramaN_F.resx">
+      <DependentUpon>WIN_CAT_OdontogramaN_F.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Odontograma_F.resx">
       <DependentUpon>WIN_CAT_Odontograma_F.cs</DependentUpon>
     </EmbeddedResource>
@@ -360,6 +369,43 @@
     <Content Include="DHD.ico" />
     <Content Include="LogoD.ico" />
     <Content Include="LogoD2.ico" />
+    <None Include="Resources\Diente_imple_Realizado.png" />
+    <None Include="Resources\Diente_imple_Pendiente.png" />
+    <None Include="Resources\Diente_extrac_Realizado.png" />
+    <None Include="Resources\Diente_extrac_Pendiente.png" />
+    <None Include="Resources\Diente_lateral_Abajo.png" />
+    <None Include="Resources\14.png" />
+    <None Include="Resources\48.png" />
+    <None Include="Resources\47.png" />
+    <None Include="Resources\46.png" />
+    <None Include="Resources\45.png" />
+    <None Include="Resources\44.png" />
+    <None Include="Resources\43.png" />
+    <None Include="Resources\42.png" />
+    <None Include="Resources\41.png" />
+    <None Include="Resources\38.png" />
+    <None Include="Resources\37.png" />
+    <None Include="Resources\36.png" />
+    <None Include="Resources\35.png" />
+    <None Include="Resources\34.png" />
+    <None Include="Resources\33.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\28.png" />
+    <None Include="Resources\27.png" />
+    <None Include="Resources\26.png" />
+    <None Include="Resources\25.png" />
+    <None Include="Resources\24.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\18.png" />
+    <None Include="Resources\17.png" />
+    <None Include="Resources\16.png" />
+    <None Include="Resources\15.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\11.png" />
     <None Include="Resources\Implante.png" />
     <None Include="Resources\Extraccion.png" />
     <None Include="Resources\Diente Superior.png" />

@@ -48,7 +48,7 @@ namespace DenTech
                     cmd.CommandText = "Insert Into INVENTARIO(Descripcion, Cantidad, Fecha_Inicio, Fecha_Final,Tipo_Producto) " +
                         "Values('" + EDT_Nombre.Text + "', " + NUD_Cantidad.Text + ", '" + DT_FechaInicio.Value + "', '" + DT_FechaFinal.Value + "','"+COMBO_Opcion.SelectedIndex+"')";
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro agregado con éxito.", "Agregar Empresas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro agregado con éxito.", "Dentech", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else // Registro ya existente, se modifica
                 {
@@ -58,7 +58,7 @@ namespace DenTech
                         "Set Descripcion = '" + EDT_Nombre.Text + "', Cantidad = " + NUD_Cantidad.Text + ", Fecha_Inicio = '" + DT_FechaInicio.Value + "', Fecha_Final = '" + DT_FechaFinal.Value + "', " +
                         "Tipo_Producto ='"+COMBO_Opcion.SelectedIndex+"' WHERE Id_Inventario = " + gIdProducto;
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro modificado con éxito.", "Modificar Empresas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro modificado con éxito.", "Dentech", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 this.Close(); // Se cierra la ventana
             }

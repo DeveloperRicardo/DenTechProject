@@ -36,7 +36,8 @@ namespace DenTech
                     // Se estructura el query
                     SqlCommand cmd = BD.conexion.CreateCommand();
                     cmd.CommandText = "Select \n" +
-                        "Descripcion \n" +
+                        "Descripcion, \n" +
+                        "Fecha_Registro \n" +
                         "From ODONTOGRAMA " +
                         "Where ODONTOGRAMA.Id_Odontograma = " + gnIdOdontograma;
 
@@ -49,6 +50,8 @@ namespace DenTech
                     {
                         // Inserta la información a los controles
                         EDT_Descripcion.Text = Reader[0].ToString();
+                        DateTime dia = Convert.ToDateTime(Reader[1]);
+                        STC_FechaRegistro.Text += dia.ToShortDateString();
                     }
                     Reader.Close(); // Se libera
 
@@ -349,5 +352,10 @@ namespace DenTech
             //Refrescar();
         }
         #endregion
+
+        private void BTN_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

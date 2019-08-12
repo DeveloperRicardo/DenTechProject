@@ -182,6 +182,7 @@
             this.COL_Descripcion.HeaderText = "Descripción";
             this.COL_Descripcion.Name = "COL_Descripcion";
             this.COL_Descripcion.ReadOnly = true;
+            this.COL_Descripcion.Width = 370;
             // 
             // COL_FechaRegistro
             // 

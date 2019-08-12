@@ -31,7 +31,7 @@ namespace DenTech
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
             // Se insatncia un objeto de tipo ventana para abrirla y refrescar la tabla
-            WIN_CAT_Odontograma_F Window = new WIN_CAT_Odontograma_F();
+            WIN_CAT_OdontogramaN_F Window = new WIN_CAT_OdontogramaN_F(gnIdPaciente);
             Window.ShowDialog();
             Refrescar();
         }
@@ -75,14 +75,13 @@ namespace DenTech
             // Pregunta al usuario si desea eliminar el registro
             if (MessageBox.Show("¿Desea eliminar el registro seleccionado?", "DenTech", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //// Se estructura el query para eliminar el registro
-                //SqlCommand cmd = BD.conexion.CreateCommand();
-                //cmd.CommandText = "Delete From EXPEDIENTE Where Id_Expediente = " + (int)DGV_TablaExpediente.CurrentRow.Cells[0].Value;
-                //cmd.ExecuteNonQuery(); // Se ejecuta
-
-                //// Se confirma la eliminación del registro y se actualiza la información de la tabla
-                //MessageBox.Show("Registro eliminado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //Refrescar();
+                // Se estructura el query para eliminar el registro
+                SqlCommand cmd = BD.conexion.CreateCommand();
+                cmd.CommandText = "Delete FROM ODONTOGRAMA Where Id_Odontograma = " + (int)DGV_TablaNombre.CurrentRow.Cells[0].Value;
+                cmd.ExecuteNonQuery(); // Se ejecuta
+                // Se confirma la eliminación del registro y se actualiza la información de la tabla
+                MessageBox.Show("Registro eliminado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Refrescar();
             }
         }
     }

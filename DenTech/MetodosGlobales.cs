@@ -39,6 +39,9 @@ namespace DenTech
                 case 8:
                     MessageBox.Show("Contraseña incorrecta.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
+                case 9:
+                    MessageBox.Show("Se han creado los métodos faltantes.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
             }
         }
         #endregion
@@ -75,8 +78,10 @@ namespace DenTech
                 {
                     bool ExistePACIENTES = false, ExisteEMPLEADOS = false, ExisteCITAS = false, ExisteHISTORIAL = false, 
                         ExisteSANGRE = false, ExisteEXPEDIENTE = false, ExisteRECETA = false, ExisteINVENTARIO = false,
-                        ExisteSERVICIOS = false;
+                        ExisteSERVICIOS = false, ExisteODONTOGRAMA = false, ExisteDIENTE = false, ExisteDETALLE = false,
+                        ExisteTRCrearDiente = false, ExisteTRCrearDetalle = false;
                     int NumUsuarios = 0, NumSangre = 0;
+                    string QryTablas = "", QryTablas2 = "", tablas = "";
                     Miconexion.Open();
                     SqlCommand Query = Miconexion.CreateCommand();
                     //Verificar si existen la tablas
@@ -98,9 +103,20 @@ namespace DenTech
                     ExisteRECETA = Convert.ToBoolean(Query.ExecuteScalar());
                     Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INVENTARIO') SELECT 'true' ELSE SELECT 'false'";
                     ExisteINVENTARIO = Convert.ToBoolean(Query.ExecuteScalar());
-                    if (!ExistePACIENTES || !ExisteEMPLEADOS || !ExisteCITAS || !ExisteHISTORIAL || !ExisteSANGRE || !ExisteEXPEDIENTE || !ExisteRECETA || !ExisteINVENTARIO || !ExisteSERVICIOS)
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'ODONTOGRAMA') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteODONTOGRAMA = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'DIENTE') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteDIENTE = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'DETALLEDIENTE') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteDETALLE = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM sys.triggers WHERE name = 'TR_Crear_Diente') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteTRCrearDiente = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM sys.triggers WHERE name = 'TR_Crear_Detalle') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteTRCrearDetalle = Convert.ToBoolean(Query.ExecuteScalar());
+                    if (!ExistePACIENTES || !ExisteEMPLEADOS || !ExisteCITAS || !ExisteHISTORIAL || !ExisteSANGRE ||
+                        !ExisteEXPEDIENTE || !ExisteRECETA || !ExisteINVENTARIO || !ExisteSERVICIOS || !ExisteODONTOGRAMA ||
+                        !ExisteDIENTE || !ExisteDETALLE)
                     {
-                        string QryTablas = "",tablas = "";
                         if (!ExisteEMPLEADOS)
                         {
                             QryTablas += "CREATE TABLE EMPLEADOS(Id_Empleado int primary key identity, Usuario varchar(30),Nombre varchar(20)," +
@@ -154,6 +170,24 @@ namespace DenTech
                             QryTablas += "CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int)";
                             tablas += "-INVENTARIO\n";
                         }
+                        if (!ExisteODONTOGRAMA)
+                        {
+                            QryTablas += "CREATE TABLE ODONTOGRAMA(Id_Odontograma int primary key identity, Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade," +
+                                         "Fecha_Registro date, Descripcion varchar(100))";
+                            tablas += "-ODONTOGRAMA\n";
+                        }
+                        if (!ExisteDIENTE)
+                        {
+                            QryTablas += "CREATE TABLE DIENTE(Id_Diente int primary key identity, Id_Odontograma int foreign key references ODONTOGRAMA(Id_Odontograma) on update cascade on delete cascade," +
+                                         "NumDiente int, Descripcion varchar(510))";
+                            tablas += "-DIENTE\n";
+                        }
+                        if (!ExisteDETALLE)
+                        {
+                            QryTablas += "CREATE TABLE DETALLEDIENTE(Id_Detalle int primary key identity, ID_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade," +
+                                         "AreaDiente int, Estatus int); ";
+                            tablas += "-DETALLEDIENTE\n";
+                        }
                         MessageBox.Show("Se crearan las siguientes tablas faltantes en la base de datos:\n\n" + tablas, "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Query.CommandText = QryTablas;
                         Query.ExecuteNonQuery();
@@ -179,6 +213,76 @@ namespace DenTech
                                             "INSERT INTO SANGRE VALUES('O+');" +
                                             "INSERT INTO SANGRE VALUES('O-');";
                         Query.ExecuteNonQuery();
+                    }
+                    if (!ExisteTRCrearDiente || !ExisteTRCrearDetalle)
+                    {
+                        QryTablas = "";
+                        tablas = "";
+                        if (!ExisteTRCrearDiente)
+                        {
+                            QryTablas += "create trigger TR_Crear_Diente \n" +
+                                         "on ODONTOGRAMA \n" +
+                                         "for insert \n" +
+                                         "as \n " +
+                                         "DECLARE @ID int \n"+
+                                         "SET @ID = (SELECT Id_Odontograma FROM inserted) \n" +
+                                         "INSERT INTO DIENTE VALUES(@ID,11,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,12,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,13,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,14,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,15,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,16,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,17,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,18,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,21,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,22,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,23,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,24,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,25,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,26,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,27,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,28,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,31,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,32,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,33,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,34,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,35,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,36,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,37,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,38,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,41,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,42,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,43,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,44,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,45,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,46,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,47,'') \n" +
+	                                     "INSERT INTO DIENTE VALUES(@ID,48,'');\n ";
+                            tablas += "-TR_Crear_Diente\n";
+                        }
+                        if (!ExisteTRCrearDetalle)
+                        {
+                            QryTablas2 = "create trigger TR_Crear_Detalle \n" +
+                                         "on DIENTE \n" +
+                                         "for insert \n" +
+                                         "as \n " +
+                                         "DECLARE @ID2 int \n" +
+                                         "SET @ID2 = (SELECT Id_Diente FROM inserted) \n" +
+                                         "INSERT INTO DETALLEDIENTE VALUES(@ID2,1,0) \n" +
+                                         "INSERT INTO DETALLEDIENTE VALUES(@ID2,2,0) \n" +
+                                         "INSERT INTO DETALLEDIENTE VALUES(@ID2,3,0) \n" +
+                                         "INSERT INTO DETALLEDIENTE VALUES(@ID2,4,0) \n" +
+                                         "INSERT INTO DETALLEDIENTE VALUES(@ID2,5,0) \n" +
+                                         "INSERT INTO DETALLEDIENTE VALUES(@ID2,6,0) \n" +
+                                         "INSERT INTO DETALLEDIENTE VALUES(@ID2,7,0) \n";
+                            tablas += "-TR_Crear_Detalle\n";
+                        }
+                        MessageBox.Show("Se crearan los siguientes métodos faltantes en la base de datos:\n\n" + tablas, "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Query.CommandText = QryTablas;
+                        Query.ExecuteNonQuery();
+                        Query.CommandText = QryTablas2;
+                        Query.ExecuteNonQuery();
+                        Mensajes(9);
                     }
                     Miconexion.Close();
                 }
