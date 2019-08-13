@@ -357,5 +357,16 @@ namespace DenTech
         {
             this.Close();
         }
+
+        private void BTN_Aceptar_Click(object sender, EventArgs e)
+        {
+            // Se abre la conexión y se estructura el query para agregar el registro
+            SqlCommand cmd = BD.conexion.CreateCommand();
+            cmd.CommandText = "UPDATE ODONTOGRAMA SET Fecha_Registro = '" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day + "', Descripcion = '" + EDT_Descripcion.Text + "'" +
+                              "WHERE Id_Odontograma = " + gnIdOdontograma + ";";
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Registro modificado con éxito.", "Dentech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close(); // Se cierra la ventana
+        }
     }
 }

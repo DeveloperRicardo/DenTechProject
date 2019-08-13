@@ -1038,6 +1038,7 @@
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Aceptar.TabIndex = 105;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
+            this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 
             // STC_FechaRegistro
             // 

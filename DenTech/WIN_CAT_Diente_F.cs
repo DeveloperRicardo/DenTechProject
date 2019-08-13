@@ -16,7 +16,9 @@ namespace DenTech
         // Variables y objetos globales
         ConexionSQL BD = new ConexionSQL();
         int gnIdDiente = 0;
+        int[] gnIdDetalle = new int[7];
         string resName = "";
+        int estatus = 0, estatusLateral = 0;
         public WIN_CAT_Diente_F(int idDiente = 0)
         {
             InitializeComponent();
@@ -48,11 +50,11 @@ namespace DenTech
                     EDT_Descripcion.Text = Reader[1].ToString();
                 }
                 Reader.Close();
-                int estatus = 0;
                 for (int i = 1; i < 8; i++)
                 {
                     cmd.CommandText = "SELECT \n" +
-                    "Estatus \n" +
+                    "Estatus, \n" +
+                    "Id_Detalle \n" +
                     "FROM DETALLEDIENTE " +
                     "WHERE Id_Diente = " + gnIdDiente +
                     "AND AreaDiente = " + i;
@@ -63,6 +65,7 @@ namespace DenTech
                     // Revisa si cuenta con información
                     if (Reader.HasRows)
                     {
+                        gnIdDetalle[i-1] = Convert.ToInt16(Reader[1]);
                         estatus = Convert.ToInt16(Reader[0]);
                         switch (i)
                         {
@@ -305,6 +308,7 @@ namespace DenTech
                 resName = $"Diente_imple_Realizado"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
                 IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
                 IMG_LateralAbajo.BackgroundImageLayout = ImageLayout.Stretch;
+                estatusLateral = 4;
                 return;
             }
             if (RADIO_Pendiente.Checked)
@@ -313,6 +317,7 @@ namespace DenTech
                 resName = $"Diente_imple_Pendiente"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
                 IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
                 IMG_LateralAbajo.BackgroundImageLayout = ImageLayout.Stretch;
+                estatusLateral = 3;
                 return;
             }
             if (RADIO_Ninguno.Checked)
@@ -321,6 +326,7 @@ namespace DenTech
                 resName = $"Diente_lateral_Abajo"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
                 IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
                 IMG_LateralAbajo.BackgroundImageLayout = ImageLayout.Stretch;
+                estatusLateral = 0;
                 return;
             }            
         }
@@ -332,6 +338,7 @@ namespace DenTech
                 //Diente Implante Realizado
                 resName = $"Diente_extrac_Realizado"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
                 IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
+                estatusLateral = 2;
                 return;
             }
             if (RADIO_Pendiente.Checked)
@@ -339,6 +346,7 @@ namespace DenTech
                 //Diente Implante Pendiente
                 resName = $"Diente_extrac_Pendiente"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
                 IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
+                estatusLateral = 1;
                 return;
             }
             if (RADIO_Ninguno.Checked)
@@ -346,13 +354,116 @@ namespace DenTech
                 //Diente Implante Pendiente
                 resName = $"Diente_lateral_Abajo"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
                 IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
+                estatusLateral = 0;
                 return;
             }
         }
 
         private void BTN_Aceptar_Click(object sender, EventArgs e)
         {
-
+            SqlCommand cmd = BD.conexion.CreateCommand();
+            for (int i = 1; i < 8; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        if (BTN_SuperiorArriba.BackColor == Color.Blue)
+                        {
+                            estatus = 1;
+                        }
+                        if (BTN_SuperiorArriba.BackColor == Color.Red)
+                        {
+                            estatus = 2;
+                        }
+                        if (BTN_SuperiorArriba.BackColor == Color.White)
+                        {
+                            estatus = 0;
+                        }
+                        break;
+                    case 2:
+                        if (BTN_SuperiorIzq.BackColor == Color.Blue)
+                        {
+                            estatus = 1;
+                        }
+                        if (BTN_SuperiorIzq.BackColor == Color.Red)
+                        {
+                            estatus = 2;
+                        }
+                        if (BTN_SuperiorIzq.BackColor == Color.White)
+                        {
+                            estatus = 0;
+                        }
+                        break;
+                    case 3:
+                        if (BTN_SuperiorCentro.BackColor == Color.Blue)
+                        {
+                            estatus = 1;
+                        }
+                        if (BTN_SuperiorCentro.BackColor == Color.Red)
+                        {
+                            estatus = 2;
+                        }
+                        if (BTN_SuperiorCentro.BackColor == Color.White)
+                        {
+                            estatus = 0;
+                        }
+                        break;
+                    case 4:
+                        if (BTN_SuperiorDer.BackColor == Color.Blue)
+                        {
+                            estatus = 1;
+                        }
+                        if (BTN_SuperiorDer.BackColor == Color.Red)
+                        {
+                            estatus = 2;
+                        }
+                        if (BTN_SuperiorDer.BackColor == Color.White)
+                        {
+                            estatus = 0;
+                        }
+                        break;
+                    case 5:
+                        if (BTN_SuperiorAbajo.BackColor == Color.Blue)
+                        {
+                            estatus = 1;
+                        }
+                        if (BTN_SuperiorAbajo.BackColor == Color.Red)
+                        {
+                            estatus = 2;
+                        }
+                        if (BTN_SuperiorAbajo.BackColor == Color.White)
+                        {
+                            estatus = 0;
+                        }
+                        break;
+                    case 6:
+                        if (BTN_LateralArriba.BackColor == Color.Blue)
+                        {
+                            estatus = 1;
+                        }
+                        if (BTN_LateralArriba.BackColor == Color.Red)
+                        {
+                            estatus = 2;
+                        }
+                        if (BTN_LateralArriba.BackColor == Color.White)
+                        {
+                            estatus = 0;
+                        }
+                        break;
+                    case 7:
+                        estatus = estatusLateral;
+                        break;
+                    default:
+                        break;
+                }
+                cmd.CommandText = "UPDATE DETALLEDIENTE SET Estatus = " + estatus + "WHERE Id_Detalle = " + gnIdDetalle[i-1];
+                cmd.ExecuteNonQuery();
+            }
+            cmd.CommandText = "UPDATE DIENTE SET Descripcion = '" + EDT_Descripcion.Text + "' WHERE DIENTE.Id_Diente = " + gnIdDiente;
+            // Ejecuta el query y almacena los datos consultados
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Registro modificado con éxito.", "Dentech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close(); // Se cierra la ventana
         }
     }
 }

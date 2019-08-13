@@ -302,8 +302,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "WIN_CAT_Expediente_T";
-            this.TituloBanner = "Expediente";
-            this.TituloVentana = "      DenTech - Expediente";
             this.Load += new System.EventHandler(this.WIN_CAT_Expediente_T_Load);
             this.Controls.SetChildIndex(this.DGV_TablaExpediente, 0);
             this.Controls.SetChildIndex(this.BTN_Agregar, 0);
