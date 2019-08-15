@@ -12,7 +12,7 @@ using DenTech.Properties;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_Inventario_T : DenTech.WIN_Template
+    public partial class WIN_CAT_Inventario_T : WIN_Template_T
     {
         WIN_GLO_Principal Principal = new WIN_GLO_Principal();
         ConexionSQL BD = new ConexionSQL();

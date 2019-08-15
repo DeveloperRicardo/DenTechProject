@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.BTN_Cerrar = new System.Windows.Forms.Button();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
@@ -46,19 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaProducto)).BeginInit();
             this.PANEL_Botones.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BTN_Cerrar
-            // 
-            this.BTN_Cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_Cerrar.FlatAppearance.BorderSize = 0;
-            this.BTN_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cerrar.Image")));
-            this.BTN_Cerrar.Location = new System.Drawing.Point(801, 315);
-            this.BTN_Cerrar.Name = "BTN_Cerrar";
-            this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cerrar.TabIndex = 44;
-            this.BTN_Cerrar.UseVisualStyleBackColor = false;
-            this.BTN_Cerrar.Click += new System.EventHandler(this.BTN_Cerrar_Click);
             // 
             // BTN_Eliminar
             // 
@@ -138,7 +124,7 @@
             this.COL_FechaFinal});
             this.DGV_TablaProducto.EnableHeadersVisualStyles = false;
             this.DGV_TablaProducto.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_TablaProducto.Location = new System.Drawing.Point(13, 76);
+            this.DGV_TablaProducto.Location = new System.Drawing.Point(21, 133);
             this.DGV_TablaProducto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaProducto.Name = "DGV_TablaProducto";
             this.DGV_TablaProducto.ReadOnly = true;
@@ -158,7 +144,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.DGV_TablaProducto.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_TablaProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_TablaProducto.Size = new System.Drawing.Size(723, 238);
+            this.DGV_TablaProducto.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaProducto.TabIndex = 45;
             // 
             // COL_Inventario
@@ -208,7 +194,7 @@
             this.PANEL_Botones.Controls.Add(this.BTN_Agregar);
             this.PANEL_Botones.Controls.Add(this.BTN_Modificar);
             this.PANEL_Botones.Controls.Add(this.BTN_Eliminar);
-            this.PANEL_Botones.Location = new System.Drawing.Point(739, 75);
+            this.PANEL_Botones.Location = new System.Drawing.Point(967, 133);
             this.PANEL_Botones.Name = "PANEL_Botones";
             this.PANEL_Botones.Size = new System.Drawing.Size(117, 115);
             this.PANEL_Botones.TabIndex = 46;
@@ -218,26 +204,23 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(864, 381);
+            this.ClientSize = new System.Drawing.Size(1090, 590);
             this.Controls.Add(this.PANEL_Botones);
             this.Controls.Add(this.DGV_TablaProducto);
-            this.Controls.Add(this.BTN_Cerrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WIN_CAT_Inventario_T";
             this.TituloBanner = "Inventario";
-            this.TituloVentana = "      DenTech - Inventario";
             this.Load += new System.EventHandler(this.WIN_CAT_Inventario_T_Load);
-            this.Controls.SetChildIndex(this.BTN_Cerrar, 0);
             this.Controls.SetChildIndex(this.DGV_TablaProducto, 0);
             this.Controls.SetChildIndex(this.PANEL_Botones, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaProducto)).EndInit();
             this.PANEL_Botones.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button BTN_Cerrar;
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;

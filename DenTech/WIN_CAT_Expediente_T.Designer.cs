@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Expediente_T));
             this.DGV_TablaExpediente = new System.Windows.Forms.DataGridView();
             this.COL_IdExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +44,6 @@
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
-            this.BTN_Cerrar = new System.Windows.Forms.Button();
             this.BTN_General = new System.Windows.Forms.Button();
             this.BTN_Dental = new System.Windows.Forms.Button();
             this.Menu_General = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -61,14 +60,14 @@
             this.DGV_TablaExpediente.AllowUserToOrderColumns = true;
             this.DGV_TablaExpediente.BackgroundColor = System.Drawing.Color.White;
             this.DGV_TablaExpediente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaExpediente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaExpediente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_TablaExpediente.ColumnHeadersHeight = 30;
             this.DGV_TablaExpediente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_IdExpediente,
@@ -80,27 +79,27 @@
             this.IdPaciente});
             this.DGV_TablaExpediente.EnableHeadersVisualStyles = false;
             this.DGV_TablaExpediente.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_TablaExpediente.Location = new System.Drawing.Point(13, 76);
+            this.DGV_TablaExpediente.Location = new System.Drawing.Point(21, 133);
             this.DGV_TablaExpediente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaExpediente.Name = "DGV_TablaExpediente";
             this.DGV_TablaExpediente.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaExpediente.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaExpediente.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_TablaExpediente.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_TablaExpediente.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_TablaExpediente.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_TablaExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_TablaExpediente.Size = new System.Drawing.Size(945, 215);
+            this.DGV_TablaExpediente.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaExpediente.TabIndex = 34;
             // 
             // COL_IdExpediente
@@ -137,6 +136,7 @@
             this.COL_Enfermedad.HeaderText = "Enfermedad(es)";
             this.COL_Enfermedad.Name = "COL_Enfermedad";
             this.COL_Enfermedad.ReadOnly = true;
+            this.COL_Enfermedad.Visible = false;
             this.COL_Enfermedad.Width = 170;
             // 
             // COL_Alergia
@@ -146,6 +146,7 @@
             this.COL_Alergia.HeaderText = "Alergia(s)";
             this.COL_Alergia.Name = "COL_Alergia";
             this.COL_Alergia.ReadOnly = true;
+            this.COL_Alergia.Visible = false;
             this.COL_Alergia.Width = 170;
             // 
             // COL_Fecha
@@ -155,6 +156,7 @@
             this.COL_Fecha.HeaderText = "Fecha";
             this.COL_Fecha.Name = "COL_Fecha";
             this.COL_Fecha.ReadOnly = true;
+            this.COL_Fecha.Visible = false;
             // 
             // IdPaciente
             // 
@@ -174,7 +176,7 @@
             this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
             this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(964, 152);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(967, 209);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Eliminar.TabIndex = 39;
@@ -192,7 +194,7 @@
             this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
             this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(964, 114);
+            this.BTN_Modificar.Location = new System.Drawing.Point(967, 171);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Modificar.TabIndex = 38;
@@ -210,7 +212,7 @@
             this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
             this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(964, 76);
+            this.BTN_Agregar.Location = new System.Drawing.Point(967, 133);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Agregar.TabIndex = 37;
@@ -218,19 +220,6 @@
             this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Agregar.UseVisualStyleBackColor = false;
             this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
-            // 
-            // BTN_Cerrar
-            // 
-            this.BTN_Cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_Cerrar.FlatAppearance.BorderSize = 0;
-            this.BTN_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cerrar.Image")));
-            this.BTN_Cerrar.Location = new System.Drawing.Point(1023, 367);
-            this.BTN_Cerrar.Name = "BTN_Cerrar";
-            this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cerrar.TabIndex = 40;
-            this.BTN_Cerrar.UseVisualStyleBackColor = false;
-            this.BTN_Cerrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // BTN_General
             // 
@@ -240,7 +229,7 @@
             this.BTN_General.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_General.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_General.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_General.Location = new System.Drawing.Point(964, 190);
+            this.BTN_General.Location = new System.Drawing.Point(967, 247);
             this.BTN_General.Name = "BTN_General";
             this.BTN_General.Size = new System.Drawing.Size(111, 32);
             this.BTN_General.TabIndex = 41;
@@ -257,7 +246,7 @@
             this.BTN_Dental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Dental.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Dental.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Dental.Location = new System.Drawing.Point(964, 228);
+            this.BTN_Dental.Location = new System.Drawing.Point(967, 285);
             this.BTN_Dental.Name = "BTN_Dental";
             this.BTN_Dental.Size = new System.Drawing.Size(111, 32);
             this.BTN_Dental.TabIndex = 42;
@@ -269,7 +258,7 @@
             // Menu_General
             // 
             this.Menu_General.Name = "Menu_General";
-            this.Menu_General.Size = new System.Drawing.Size(181, 26);
+            this.Menu_General.Size = new System.Drawing.Size(61, 4);
             // 
             // Menu_Dental
             // 
@@ -291,10 +280,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1089, 429);
+            this.ClientSize = new System.Drawing.Size(1090, 590);
             this.Controls.Add(this.BTN_Dental);
             this.Controls.Add(this.BTN_General);
-            this.Controls.Add(this.BTN_Cerrar);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.BTN_Agregar);
@@ -302,17 +290,18 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "WIN_CAT_Expediente_T";
+            this.TituloBanner = "Expediente";
             this.Load += new System.EventHandler(this.WIN_CAT_Expediente_T_Load);
             this.Controls.SetChildIndex(this.DGV_TablaExpediente, 0);
             this.Controls.SetChildIndex(this.BTN_Agregar, 0);
             this.Controls.SetChildIndex(this.BTN_Modificar, 0);
             this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
-            this.Controls.SetChildIndex(this.BTN_Cerrar, 0);
             this.Controls.SetChildIndex(this.BTN_General, 0);
             this.Controls.SetChildIndex(this.BTN_Dental, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).EndInit();
             this.Menu_Dental.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -321,7 +310,6 @@
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;
-        private System.Windows.Forms.Button BTN_Cerrar;
         private System.Windows.Forms.Button BTN_General;
         private System.Windows.Forms.Button BTN_Dental;
         private System.Windows.Forms.ContextMenuStrip Menu_General;

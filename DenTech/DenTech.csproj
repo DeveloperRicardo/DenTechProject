@@ -252,6 +252,12 @@
     <Compile Include="WIN_Template.Designer.cs">
       <DependentUpon>WIN_Template.cs</DependentUpon>
     </Compile>
+    <Compile Include="WIN_Template_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIN_Template_T.Designer.cs">
+      <DependentUpon>WIN_Template_T.cs</DependentUpon>
+    </Compile>
     <Compile Include="Z_DummyDeControles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WIN_Template.resx">
       <DependentUpon>WIN_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_Template_T.resx">
+      <DependentUpon>WIN_Template_T.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Z_DummyDeControles.resx">
       <DependentUpon>Z_DummyDeControles.cs</DependentUpon>

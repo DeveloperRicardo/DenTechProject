@@ -39,7 +39,6 @@
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaServicios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +64,7 @@
             this.COL_Precio});
             this.DGV_TablaServicios.EnableHeadersVisualStyles = false;
             this.DGV_TablaServicios.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_TablaServicios.Location = new System.Drawing.Point(12, 76);
+            this.DGV_TablaServicios.Location = new System.Drawing.Point(21, 133);
             this.DGV_TablaServicios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaServicios.Name = "DGV_TablaServicios";
             this.DGV_TablaServicios.ReadOnly = true;
@@ -85,7 +84,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.DGV_TablaServicios.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_TablaServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_TablaServicios.Size = new System.Drawing.Size(505, 239);
+            this.DGV_TablaServicios.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaServicios.TabIndex = 33;
             // 
             // COL_IdServicio
@@ -124,7 +123,7 @@
             this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
             this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(523, 152);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(967, 209);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Eliminar.TabIndex = 36;
@@ -142,7 +141,7 @@
             this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
             this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(523, 114);
+            this.BTN_Modificar.Location = new System.Drawing.Point(967, 171);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Modificar.TabIndex = 35;
@@ -160,7 +159,7 @@
             this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
             this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(523, 76);
+            this.BTN_Agregar.Location = new System.Drawing.Point(967, 133);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Agregar.TabIndex = 34;
@@ -169,27 +168,13 @@
             this.BTN_Agregar.UseVisualStyleBackColor = false;
             this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(582, 329);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 52);
-            this.button1.TabIndex = 37;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // WIN_CAT_Servicios_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(647, 389);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1090, 590);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.BTN_Agregar);
@@ -199,15 +184,14 @@
             this.MinimizeBox = false;
             this.Name = "WIN_CAT_Servicios_T";
             this.TituloBanner = "Servicios";
-            this.TituloVentana = "      DenTech - Servicios";
             this.Load += new System.EventHandler(this.WIN_CAT_Servicios_T_Load);
             this.Controls.SetChildIndex(this.DGV_TablaServicios, 0);
             this.Controls.SetChildIndex(this.BTN_Agregar, 0);
             this.Controls.SetChildIndex(this.BTN_Modificar, 0);
             this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaServicios)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -219,6 +203,5 @@
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;
-        private System.Windows.Forms.Button button1;
     }
 }

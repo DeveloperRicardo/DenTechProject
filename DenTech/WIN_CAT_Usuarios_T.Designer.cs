@@ -40,7 +40,6 @@
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
-            this.BTN_Cancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +66,7 @@
             this.COL_Tipo});
             this.DGV_TablaUsuarios.EnableHeadersVisualStyles = false;
             this.DGV_TablaUsuarios.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_TablaUsuarios.Location = new System.Drawing.Point(12, 76);
+            this.DGV_TablaUsuarios.Location = new System.Drawing.Point(21, 133);
             this.DGV_TablaUsuarios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaUsuarios.Name = "DGV_TablaUsuarios";
             this.DGV_TablaUsuarios.ReadOnly = true;
@@ -87,7 +86,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.DGV_TablaUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_TablaUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_TablaUsuarios.Size = new System.Drawing.Size(539, 215);
+            this.DGV_TablaUsuarios.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaUsuarios.TabIndex = 33;
             // 
             // COL_IdUsuario
@@ -134,7 +133,7 @@
             this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
             this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(557, 152);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(967, 209);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Eliminar.TabIndex = 36;
@@ -152,7 +151,7 @@
             this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
             this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(557, 114);
+            this.BTN_Modificar.Location = new System.Drawing.Point(967, 171);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Modificar.TabIndex = 35;
@@ -170,7 +169,7 @@
             this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
             this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(557, 76);
+            this.BTN_Agregar.Location = new System.Drawing.Point(967, 133);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Agregar.TabIndex = 34;
@@ -179,27 +178,13 @@
             this.BTN_Agregar.UseVisualStyleBackColor = false;
             this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
-            // BTN_Cancelar
-            // 
-            this.BTN_Cancelar.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_Cancelar.FlatAppearance.BorderSize = 0;
-            this.BTN_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Cancelar.Image")));
-            this.BTN_Cancelar.Location = new System.Drawing.Point(616, 307);
-            this.BTN_Cancelar.Name = "BTN_Cancelar";
-            this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cancelar.TabIndex = 38;
-            this.BTN_Cancelar.UseVisualStyleBackColor = false;
-            this.BTN_Cancelar.Click += new System.EventHandler(this.button1_Click);
-            // 
             // WIN_CAT_Usuarios_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(679, 364);
-            this.Controls.Add(this.BTN_Cancelar);
+            this.ClientSize = new System.Drawing.Size(1090, 590);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.BTN_Agregar);
@@ -208,15 +193,14 @@
             this.MaximizeBox = false;
             this.Name = "WIN_CAT_Usuarios_T";
             this.TituloBanner = "Usuarios";
-            this.TituloVentana = "      DenTech - Usuarios";
             this.Load += new System.EventHandler(this.WIN_CAT_Usuarios_T_Load);
             this.Controls.SetChildIndex(this.DGV_TablaUsuarios, 0);
             this.Controls.SetChildIndex(this.BTN_Agregar, 0);
             this.Controls.SetChildIndex(this.BTN_Modificar, 0);
             this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
-            this.Controls.SetChildIndex(this.BTN_Cancelar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaUsuarios)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -225,7 +209,6 @@
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;
-        private System.Windows.Forms.Button BTN_Cancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Nombre;

@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button1 = new System.Windows.Forms.Button();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
@@ -46,19 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaPacientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(735, 296);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 52);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // BTN_Eliminar
             // 
             this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
@@ -68,7 +54,7 @@
             this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
             this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(676, 152);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(967, 209);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Eliminar.TabIndex = 3;
@@ -86,7 +72,7 @@
             this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
             this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(676, 114);
+            this.BTN_Modificar.Location = new System.Drawing.Point(967, 171);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Modificar.TabIndex = 2;
@@ -104,7 +90,7 @@
             this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
             this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(676, 76);
+            this.BTN_Agregar.Location = new System.Drawing.Point(967, 133);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Agregar.TabIndex = 1;
@@ -138,7 +124,7 @@
             this.COL_TelEmergencia});
             this.DGV_TablaPacientes.EnableHeadersVisualStyles = false;
             this.DGV_TablaPacientes.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_TablaPacientes.Location = new System.Drawing.Point(12, 76);
+            this.DGV_TablaPacientes.Location = new System.Drawing.Point(21, 133);
             this.DGV_TablaPacientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaPacientes.Name = "DGV_TablaPacientes";
             this.DGV_TablaPacientes.ReadOnly = true;
@@ -158,7 +144,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.DGV_TablaPacientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_TablaPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_TablaPacientes.Size = new System.Drawing.Size(658, 215);
+            this.DGV_TablaPacientes.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaPacientes.TabIndex = 0;
             // 
             // COL_IdPaciente
@@ -217,8 +203,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(799, 354);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1090, 590);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.BTN_Agregar);
@@ -227,20 +212,18 @@
             this.MaximizeBox = false;
             this.Name = "WIN_CAT_Pacientes_T";
             this.TituloBanner = "Pacientes";
-            this.TituloVentana = "      DenTech - Pacientes";
             this.Load += new System.EventHandler(this.WIN_CAT_Pacientes_T_Load);
             this.Controls.SetChildIndex(this.DGV_TablaPacientes, 0);
             this.Controls.SetChildIndex(this.BTN_Agregar, 0);
             this.Controls.SetChildIndex(this.BTN_Modificar, 0);
             this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaPacientes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;
