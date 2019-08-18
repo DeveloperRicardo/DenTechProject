@@ -16,7 +16,7 @@ namespace DenTech
         // Variables y objetos globales
         ConexionSQL BD = new ConexionSQL();
         List<FlowLayoutPanel> Lista = new List<FlowLayoutPanel>();
-        DateTime Hoy = DateTime.Today;
+        DateTime FechaActual = DateTime.Today;
 
         public WIN_CAT_Citas_T()
         {
@@ -31,9 +31,39 @@ namespace DenTech
             {
                 // Genera los cuadros del mes y agrega la información
                 GenerarCuadros(42);
-                AgregarNumeroDia(5, 31);
+                AgregarNumeroDia(ObtenerPrimerDiaMes(), ObtenerDiasMes());
                 Refrescar();
+
+                // Muestra la información del mes y año actual
+                STC_MesAño.Text = this.FechaActual.ToString("MMMM, yyyy");
             }
+        }
+
+        // Evento del botón Atrás
+        private void BTN_Atras_Click(object sender, EventArgs e)
+        {
+            // Se retrocede un mes y se muestra
+            this.FechaActual = this.FechaActual.AddMonths(-1);
+            STC_MesAño.Text = this.FechaActual.ToString("MMMM, yyyy");
+            AgregarNumeroDia(ObtenerPrimerDiaMes(), ObtenerDiasMes());
+        }
+
+        // Evento del botón Fecha Actual
+        private void BTN_FechaActual_Click(object sender, EventArgs e)
+        {
+            // Cambia el valor al de la fecha actual y la muestra
+            this.FechaActual = DateTime.Today;
+            STC_MesAño.Text = this.FechaActual.ToString("MMMM, yyyy");
+            AgregarNumeroDia(ObtenerPrimerDiaMes(), ObtenerDiasMes());
+        }
+
+        // Evento del botón Siguiente
+        private void BTN_Adelante_Click(object sender, EventArgs e)
+        {
+            // Se avanza un mes y se muestra
+            this.FechaActual = this.FechaActual.AddMonths(1);
+            STC_MesAño.Text = this.FechaActual.ToString("MMMM, yyyy");
+            AgregarNumeroDia(ObtenerPrimerDiaMes(), ObtenerDiasMes());
         }
 
         // Evento del botón Agregar
@@ -154,6 +184,10 @@ namespace DenTech
         // Método AgregarNumeroDia
         private void AgregarNumeroDia(int DiaI, int DiaF)
         {
+            // Limpia el número de los días
+            foreach (FlowLayoutPanel STC in Lista)
+                STC.Controls.Clear();
+
             // Variable
             int Dia = 1;
 
@@ -169,17 +203,50 @@ namespace DenTech
                 Static.TextAlign = ContentAlignment.MiddleRight;
                 Static.Size = new Size(119, 25);
                 Static.Text = Dia.ToString();
+                Lista[(i - 2) + DiaI].Controls.Clear();
                 Lista[(i - 2) + DiaI].Controls.Add(Static);
                 Dia++;
             }
         }
 
+        // Método ObtenerPrimerDiaMes
+        private int ObtenerPrimerDiaMes()
+        {
+            // Variable de mes
+            string Mes = this.FechaActual.Month.ToString();
 
+            // Verifica que el mes tenga 1 caracter para agregar el 0
+            if (Mes == "1" || Mes == "2" || Mes == "3" || Mes == "4" || Mes == "5" || Mes == "6" || Mes == "7" || Mes == "8" || Mes == "9")
+                Mes = "0" + Mes;
+
+            // Crea la fecha en el formato que corresponde para cambiar la estructura del calendario
+            string sFecha = this.FechaActual.Year.ToString() + "-" + Mes + "-01";
+            DateTime Fecha = Convert.ToDateTime(sFecha);
+            return (int)Fecha.DayOfWeek + 1;
+        }
+        
+        // Método ObtenerDiasMes
+        public int ObtenerDiasMes()
+        {
+            // Variable de mes
+            string Mes = this.FechaActual.Month.ToString();
+
+            // Verifica que el mes tenga 1 caracter para agregar el 0
+            if (Mes == "1" || Mes == "2" || Mes == "3" || Mes == "4" || Mes == "5" || Mes == "6" || Mes == "7" || Mes == "8" || Mes == "9")
+                Mes = "0" + Mes;
+
+            // Crea la fecha en el formato que corresponde para cambiar la estructura del calendario
+            string sFecha = this.FechaActual.Year.ToString() + "-" + Mes + "-01";
+            DateTime Fecha = Convert.ToDateTime(sFecha);
+            return (int)Fecha.AddMonths(1).AddDays(-1).Day;
+        }
 
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
+
+        
     }
 }

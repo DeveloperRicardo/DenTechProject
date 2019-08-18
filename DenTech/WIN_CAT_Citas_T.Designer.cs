@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Citas_T));
             this.DGV_TablaCitas = new System.Windows.Forms.DataGridView();
             this.COL_IdCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +60,7 @@
             this.STC_Martes = new System.Windows.Forms.Label();
             this.STC_Lunes = new System.Windows.Forms.Label();
             this.STC_Domingo = new System.Windows.Forms.Label();
+            this.BTN_FechaActual = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaCitas)).BeginInit();
             this.PANEL_Mes.SuspendLayout();
             this.PANEL_Flechas.SuspendLayout();
@@ -75,14 +76,14 @@
             this.DGV_TablaCitas.AllowUserToOrderColumns = true;
             this.DGV_TablaCitas.BackgroundColor = System.Drawing.Color.White;
             this.DGV_TablaCitas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGV_TablaCitas.ColumnHeadersHeight = 30;
             this.DGV_TablaCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_IdCita,
@@ -96,21 +97,21 @@
             this.DGV_TablaCitas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaCitas.Name = "DGV_TablaCitas";
             this.DGV_TablaCitas.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DGV_TablaCitas.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_TablaCitas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_TablaCitas.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DGV_TablaCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaCitas.Size = new System.Drawing.Size(111, 62);
             this.DGV_TablaCitas.TabIndex = 33;
@@ -263,6 +264,7 @@
             // 
             // PANEL_Flechas
             // 
+            this.PANEL_Flechas.Controls.Add(this.BTN_FechaActual);
             this.PANEL_Flechas.Controls.Add(this.BTN_Adelante);
             this.PANEL_Flechas.Controls.Add(this.BTN_Atras);
             this.PANEL_Flechas.Location = new System.Drawing.Point(766, 75);
@@ -278,12 +280,13 @@
             this.BTN_Adelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Adelante.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Adelante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Adelante.Location = new System.Drawing.Point(109, 6);
+            this.BTN_Adelante.Location = new System.Drawing.Point(139, 6);
             this.BTN_Adelante.Name = "BTN_Adelante";
             this.BTN_Adelante.Size = new System.Drawing.Size(40, 40);
             this.BTN_Adelante.TabIndex = 42;
             this.BTN_Adelante.Text = ">";
             this.BTN_Adelante.UseVisualStyleBackColor = false;
+            this.BTN_Adelante.Click += new System.EventHandler(this.BTN_Adelante_Click);
             // 
             // BTN_Atras
             // 
@@ -293,12 +296,13 @@
             this.BTN_Atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Atras.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Atras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Atras.Location = new System.Drawing.Point(63, 6);
+            this.BTN_Atras.Location = new System.Drawing.Point(33, 6);
             this.BTN_Atras.Name = "BTN_Atras";
             this.BTN_Atras.Size = new System.Drawing.Size(40, 40);
             this.BTN_Atras.TabIndex = 41;
             this.BTN_Atras.Text = "<";
             this.BTN_Atras.UseVisualStyleBackColor = false;
+            this.BTN_Atras.Click += new System.EventHandler(this.BTN_Atras_Click);
             // 
             // LAYOUT_Cuerpo
             // 
@@ -436,6 +440,22 @@
             this.STC_Domingo.Text = "Domingo";
             this.STC_Domingo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // BTN_FechaActual
+            // 
+            this.BTN_FechaActual.BackColor = System.Drawing.Color.White;
+            this.BTN_FechaActual.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_FechaActual.FlatAppearance.BorderSize = 2;
+            this.BTN_FechaActual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_FechaActual.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_FechaActual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_FechaActual.Location = new System.Drawing.Point(79, 6);
+            this.BTN_FechaActual.Name = "BTN_FechaActual";
+            this.BTN_FechaActual.Size = new System.Drawing.Size(54, 40);
+            this.BTN_FechaActual.TabIndex = 43;
+            this.BTN_FechaActual.Text = "Hoy";
+            this.BTN_FechaActual.UseVisualStyleBackColor = false;
+            this.BTN_FechaActual.Click += new System.EventHandler(this.BTN_FechaActual_Click);
+            // 
             // WIN_CAT_Citas_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,5 +530,6 @@
         private System.Windows.Forms.Label STC_Martes;
         private System.Windows.Forms.Label STC_NumDia;
         private System.Windows.Forms.LinkLabel LSTC_Appointment;
+        private System.Windows.Forms.Button BTN_FechaActual;
     }
 }
