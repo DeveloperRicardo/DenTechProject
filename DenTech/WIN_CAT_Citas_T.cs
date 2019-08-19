@@ -31,8 +31,9 @@ namespace DenTech
             if (BD.Conexion(true))
             {
                 // Genera los cuadros del mes y agrega la información
-                GenerarCuadros(42);
+                GenerarPaneles(42);
                 AgregarNumeroDia(ObtenerPrimerDiaMes(), ObtenerDiasMes());
+                CargarCitas(ObtenerPrimerDiaMes());
                 Refrescar();
 
                 // Muestra la información del mes y año actual
@@ -45,8 +46,7 @@ namespace DenTech
         {
             // Se retrocede un mes y se muestra
             this.FechaActual = this.FechaActual.AddMonths(-1);
-            STC_MesAño.Text = this.FechaActual.ToString("MMMM, yyyy");
-            AgregarNumeroDia(ObtenerPrimerDiaMes(), ObtenerDiasMes());
+            MostrarFechaActual();
         }
 
         // Evento del botón Fecha Actual
@@ -54,8 +54,7 @@ namespace DenTech
         {
             // Cambia el valor al de la fecha actual y la muestra
             this.FechaActual = DateTime.Today;
-            STC_MesAño.Text = this.FechaActual.ToString("MMMM, yyyy");
-            AgregarNumeroDia(ObtenerPrimerDiaMes(), ObtenerDiasMes());
+            MostrarFechaActual();
         }
 
         // Evento del botón Siguiente
@@ -63,8 +62,7 @@ namespace DenTech
         {
             // Se avanza un mes y se muestra
             this.FechaActual = this.FechaActual.AddMonths(1);
-            STC_MesAño.Text = this.FechaActual.ToString("MMMM, yyyy");
-            AgregarNumeroDia(ObtenerPrimerDiaMes(), ObtenerDiasMes());
+            MostrarFechaActual();
         }
 
         // Evento del botón Agregar
@@ -160,7 +158,7 @@ namespace DenTech
         }
 
         // Método GenerarCuadros
-        private void GenerarCuadros(int NumDias)
+        private void GenerarPaneles(int NumDias)
         {
             // Se limpia el control y el objeto
             LAYOUT_Cuerpo.Controls.Clear();
@@ -177,6 +175,9 @@ namespace DenTech
                 Cuadro.Size = new Size(132, 71);
                 Cuadro.BackColor = Color.White;
                 Cuadro.BorderStyle = BorderStyle.FixedSingle;
+                Cuadro.Cursor = Cursors.Hand;
+                Cuadro.Click += new EventHandler(AgregarCita);
+                Cuadro.AutoScroll = true;
                 LAYOUT_Cuerpo.Controls.Add(Cuadro);
                 Lista.Add(Cuadro);
             }
@@ -187,7 +188,10 @@ namespace DenTech
         {
             // Limpia el número de los días
             foreach (FlowLayoutPanel STC in Lista)
+            {
                 STC.Controls.Clear();
+                STC.Tag = 0;
+            }
 
             // Variable
             int Dia = 1;
@@ -204,10 +208,20 @@ namespace DenTech
                 Static.TextAlign = ContentAlignment.MiddleRight;
                 Static.Size = new Size(119, 25);
                 Static.Text = Dia.ToString();
-                Lista[(i - 2) + DiaI].Controls.Clear();
-                Lista[(i - 2) + DiaI].Controls.Add(Static);
+                Lista[(i - 1) + (DiaI - 1)].Tag = i;
+                Lista[(i - 1) + (DiaI - 1)].Controls.Add(Static);
                 Dia++;
             }
+        }
+
+        // Método MostrarFechaActual
+        private void MostrarFechaActual()
+        {
+            // Muestra la información de la fecha posicionada
+            STC_MesAño.Text = this.FechaActual.ToString("MMMM, yyyy");
+            int PrimerDiaMes = ObtenerPrimerDiaMes();
+            AgregarNumeroDia(PrimerDiaMes, ObtenerDiasMes());
+            CargarCitas(PrimerDiaMes);
         }
 
         // Método ObtenerPrimerDiaMes
@@ -225,7 +239,7 @@ namespace DenTech
             DateTime Fecha = Convert.ToDateTime(this.FechaInicio);
             return (int)Fecha.DayOfWeek + 1;
         }
-        
+
         // Método ObtenerDiasMes
         public int ObtenerDiasMes()
         {
@@ -243,7 +257,7 @@ namespace DenTech
         }
 
         // Método CargarCitas
-        private void CargarCitas()
+        private void CargarCitas(int Inicio)
         {
             // Variables de fecha 
             DateTime FechaI = Convert.ToDateTime(this.FechaInicio);
@@ -257,20 +271,67 @@ namespace DenTech
 
             // Se estructura el query
             cmd.CommandText = "Select " +
-                "Id_Cita, " +
-                "Id_Empleado, " +
-                "Id_Paciente, " +
-                "Id_Servicios, " +
-                "Fecha_Cita " +
+                "Id_Cita,  " +
+                "CITAS.Id_Empleado,  " +
+                "CITAS.Id_Paciente,  " +
+                "CITAS.Id_Servicios,  " +
+                "Fecha_Cita,  " +
+                "NombreOdontologo = (EMPLEADOS.Nombre + ' ' + EMPLEADOS.ApellidoP + ' ' + EMPLEADOS.ApellidoM), " +
+                "NombrePaciente = (PACIENTES.Nombre + ' ' + PACIENTES.ApellidoP + ' ' + PACIENTES.ApellidoM), " +
+                "Servicio = (SERVICIOS.Descripcion) " +
                 "From CITAS " +
-                "Where Fecha_Cita Between '" + FechaI.ToShortDateString() + "' And '" + FechaF.ToShortDateString() + "'";
+                "Left Join EMPLEADOS on EMPLEADOS.Id_Empleado = CITAS.Id_Empleado " +
+                "Left Join PACIENTES on PACIENTES.Id_Paciente = CITAS.Id_Paciente " +
+                "Left Join SERVICIOS on SERVICIOS.Id_Servicios = CITAS.Id_Servicios " +
+                "Where Fecha_Cita Between '" + FechaI.ToShortDateString() + "' And '" + FechaF.ToShortDateString() + "'" +
+                "Order By Fecha_Cita Desc";
             cmd.ExecuteNonQuery(); // Se ejecuta
 
             // Se crea un adaptador de sql, guardará el data source que contiene la información de la consulta
             Adaptador.SelectCommand = cmd;
             Adaptador.Fill(Data);
 
+            // Ciclo for each
+            foreach (DataRow Row in Data.Rows)
+            {
+                // Se pasa la información para agregar los Links
+                DateTime Fecha = DateTime.Parse(Row[4].ToString());
+                LinkLabel Zelda = new LinkLabel();
+                Zelda.Tag = Row[0];
+                Zelda.Name = $"Link_{Row[0]}";
+                Zelda.Text = Row[6].ToString();
+                Zelda.Click += new EventHandler(ModificarCita);
+                Lista[(Fecha.Day - 1) + (Inicio - 1)].Controls.Add(Zelda);
+            }
+        }
 
+        // Método AgregarCita
+        private void AgregarCita(object sender, EventArgs e)
+        {
+            // Se insatncia un objeto de tipo ventana para abrirla y refrescar la tabla
+            WIN_CAT_Citas_F Window = new WIN_CAT_Citas_F();
+            FlowLayoutPanel tag = (FlowLayoutPanel)sender;
+            int Dia = Int32.Parse(tag.Tag.ToString());
+
+            // Verifica que día tenga valor válido
+            if (Dia != 0)
+            {
+                // Abre la ventana
+                Window.Fecha = new DateTime(this.FechaActual.Year, this.FechaActual.Month, Dia);
+                Window.ShowDialog();
+                MostrarFechaActual();
+            }
+        }
+
+        // Método ModificarCita
+        private void ModificarCita(object sender, EventArgs e)
+        {
+            // Se transifere la información del Id para modificar su registro en la ventana
+            LinkLabel tag = (LinkLabel)sender;
+            int Id = Int32.Parse(tag.Tag.ToString());
+            WIN_CAT_Citas_F Window = new WIN_CAT_Citas_F(Id);
+            Window.ShowDialog();
+            MostrarFechaActual();
         }
     }
 }

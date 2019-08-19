@@ -145,6 +145,7 @@
             // 
             // EDT_Fecha
             // 
+            this.EDT_Fecha.Enabled = false;
             this.EDT_Fecha.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.EDT_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.EDT_Fecha.Location = new System.Drawing.Point(135, 177);
@@ -156,6 +157,7 @@
             // STC_Fecha
             // 
             this.STC_Fecha.AutoSize = true;
+            this.STC_Fecha.Enabled = false;
             this.STC_Fecha.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STC_Fecha.Location = new System.Drawing.Point(13, 179);
             this.STC_Fecha.Name = "STC_Fecha";

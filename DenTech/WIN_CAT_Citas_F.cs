@@ -14,7 +14,8 @@ namespace DenTech
     public partial class WIN_CAT_Citas_F : WIN_Template_F
     {
         // Variables y objetos globales
-        int gnIdCita = 0, gnIdOdontologo = 0, gnIdPaciente = 0, gnIdServicio = 0;
+        private int gnIdCita = 0, gnIdOdontologo = 0, gnIdPaciente = 0, gnIdServicio = 0;
+        public DateTime Fecha;
         ConexionSQL BD = new ConexionSQL();
         MetodosGlobales MG = new MetodosGlobales();
 
@@ -41,6 +42,7 @@ namespace DenTech
                         "Id_Servicios, " +
                         "Fecha_Cita " +
                         "From CITAS " +
+                        "Where Id_Cita = " + gnIdCita +
                         "Order By Fecha_Cita Desc";
 
                     // Ejecuta el query y almacena los datos consultados
@@ -115,6 +117,7 @@ namespace DenTech
                 else
                 {
                     // Muestra los campos vacios
+                    EDT_Fecha.Value = new DateTime(Fecha.Year, Fecha.Month, Fecha.Day);
                     STC_NombreOdontologo.Text = "";
                     STC_NombrePaciente.Text = "";
                     STC_NombreServicio.Text = "";
