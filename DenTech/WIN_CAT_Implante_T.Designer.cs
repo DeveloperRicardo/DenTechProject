@@ -38,10 +38,18 @@
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.DGV_TablaImplante = new System.Windows.Forms.DataGridView();
+            this.GP_Opciones = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.RADIO_Pendiente = new System.Windows.Forms.RadioButton();
+            this.RADIO_Realizado = new System.Windows.Forms.RadioButton();
             this.COL_IdImplante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaImplante)).BeginInit();
+            this.GP_Opciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // BTN_Seleccionar
@@ -58,6 +66,7 @@
             this.BTN_Seleccionar.TabIndex = 49;
             this.BTN_Seleccionar.Text = "Seleccionar";
             this.BTN_Seleccionar.UseVisualStyleBackColor = false;
+            this.BTN_Seleccionar.Click += new System.EventHandler(this.BTN_Seleccionar_Click);
             // 
             // BTN_Cerrar
             // 
@@ -70,6 +79,7 @@
             this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Cerrar.TabIndex = 48;
             this.BTN_Cerrar.UseVisualStyleBackColor = false;
+            this.BTN_Cerrar.Click += new System.EventHandler(this.BTN_Cerrar_Click);
             // 
             // BTN_Eliminar
             // 
@@ -170,6 +180,70 @@
             this.DGV_TablaImplante.Size = new System.Drawing.Size(658, 239);
             this.DGV_TablaImplante.TabIndex = 44;
             // 
+            // GP_Opciones
+            // 
+            this.GP_Opciones.Controls.Add(this.pictureBox3);
+            this.GP_Opciones.Controls.Add(this.pictureBox2);
+            this.GP_Opciones.Controls.Add(this.RADIO_Pendiente);
+            this.GP_Opciones.Controls.Add(this.RADIO_Realizado);
+            this.GP_Opciones.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GP_Opciones.Location = new System.Drawing.Point(13, 322);
+            this.GP_Opciones.Name = "GP_Opciones";
+            this.GP_Opciones.Size = new System.Drawing.Size(278, 59);
+            this.GP_Opciones.TabIndex = 57;
+            this.GP_Opciones.TabStop = false;
+            this.GP_Opciones.Text = "Estatus:";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Red;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Location = new System.Drawing.Point(172, 26);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Blue;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(26, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // RADIO_Pendiente
+            // 
+            this.RADIO_Pendiente.AutoSize = true;
+            this.RADIO_Pendiente.BackColor = System.Drawing.Color.Transparent;
+            this.RADIO_Pendiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RADIO_Pendiente.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RADIO_Pendiente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RADIO_Pendiente.Location = new System.Drawing.Point(152, 26);
+            this.RADIO_Pendiente.Name = "RADIO_Pendiente";
+            this.RADIO_Pendiente.Size = new System.Drawing.Size(118, 23);
+            this.RADIO_Pendiente.TabIndex = 11;
+            this.RADIO_Pendiente.TabStop = true;
+            this.RADIO_Pendiente.Text = "        Pendiente";
+            this.RADIO_Pendiente.UseVisualStyleBackColor = false;
+            // 
+            // RADIO_Realizado
+            // 
+            this.RADIO_Realizado.AutoSize = true;
+            this.RADIO_Realizado.BackColor = System.Drawing.Color.Transparent;
+            this.RADIO_Realizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RADIO_Realizado.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RADIO_Realizado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RADIO_Realizado.Location = new System.Drawing.Point(5, 26);
+            this.RADIO_Realizado.Name = "RADIO_Realizado";
+            this.RADIO_Realizado.Size = new System.Drawing.Size(115, 23);
+            this.RADIO_Realizado.TabIndex = 10;
+            this.RADIO_Realizado.TabStop = true;
+            this.RADIO_Realizado.Text = "        Realizado";
+            this.RADIO_Realizado.UseVisualStyleBackColor = false;
+            // 
             // COL_IdImplante
             // 
             this.COL_IdImplante.DataPropertyName = "Id_Implante";
@@ -178,15 +252,16 @@
             this.COL_IdImplante.Name = "COL_IdImplante";
             this.COL_IdImplante.ReadOnly = true;
             this.COL_IdImplante.Visible = false;
+            this.COL_IdImplante.Width = 300;
             // 
             // COL_Descripción
             // 
-            this.COL_Descripción.DataPropertyName = "Descripción";
+            this.COL_Descripción.DataPropertyName = "Descripcion";
             this.COL_Descripción.Frozen = true;
             this.COL_Descripción.HeaderText = "Descripción";
             this.COL_Descripción.Name = "COL_Descripción";
             this.COL_Descripción.ReadOnly = true;
-            this.COL_Descripción.Width = 350;
+            this.COL_Descripción.Width = 505;
             // 
             // COL_Precio
             // 
@@ -203,6 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(800, 390);
+            this.Controls.Add(this.GP_Opciones);
             this.Controls.Add(this.BTN_Seleccionar);
             this.Controls.Add(this.BTN_Cerrar);
             this.Controls.Add(this.BTN_Eliminar);
@@ -220,7 +296,12 @@
             this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
             this.Controls.SetChildIndex(this.BTN_Cerrar, 0);
             this.Controls.SetChildIndex(this.BTN_Seleccionar, 0);
+            this.Controls.SetChildIndex(this.GP_Opciones, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaImplante)).EndInit();
+            this.GP_Opciones.ResumeLayout(false);
+            this.GP_Opciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,6 +314,11 @@
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;
         private System.Windows.Forms.DataGridView DGV_TablaImplante;
+        private System.Windows.Forms.GroupBox GP_Opciones;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.RadioButton RADIO_Pendiente;
+        private System.Windows.Forms.RadioButton RADIO_Realizado;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdImplante;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Descripción;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Precio;

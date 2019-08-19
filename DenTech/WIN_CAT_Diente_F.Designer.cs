@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Diente_F));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IMG_LateralAbajo = new System.Windows.Forms.PictureBox();
             this.STC_Campo = new System.Windows.Forms.Label();
@@ -50,14 +54,30 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.RADIO_Ninguno = new System.Windows.Forms.RadioButton();
             this.RADIO_Pendiente = new System.Windows.Forms.RadioButton();
-            this.BTN_Extracción = new System.Windows.Forms.Button();
+            this.BTN_Extraccion = new System.Windows.Forms.Button();
             this.BTN_Implante = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.DGV_TablaTratamiento = new System.Windows.Forms.DataGridView();
+            this.BTN_Eliminar = new System.Windows.Forms.Button();
+            this.BTN_Agregar = new System.Windows.Forms.Button();
+            this.Menu_Implante = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OP_ImpSeleccionar = new System.Windows.Forms.ToolStripMenuItem();
+            this.OP_ImpNinguno = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Extraccion = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OP_ExSeleccionar = new System.Windows.Forms.ToolStripMenuItem();
+            this.OP_ExNinguno = new System.Windows.Forms.ToolStripMenuItem();
+            this.COL_IdTratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_LateralAbajo)).BeginInit();
             this.GP_Opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaTratamiento)).BeginInit();
+            this.Menu_Implante.SuspendLayout();
+            this.Menu_Extraccion.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -234,7 +254,7 @@
             this.EDT_Descripcion.Location = new System.Drawing.Point(207, 106);
             this.EDT_Descripcion.Multiline = true;
             this.EDT_Descripcion.Name = "EDT_Descripcion";
-            this.EDT_Descripcion.Size = new System.Drawing.Size(677, 358);
+            this.EDT_Descripcion.Size = new System.Drawing.Size(677, 204);
             this.EDT_Descripcion.TabIndex = 7;
             // 
             // RADIO_Realizado
@@ -328,23 +348,23 @@
             this.RADIO_Pendiente.Text = "        Pendiente";
             this.RADIO_Pendiente.UseVisualStyleBackColor = false;
             // 
-            // BTN_Extracción
+            // BTN_Extraccion
             // 
-            this.BTN_Extracción.BackColor = System.Drawing.Color.White;
-            this.BTN_Extracción.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Extracción.FlatAppearance.BorderSize = 2;
-            this.BTN_Extracción.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Extracción.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Extracción.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Extracción.Image")));
-            this.BTN_Extracción.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Extracción.Location = new System.Drawing.Point(324, 487);
-            this.BTN_Extracción.Name = "BTN_Extracción";
-            this.BTN_Extracción.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Extracción.TabIndex = 9;
-            this.BTN_Extracción.Text = "Extracción";
-            this.BTN_Extracción.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Extracción.UseVisualStyleBackColor = false;
-            this.BTN_Extracción.Click += new System.EventHandler(this.BTN_Extracción_Click);
+            this.BTN_Extraccion.BackColor = System.Drawing.Color.White;
+            this.BTN_Extraccion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Extraccion.FlatAppearance.BorderSize = 2;
+            this.BTN_Extraccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Extraccion.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Extraccion.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Extraccion.Image")));
+            this.BTN_Extraccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Extraccion.Location = new System.Drawing.Point(324, 487);
+            this.BTN_Extraccion.Name = "BTN_Extraccion";
+            this.BTN_Extraccion.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Extraccion.TabIndex = 9;
+            this.BTN_Extraccion.Text = "Extracción";
+            this.BTN_Extraccion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Extraccion.UseVisualStyleBackColor = false;
+            this.BTN_Extraccion.Click += new System.EventHandler(this.BTN_Extracción_Click);
             // 
             // BTN_Implante
             // 
@@ -364,14 +384,180 @@
             this.BTN_Implante.UseVisualStyleBackColor = false;
             this.BTN_Implante.Click += new System.EventHandler(this.BTN_Implante_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(203, 315);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 20);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Tratamientos:";
+            // 
+            // DGV_TablaTratamiento
+            // 
+            this.DGV_TablaTratamiento.AllowUserToAddRows = false;
+            this.DGV_TablaTratamiento.AllowUserToDeleteRows = false;
+            this.DGV_TablaTratamiento.AllowUserToOrderColumns = true;
+            this.DGV_TablaTratamiento.BackgroundColor = System.Drawing.Color.White;
+            this.DGV_TablaTratamiento.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaTratamiento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_TablaTratamiento.ColumnHeadersHeight = 30;
+            this.DGV_TablaTratamiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.COL_IdTratamiento,
+            this.COL_Descripción,
+            this.COL_Precio});
+            this.DGV_TablaTratamiento.EnableHeadersVisualStyles = false;
+            this.DGV_TablaTratamiento.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DGV_TablaTratamiento.Location = new System.Drawing.Point(207, 337);
+            this.DGV_TablaTratamiento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DGV_TablaTratamiento.Name = "DGV_TablaTratamiento";
+            this.DGV_TablaTratamiento.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaTratamiento.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_TablaTratamiento.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_TablaTratamiento.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.DGV_TablaTratamiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_TablaTratamiento.Size = new System.Drawing.Size(563, 126);
+            this.DGV_TablaTratamiento.TabIndex = 46;
+            // 
+            // BTN_Eliminar
+            // 
+            this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
+            this.BTN_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Eliminar.FlatAppearance.BorderSize = 2;
+            this.BTN_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
+            this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Eliminar.Location = new System.Drawing.Point(776, 375);
+            this.BTN_Eliminar.Name = "BTN_Eliminar";
+            this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Eliminar.TabIndex = 55;
+            this.BTN_Eliminar.Text = "Eliminar";
+            this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Eliminar.UseVisualStyleBackColor = false;
+            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
+            // 
+            // BTN_Agregar
+            // 
+            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
+            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
+            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
+            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Agregar.Location = new System.Drawing.Point(776, 337);
+            this.BTN_Agregar.Name = "BTN_Agregar";
+            this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Agregar.TabIndex = 54;
+            this.BTN_Agregar.Text = "Agregar";
+            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Agregar.UseVisualStyleBackColor = false;
+            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
+            // 
+            // Menu_Implante
+            // 
+            this.Menu_Implante.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OP_ImpSeleccionar,
+            this.OP_ImpNinguno});
+            this.Menu_Implante.Name = "Menu_General";
+            this.Menu_Implante.Size = new System.Drawing.Size(135, 48);
+            // 
+            // OP_ImpSeleccionar
+            // 
+            this.OP_ImpSeleccionar.Name = "OP_ImpSeleccionar";
+            this.OP_ImpSeleccionar.Size = new System.Drawing.Size(134, 22);
+            this.OP_ImpSeleccionar.Text = "Seleccionar";
+            this.OP_ImpSeleccionar.Click += new System.EventHandler(this.OP_ImpSeleccionar_Click);
+            // 
+            // OP_ImpNinguno
+            // 
+            this.OP_ImpNinguno.Name = "OP_ImpNinguno";
+            this.OP_ImpNinguno.Size = new System.Drawing.Size(134, 22);
+            this.OP_ImpNinguno.Text = "Ninguno";
+            this.OP_ImpNinguno.Click += new System.EventHandler(this.OP_ExNinguno_Click);
+            // 
+            // Menu_Extraccion
+            // 
+            this.Menu_Extraccion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OP_ExSeleccionar,
+            this.OP_ExNinguno});
+            this.Menu_Extraccion.Name = "Menu_General";
+            this.Menu_Extraccion.Size = new System.Drawing.Size(135, 48);
+            // 
+            // OP_ExSeleccionar
+            // 
+            this.OP_ExSeleccionar.Name = "OP_ExSeleccionar";
+            this.OP_ExSeleccionar.Size = new System.Drawing.Size(134, 22);
+            this.OP_ExSeleccionar.Text = "Seleccionar";
+            this.OP_ExSeleccionar.Click += new System.EventHandler(this.OP_ExSeleccionar_Click);
+            // 
+            // OP_ExNinguno
+            // 
+            this.OP_ExNinguno.Name = "OP_ExNinguno";
+            this.OP_ExNinguno.Size = new System.Drawing.Size(134, 22);
+            this.OP_ExNinguno.Text = "Ninguno";
+            this.OP_ExNinguno.Click += new System.EventHandler(this.OP_ExNinguno_Click);
+            // 
+            // COL_IdTratamiento
+            // 
+            this.COL_IdTratamiento.DataPropertyName = "Id_TrataDiente";
+            this.COL_IdTratamiento.Frozen = true;
+            this.COL_IdTratamiento.HeaderText = "IdTratamiento";
+            this.COL_IdTratamiento.Name = "COL_IdTratamiento";
+            this.COL_IdTratamiento.ReadOnly = true;
+            this.COL_IdTratamiento.Visible = false;
+            // 
+            // COL_Descripción
+            // 
+            this.COL_Descripción.DataPropertyName = "Descripcion";
+            this.COL_Descripción.Frozen = true;
+            this.COL_Descripción.HeaderText = "Descripción";
+            this.COL_Descripción.Name = "COL_Descripción";
+            this.COL_Descripción.ReadOnly = true;
+            this.COL_Descripción.Width = 450;
+            // 
+            // COL_Precio
+            // 
+            this.COL_Precio.DataPropertyName = "Precio";
+            this.COL_Precio.Frozen = true;
+            this.COL_Precio.HeaderText = "Precio";
+            this.COL_Precio.Name = "COL_Precio";
+            this.COL_Precio.ReadOnly = true;
+            this.COL_Precio.Width = 150;
+            // 
             // WIN_CAT_Diente_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(899, 594);
+            this.Controls.Add(this.BTN_Eliminar);
+            this.Controls.Add(this.BTN_Agregar);
+            this.Controls.Add(this.DGV_TablaTratamiento);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.BTN_Implante);
-            this.Controls.Add(this.BTN_Extracción);
+            this.Controls.Add(this.BTN_Extraccion);
             this.Controls.Add(this.GP_Opciones);
             this.Controls.Add(this.EDT_Descripcion);
             this.Controls.Add(this.label2);
@@ -406,8 +592,12 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.EDT_Descripcion, 0);
             this.Controls.SetChildIndex(this.GP_Opciones, 0);
-            this.Controls.SetChildIndex(this.BTN_Extracción, 0);
+            this.Controls.SetChildIndex(this.BTN_Extraccion, 0);
             this.Controls.SetChildIndex(this.BTN_Implante, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.DGV_TablaTratamiento, 0);
+            this.Controls.SetChildIndex(this.BTN_Agregar, 0);
+            this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_LateralAbajo)).EndInit();
             this.GP_Opciones.ResumeLayout(false);
@@ -415,6 +605,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaTratamiento)).EndInit();
+            this.Menu_Implante.ResumeLayout(false);
+            this.Menu_Extraccion.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,7 +636,20 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button BTN_Extracción;
+        private System.Windows.Forms.Button BTN_Extraccion;
         private System.Windows.Forms.Button BTN_Implante;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView DGV_TablaTratamiento;
+        private System.Windows.Forms.Button BTN_Eliminar;
+        private System.Windows.Forms.Button BTN_Agregar;
+        private System.Windows.Forms.ContextMenuStrip Menu_Implante;
+        private System.Windows.Forms.ToolStripMenuItem OP_ImpSeleccionar;
+        private System.Windows.Forms.ToolStripMenuItem OP_ImpNinguno;
+        private System.Windows.Forms.ContextMenuStrip Menu_Extraccion;
+        private System.Windows.Forms.ToolStripMenuItem OP_ExSeleccionar;
+        private System.Windows.Forms.ToolStripMenuItem OP_ExNinguno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdTratamiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Descripción;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Precio;
     }
 }

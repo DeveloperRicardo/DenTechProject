@@ -153,32 +153,50 @@ namespace DenTech
                                     //Diente Extraccion Pendiente
                                     case 1:
                                         resName = $"Diente_extrac_Pendiente"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                                        IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
                                         break;
                                     //Diente Extraccion Realizado
                                     case 2:
                                         resName = $"Diente_extrac_Realizado"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                                        IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
                                         break;
                                     //Diente Implementacion Pendiente
                                     case 3:
                                         resName = $"Diente_imple_Pendiente"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                                        IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
                                         break;
                                     //Diente Implementacion Realizado
                                     case 4:
                                         resName = $"Diente_imple_Realizado"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                                        IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
                                         break;
                                     default:
                                         break;
-                                }
+                                }estatusLateral = estatus;
+                                IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
                                 break;
                         }
                     }
                     Reader.Close();
                 }
+                RefrescarTratamientos();
             }
+        }
+
+        private void RefrescarTratamientos()
+        {
+            SqlCommand cmd = BD.conexion.CreateCommand();
+            cmd.CommandText = "SELECT \n" +
+            "Id_TrataDiente, \n" +
+            "Descripcion, \n" +
+            "Precio \n" +
+            "FROM TRATAMIENTO " +
+            "INNER JOIN TRATAMIENTODIENTE " +
+            "ON TRATAMIENTO.Id_Tratamiento = TRATAMIENTODIENTE.Id_Tratamiento " +
+            "WHERE Id_Diente = " + gnIdDiente;
+            var Data = new DataTable();
+            SqlDataAdapter Adaptador = new SqlDataAdapter();
+            cmd.ExecuteNonQuery();
+            // Se crea un adaptador de sql, guardará el data source que contiene la información de la consulta
+            Adaptador.SelectCommand = cmd;
+            Adaptador.Fill(Data);
+            DGV_TablaTratamiento.DataSource = Data;
         }
 
         private void BTN_Cancelar_Click(object sender, EventArgs e)
@@ -302,61 +320,108 @@ namespace DenTech
 
         private void BTN_Implante_Click(object sender, EventArgs e)
         {
-            if (RADIO_Realizado.Checked)
+            if (estatusLateral == 0)
             {
-                //Diente Implante Realizado
-                resName = $"Diente_imple_Realizado"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
-                IMG_LateralAbajo.BackgroundImageLayout = ImageLayout.Stretch;
-                estatusLateral = 4;
-                return;
+                OP_ImpSeleccionar_Click(sender, e);
             }
-            if (RADIO_Pendiente.Checked)
+            else
             {
-                //Diente Implante Pendiente
-                resName = $"Diente_imple_Pendiente"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
-                IMG_LateralAbajo.BackgroundImageLayout = ImageLayout.Stretch;
-                estatusLateral = 3;
-                return;
-            }
-            if (RADIO_Ninguno.Checked)
-            {
-                //Diente Implante Pendiente
-                resName = $"Diente_lateral_Abajo"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
-                IMG_LateralAbajo.BackgroundImageLayout = ImageLayout.Stretch;
-                estatusLateral = 0;
-                return;
-            }            
+                Menu_Implante.Show(BTN_Implante, new Point(0, BTN_Implante.Height));
+            }   
         }
 
         private void BTN_Extracción_Click(object sender, EventArgs e)
         {
-            if (RADIO_Realizado.Checked)
+            if (estatusLateral == 0)
             {
-                //Diente Implante Realizado
-                resName = $"Diente_extrac_Realizado"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
-                estatusLateral = 2;
-                return;
+                OP_ExSeleccionar_Click(sender, e);
             }
-            if (RADIO_Pendiente.Checked)
+            else
             {
-                //Diente Implante Pendiente
-                resName = $"Diente_extrac_Pendiente"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
-                estatusLateral = 1;
-                return;
+                Menu_Extraccion.Show(BTN_Extraccion, new Point(0, BTN_Extraccion.Height));
             }
-            if (RADIO_Ninguno.Checked)
+        }
+
+        private void BTN_Agregar_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla y refrescar la tabla
+            WIN_CAT_Tratamiento_T Window = new WIN_CAT_Tratamiento_T(gnIdDiente);
+            Window.ShowDialog();
+            RefrescarTratamientos();
+        }
+
+        private void BTN_Eliminar_Click(object sender, EventArgs e)
+        {
+            // Verifica que la tabla tenga información
+            if (DGV_TablaTratamiento.RowCount == 0)
+                return;
+
+            // Pregunta al usuario si desea eliminar el registro
+            if (MessageBox.Show("¿Desea eliminar el tratamiento seleccionado del diente?", "DenTech", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //Diente Implante Pendiente
-                resName = $"Diente_lateral_Abajo"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
-                IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
-                estatusLateral = 0;
-                return;
+                SqlCommand cmd3 = BD.conexion.CreateCommand();
+                // Se estructura el query para eliminar el registro
+                cmd3.CommandText = "Delete From TRATAMIENTODIENTE Where Id_TrataDiente = " + (int)DGV_TablaTratamiento.CurrentRow.Cells[0].Value;
+                cmd3.ExecuteNonQuery(); // Se ejecuta
+
+                // Se confirma la eliminación del registro y se actualiza la información de la tabla
+                MessageBox.Show("Registro eliminado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefrescarTratamientos();
             }
+        }
+
+        private void OP_ExSeleccionar_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla y refrescar la tabla
+            WIN_CAT_Extraccion_T Window = new WIN_CAT_Extraccion_T(gnIdDiente);
+            Window.ShowDialog();
+            switch (Window.Estatus)
+            {
+                case 2:
+                    //Diente Extraccion Realizado
+                    resName = $"Diente_extrac_Realizado"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
+                    estatusLateral = Window.Estatus;
+                    break;
+                case 1:
+                    //Diente Extraccion Pendiente
+                    resName = $"Diente_extrac_Pendiente"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
+                    estatusLateral = Window.Estatus;
+                    break;
+            }
+            IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
+            return;
+        }
+
+        private void OP_ExNinguno_Click(object sender, EventArgs e)
+        {
+            //Diente Extraccion Pendiente
+            resName = $"Diente_lateral_Abajo"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
+            estatusLateral = 0;
+            IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
+            return;
+        }
+
+        private void OP_ImpSeleccionar_Click(object sender, EventArgs e)
+        {
+            // Se instancia un objeto de tipo ventana para abrirla y refrescar la tabla
+            WIN_CAT_Implante_T Window = new WIN_CAT_Implante_T(gnIdDiente);
+            Window.ShowDialog();
+            switch (Window.Estatus)
+            {
+                case 4:
+                    //Diente Implante Realizado
+                    resName = $"Diente_imple_Realizado"; // Check the correct name in the .resx file. By using the wizards the extension is omitted, for example.
+                    estatusLateral = Window.Estatus;
+                    break;
+                case 3:
+                    //Diente Implante Pendiente
+                    resName = $"Diente_imple_Pendiente";
+                    estatusLateral = Window.Estatus;
+                    break;
+            }
+            IMG_LateralAbajo.Image = (Image)Properties.Resources.ResourceManager.GetObject(resName);
+            IMG_LateralAbajo.BackgroundImageLayout = ImageLayout.Stretch;
+            return;
         }
 
         private void BTN_Aceptar_Click(object sender, EventArgs e)

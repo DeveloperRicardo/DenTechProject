@@ -15,11 +15,14 @@ namespace DenTech
     {
         // Variables y objetos globales
         ConexionSQL BD = new ConexionSQL();
-
-        public WIN_CAT_Implante_T()
+        int gnIdDiente = 0;
+        public int Estatus = 0;
+        public WIN_CAT_Implante_T(int IdDiente = 0)
         {
             InitializeComponent();
+            gnIdDiente = IdDiente;
         }
+
         // Método Refrescar
         private void Refrescar()
         {
@@ -43,6 +46,16 @@ namespace DenTech
 
             // Se inserta la información en el DataGridView
             DGV_TablaImplante.DataSource = Data;
+            // Verifica que la tabla tenga información
+            if (DGV_TablaImplante.RowCount == 0)
+            {
+                BTN_Seleccionar.Enabled = false;
+            }
+            else
+            {
+                BTN_Seleccionar.Enabled = true;
+            }
+            RADIO_Realizado.Checked = true;
         }
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
@@ -102,6 +115,40 @@ namespace DenTech
                     Refrescar();
                 }
             }
+        }
+
+        private void BTN_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BTN_Seleccionar_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = BD.conexion.CreateCommand();
+            bool ExisteRegistro = false;
+            cmd.CommandText = "IF EXISTS(SELECT * FROM IMPLANTEDIENTE WHERE Id_Diente = " + gnIdDiente +
+                              ") SELECT 'true' ELSE SELECT 'false'";
+            ExisteRegistro = Convert.ToBoolean(cmd.ExecuteScalar());
+            if (ExisteRegistro == true)
+            {
+                cmd.CommandText = "UPDATE IMPLANTEDIENTE SET Id_Implante = " + (int)DGV_TablaImplante.CurrentRow.Cells[0].Value +
+                    " WHERE Id_Diente = " + gnIdDiente;
+
+            }
+            else
+            {
+                cmd.CommandText = "INSERT INTO IMPLANTEDIENTE VALUES(" + gnIdDiente + ", " + (int)DGV_TablaImplante.CurrentRow.Cells[0].Value + ")";
+            }
+            cmd.ExecuteNonQuery();
+            if (RADIO_Realizado.Checked)
+            {
+                Estatus = 4;
+            }
+            if (RADIO_Pendiente.Checked)
+            {
+                Estatus = 3;
+            }
+            this.Close();
         }
     }
 }

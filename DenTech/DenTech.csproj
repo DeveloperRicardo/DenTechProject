@@ -321,6 +321,12 @@
     <EmbeddedResource Include="WIN_CAT_Diente_F.resx">
       <DependentUpon>WIN_CAT_Diente_F.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Extraccion_F.resx">
+      <DependentUpon>WIN_CAT_Extraccion_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIN_CAT_Extraccion_T.resx">
+      <DependentUpon>WIN_CAT_Extraccion_T.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WIN_CAT_Implante_F.resx">
       <DependentUpon>WIN_CAT_Implante_F.cs</DependentUpon>
     </EmbeddedResource>

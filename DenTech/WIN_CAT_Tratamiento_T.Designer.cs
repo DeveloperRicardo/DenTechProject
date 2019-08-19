@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Tratamiento_T));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BTN_Cerrar = new System.Windows.Forms.Button();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
@@ -55,6 +55,7 @@
             this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
             this.BTN_Cerrar.TabIndex = 42;
             this.BTN_Cerrar.UseVisualStyleBackColor = false;
+            this.BTN_Cerrar.Click += new System.EventHandler(this.BTN_Cerrar_Click);
             // 
             // BTN_Eliminar
             // 
@@ -117,14 +118,14 @@
             this.DGV_TablaTratamiento.AllowUserToOrderColumns = true;
             this.DGV_TablaTratamiento.BackgroundColor = System.Drawing.Color.White;
             this.DGV_TablaTratamiento.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaTratamiento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaTratamiento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_TablaTratamiento.ColumnHeadersHeight = 30;
             this.DGV_TablaTratamiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_IdTratamiento,
@@ -136,24 +137,25 @@
             this.DGV_TablaTratamiento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaTratamiento.Name = "DGV_TablaTratamiento";
             this.DGV_TablaTratamiento.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaTratamiento.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaTratamiento.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_TablaTratamiento.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_TablaTratamiento.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_TablaTratamiento.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_TablaTratamiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaTratamiento.Size = new System.Drawing.Size(658, 239);
             this.DGV_TablaTratamiento.TabIndex = 38;
+            this.DGV_TablaTratamiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_TablaTratamiento_CellContentClick);
             // 
             // BTN_Seleccionar
             // 
@@ -169,6 +171,7 @@
             this.BTN_Seleccionar.TabIndex = 43;
             this.BTN_Seleccionar.Text = "Seleccionar";
             this.BTN_Seleccionar.UseVisualStyleBackColor = false;
+            this.BTN_Seleccionar.Click += new System.EventHandler(this.BTN_Seleccionar_Click);
             // 
             // COL_IdTratamiento
             // 
@@ -181,12 +184,12 @@
             // 
             // COL_Descripción
             // 
-            this.COL_Descripción.DataPropertyName = "Descripción";
+            this.COL_Descripción.DataPropertyName = "Descripcion";
             this.COL_Descripción.Frozen = true;
             this.COL_Descripción.HeaderText = "Descripción";
             this.COL_Descripción.Name = "COL_Descripción";
             this.COL_Descripción.ReadOnly = true;
-            this.COL_Descripción.Width = 350;
+            this.COL_Descripción.Width = 505;
             // 
             // COL_Precio
             // 

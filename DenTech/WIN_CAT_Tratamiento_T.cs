@@ -15,10 +15,11 @@ namespace DenTech
     {
         // Variables y objetos globales
         ConexionSQL BD = new ConexionSQL();
-
-        public WIN_CAT_Tratamiento_T()
+        int IdDiente = 0;
+        public WIN_CAT_Tratamiento_T(int gnIdDiente = 0)
         {
             InitializeComponent();
+            IdDiente = gnIdDiente;
         }
 
         // Método Refrescar
@@ -44,6 +45,15 @@ namespace DenTech
 
             // Se inserta la información en el DataGridView
             DGV_TablaTratamiento.DataSource = Data;
+            // Verifica que la tabla tenga información
+            if (DGV_TablaTratamiento.RowCount == 0)
+            {
+                BTN_Seleccionar.Enabled = false;
+            }
+            else
+            {
+                BTN_Seleccionar.Enabled = true;
+            }
         }
 
         private void WIN_CAT_Tratamiento_T_Load(object sender, EventArgs e)
@@ -103,6 +113,24 @@ namespace DenTech
                     Refrescar();
                 }
             }
+        }
+
+        private void BTN_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BTN_Seleccionar_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = BD.conexion.CreateCommand();
+            cmd.CommandText = "INSERT INTO TRATAMIENTODIENTE VALUES(" + IdDiente + ", " + (int)DGV_TablaTratamiento.CurrentRow.Cells[0].Value + ")";
+            cmd.ExecuteNonQuery();
+            this.Close();
+        }
+
+        private void DGV_TablaTratamiento_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
