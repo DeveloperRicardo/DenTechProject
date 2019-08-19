@@ -35,12 +35,14 @@ namespace DenTech
             // Verifica si se puede conectar con la base de datos
             if (BD.Conexion(true))
             {
-                // Verifica el valor del parámetro y asigna información correspondiente
-                if (gnOpcion == 1)
-                    TituloBanner = "Seleccionar Usuarios";
-                else
-                    TituloBanner = "Seleccionar Pacientes";
-
+                // Verifica que título se colocará
+                switch (gnOpcion)
+                {
+                    case 1: TituloBanner = "Seleccionar Usuarios"; break;
+                    case 2: TituloBanner = "Seleccionar Pacientes"; break;
+                    case 3: TituloBanner = "Seleccionar Servicios"; break;
+                    default: TituloBanner = "Nande"; break;
+                }
                 Refrescar();
             }
         }
@@ -72,18 +74,33 @@ namespace DenTech
             SqlDataAdapter Adaptador = new SqlDataAdapter();
             var Data = new DataTable();
 
-            // Revisa como estructurar el query
-            if (gnOpcion == 1)
-                cmd.CommandText = "Select\n" +
-                "Id_Empleado as Id,\n" +
-                "NombreCompleto = (EMPLEADOS.Nombre + ' ' + EMPLEADOS.ApellidoP + ' ' + EMPLEADOS.ApellidoM)\n" +
-                "From EMPLEADOS\n" +
-                "Where EMPLEADOS.Tipo_Usuario = 1";
-            else
-                cmd.CommandText = "Select\n" +
-                "Id_Paciente as Id,\n" +
-                "NombreCompleto = (PACIENTES.Nombre + ' ' + PACIENTES.ApellidoP + ' ' + PACIENTES.ApellidoM)\n" +
-                "From PACIENTES";
+            // Revisa de que tabla se obtendrán los datos
+            switch (gnOpcion)
+            {
+                case 1:
+                    // Estructura el query de Empleados
+                    cmd.CommandText = "Select\n" +
+                    "Id_Empleado as Id,\n" +
+                        "NombreCompleto = (EMPLEADOS.Nombre + ' ' + EMPLEADOS.ApellidoP + ' ' + EMPLEADOS.ApellidoM)\n" +
+                        "From EMPLEADOS\n" +
+                        "Where EMPLEADOS.Tipo_Usuario = 1";
+                    break;
+                case 2:
+                    // Estructura el query de Pacientes
+                    cmd.CommandText = "Select\n" +
+                        "Id_Paciente as Id,\n" +
+                        "NombreCompleto = (PACIENTES.Nombre + ' ' + PACIENTES.ApellidoP + ' ' + PACIENTES.ApellidoM)\n" +
+                        "From PACIENTES";
+                    break;
+                case 3:
+                    // Estructura el query de Servicios
+                    cmd.CommandText = "Select " +
+                        "Id_Servicios as Id, " +
+                        "Descripcion as NombreCompleto " +
+                        "From Servicios";
+                    break;
+                default: MessageBox.Show("NANDE?", "Super Error", MessageBoxButtons.OK, MessageBoxIcon.Error); break;
+            }
 
             cmd.ExecuteNonQuery(); // Se ejecuta
 

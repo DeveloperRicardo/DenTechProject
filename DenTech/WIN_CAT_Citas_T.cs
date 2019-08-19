@@ -17,6 +17,7 @@ namespace DenTech
         ConexionSQL BD = new ConexionSQL();
         List<FlowLayoutPanel> Lista = new List<FlowLayoutPanel>();
         DateTime FechaActual = DateTime.Today;
+        string FechaInicio = "";
 
         public WIN_CAT_Citas_T()
         {
@@ -220,8 +221,8 @@ namespace DenTech
                 Mes = "0" + Mes;
 
             // Crea la fecha en el formato que corresponde para cambiar la estructura del calendario
-            string sFecha = this.FechaActual.Year.ToString() + "-" + Mes + "-01";
-            DateTime Fecha = Convert.ToDateTime(sFecha);
+            this.FechaInicio = this.FechaActual.Year.ToString() + "-" + Mes + "-01";
+            DateTime Fecha = Convert.ToDateTime(this.FechaInicio);
             return (int)Fecha.DayOfWeek + 1;
         }
         
@@ -236,17 +237,40 @@ namespace DenTech
                 Mes = "0" + Mes;
 
             // Crea la fecha en el formato que corresponde para cambiar la estructura del calendario
-            string sFecha = this.FechaActual.Year.ToString() + "-" + Mes + "-01";
-            DateTime Fecha = Convert.ToDateTime(sFecha);
+            this.FechaInicio = this.FechaActual.Year.ToString() + "-" + Mes + "-01";
+            DateTime Fecha = Convert.ToDateTime(this.FechaInicio);
             return (int)Fecha.AddMonths(1).AddDays(-1).Day;
         }
 
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        // Método CargarCitas
+        private void CargarCitas()
         {
+            // Variables de fecha 
+            DateTime FechaI = Convert.ToDateTime(this.FechaInicio);
+            DateTime FechaF = FechaI.AddMonths(1).AddDays(-1);
+
+            // Se realiza la conexión a la BD y se instancia un objeto de la misma, además se declaran variables
+            BD.conexion.CreateCommand();
+            SqlCommand cmd = BD.conexion.CreateCommand();
+            SqlDataAdapter Adaptador = new SqlDataAdapter();
+            var Data = new DataTable();
+
+            // Se estructura el query
+            cmd.CommandText = "Select " +
+                "Id_Cita, " +
+                "Id_Empleado, " +
+                "Id_Paciente, " +
+                "Id_Servicios, " +
+                "Fecha_Cita " +
+                "From CITAS " +
+                "Where Fecha_Cita Between '" + FechaI.ToShortDateString() + "' And '" + FechaF.ToShortDateString() + "'";
+            cmd.ExecuteNonQuery(); // Se ejecuta
+
+            // Se crea un adaptador de sql, guardará el data source que contiene la información de la consulta
+            Adaptador.SelectCommand = cmd;
+            Adaptador.Fill(Data);
+
 
         }
-
-        
     }
 }
