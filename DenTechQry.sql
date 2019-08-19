@@ -29,6 +29,10 @@ Tratamiento varchar(100),Fecha_Inicio date, Fecha_Final date, Fecha_Diag date)
 
 CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int)
 
+CREATE TABLE TRATAMIENTO(Id_Tratamiento int primary key identity, Descripcion varchar(100), Precio int)
+
+CREATE TABLE IMPLANTE(Id_Implante int primary key identity, Descripcion varchar(100), Precio int)
+
 CREATE TABLE ODONTOGRAMA(Id_Odontograma int primary key identity, Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade,
 Fecha_Registro date, Descripcion varchar(100))
 
@@ -37,6 +41,12 @@ NumDiente int, Descripcion varchar(510))
 
 CREATE TABLE DETALLEDIENTE(Id_Detalle int primary key identity, ID_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade,
 AreaDiente int,Estatus int);
+
+CREATE TABLE IMPLANTEDIENTE(Id_ImplanteDiente int primary key identity, Id_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade, 
+Id_Implante int foreign key references IMPLANTE(Id_Implante) on update cascade on delete cascade)
+
+CREATE TABLE TRATAMIENTODIENTE(Id_TrataDiente int primary key identity, Id_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade, 
+Id_Tratamiento int foreign key references TRATAMIENTO(Id_Tratamiento) on update cascade on delete cascade)
 
 IF EXISTS(SELECT * FROM sys.triggers WHERE name = 'TR_Crear_Diente') SELECT 'true' ELSE SELECT 'false'
 
