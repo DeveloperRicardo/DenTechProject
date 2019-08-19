@@ -258,7 +258,7 @@
             // Menu_General
             // 
             this.Menu_General.Name = "Menu_General";
-            this.Menu_General.Size = new System.Drawing.Size(61, 4);
+            this.Menu_General.Size = new System.Drawing.Size(181, 26);
             // 
             // Menu_Dental
             // 

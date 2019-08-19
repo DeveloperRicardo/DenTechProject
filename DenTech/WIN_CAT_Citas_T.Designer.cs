@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Citas_T));
-            this.DGV_TablaCitas = new System.Windows.Forms.DataGridView();
-            this.COL_IdCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Odontologo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BTN_Eliminar = new System.Windows.Forms.Button();
-            this.BTN_Modificar = new System.Windows.Forms.Button();
-            this.BTN_Agregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.BTN_Recetas = new System.Windows.Forms.Button();
             this.PANEL_Mes = new System.Windows.Forms.Panel();
             this.STC_MesAño = new System.Windows.Forms.Label();
             this.PANEL_Flechas = new System.Windows.Forms.Panel();
+            this.BTN_FechaActual = new System.Windows.Forms.Button();
             this.BTN_Adelante = new System.Windows.Forms.Button();
             this.BTN_Atras = new System.Windows.Forms.Button();
             this.LAYOUT_Cuerpo = new System.Windows.Forms.FlowLayoutPanel();
@@ -60,159 +49,17 @@
             this.STC_Martes = new System.Windows.Forms.Label();
             this.STC_Lunes = new System.Windows.Forms.Label();
             this.STC_Domingo = new System.Windows.Forms.Label();
-            this.BTN_FechaActual = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaCitas)).BeginInit();
+            this.Menu_ModEli = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MenuOp_Modificar = new System.Windows.Forms.ToolStripMenuItem();
+            this.recetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuOp_Eliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.PANEL_Mes.SuspendLayout();
             this.PANEL_Flechas.SuspendLayout();
             this.LAYOUT_Cuerpo.SuspendLayout();
             this.PANEL_CuadroDia.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.Menu_ModEli.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // DGV_TablaCitas
-            // 
-            this.DGV_TablaCitas.AllowUserToAddRows = false;
-            this.DGV_TablaCitas.AllowUserToDeleteRows = false;
-            this.DGV_TablaCitas.AllowUserToOrderColumns = true;
-            this.DGV_TablaCitas.BackgroundColor = System.Drawing.Color.White;
-            this.DGV_TablaCitas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DGV_TablaCitas.ColumnHeadersHeight = 30;
-            this.DGV_TablaCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.COL_IdCita,
-            this.IdPaciente,
-            this.COL_Odontologo,
-            this.COL_Paciente,
-            this.COL_Fecha});
-            this.DGV_TablaCitas.EnableHeadersVisualStyles = false;
-            this.DGV_TablaCitas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_TablaCitas.Location = new System.Drawing.Point(984, 228);
-            this.DGV_TablaCitas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DGV_TablaCitas.Name = "DGV_TablaCitas";
-            this.DGV_TablaCitas.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGV_TablaCitas.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_TablaCitas.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.DGV_TablaCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_TablaCitas.Size = new System.Drawing.Size(111, 62);
-            this.DGV_TablaCitas.TabIndex = 33;
-            // 
-            // COL_IdCita
-            // 
-            this.COL_IdCita.DataPropertyName = "Id_Cita";
-            this.COL_IdCita.Frozen = true;
-            this.COL_IdCita.HeaderText = "IdCitas";
-            this.COL_IdCita.Name = "COL_IdCita";
-            this.COL_IdCita.ReadOnly = true;
-            this.COL_IdCita.Visible = false;
-            // 
-            // IdPaciente
-            // 
-            this.IdPaciente.DataPropertyName = "Id_Paciente";
-            this.IdPaciente.Frozen = true;
-            this.IdPaciente.HeaderText = "IdPaciente";
-            this.IdPaciente.Name = "IdPaciente";
-            this.IdPaciente.ReadOnly = true;
-            this.IdPaciente.Visible = false;
-            // 
-            // COL_Odontologo
-            // 
-            this.COL_Odontologo.DataPropertyName = "NombreOdontologo";
-            this.COL_Odontologo.Frozen = true;
-            this.COL_Odontologo.HeaderText = "Odontólogo";
-            this.COL_Odontologo.Name = "COL_Odontologo";
-            this.COL_Odontologo.ReadOnly = true;
-            this.COL_Odontologo.Width = 250;
-            // 
-            // COL_Paciente
-            // 
-            this.COL_Paciente.DataPropertyName = "NombrePaciente";
-            this.COL_Paciente.Frozen = true;
-            this.COL_Paciente.HeaderText = "Paciente";
-            this.COL_Paciente.Name = "COL_Paciente";
-            this.COL_Paciente.ReadOnly = true;
-            this.COL_Paciente.Width = 250;
-            // 
-            // COL_Fecha
-            // 
-            this.COL_Fecha.DataPropertyName = "Fecha_Cita";
-            this.COL_Fecha.HeaderText = "Fecha";
-            this.COL_Fecha.Name = "COL_Fecha";
-            this.COL_Fecha.ReadOnly = true;
-            this.COL_Fecha.Width = 120;
-            // 
-            // BTN_Eliminar
-            // 
-            this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
-            this.BTN_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Eliminar.FlatAppearance.BorderSize = 2;
-            this.BTN_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
-            this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(984, 151);
-            this.BTN_Eliminar.Name = "BTN_Eliminar";
-            this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Eliminar.TabIndex = 36;
-            this.BTN_Eliminar.Text = "Eliminar";
-            this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Eliminar.UseVisualStyleBackColor = false;
-            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
-            // 
-            // BTN_Modificar
-            // 
-            this.BTN_Modificar.BackColor = System.Drawing.Color.White;
-            this.BTN_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Modificar.FlatAppearance.BorderSize = 2;
-            this.BTN_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
-            this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(984, 113);
-            this.BTN_Modificar.Name = "BTN_Modificar";
-            this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Modificar.TabIndex = 35;
-            this.BTN_Modificar.Text = "Modificar";
-            this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Modificar.UseVisualStyleBackColor = false;
-            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
-            // 
-            // BTN_Agregar
-            // 
-            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
-            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
-            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
-            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(984, 75);
-            this.BTN_Agregar.Name = "BTN_Agregar";
-            this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Agregar.TabIndex = 34;
-            this.BTN_Agregar.Text = "Agregar";
-            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Agregar.UseVisualStyleBackColor = false;
-            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
             // button1
             // 
@@ -220,31 +67,16 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1043, 297);
+            this.button1.Location = new System.Drawing.Point(926, 610);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 52);
             this.button1.TabIndex = 38;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // BTN_Recetas
-            // 
-            this.BTN_Recetas.BackColor = System.Drawing.Color.White;
-            this.BTN_Recetas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Recetas.FlatAppearance.BorderSize = 2;
-            this.BTN_Recetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Recetas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Recetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Recetas.Location = new System.Drawing.Point(984, 189);
-            this.BTN_Recetas.Name = "BTN_Recetas";
-            this.BTN_Recetas.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Recetas.TabIndex = 39;
-            this.BTN_Recetas.Text = "Recetas";
-            this.BTN_Recetas.UseVisualStyleBackColor = false;
-            this.BTN_Recetas.Click += new System.EventHandler(this.BTN_Recetas_Click);
-            // 
             // PANEL_Mes
             // 
+            this.PANEL_Mes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PANEL_Mes.Controls.Add(this.STC_MesAño);
             this.PANEL_Mes.Location = new System.Drawing.Point(12, 75);
             this.PANEL_Mes.Name = "PANEL_Mes";
@@ -264,6 +96,7 @@
             // 
             // PANEL_Flechas
             // 
+            this.PANEL_Flechas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PANEL_Flechas.Controls.Add(this.BTN_FechaActual);
             this.PANEL_Flechas.Controls.Add(this.BTN_Adelante);
             this.PANEL_Flechas.Controls.Add(this.BTN_Atras);
@@ -271,6 +104,22 @@
             this.PANEL_Flechas.Name = "PANEL_Flechas";
             this.PANEL_Flechas.Size = new System.Drawing.Size(212, 53);
             this.PANEL_Flechas.TabIndex = 41;
+            // 
+            // BTN_FechaActual
+            // 
+            this.BTN_FechaActual.BackColor = System.Drawing.Color.White;
+            this.BTN_FechaActual.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_FechaActual.FlatAppearance.BorderSize = 2;
+            this.BTN_FechaActual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_FechaActual.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_FechaActual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_FechaActual.Location = new System.Drawing.Point(79, 6);
+            this.BTN_FechaActual.Name = "BTN_FechaActual";
+            this.BTN_FechaActual.Size = new System.Drawing.Size(54, 40);
+            this.BTN_FechaActual.TabIndex = 43;
+            this.BTN_FechaActual.Text = "Hoy";
+            this.BTN_FechaActual.UseVisualStyleBackColor = false;
+            this.BTN_FechaActual.Click += new System.EventHandler(this.BTN_FechaActual_Click);
             // 
             // BTN_Adelante
             // 
@@ -440,21 +289,35 @@
             this.STC_Domingo.Text = "Domingo";
             this.STC_Domingo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // BTN_FechaActual
+            // Menu_ModEli
             // 
-            this.BTN_FechaActual.BackColor = System.Drawing.Color.White;
-            this.BTN_FechaActual.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_FechaActual.FlatAppearance.BorderSize = 2;
-            this.BTN_FechaActual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_FechaActual.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_FechaActual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_FechaActual.Location = new System.Drawing.Point(79, 6);
-            this.BTN_FechaActual.Name = "BTN_FechaActual";
-            this.BTN_FechaActual.Size = new System.Drawing.Size(54, 40);
-            this.BTN_FechaActual.TabIndex = 43;
-            this.BTN_FechaActual.Text = "Hoy";
-            this.BTN_FechaActual.UseVisualStyleBackColor = false;
-            this.BTN_FechaActual.Click += new System.EventHandler(this.BTN_FechaActual_Click);
+            this.Menu_ModEli.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuOp_Modificar,
+            this.recetasToolStripMenuItem,
+            this.MenuOp_Eliminar});
+            this.Menu_ModEli.Name = "Menu_General";
+            this.Menu_ModEli.Size = new System.Drawing.Size(126, 70);
+            // 
+            // MenuOp_Modificar
+            // 
+            this.MenuOp_Modificar.Name = "MenuOp_Modificar";
+            this.MenuOp_Modificar.Size = new System.Drawing.Size(125, 22);
+            this.MenuOp_Modificar.Text = "Modificar";
+            this.MenuOp_Modificar.Click += new System.EventHandler(this.MenuOp_Modificar_Click);
+            // 
+            // recetasToolStripMenuItem
+            // 
+            this.recetasToolStripMenuItem.Name = "recetasToolStripMenuItem";
+            this.recetasToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.recetasToolStripMenuItem.Text = "Recetas";
+            this.recetasToolStripMenuItem.Click += new System.EventHandler(this.recetasToolStripMenuItem_Click);
+            // 
+            // MenuOp_Eliminar
+            // 
+            this.MenuOp_Eliminar.Name = "MenuOp_Eliminar";
+            this.MenuOp_Eliminar.Size = new System.Drawing.Size(125, 22);
+            this.MenuOp_Eliminar.Text = "Eliminar";
+            this.MenuOp_Eliminar.Click += new System.EventHandler(this.MenuOp_Eliminar_Click);
             // 
             // WIN_CAT_Citas_T
             // 
@@ -463,33 +326,22 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.Cerrar = true;
-            this.ClientSize = new System.Drawing.Size(1112, 616);
+            this.ClientSize = new System.Drawing.Size(991, 667);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PANEL_Flechas);
             this.Controls.Add(this.LAYOUT_Cuerpo);
             this.Controls.Add(this.PANEL_Mes);
-            this.Controls.Add(this.BTN_Recetas);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.BTN_Eliminar);
-            this.Controls.Add(this.BTN_Modificar);
-            this.Controls.Add(this.BTN_Agregar);
-            this.Controls.Add(this.DGV_TablaCitas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WIN_CAT_Citas_T";
             this.TituloBanner = "Citas";
             this.TituloVentana = "      DenTech - Citas";
             this.Load += new System.EventHandler(this.WIN_CAT_Citas_T_Load);
-            this.Controls.SetChildIndex(this.DGV_TablaCitas, 0);
-            this.Controls.SetChildIndex(this.BTN_Agregar, 0);
-            this.Controls.SetChildIndex(this.BTN_Modificar, 0);
-            this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
             this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.BTN_Recetas, 0);
             this.Controls.SetChildIndex(this.PANEL_Mes, 0);
             this.Controls.SetChildIndex(this.LAYOUT_Cuerpo, 0);
             this.Controls.SetChildIndex(this.PANEL_Flechas, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaCitas)).EndInit();
             this.PANEL_Mes.ResumeLayout(false);
             this.PANEL_Mes.PerformLayout();
             this.PANEL_Flechas.ResumeLayout(false);
@@ -497,22 +349,13 @@
             this.PANEL_CuadroDia.ResumeLayout(false);
             this.PANEL_CuadroDia.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.Menu_ModEli.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView DGV_TablaCitas;
-        private System.Windows.Forms.Button BTN_Eliminar;
-        private System.Windows.Forms.Button BTN_Modificar;
-        private System.Windows.Forms.Button BTN_Agregar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button BTN_Recetas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdCita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdPaciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Odontologo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Paciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Fecha;
         private System.Windows.Forms.Panel PANEL_Mes;
         private System.Windows.Forms.Panel PANEL_Flechas;
         private System.Windows.Forms.Label STC_MesAño;
@@ -531,5 +374,9 @@
         private System.Windows.Forms.Label STC_NumDia;
         private System.Windows.Forms.LinkLabel LSTC_Appointment;
         private System.Windows.Forms.Button BTN_FechaActual;
+        private System.Windows.Forms.ContextMenuStrip Menu_ModEli;
+        private System.Windows.Forms.ToolStripMenuItem MenuOp_Modificar;
+        private System.Windows.Forms.ToolStripMenuItem MenuOp_Eliminar;
+        private System.Windows.Forms.ToolStripMenuItem recetasToolStripMenuItem;
     }
 }
