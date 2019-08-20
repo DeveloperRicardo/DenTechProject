@@ -79,7 +79,8 @@ namespace DenTech
                     bool ExistePACIENTES = false, ExisteEMPLEADOS = false, ExisteCITAS = false, ExisteHISTORIAL = false, 
                         ExisteSANGRE = false, ExisteEXPEDIENTE = false, ExisteRECETA = false, ExisteINVENTARIO = false,
                         ExisteSERVICIOS = false, ExisteODONTOGRAMA = false, ExisteDIENTE = false, ExisteDETALLE = false,
-                        ExisteTRCrearDiente = false, ExisteTRCrearDetalle = false;
+                        ExisteTRATAMIENTO = false, ExisteIMPLANTE = false, ExisteEXTRACCION = false, ExisteTRATADIENTE = false,
+                        ExisteIMPDIENTE = false, ExisteEXDIENTE = false, ExisteTRCrearDiente = false, ExisteTRCrearDetalle = false;
                     int NumUsuarios = 0, NumSangre = 0;
                     string QryTablas = "", QryTablas2 = "", tablas = "";
                     Miconexion.Open();
@@ -109,13 +110,26 @@ namespace DenTech
                     ExisteDIENTE = Convert.ToBoolean(Query.ExecuteScalar());
                     Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'DETALLEDIENTE') SELECT 'true' ELSE SELECT 'false'";
                     ExisteDETALLE = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TRATAMIENTO') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteTRATAMIENTO = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'IMPLANTE') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteIMPLANTE = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'EXTRACCION') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteEXTRACCION = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TRATAMIENTODIENTE') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteTRATADIENTE = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'IMPLANTEDIENTE') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteIMPDIENTE = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'EXTRACCIONDIENTE') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteEXDIENTE = Convert.ToBoolean(Query.ExecuteScalar());
                     Query.CommandText = "IF EXISTS(SELECT * FROM sys.triggers WHERE name = 'TR_Crear_Diente') SELECT 'true' ELSE SELECT 'false'";
                     ExisteTRCrearDiente = Convert.ToBoolean(Query.ExecuteScalar());
                     Query.CommandText = "IF EXISTS(SELECT * FROM sys.triggers WHERE name = 'TR_Crear_Detalle') SELECT 'true' ELSE SELECT 'false'";
                     ExisteTRCrearDetalle = Convert.ToBoolean(Query.ExecuteScalar());
                     if (!ExistePACIENTES || !ExisteEMPLEADOS || !ExisteCITAS || !ExisteHISTORIAL || !ExisteSANGRE ||
                         !ExisteEXPEDIENTE || !ExisteRECETA || !ExisteINVENTARIO || !ExisteSERVICIOS || !ExisteODONTOGRAMA ||
-                        !ExisteDIENTE || !ExisteDETALLE)
+                        !ExisteDIENTE || !ExisteDETALLE || !ExisteTRATAMIENTO || !ExisteIMPLANTE || !ExisteEXTRACCION ||
+                        !ExisteTRATADIENTE || !ExisteIMPDIENTE || !ExisteEXDIENTE)
                     {
                         if (!ExisteEMPLEADOS)
                         {
@@ -143,7 +157,7 @@ namespace DenTech
                         {
                             QryTablas += "CREATE TABLE CITAS(Id_Cita int primary key identity, Id_Empleado int foreign key references EMPLEADOS(Id_Empleado) on update cascade on delete cascade," +
                                          "Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade, Id_Servicios int foreign key references SERVICIOS(Id_Servicios)"+
-                                         "on update cascade on delete cascade, Fecha_Cita date);";
+                                         "on update cascade on delete cascade, Fecha_Cita datetime);";
                             tablas += "-CITAS\n";
                         }
                         if (!ExisteHISTORIAL)
@@ -187,6 +201,42 @@ namespace DenTech
                             QryTablas += "CREATE TABLE DETALLEDIENTE(Id_Detalle int primary key identity, ID_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade," +
                                          "AreaDiente int, Estatus int); ";
                             tablas += "-DETALLEDIENTE\n";
+                        }
+                        if (!ExisteTRATAMIENTO)
+                        {
+                            QryTablas += "CREATE TABLE TRATAMIENTO(Id_Tratamiento int primary key identity, Descripcion varchar(100), Precio int);";
+                            tablas += "-TRATAMIENTO\n";
+                        }
+                        if (!ExisteIMPLANTE)
+                        {
+                            QryTablas += "CREATE TABLE IMPLANTE(Id_Implante int primary key identity, Descripcion varchar(100), Precio int);";
+                            tablas += "-IMPLANTE\n";
+                        }
+                        if (!ExisteEXTRACCION)
+                        {
+                            QryTablas += "CREATE TABLE EXTRACCION(Id_Extraccion int primary key identity, Descripcion varchar(100), Precio int);";
+                            tablas += "-EXTRACCION\n";
+                        }
+                        if (!ExisteTRATADIENTE)
+                        {
+                            QryTablas += "CREATE TABLE TRATAMIENTODIENTE(Id_TrataDiente int primary key identity, "+
+                                         "Id_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade, " +
+                                         "Id_Tratamiento int foreign key references TRATAMIENTO(Id_Tratamiento) on update cascade on delete cascade);";
+                            tablas += "-TRATAMIENTODIENTE\n";
+                        }
+                        if (!ExisteIMPDIENTE)
+                        {
+                            QryTablas += "CREATE TABLE IMPLANTEDIENTE(Id_ImplanteDiente int primary key identity, " +
+                                         "Id_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade, " +
+                                         "Id_Implante int foreign key references IMPLANTE(Id_Implante) on update cascade on delete cascade);";
+                            tablas += "-IMPLANTEDIENTE\n";
+                        }
+                        if (!ExisteEXDIENTE)
+                        {
+                            QryTablas += "CREATE TABLE EXTRACCIONDIENTE(Id_ExtraDiente int primary key identity, " +
+                                         "Id_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade, " +
+                                         "Id_Extraccion int foreign key references EXTRACCION(Id_Extraccion) on update cascade on delete cascade);";
+                            tablas += "-EXTRACCIONDIENTE\n";
                         }
                         MessageBox.Show("Se crearan las siguientes tablas faltantes en la base de datos:\n\n" + tablas, "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Query.CommandText = QryTablas;

@@ -13,6 +13,7 @@ namespace DenTech
 {
     public partial class WIN_GLO_Principal : WIN_Template
     {
+        int ventanas = 0;
         public WIN_GLO_Principal()
         {
             InitializeComponent();
@@ -36,8 +37,7 @@ namespace DenTech
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
             frm.Focus();
-            // WIN_CAT_Usuarios_T Empleados = new WIN_CAT_Usuarios_T();
-            // Empleados.Show();
+            PNL_Ventanas.Refresh();
         }
 
         private void BTN_Pacientes_Click(object sender, EventArgs e)
@@ -47,6 +47,7 @@ namespace DenTech
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
             frm.Focus();
+            PNL_Ventanas.Refresh();
         }
 
         private void BTN_Inventario_Click(object sender, EventArgs e)
@@ -56,6 +57,7 @@ namespace DenTech
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
             frm.Focus();
+            PNL_Ventanas.Refresh();
         }
 
         private void BTN_Servicios_Click(object sender, EventArgs e)
@@ -65,6 +67,7 @@ namespace DenTech
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
             frm.Focus();
+            PNL_Ventanas.Refresh();
         }
 
         private void BTN_Expediente_Click(object sender, EventArgs e)
@@ -74,6 +77,7 @@ namespace DenTech
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
             frm.Focus();
+            PNL_Ventanas.Refresh();
         }
 
         private void BTN_Citas_Click(object sender, EventArgs e)
@@ -83,6 +87,30 @@ namespace DenTech
             frm.MdiParent = PNL_Ventanas.MdiForm;
             frm.Show();
             frm.Focus();
+            PNL_Ventanas.Refresh();
+        }
+
+        private void PNL_Ventanas_Resize(object sender, EventArgs e)
+        {
+            ventanas = PNL_Ventanas.MdiForm.MdiChildren.Count();
+            if (ventanas != 0)
+            {
+                if (WindowState == FormWindowState.Maximized)
+                {
+                    for (int i = 0; i <= ventanas; i++)
+                    {
+                        PNL_Ventanas.MdiForm.MdiChildren[i].SetDesktopLocation(78, 28);
+                    }
+                }
+                if (WindowState == FormWindowState.Normal)
+                {
+                    for (int i = 0; i <= ventanas; i++)
+                    {
+                        PNL_Ventanas.MdiForm.MdiChildren[i].SetDesktopLocation(14, 8);
+                    }
+                }
+            }
+            PNL_Ventanas.Refresh();
         }
     }
 }

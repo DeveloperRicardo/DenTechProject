@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Citas_T));
-            this.button1 = new System.Windows.Forms.Button();
             this.PANEL_Mes = new System.Windows.Forms.Panel();
             this.STC_MesAño = new System.Windows.Forms.Label();
             this.PANEL_Flechas = new System.Windows.Forms.Panel();
@@ -61,26 +60,13 @@
             this.Menu_ModEli.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(926, 610);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 52);
-            this.button1.TabIndex = 38;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // PANEL_Mes
             // 
             this.PANEL_Mes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PANEL_Mes.Controls.Add(this.STC_MesAño);
-            this.PANEL_Mes.Location = new System.Drawing.Point(12, 75);
+            this.PANEL_Mes.Location = new System.Drawing.Point(28, 22);
             this.PANEL_Mes.Name = "PANEL_Mes";
-            this.PANEL_Mes.Size = new System.Drawing.Size(966, 53);
+            this.PANEL_Mes.Size = new System.Drawing.Size(966, 45);
             this.PANEL_Mes.TabIndex = 40;
             // 
             // STC_MesAño
@@ -88,7 +74,7 @@
             this.STC_MesAño.AutoSize = true;
             this.STC_MesAño.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STC_MesAño.ForeColor = System.Drawing.Color.Black;
-            this.STC_MesAño.Location = new System.Drawing.Point(8, 10);
+            this.STC_MesAño.Location = new System.Drawing.Point(8, 5);
             this.STC_MesAño.Name = "STC_MesAño";
             this.STC_MesAño.Size = new System.Drawing.Size(117, 32);
             this.STC_MesAño.TabIndex = 41;
@@ -100,9 +86,9 @@
             this.PANEL_Flechas.Controls.Add(this.BTN_FechaActual);
             this.PANEL_Flechas.Controls.Add(this.BTN_Adelante);
             this.PANEL_Flechas.Controls.Add(this.BTN_Atras);
-            this.PANEL_Flechas.Location = new System.Drawing.Point(766, 75);
+            this.PANEL_Flechas.Location = new System.Drawing.Point(782, 22);
             this.PANEL_Flechas.Name = "PANEL_Flechas";
-            this.PANEL_Flechas.Size = new System.Drawing.Size(212, 53);
+            this.PANEL_Flechas.Size = new System.Drawing.Size(212, 45);
             this.PANEL_Flechas.TabIndex = 41;
             // 
             // BTN_FechaActual
@@ -113,9 +99,9 @@
             this.BTN_FechaActual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_FechaActual.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_FechaActual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_FechaActual.Location = new System.Drawing.Point(79, 6);
+            this.BTN_FechaActual.Location = new System.Drawing.Point(79, 4);
             this.BTN_FechaActual.Name = "BTN_FechaActual";
-            this.BTN_FechaActual.Size = new System.Drawing.Size(54, 40);
+            this.BTN_FechaActual.Size = new System.Drawing.Size(54, 36);
             this.BTN_FechaActual.TabIndex = 43;
             this.BTN_FechaActual.Text = "Hoy";
             this.BTN_FechaActual.UseVisualStyleBackColor = false;
@@ -129,9 +115,9 @@
             this.BTN_Adelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Adelante.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Adelante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Adelante.Location = new System.Drawing.Point(139, 6);
+            this.BTN_Adelante.Location = new System.Drawing.Point(139, 4);
             this.BTN_Adelante.Name = "BTN_Adelante";
-            this.BTN_Adelante.Size = new System.Drawing.Size(40, 40);
+            this.BTN_Adelante.Size = new System.Drawing.Size(40, 36);
             this.BTN_Adelante.TabIndex = 42;
             this.BTN_Adelante.Text = ">";
             this.BTN_Adelante.UseVisualStyleBackColor = false;
@@ -145,9 +131,9 @@
             this.BTN_Atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Atras.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Atras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Atras.Location = new System.Drawing.Point(33, 6);
+            this.BTN_Atras.Location = new System.Drawing.Point(33, 4);
             this.BTN_Atras.Name = "BTN_Atras";
-            this.BTN_Atras.Size = new System.Drawing.Size(40, 40);
+            this.BTN_Atras.Size = new System.Drawing.Size(40, 36);
             this.BTN_Atras.TabIndex = 41;
             this.BTN_Atras.Text = "<";
             this.BTN_Atras.UseVisualStyleBackColor = false;
@@ -156,9 +142,9 @@
             // LAYOUT_Cuerpo
             // 
             this.LAYOUT_Cuerpo.Controls.Add(this.PANEL_CuadroDia);
-            this.LAYOUT_Cuerpo.Location = new System.Drawing.Point(12, 163);
+            this.LAYOUT_Cuerpo.Location = new System.Drawing.Point(28, 94);
             this.LAYOUT_Cuerpo.Name = "LAYOUT_Cuerpo";
-            this.LAYOUT_Cuerpo.Size = new System.Drawing.Size(966, 441);
+            this.LAYOUT_Cuerpo.Size = new System.Drawing.Size(966, 464);
             this.LAYOUT_Cuerpo.TabIndex = 41;
             // 
             // PANEL_CuadroDia
@@ -200,19 +186,19 @@
             this.panel1.Controls.Add(this.STC_Martes);
             this.panel1.Controls.Add(this.STC_Lunes);
             this.panel1.Controls.Add(this.STC_Domingo);
-            this.panel1.Location = new System.Drawing.Point(12, 127);
+            this.panel1.Location = new System.Drawing.Point(28, 66);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(966, 36);
+            this.panel1.Size = new System.Drawing.Size(966, 29);
             this.panel1.TabIndex = 42;
             // 
             // STC_Sabado
             // 
             this.STC_Sabado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.STC_Sabado.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Sabado.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.STC_Sabado.ForeColor = System.Drawing.Color.Black;
             this.STC_Sabado.Location = new System.Drawing.Point(828, 0);
             this.STC_Sabado.Name = "STC_Sabado";
-            this.STC_Sabado.Size = new System.Drawing.Size(138, 36);
+            this.STC_Sabado.Size = new System.Drawing.Size(138, 29);
             this.STC_Sabado.TabIndex = 49;
             this.STC_Sabado.Text = "Sábado";
             this.STC_Sabado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,11 +206,11 @@
             // STC_Viernes
             // 
             this.STC_Viernes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.STC_Viernes.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Viernes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.STC_Viernes.ForeColor = System.Drawing.Color.Black;
             this.STC_Viernes.Location = new System.Drawing.Point(690, 0);
             this.STC_Viernes.Name = "STC_Viernes";
-            this.STC_Viernes.Size = new System.Drawing.Size(138, 36);
+            this.STC_Viernes.Size = new System.Drawing.Size(138, 29);
             this.STC_Viernes.TabIndex = 48;
             this.STC_Viernes.Text = "Viernes";
             this.STC_Viernes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,11 +218,11 @@
             // STC_Jueves
             // 
             this.STC_Jueves.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.STC_Jueves.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Jueves.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.STC_Jueves.ForeColor = System.Drawing.Color.Black;
             this.STC_Jueves.Location = new System.Drawing.Point(552, 0);
             this.STC_Jueves.Name = "STC_Jueves";
-            this.STC_Jueves.Size = new System.Drawing.Size(138, 36);
+            this.STC_Jueves.Size = new System.Drawing.Size(138, 29);
             this.STC_Jueves.TabIndex = 47;
             this.STC_Jueves.Text = "Jueves";
             this.STC_Jueves.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,11 +230,11 @@
             // STC_Miercoles
             // 
             this.STC_Miercoles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.STC_Miercoles.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Miercoles.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.STC_Miercoles.ForeColor = System.Drawing.Color.Black;
             this.STC_Miercoles.Location = new System.Drawing.Point(414, 0);
             this.STC_Miercoles.Name = "STC_Miercoles";
-            this.STC_Miercoles.Size = new System.Drawing.Size(138, 36);
+            this.STC_Miercoles.Size = new System.Drawing.Size(138, 29);
             this.STC_Miercoles.TabIndex = 46;
             this.STC_Miercoles.Text = "Miércoles";
             this.STC_Miercoles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -256,11 +242,11 @@
             // STC_Martes
             // 
             this.STC_Martes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.STC_Martes.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Martes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.STC_Martes.ForeColor = System.Drawing.Color.Black;
             this.STC_Martes.Location = new System.Drawing.Point(276, 0);
             this.STC_Martes.Name = "STC_Martes";
-            this.STC_Martes.Size = new System.Drawing.Size(138, 36);
+            this.STC_Martes.Size = new System.Drawing.Size(138, 29);
             this.STC_Martes.TabIndex = 45;
             this.STC_Martes.Text = "Martes";
             this.STC_Martes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,11 +254,11 @@
             // STC_Lunes
             // 
             this.STC_Lunes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.STC_Lunes.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Lunes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.STC_Lunes.ForeColor = System.Drawing.Color.Black;
             this.STC_Lunes.Location = new System.Drawing.Point(138, 0);
             this.STC_Lunes.Name = "STC_Lunes";
-            this.STC_Lunes.Size = new System.Drawing.Size(138, 36);
+            this.STC_Lunes.Size = new System.Drawing.Size(138, 29);
             this.STC_Lunes.TabIndex = 44;
             this.STC_Lunes.Text = "Lunes";
             this.STC_Lunes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -280,11 +266,11 @@
             // STC_Domingo
             // 
             this.STC_Domingo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.STC_Domingo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STC_Domingo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.STC_Domingo.ForeColor = System.Drawing.Color.Black;
             this.STC_Domingo.Location = new System.Drawing.Point(0, 0);
             this.STC_Domingo.Name = "STC_Domingo";
-            this.STC_Domingo.Size = new System.Drawing.Size(138, 36);
+            this.STC_Domingo.Size = new System.Drawing.Size(138, 29);
             this.STC_Domingo.TabIndex = 43;
             this.STC_Domingo.Text = "Domingo";
             this.STC_Domingo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,21 +309,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.Cerrar = true;
-            this.ClientSize = new System.Drawing.Size(991, 667);
+            this.ClientSize = new System.Drawing.Size(1090, 590);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PANEL_Flechas);
             this.Controls.Add(this.LAYOUT_Cuerpo);
             this.Controls.Add(this.PANEL_Mes);
-            this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WIN_CAT_Citas_T";
-            this.TituloBanner = "Citas";
-            this.TituloVentana = "      DenTech - Citas";
             this.Load += new System.EventHandler(this.WIN_CAT_Citas_T_Load);
-            this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.PANEL_Mes, 0);
             this.Controls.SetChildIndex(this.LAYOUT_Cuerpo, 0);
             this.Controls.SetChildIndex(this.PANEL_Flechas, 0);
@@ -351,11 +333,11 @@
             this.panel1.ResumeLayout(false);
             this.Menu_ModEli.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel PANEL_Mes;
         private System.Windows.Forms.Panel PANEL_Flechas;
         private System.Windows.Forms.Label STC_MesAño;

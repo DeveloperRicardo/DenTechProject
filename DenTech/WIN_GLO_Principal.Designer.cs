@@ -152,9 +152,10 @@
             // 
             // PNL_Ventanas
             // 
-            this.PNL_Ventanas.ActiveMDIWnd = null;
+            this.PNL_Ventanas.ActiveMDIWnd = this;
             resources.ApplyResources(this.PNL_Ventanas, "PNL_Ventanas");
             this.PNL_Ventanas.Name = "PNL_Ventanas";
+            this.PNL_Ventanas.Resize += new System.EventHandler(this.PNL_Ventanas_Resize);
             // 
             // WIN_GLO_Principal
             // 

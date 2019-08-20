@@ -34,6 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Expediente_T));
             this.DGV_TablaExpediente = new System.Windows.Forms.DataGridView();
+            this.BTN_Eliminar = new System.Windows.Forms.Button();
+            this.BTN_Modificar = new System.Windows.Forms.Button();
+            this.BTN_Agregar = new System.Windows.Forms.Button();
+            this.BTN_Dental = new System.Windows.Forms.Button();
+            this.Menu_Dental = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OP_Odontograma = new System.Windows.Forms.ToolStripMenuItem();
             this.COL_IdExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,14 +47,6 @@
             this.COL_Alergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BTN_Eliminar = new System.Windows.Forms.Button();
-            this.BTN_Modificar = new System.Windows.Forms.Button();
-            this.BTN_Agregar = new System.Windows.Forms.Button();
-            this.BTN_General = new System.Windows.Forms.Button();
-            this.BTN_Dental = new System.Windows.Forms.Button();
-            this.Menu_General = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Menu_Dental = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.OP_Odontograma = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).BeginInit();
             this.Menu_Dental.SuspendLayout();
             this.SuspendLayout();
@@ -101,71 +99,6 @@
             this.DGV_TablaExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaExpediente.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaExpediente.TabIndex = 34;
-            // 
-            // COL_IdExpediente
-            // 
-            this.COL_IdExpediente.DataPropertyName = "Id_Expediente";
-            this.COL_IdExpediente.Frozen = true;
-            this.COL_IdExpediente.HeaderText = "IdExpediente";
-            this.COL_IdExpediente.Name = "COL_IdExpediente";
-            this.COL_IdExpediente.ReadOnly = true;
-            this.COL_IdExpediente.Visible = false;
-            // 
-            // COL_IdEmpleado
-            // 
-            this.COL_IdEmpleado.DataPropertyName = "Odontologo";
-            this.COL_IdEmpleado.Frozen = true;
-            this.COL_IdEmpleado.HeaderText = "Odontólogo";
-            this.COL_IdEmpleado.Name = "COL_IdEmpleado";
-            this.COL_IdEmpleado.ReadOnly = true;
-            this.COL_IdEmpleado.Width = 250;
-            // 
-            // COL_Paciente
-            // 
-            this.COL_Paciente.DataPropertyName = "Paciente";
-            this.COL_Paciente.Frozen = true;
-            this.COL_Paciente.HeaderText = "Paciente";
-            this.COL_Paciente.Name = "COL_Paciente";
-            this.COL_Paciente.ReadOnly = true;
-            this.COL_Paciente.Width = 250;
-            // 
-            // COL_Enfermedad
-            // 
-            this.COL_Enfermedad.DataPropertyName = "Enfermedad";
-            this.COL_Enfermedad.Frozen = true;
-            this.COL_Enfermedad.HeaderText = "Enfermedad(es)";
-            this.COL_Enfermedad.Name = "COL_Enfermedad";
-            this.COL_Enfermedad.ReadOnly = true;
-            this.COL_Enfermedad.Visible = false;
-            this.COL_Enfermedad.Width = 170;
-            // 
-            // COL_Alergia
-            // 
-            this.COL_Alergia.DataPropertyName = "Alergia";
-            this.COL_Alergia.Frozen = true;
-            this.COL_Alergia.HeaderText = "Alergia(s)";
-            this.COL_Alergia.Name = "COL_Alergia";
-            this.COL_Alergia.ReadOnly = true;
-            this.COL_Alergia.Visible = false;
-            this.COL_Alergia.Width = 170;
-            // 
-            // COL_Fecha
-            // 
-            this.COL_Fecha.DataPropertyName = "Fecha";
-            this.COL_Fecha.Frozen = true;
-            this.COL_Fecha.HeaderText = "Fecha";
-            this.COL_Fecha.Name = "COL_Fecha";
-            this.COL_Fecha.ReadOnly = true;
-            this.COL_Fecha.Visible = false;
-            // 
-            // IdPaciente
-            // 
-            this.IdPaciente.DataPropertyName = "Id_Paciente";
-            this.IdPaciente.Frozen = true;
-            this.IdPaciente.HeaderText = "IdPaciente";
-            this.IdPaciente.Name = "IdPaciente";
-            this.IdPaciente.ReadOnly = true;
-            this.IdPaciente.Visible = false;
             // 
             // BTN_Eliminar
             // 
@@ -221,23 +154,6 @@
             this.BTN_Agregar.UseVisualStyleBackColor = false;
             this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
-            // BTN_General
-            // 
-            this.BTN_General.BackColor = System.Drawing.Color.White;
-            this.BTN_General.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_General.FlatAppearance.BorderSize = 2;
-            this.BTN_General.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_General.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_General.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_General.Location = new System.Drawing.Point(967, 247);
-            this.BTN_General.Name = "BTN_General";
-            this.BTN_General.Size = new System.Drawing.Size(111, 32);
-            this.BTN_General.TabIndex = 41;
-            this.BTN_General.Text = "General";
-            this.BTN_General.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_General.UseVisualStyleBackColor = false;
-            this.BTN_General.Click += new System.EventHandler(this.BTN_General_Click);
-            // 
             // BTN_Dental
             // 
             this.BTN_Dental.BackColor = System.Drawing.Color.White;
@@ -246,7 +162,7 @@
             this.BTN_Dental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Dental.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Dental.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Dental.Location = new System.Drawing.Point(967, 285);
+            this.BTN_Dental.Location = new System.Drawing.Point(967, 247);
             this.BTN_Dental.Name = "BTN_Dental";
             this.BTN_Dental.Size = new System.Drawing.Size(111, 32);
             this.BTN_Dental.TabIndex = 42;
@@ -254,11 +170,6 @@
             this.BTN_Dental.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Dental.UseVisualStyleBackColor = false;
             this.BTN_Dental.Click += new System.EventHandler(this.BTN_Dental_Click);
-            // 
-            // Menu_General
-            // 
-            this.Menu_General.Name = "Menu_General";
-            this.Menu_General.Size = new System.Drawing.Size(181, 26);
             // 
             // Menu_Dental
             // 
@@ -274,6 +185,71 @@
             this.OP_Odontograma.Text = "Odontograma";
             this.OP_Odontograma.Click += new System.EventHandler(this.OP_Odontograma_Click);
             // 
+            // COL_IdExpediente
+            // 
+            this.COL_IdExpediente.DataPropertyName = "Id_Expediente";
+            this.COL_IdExpediente.Frozen = true;
+            this.COL_IdExpediente.HeaderText = "IdExpediente";
+            this.COL_IdExpediente.Name = "COL_IdExpediente";
+            this.COL_IdExpediente.ReadOnly = true;
+            this.COL_IdExpediente.Visible = false;
+            // 
+            // COL_IdEmpleado
+            // 
+            this.COL_IdEmpleado.DataPropertyName = "Odontologo";
+            this.COL_IdEmpleado.Frozen = true;
+            this.COL_IdEmpleado.HeaderText = "Odontólogo";
+            this.COL_IdEmpleado.Name = "COL_IdEmpleado";
+            this.COL_IdEmpleado.ReadOnly = true;
+            this.COL_IdEmpleado.Width = 490;
+            // 
+            // COL_Paciente
+            // 
+            this.COL_Paciente.DataPropertyName = "Paciente";
+            this.COL_Paciente.Frozen = true;
+            this.COL_Paciente.HeaderText = "Paciente";
+            this.COL_Paciente.Name = "COL_Paciente";
+            this.COL_Paciente.ReadOnly = true;
+            this.COL_Paciente.Width = 490;
+            // 
+            // COL_Enfermedad
+            // 
+            this.COL_Enfermedad.DataPropertyName = "Enfermedad";
+            this.COL_Enfermedad.Frozen = true;
+            this.COL_Enfermedad.HeaderText = "Enfermedad(es)";
+            this.COL_Enfermedad.Name = "COL_Enfermedad";
+            this.COL_Enfermedad.ReadOnly = true;
+            this.COL_Enfermedad.Visible = false;
+            this.COL_Enfermedad.Width = 170;
+            // 
+            // COL_Alergia
+            // 
+            this.COL_Alergia.DataPropertyName = "Alergia";
+            this.COL_Alergia.Frozen = true;
+            this.COL_Alergia.HeaderText = "Alergia(s)";
+            this.COL_Alergia.Name = "COL_Alergia";
+            this.COL_Alergia.ReadOnly = true;
+            this.COL_Alergia.Visible = false;
+            this.COL_Alergia.Width = 170;
+            // 
+            // COL_Fecha
+            // 
+            this.COL_Fecha.DataPropertyName = "Fecha";
+            this.COL_Fecha.Frozen = true;
+            this.COL_Fecha.HeaderText = "Fecha";
+            this.COL_Fecha.Name = "COL_Fecha";
+            this.COL_Fecha.ReadOnly = true;
+            this.COL_Fecha.Visible = false;
+            // 
+            // IdPaciente
+            // 
+            this.IdPaciente.DataPropertyName = "Id_Paciente";
+            this.IdPaciente.Frozen = true;
+            this.IdPaciente.HeaderText = "IdPaciente";
+            this.IdPaciente.Name = "IdPaciente";
+            this.IdPaciente.ReadOnly = true;
+            this.IdPaciente.Visible = false;
+            // 
             // WIN_CAT_Expediente_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,7 +258,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1090, 590);
             this.Controls.Add(this.BTN_Dental);
-            this.Controls.Add(this.BTN_General);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.BTN_Agregar);
@@ -296,7 +271,6 @@
             this.Controls.SetChildIndex(this.BTN_Agregar, 0);
             this.Controls.SetChildIndex(this.BTN_Modificar, 0);
             this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
-            this.Controls.SetChildIndex(this.BTN_General, 0);
             this.Controls.SetChildIndex(this.BTN_Dental, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).EndInit();
             this.Menu_Dental.ResumeLayout(false);
@@ -310,9 +284,7 @@
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;
-        private System.Windows.Forms.Button BTN_General;
         private System.Windows.Forms.Button BTN_Dental;
-        private System.Windows.Forms.ContextMenuStrip Menu_General;
         private System.Windows.Forms.ContextMenuStrip Menu_Dental;
         private System.Windows.Forms.ToolStripMenuItem OP_Odontograma;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdExpediente;

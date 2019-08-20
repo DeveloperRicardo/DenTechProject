@@ -110,14 +110,14 @@ namespace DenTech
             DGV_TablaExpediente.DataSource = Data;
         }
 
-        private void BTN_General_Click(object sender, EventArgs e)
-        {
-            // Verifica que la tabla tenga información
-            if (DGV_TablaExpediente.RowCount == 0)
-                return;
+        //private void BTN_General_Click(object sender, EventArgs e)
+        //{
+        //    // Verifica que la tabla tenga información
+        //    if (DGV_TablaExpediente.RowCount == 0)
+        //        return;
 
-            Menu_General.Show(BTN_General, new Point(0, BTN_General.Height));
-        }
+        //    Menu_General.Show(BTN_General, new Point(0, BTN_General.Height));
+        //}
 
         private void OP_Recetas_Click(object sender, EventArgs e)
         {
