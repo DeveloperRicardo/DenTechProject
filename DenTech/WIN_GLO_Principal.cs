@@ -97,14 +97,14 @@ namespace DenTech
             {
                 if (WindowState == FormWindowState.Maximized)
                 {
-                    for (int i = 0; i <= ventanas; i++)
+                    for (int i = 0; i < ventanas; i++)
                     {
                         PNL_Ventanas.MdiForm.MdiChildren[i].SetDesktopLocation(78, 28);
                     }
                 }
                 if (WindowState == FormWindowState.Normal)
                 {
-                    for (int i = 0; i <= ventanas; i++)
+                    for (int i = 0; i < ventanas; i++)
                     {
                         PNL_Ventanas.MdiForm.MdiChildren[i].SetDesktopLocation(14, 8);
                     }
