@@ -171,7 +171,8 @@
             "Administrador",
             "Odontólogo",
             "Recepcionista",
-            "Intendente"});
+            "Intendente",
+            "Super-usuario"});
             this.COMBO_TipoUsuario.Location = new System.Drawing.Point(124, 234);
             this.COMBO_TipoUsuario.Name = "COMBO_TipoUsuario";
             this.COMBO_TipoUsuario.Size = new System.Drawing.Size(232, 25);
@@ -193,6 +194,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(374, 339);
             this.Controls.Add(this.STC_TipoUsuario);
             this.Controls.Add(this.COMBO_TipoUsuario);

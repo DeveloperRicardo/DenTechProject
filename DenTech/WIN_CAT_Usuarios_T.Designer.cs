@@ -33,13 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Usuarios_T));
             this.DGV_TablaUsuarios = new System.Windows.Forms.DataGridView();
+            this.BTN_Eliminar = new System.Windows.Forms.Button();
+            this.BTN_Modificar = new System.Windows.Forms.Button();
+            this.BTN_Agregar = new System.Windows.Forms.Button();
             this.COL_IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BTN_Eliminar = new System.Windows.Forms.Button();
-            this.BTN_Modificar = new System.Windows.Forms.Button();
-            this.BTN_Agregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,41 +88,7 @@
             this.DGV_TablaUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaUsuarios.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaUsuarios.TabIndex = 33;
-            // 
-            // COL_IdUsuario
-            // 
-            this.COL_IdUsuario.DataPropertyName = "Id_Empleado";
-            this.COL_IdUsuario.Frozen = true;
-            this.COL_IdUsuario.HeaderText = "IdUsuario";
-            this.COL_IdUsuario.Name = "COL_IdUsuario";
-            this.COL_IdUsuario.ReadOnly = true;
-            this.COL_IdUsuario.Visible = false;
-            // 
-            // COL_Usuario
-            // 
-            this.COL_Usuario.DataPropertyName = "Usuario";
-            this.COL_Usuario.Frozen = true;
-            this.COL_Usuario.HeaderText = "Usuario";
-            this.COL_Usuario.Name = "COL_Usuario";
-            this.COL_Usuario.ReadOnly = true;
-            this.COL_Usuario.Width = 130;
-            // 
-            // COL_Nombre
-            // 
-            this.COL_Nombre.DataPropertyName = "NombreCompleto";
-            this.COL_Nombre.Frozen = true;
-            this.COL_Nombre.HeaderText = "Nombre";
-            this.COL_Nombre.Name = "COL_Nombre";
-            this.COL_Nombre.ReadOnly = true;
-            this.COL_Nombre.Width = 275;
-            // 
-            // COL_Tipo
-            // 
-            this.COL_Tipo.DataPropertyName = "Tipo";
-            this.COL_Tipo.HeaderText = "Tipo";
-            this.COL_Tipo.Name = "COL_Tipo";
-            this.COL_Tipo.ReadOnly = true;
-            this.COL_Tipo.Width = 130;
+            this.DGV_TablaUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_TablaUsuarios_CellClick);
             // 
             // BTN_Eliminar
             // 
@@ -177,6 +143,39 @@
             this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Agregar.UseVisualStyleBackColor = false;
             this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
+            // 
+            // COL_IdUsuario
+            // 
+            this.COL_IdUsuario.DataPropertyName = "Id_Empleado";
+            this.COL_IdUsuario.Frozen = true;
+            this.COL_IdUsuario.HeaderText = "IdUsuario";
+            this.COL_IdUsuario.Name = "COL_IdUsuario";
+            this.COL_IdUsuario.ReadOnly = true;
+            this.COL_IdUsuario.Visible = false;
+            // 
+            // COL_Usuario
+            // 
+            this.COL_Usuario.DataPropertyName = "Usuario";
+            this.COL_Usuario.HeaderText = "Usuario";
+            this.COL_Usuario.Name = "COL_Usuario";
+            this.COL_Usuario.ReadOnly = true;
+            this.COL_Usuario.Width = 130;
+            // 
+            // COL_Nombre
+            // 
+            this.COL_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.COL_Nombre.DataPropertyName = "NombreCompleto";
+            this.COL_Nombre.HeaderText = "Nombre";
+            this.COL_Nombre.Name = "COL_Nombre";
+            this.COL_Nombre.ReadOnly = true;
+            // 
+            // COL_Tipo
+            // 
+            this.COL_Tipo.DataPropertyName = "Tipo";
+            this.COL_Tipo.HeaderText = "Tipo";
+            this.COL_Tipo.Name = "COL_Tipo";
+            this.COL_Tipo.ReadOnly = true;
+            this.COL_Tipo.Width = 200;
             // 
             // WIN_CAT_Usuarios_T
             // 

@@ -90,6 +90,7 @@ namespace DenTech
             // Se estructura el query
             cmd.CommandText = "Select\n" +
                 "Id_Paciente,\n" +
+                "Matricula,\n" +
                 "NombreCompleto = (Nombre + ' ' + ApellidoP + ' ' + ApellidoM),\n" +
                 "Edad,\n" +
                 "Tipo =\n" + // Tipo Sangre

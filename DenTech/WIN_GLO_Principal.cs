@@ -28,6 +28,43 @@ namespace DenTech
         {
             TituloVentana += "Menú Principal";
             TituloBanner = Settings.Default.NombreUsuario;
+            switch (Settings.Default.TipoUsuario)
+            {
+                case 0:
+                    BTN_Empleados.Visible = true;
+                    BTN_Pacientes.Visible = false;
+                    BTN_Citas.Visible = false;
+                    BTN_Inventario.Visible = true;
+                    BTN_Servicios.Visible = true;
+                    BTN_Expediente.Visible = false;
+                    break;
+                case 1:
+                    BTN_Empleados.Visible = false;
+                    BTN_Pacientes.Visible = false;
+                    BTN_Citas.Visible = true;
+                    BTN_Inventario.Visible = true;
+                    BTN_Servicios.Visible = false;
+                    BTN_Expediente.Visible = true;
+                    break;
+                case 2:
+                    BTN_Empleados.Visible = false;
+                    BTN_Pacientes.Visible = true;
+                    BTN_Citas.Visible = true;
+                    BTN_Inventario.Visible = true;
+                    BTN_Servicios.Visible = false;
+                    BTN_Expediente.Visible = true;
+                    break;
+                case 3:
+                    BTN_Empleados.Visible = false;
+                    BTN_Pacientes.Visible = false;
+                    BTN_Citas.Visible = false;
+                    BTN_Inventario.Visible = true;
+                    BTN_Servicios.Visible = false;
+                    BTN_Expediente.Visible = false;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void BTN_Empleados_Click(object sender, EventArgs e)

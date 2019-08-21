@@ -268,12 +268,11 @@
             // 
             // COL_Precio
             // 
+            this.COL_Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.COL_Precio.DataPropertyName = "Precio";
-            this.COL_Precio.Frozen = true;
             this.COL_Precio.HeaderText = "Precio";
             this.COL_Precio.Name = "COL_Precio";
             this.COL_Precio.ReadOnly = true;
-            this.COL_Precio.Width = 150;
             // 
             // WIN_CAT_Extraccion_T
             // 

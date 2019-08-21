@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Servicios_T));
             this.DGV_TablaServicios = new System.Windows.Forms.DataGridView();
-            this.COL_IdServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
+            this.COL_IdServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaServicios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,33 +86,6 @@
             this.DGV_TablaServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaServicios.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaServicios.TabIndex = 33;
-            // 
-            // COL_IdServicio
-            // 
-            this.COL_IdServicio.DataPropertyName = "Id_Servicios";
-            this.COL_IdServicio.Frozen = true;
-            this.COL_IdServicio.HeaderText = "IdServicio";
-            this.COL_IdServicio.Name = "COL_IdServicio";
-            this.COL_IdServicio.ReadOnly = true;
-            this.COL_IdServicio.Visible = false;
-            // 
-            // COL_Servicio
-            // 
-            this.COL_Servicio.DataPropertyName = "Descripcion";
-            this.COL_Servicio.Frozen = true;
-            this.COL_Servicio.HeaderText = "Servicio";
-            this.COL_Servicio.Name = "COL_Servicio";
-            this.COL_Servicio.ReadOnly = true;
-            this.COL_Servicio.Width = 350;
-            // 
-            // COL_Precio
-            // 
-            this.COL_Precio.DataPropertyName = "Precio";
-            this.COL_Precio.Frozen = true;
-            this.COL_Precio.HeaderText = "Precio";
-            this.COL_Precio.Name = "COL_Precio";
-            this.COL_Precio.ReadOnly = true;
-            this.COL_Precio.Width = 150;
             // 
             // BTN_Eliminar
             // 
@@ -168,6 +141,31 @@
             this.BTN_Agregar.UseVisualStyleBackColor = false;
             this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
+            // COL_IdServicio
+            // 
+            this.COL_IdServicio.DataPropertyName = "Id_Servicios";
+            this.COL_IdServicio.Frozen = true;
+            this.COL_IdServicio.HeaderText = "IdServicio";
+            this.COL_IdServicio.Name = "COL_IdServicio";
+            this.COL_IdServicio.ReadOnly = true;
+            this.COL_IdServicio.Visible = false;
+            // 
+            // COL_Servicio
+            // 
+            this.COL_Servicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.COL_Servicio.DataPropertyName = "Descripcion";
+            this.COL_Servicio.HeaderText = "Servicio";
+            this.COL_Servicio.Name = "COL_Servicio";
+            this.COL_Servicio.ReadOnly = true;
+            // 
+            // COL_Precio
+            // 
+            this.COL_Precio.DataPropertyName = "Precio";
+            this.COL_Precio.HeaderText = "Precio";
+            this.COL_Precio.Name = "COL_Precio";
+            this.COL_Precio.ReadOnly = true;
+            this.COL_Precio.Width = 150;
+            // 
             // WIN_CAT_Servicios_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,11 +195,11 @@
 
         #endregion
         private System.Windows.Forms.DataGridView DGV_TablaServicios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdServicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Precio;
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Agregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdServicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Precio;
     }
 }

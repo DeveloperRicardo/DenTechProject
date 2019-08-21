@@ -42,6 +42,9 @@ namespace DenTech
                 case 9:
                     MessageBox.Show("Se han creado los métodos faltantes.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
+                case 10:
+                    MessageBox.Show("Ha ocurrido un error al realizar un proceso.\n\nDetalles del error:\n" + Excepcion, "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
             }
         }
         #endregion
@@ -76,11 +79,12 @@ namespace DenTech
             {
                 using (SqlConnection Miconexion = new SqlConnection(Parametros))
                 {
-                    bool ExistePACIENTES = false, ExisteEMPLEADOS = false, ExisteCITAS = false, ExisteHISTORIAL = false, 
-                        ExisteSANGRE = false, ExisteEXPEDIENTE = false, ExisteRECETA = false, ExisteINVENTARIO = false,
-                        ExisteSERVICIOS = false, ExisteODONTOGRAMA = false, ExisteDIENTE = false, ExisteDETALLE = false,
-                        ExisteTRATAMIENTO = false, ExisteIMPLANTE = false, ExisteEXTRACCION = false, ExisteTRATADIENTE = false,
-                        ExisteIMPDIENTE = false, ExisteEXDIENTE = false, ExisteTRCrearDiente = false, ExisteTRCrearDetalle = false;
+                    bool ExistePACIENTES = false, ExisteEMPLEADOS = false, ExisteCITAS = false, ExisteHISTORIAL = false,
+                         ExisteSANGRE = false, ExisteEXPEDIENTE = false, ExisteRECETA = false, ExisteINVENTARIO = false,
+                         ExisteSERVICIOS = false, ExisteARCHIVOS = false, ExisteANTECEDENTES = false, ExisteODONTOGRAMA = false, 
+                         ExisteDIENTE = false, ExisteDETALLE = false, ExisteTRATAMIENTO = false, ExisteIMPLANTE = false,
+                         ExisteEXTRACCION = false, ExisteTRATADIENTE = false, ExisteIMPDIENTE = false, ExisteEXDIENTE = false,
+                         ExisteTRCrearDiente = false, ExisteTRCrearDetalle = false;
                     int NumUsuarios = 0, NumSangre = 0;
                     string QryTablas = "", QryTablas2 = "", tablas = "";
                     Miconexion.Open();
@@ -104,6 +108,8 @@ namespace DenTech
                     ExisteRECETA = Convert.ToBoolean(Query.ExecuteScalar());
                     Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INVENTARIO') SELECT 'true' ELSE SELECT 'false'";
                     ExisteINVENTARIO = Convert.ToBoolean(Query.ExecuteScalar());
+                    Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'ARCHIVOSADJUNTOS') SELECT 'true' ELSE SELECT 'false'";
+                    ExisteARCHIVOS = Convert.ToBoolean(Query.ExecuteScalar());
                     Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'ODONTOGRAMA') SELECT 'true' ELSE SELECT 'false'";
                     ExisteODONTOGRAMA = Convert.ToBoolean(Query.ExecuteScalar());
                     Query.CommandText = "IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'DIENTE') SELECT 'true' ELSE SELECT 'false'";
@@ -127,9 +133,9 @@ namespace DenTech
                     Query.CommandText = "IF EXISTS(SELECT * FROM sys.triggers WHERE name = 'TR_Crear_Detalle') SELECT 'true' ELSE SELECT 'false'";
                     ExisteTRCrearDetalle = Convert.ToBoolean(Query.ExecuteScalar());
                     if (!ExistePACIENTES || !ExisteEMPLEADOS || !ExisteCITAS || !ExisteHISTORIAL || !ExisteSANGRE ||
-                        !ExisteEXPEDIENTE || !ExisteRECETA || !ExisteINVENTARIO || !ExisteSERVICIOS || !ExisteODONTOGRAMA ||
-                        !ExisteDIENTE || !ExisteDETALLE || !ExisteTRATAMIENTO || !ExisteIMPLANTE || !ExisteEXTRACCION ||
-                        !ExisteTRATADIENTE || !ExisteIMPDIENTE || !ExisteEXDIENTE)
+                        !ExisteEXPEDIENTE || !ExisteRECETA || !ExisteINVENTARIO || !ExisteSERVICIOS || !ExisteARCHIVOS ||
+                        !ExisteODONTOGRAMA || !ExisteDIENTE || !ExisteDETALLE || !ExisteTRATAMIENTO || !ExisteIMPLANTE ||
+                        !ExisteEXTRACCION || !ExisteTRATADIENTE || !ExisteIMPDIENTE || !ExisteEXDIENTE)
                     {
                         if (!ExisteEMPLEADOS)
                         {
@@ -150,7 +156,7 @@ namespace DenTech
                         if (!ExistePACIENTES)
                         {
                             QryTablas += "CREATE TABLE PACIENTES(Id_Paciente int primary key identity, Id_Sangre int foreign key references SANGRE(Id_Sangre) on update cascade on delete cascade," +
-                                         "Nombre varchar(20),ApellidoP varchar(12),ApellidoM varchar(12), Edad int,Sexo int, Direccion varchar(100),Telefono varchar(10),Tel_Emergencia varchar(10));";
+                                         "Matricula varchar(6), Nombre varchar(20),ApellidoP varchar(12),ApellidoM varchar(12), Edad int,Sexo int, Direccion varchar(100),Telefono varchar(10),Tel_Emergencia varchar(10));";
                             tablas += "-PACIENTES\n";
                         }
                         if (!ExisteCITAS)
@@ -181,19 +187,24 @@ namespace DenTech
                         }
                         if (!ExisteINVENTARIO)
                         {
-                            QryTablas += "CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int)";
+                            QryTablas += "CREATE TABLE INVENTARIO(Id_Inventario int primary key identity, Descripcion varchar(100),Cantidad int, Fecha_Inicio date, Fecha_Final date, Tipo_Producto int);";
                             tablas += "-INVENTARIO\n";
+                        }
+                        if (!ExisteARCHIVOS)
+                        {
+                            QryTablas += "CREATE TABLE ARCHIVOSADJUNTOS(Id int primary key identity, Nombre varchar(100),RutaLogica varchar(500));";
+                            tablas += "-ARCHIVOSADJUNTOS\n";
                         }
                         if (!ExisteODONTOGRAMA)
                         {
                             QryTablas += "CREATE TABLE ODONTOGRAMA(Id_Odontograma int primary key identity, Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade," +
-                                         "Fecha_Registro date, Descripcion varchar(100))";
+                                         "Fecha_Registro date, Descripcion varchar(100));";
                             tablas += "-ODONTOGRAMA\n";
                         }
                         if (!ExisteDIENTE)
                         {
                             QryTablas += "CREATE TABLE DIENTE(Id_Diente int primary key identity, Id_Odontograma int foreign key references ODONTOGRAMA(Id_Odontograma) on update cascade on delete cascade," +
-                                         "NumDiente int, Descripcion varchar(510))";
+                                         "NumDiente int, Descripcion varchar(510));";
                             tablas += "-DIENTE\n";
                         }
                         if (!ExisteDETALLE)
@@ -341,6 +352,36 @@ namespace DenTech
             {
                 Mensajes(2,ex.Message);
             }
+        }
+        #endregion
+
+        #region CodigoRegistro
+        public string CodigoRegistro(int codigo){
+            string Nuevocodigo = "";
+            switch (codigo.ToString().Count())
+            {
+                case 1:
+                    Nuevocodigo = "00000" + (codigo+1);
+                    break;
+                case 2:
+                    Nuevocodigo = "0000" + (codigo+1);
+                    break;
+                case 3:
+                    Nuevocodigo = "000" + (codigo+1);
+                    break;
+                case 4:
+                    Nuevocodigo = "00" + (codigo+1);
+                    break;
+                case 5:
+                    Nuevocodigo = "0" + (codigo+1);
+                    break;
+                case 6:
+                    Nuevocodigo = Convert.ToString(codigo + 1);
+                    break;
+                default:
+                    break;
+            }
+            return Nuevocodigo;
         }
         #endregion
     }

@@ -98,6 +98,7 @@ namespace DenTech
                 "   When 1 Then 'Odontólogo'\n" +
                 "   When 2 Then 'Recepcionista'\n" +
                 "   When 3 Then 'Intendente'\n" +
+                "   When 4 Then 'Super-usuario'\n" +
                 "End\n" +
                 "From EMPLEADOS";
             cmd.ExecuteNonQuery(); // Se ejecuta
@@ -108,6 +109,22 @@ namespace DenTech
 
             // Se inserta la información en el DataGridView
             DGV_TablaUsuarios.DataSource = Data;
+        }
+
+        private void DGV_TablaUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Convert.ToString(DGV_TablaUsuarios.CurrentRow.Cells[3].Value) == "Super-usuario")
+            {
+                BTN_Agregar.Enabled = false;
+                BTN_Modificar.Enabled = false;
+                BTN_Eliminar.Enabled = false;
+            }
+            else
+            {
+                BTN_Agregar.Enabled = true;
+                BTN_Modificar.Enabled = true;
+                BTN_Eliminar.Enabled = true;
+            }
         }
     }
 }

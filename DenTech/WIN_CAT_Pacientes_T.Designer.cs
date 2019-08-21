@@ -37,11 +37,12 @@
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.DGV_TablaPacientes = new System.Windows.Forms.DataGridView();
             this.COL_IdPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_TipoSangre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_TelEmergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,11 +118,12 @@
             this.DGV_TablaPacientes.ColumnHeadersHeight = 30;
             this.DGV_TablaPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_IdPaciente,
-            this.COL_Nombre,
             this.COL_Edad,
             this.COL_TipoSangre,
             this.COL_Telefono,
-            this.COL_TelEmergencia});
+            this.COL_TelEmergencia,
+            this.COL_Matricula,
+            this.COL_Nombre});
             this.DGV_TablaPacientes.EnableHeadersVisualStyles = false;
             this.DGV_TablaPacientes.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DGV_TablaPacientes.Location = new System.Drawing.Point(21, 133);
@@ -149,21 +151,14 @@
             // 
             // COL_IdPaciente
             // 
+            this.COL_IdPaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.COL_IdPaciente.DataPropertyName = "Id_Paciente";
             this.COL_IdPaciente.Frozen = true;
             this.COL_IdPaciente.HeaderText = "IdPaciente";
             this.COL_IdPaciente.Name = "COL_IdPaciente";
             this.COL_IdPaciente.ReadOnly = true;
             this.COL_IdPaciente.Visible = false;
-            // 
-            // COL_Nombre
-            // 
-            this.COL_Nombre.DataPropertyName = "NombreCompleto";
-            this.COL_Nombre.Frozen = true;
-            this.COL_Nombre.HeaderText = "Nombre";
-            this.COL_Nombre.Name = "COL_Nombre";
-            this.COL_Nombre.ReadOnly = true;
-            this.COL_Nombre.Width = 275;
+            this.COL_IdPaciente.Width = 112;
             // 
             // COL_Edad
             // 
@@ -171,6 +166,7 @@
             this.COL_Edad.HeaderText = "Edad";
             this.COL_Edad.Name = "COL_Edad";
             this.COL_Edad.ReadOnly = true;
+            this.COL_Edad.Visible = false;
             this.COL_Edad.Width = 50;
             // 
             // COL_TipoSangre
@@ -179,6 +175,7 @@
             this.COL_TipoSangre.HeaderText = "Tipo Sangre";
             this.COL_TipoSangre.Name = "COL_TipoSangre";
             this.COL_TipoSangre.ReadOnly = true;
+            this.COL_TipoSangre.Visible = false;
             this.COL_TipoSangre.Width = 110;
             // 
             // COL_Telefono
@@ -187,6 +184,7 @@
             this.COL_Telefono.HeaderText = "Teléfono";
             this.COL_Telefono.Name = "COL_Telefono";
             this.COL_Telefono.ReadOnly = true;
+            this.COL_Telefono.Visible = false;
             this.COL_Telefono.Width = 110;
             // 
             // COL_TelEmergencia
@@ -195,7 +193,25 @@
             this.COL_TelEmergencia.HeaderText = "Tel. Emer.";
             this.COL_TelEmergencia.Name = "COL_TelEmergencia";
             this.COL_TelEmergencia.ReadOnly = true;
+            this.COL_TelEmergencia.Visible = false;
             this.COL_TelEmergencia.Width = 110;
+            // 
+            // COL_Matricula
+            // 
+            this.COL_Matricula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.COL_Matricula.DataPropertyName = "Matricula";
+            this.COL_Matricula.HeaderText = "Matricula";
+            this.COL_Matricula.Name = "COL_Matricula";
+            this.COL_Matricula.ReadOnly = true;
+            this.COL_Matricula.Width = 103;
+            // 
+            // COL_Nombre
+            // 
+            this.COL_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.COL_Nombre.DataPropertyName = "NombreCompleto";
+            this.COL_Nombre.HeaderText = "Nombre";
+            this.COL_Nombre.Name = "COL_Nombre";
+            this.COL_Nombre.ReadOnly = true;
             // 
             // WIN_CAT_Pacientes_T
             // 
@@ -229,10 +245,11 @@
         private System.Windows.Forms.Button BTN_Agregar;
         private System.Windows.Forms.DataGridView DGV_TablaPacientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdPaciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_TipoSangre;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_TelEmergencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Matricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Nombre;
     }
 }

@@ -33,25 +33,6 @@ namespace DenTech
                 EDT_Usuario.Enabled = false;
                 EDT_Contrasena.Enabled = false;
                 BTN_Acceder.Enabled = false;
-                //ds.Clear();
-                //BD.conexion.CreateCommand();
-                //SqlCommand comando = BD.conexion.CreateCommand();
-                //comando.CommandText = "SELECT Id_Empleado, Usuario FROM EMPLEADOS";
-                //SqlDataAdapter adaptador = new SqlDataAdapter();
-                //adaptador.SelectCommand = comando;
-                //adaptador.Fill(ds);
-                //COMBO_Usuario.DataSource = ds;
-                //COMBO_Usuario.ValueMember = "Id_Empleado";
-                //COMBO_Usuario.DisplayMember = "Usuario";
-                //COMBO_Usuario.Refresh();
-            }
-            else
-            {
-                //COMBO_Usuario.Enabled = false;
-
-
-                //IMG_Icono.Visible = true;
-                //STC_MensajeConexion.Visible = true;
             }
         }
 
@@ -91,12 +72,6 @@ namespace DenTech
             LoginF.ShowDialog();
             if (Settings.Default.ConexionValida == true)
             {
-                //ds.Clear();
-                //COMBO_Usuario.DataSource = null;
-                //COMBO_Usuario.ValueMember = null;
-                //COMBO_Usuario.DisplayMember = null;
-                //COMBO_Usuario.Refresh();
-                ////                BD.Conexion(false);
                 if (BD.Conexion(true))
                 {
                     Conexion();
@@ -111,16 +86,6 @@ namespace DenTech
                 return false;
             else
                 return true;
-        }
-
-        private void EDT_Contrasena_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void Acceder()
-        {
-
         }
 
         private void BTN_Cancelar_Click(object sender, EventArgs e)

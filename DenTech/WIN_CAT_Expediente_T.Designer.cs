@@ -40,15 +40,20 @@
             this.BTN_Dental = new System.Windows.Forms.Button();
             this.Menu_Dental = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.OP_Odontograma = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTN_General = new System.Windows.Forms.Button();
+            this.Menu_General = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OP_ArcAdjuntos = new System.Windows.Forms.ToolStripMenuItem();
+            this.OP_AntPersonales = new System.Windows.Forms.ToolStripMenuItem();
             this.COL_IdExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Enfermedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Alergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Alergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Enfermedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).BeginInit();
             this.Menu_Dental.SuspendLayout();
+            this.Menu_General.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGV_TablaExpediente
@@ -69,11 +74,11 @@
             this.DGV_TablaExpediente.ColumnHeadersHeight = 30;
             this.DGV_TablaExpediente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_IdExpediente,
-            this.COL_IdEmpleado,
             this.COL_Paciente,
-            this.COL_Enfermedad,
-            this.COL_Alergia,
+            this.COL_IdEmpleado,
             this.COL_Fecha,
+            this.COL_Alergia,
+            this.COL_Enfermedad,
             this.IdPaciente});
             this.DGV_TablaExpediente.EnableHeadersVisualStyles = false;
             this.DGV_TablaExpediente.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -160,13 +165,13 @@
             this.BTN_Dental.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BTN_Dental.FlatAppearance.BorderSize = 2;
             this.BTN_Dental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Dental.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Dental.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.BTN_Dental.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Dental.Location = new System.Drawing.Point(967, 247);
+            this.BTN_Dental.Location = new System.Drawing.Point(967, 285);
             this.BTN_Dental.Name = "BTN_Dental";
             this.BTN_Dental.Size = new System.Drawing.Size(111, 32);
             this.BTN_Dental.TabIndex = 42;
-            this.BTN_Dental.Text = "Dental";
+            this.BTN_Dental.Text = "Odontograma";
             this.BTN_Dental.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Dental.UseVisualStyleBackColor = false;
             this.BTN_Dental.Click += new System.EventHandler(this.BTN_Dental_Click);
@@ -185,70 +190,105 @@
             this.OP_Odontograma.Text = "Odontograma";
             this.OP_Odontograma.Click += new System.EventHandler(this.OP_Odontograma_Click);
             // 
+            // BTN_General
+            // 
+            this.BTN_General.BackColor = System.Drawing.Color.White;
+            this.BTN_General.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_General.FlatAppearance.BorderSize = 2;
+            this.BTN_General.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_General.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.BTN_General.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_General.Location = new System.Drawing.Point(967, 247);
+            this.BTN_General.Name = "BTN_General";
+            this.BTN_General.Size = new System.Drawing.Size(111, 32);
+            this.BTN_General.TabIndex = 48;
+            this.BTN_General.Text = "General";
+            this.BTN_General.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_General.UseVisualStyleBackColor = false;
+            this.BTN_General.Click += new System.EventHandler(this.BTN_General_Click);
+            // 
+            // Menu_General
+            // 
+            this.Menu_General.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OP_ArcAdjuntos,
+            this.OP_AntPersonales});
+            this.Menu_General.Name = "contextMenuStrip1";
+            this.Menu_General.Size = new System.Drawing.Size(206, 48);
+            // 
+            // OP_ArcAdjuntos
+            // 
+            this.OP_ArcAdjuntos.Name = "OP_ArcAdjuntos";
+            this.OP_ArcAdjuntos.Size = new System.Drawing.Size(205, 22);
+            this.OP_ArcAdjuntos.Text = "Archivos Adjuntos";
+            this.OP_ArcAdjuntos.Click += new System.EventHandler(this.OP_ArcAdjuntos_Click);
+            // 
+            // OP_AntPersonales
+            // 
+            this.OP_AntPersonales.Name = "OP_AntPersonales";
+            this.OP_AntPersonales.Size = new System.Drawing.Size(205, 22);
+            this.OP_AntPersonales.Text = "Antecedentes Personales";
+            // 
             // COL_IdExpediente
             // 
+            this.COL_IdExpediente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.COL_IdExpediente.DataPropertyName = "Id_Expediente";
-            this.COL_IdExpediente.Frozen = true;
             this.COL_IdExpediente.HeaderText = "IdExpediente";
             this.COL_IdExpediente.Name = "COL_IdExpediente";
             this.COL_IdExpediente.ReadOnly = true;
             this.COL_IdExpediente.Visible = false;
-            // 
-            // COL_IdEmpleado
-            // 
-            this.COL_IdEmpleado.DataPropertyName = "Odontologo";
-            this.COL_IdEmpleado.Frozen = true;
-            this.COL_IdEmpleado.HeaderText = "Odontólogo";
-            this.COL_IdEmpleado.Name = "COL_IdEmpleado";
-            this.COL_IdEmpleado.ReadOnly = true;
-            this.COL_IdEmpleado.Width = 490;
+            this.COL_IdExpediente.Width = 132;
             // 
             // COL_Paciente
             // 
             this.COL_Paciente.DataPropertyName = "Paciente";
-            this.COL_Paciente.Frozen = true;
             this.COL_Paciente.HeaderText = "Paciente";
             this.COL_Paciente.Name = "COL_Paciente";
             this.COL_Paciente.ReadOnly = true;
-            this.COL_Paciente.Width = 490;
+            this.COL_Paciente.Width = 468;
             // 
-            // COL_Enfermedad
+            // COL_IdEmpleado
             // 
-            this.COL_Enfermedad.DataPropertyName = "Enfermedad";
-            this.COL_Enfermedad.Frozen = true;
-            this.COL_Enfermedad.HeaderText = "Enfermedad(es)";
-            this.COL_Enfermedad.Name = "COL_Enfermedad";
-            this.COL_Enfermedad.ReadOnly = true;
-            this.COL_Enfermedad.Visible = false;
-            this.COL_Enfermedad.Width = 170;
-            // 
-            // COL_Alergia
-            // 
-            this.COL_Alergia.DataPropertyName = "Alergia";
-            this.COL_Alergia.Frozen = true;
-            this.COL_Alergia.HeaderText = "Alergia(s)";
-            this.COL_Alergia.Name = "COL_Alergia";
-            this.COL_Alergia.ReadOnly = true;
-            this.COL_Alergia.Visible = false;
-            this.COL_Alergia.Width = 170;
+            this.COL_IdEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.COL_IdEmpleado.DataPropertyName = "Odontologo";
+            this.COL_IdEmpleado.HeaderText = "Odontólogo";
+            this.COL_IdEmpleado.Name = "COL_IdEmpleado";
+            this.COL_IdEmpleado.ReadOnly = true;
             // 
             // COL_Fecha
             // 
             this.COL_Fecha.DataPropertyName = "Fecha";
-            this.COL_Fecha.Frozen = true;
             this.COL_Fecha.HeaderText = "Fecha";
             this.COL_Fecha.Name = "COL_Fecha";
             this.COL_Fecha.ReadOnly = true;
             this.COL_Fecha.Visible = false;
+            this.COL_Fecha.Width = 77;
+            // 
+            // COL_Alergia
+            // 
+            this.COL_Alergia.DataPropertyName = "Alergia";
+            this.COL_Alergia.HeaderText = "Alergia(s)";
+            this.COL_Alergia.Name = "COL_Alergia";
+            this.COL_Alergia.ReadOnly = true;
+            this.COL_Alergia.Visible = false;
+            this.COL_Alergia.Width = 104;
+            // 
+            // COL_Enfermedad
+            // 
+            this.COL_Enfermedad.DataPropertyName = "Enfermedad";
+            this.COL_Enfermedad.HeaderText = "Enfermedad(es)";
+            this.COL_Enfermedad.Name = "COL_Enfermedad";
+            this.COL_Enfermedad.ReadOnly = true;
+            this.COL_Enfermedad.Visible = false;
+            this.COL_Enfermedad.Width = 150;
             // 
             // IdPaciente
             // 
             this.IdPaciente.DataPropertyName = "Id_Paciente";
-            this.IdPaciente.Frozen = true;
             this.IdPaciente.HeaderText = "IdPaciente";
             this.IdPaciente.Name = "IdPaciente";
             this.IdPaciente.ReadOnly = true;
             this.IdPaciente.Visible = false;
+            this.IdPaciente.Width = 112;
             // 
             // WIN_CAT_Expediente_T
             // 
@@ -257,6 +297,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1090, 590);
+            this.Controls.Add(this.BTN_General);
             this.Controls.Add(this.BTN_Dental);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
@@ -272,8 +313,10 @@
             this.Controls.SetChildIndex(this.BTN_Modificar, 0);
             this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
             this.Controls.SetChildIndex(this.BTN_Dental, 0);
+            this.Controls.SetChildIndex(this.BTN_General, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaExpediente)).EndInit();
             this.Menu_Dental.ResumeLayout(false);
+            this.Menu_General.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,12 +330,16 @@
         private System.Windows.Forms.Button BTN_Dental;
         private System.Windows.Forms.ContextMenuStrip Menu_Dental;
         private System.Windows.Forms.ToolStripMenuItem OP_Odontograma;
+        private System.Windows.Forms.Button BTN_General;
+        private System.Windows.Forms.ContextMenuStrip Menu_General;
+        private System.Windows.Forms.ToolStripMenuItem OP_ArcAdjuntos;
+        private System.Windows.Forms.ToolStripMenuItem OP_AntPersonales;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdExpediente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Paciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Enfermedad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Alergia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Alergia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COL_Enfermedad;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdPaciente;
     }
 }

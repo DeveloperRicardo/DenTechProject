@@ -58,7 +58,7 @@ namespace DenTech
                         EDT_ApellidoP.Text = Reader[2].ToString();
                         EDT_ApellidoM.Text = Reader[3].ToString();
                         EDT_Password.Text = Reader[4].ToString();
-                        COMBO_TipoUsuario.SelectedValue = Int32.Parse(Reader[5].ToString());
+                        COMBO_TipoUsuario.SelectedIndex = Int32.Parse(Reader[5].ToString());
                     }
                     Reader.Close(); // Se libera
                 }
@@ -69,43 +69,44 @@ namespace DenTech
         private void BTN_Aceptar_Click(object sender, EventArgs e)
         {
             // Revisa los campos
-            ValidarCampos();
-
-            // Verifica si el registro se creará o se modificará
-            if (gnIdUsuario == 0)
+            if (ValidarCampos())
             {
-                // Se estructura query para verificar que NO existe tal usuario
-                SqlCommand cmd = BD.conexion.CreateCommand();
-                cmd.CommandText = "If Exists(Select EMPLEADOS.Usuario From EMPLEADOS Where EMPLEADOS.Usuario = '" + EDT_Usuario.Text + "') Select 'true' Else Select 'false'";
-
-                // Verifica si se encontró el usuario
-                if (Convert.ToBoolean(cmd.ExecuteScalar()))
+                // Verifica si el registro se creará o se modificará
+                if (gnIdUsuario == 0)
                 {
-                    // Marca error y te regresa al campo
-                    MessageBox.Show("El usuario ya existe.", "DenTech Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    EDT_Usuario.Focus();
-                    return;
+                    // Se estructura query para verificar que NO existe tal usuario
+                    SqlCommand cmd = BD.conexion.CreateCommand();
+                    cmd.CommandText = "If Exists(Select EMPLEADOS.Usuario From EMPLEADOS Where EMPLEADOS.Usuario = '" + EDT_Usuario.Text + "') Select 'true' Else Select 'false'";
+
+                    // Verifica si se encontró el usuario
+                    if (Convert.ToBoolean(cmd.ExecuteScalar()))
+                    {
+                        // Marca error y te regresa al campo
+                        MessageBox.Show("El usuario ya existe.", "DenTech Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        EDT_Usuario.Focus();
+                        return;
+                    }
+
+                    // Se estructura query para agregar el registro a la base de datos
+                    cmd.CommandText = "Insert Into EMPLEADOS(Usuario, Nombre, ApellidoP, ApellidoM, Password, Tipo_Usuario) " +
+                        "Values('" + EDT_Usuario.Text + "', '" + EDT_Nombre.Text + "', '" + EDT_ApellidoP.Text + "', '" + EDT_ApellidoM.Text + "', '" + EDT_Password.Text + "', '" + COMBO_TipoUsuario.SelectedIndex + "')";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro agregado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else // Registro existente, se modificará
+                {
+                    // Se abre la conexión y se estructura el query para agregar el registro
+                    SqlCommand cmd = BD.conexion.CreateCommand();
+                    cmd.CommandText = "Update EMPLEADOS " +
+                        "Set Usuario = '" + EDT_Usuario.Text + "', Nombre = '" + EDT_Nombre.Text + "', ApellidoP = '" + EDT_ApellidoP.Text + "', ApellidoM = '" + EDT_ApellidoM.Text + "', Password = '" + EDT_Password.Text + "', Tipo_Usuario = '" + COMBO_TipoUsuario.SelectedIndex + "' " +
+                        "Where Id_Empleado = " + gnIdUsuario;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro modificado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                // Se estructura query para agregar el registro a la base de datos
-                cmd.CommandText = "Insert Into EMPLEADOS(Usuario, Nombre, ApellidoP, ApellidoM, Password, Tipo_Usuario) " +
-                    "Values('" + EDT_Usuario.Text + "', '" + EDT_Nombre.Text + "', '" + EDT_ApellidoP.Text + "', '" + EDT_ApellidoM.Text + "', '" + EDT_Password.Text + "', '" + COMBO_TipoUsuario.SelectedIndex + "')";
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro agregado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Cierra la ventana
+                this.Close();
             }
-            else // Registro existente, se modificará
-            {
-                // Se abre la conexión y se estructura el query para agregar el registro
-                SqlCommand cmd = BD.conexion.CreateCommand();
-                cmd.CommandText = "Update EMPLEADOS " +
-                    "Set Usuario = '" + EDT_Usuario.Text + "', Nombre = '" + EDT_Nombre.Text + "', ApellidoP = '" + EDT_ApellidoP.Text + "', ApellidoM = '" + EDT_ApellidoM.Text + "', Password = '" + EDT_Password.Text + "', Tipo_Usuario = '" + COMBO_TipoUsuario.SelectedIndex + "' " +
-                    "Where Id_Empleado = " + gnIdUsuario;
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro modificado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            // Cierra la ventana
-            this.Close(); 
         }
 
         // Evento del botón Cancelar
@@ -115,15 +116,16 @@ namespace DenTech
         }
 
         // Método que verifica si los campos tienen información
-        private void ValidarCampos()
+        private bool ValidarCampos()
         {
+            bool Regresar = true;
             // Verifica que el campo Usuario tenga información
             if (EDT_Usuario.TextLength == 0 || EDT_Usuario.Text == "")
             {
                 // Marca error y te regresa al campo
                 MessageBox.Show("El campo Usuario no puede ir vacío.", "DenTech Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EDT_Usuario.Focus();
-                return;
+                Regresar = false;
             }
 
             // Verifica que el campo Nombre tenga información
@@ -132,7 +134,7 @@ namespace DenTech
                 // Marca error y te regresa al campo
                 MessageBox.Show("El campo Nombre no puede ir vacío.", "DenTech Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EDT_Nombre.Focus();
-                return;
+                Regresar = false;
             }
 
             // Verifica que el campo ApellidoP tenga información
@@ -141,7 +143,7 @@ namespace DenTech
                 // Marca error y te regresa al campo
                 MessageBox.Show("El campo Ap. Paterno no puede ir vacío.", "DenTech Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EDT_ApellidoP.Focus();
-                return;
+                Regresar = false;
             }
 
             // Verifica que el campo ApellidoM tenga información
@@ -150,7 +152,7 @@ namespace DenTech
                 // Marca error y te regresa al campo
                 MessageBox.Show("El campo Ap. Materno no puede ir vacío.", "DenTech Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EDT_ApellidoM.Focus();
-                return;
+                Regresar = false;
             }
 
             // VErifica que el campo Password tenga información
@@ -159,7 +161,7 @@ namespace DenTech
                 // Marca error y te regresa al campo
                 MessageBox.Show("El campo Contraseña no puede ir vacío.", "DenTech Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EDT_Password.Focus();
-                return;
+                Regresar = false;
             }
 
             // Verifica que el combo TipoUsuario tenga información
@@ -168,8 +170,9 @@ namespace DenTech
                 // Marca error y te regresa al campo
                 MessageBox.Show("El campo Tipo no puede ir vacío.", "DenTech Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 COMBO_TipoUsuario.Focus();
-                return;
+                Regresar = false;
             }
+            return Regresar;
         }
     }
 }

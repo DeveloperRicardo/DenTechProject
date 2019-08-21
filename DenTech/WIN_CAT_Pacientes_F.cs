@@ -15,6 +15,7 @@ namespace DenTech
     {
         // Variables y objetos globales
         ConexionSQL BD = new ConexionSQL();
+        MetodosGlobales Glo = new MetodosGlobales();
         int gnIdPaciente = 0;
 
         // Procedimiento de la ventana
@@ -101,10 +102,13 @@ namespace DenTech
             // Verifica si el registro se creará o se modificará
             if (gnIdPaciente == 0)
             {
+                string NuevoCodigo = "";
                 // Se abre la conexión y se estructura el query para agregar el registro
                 SqlCommand cmd = BD.conexion.CreateCommand();
-                cmd.CommandText = "Insert Into PACIENTES(Nombre, ApellidoP, ApellidoM, Edad, Sexo, Id_Sangre, Telefono, Tel_Emergencia, Direccion) " +
-                    "Values('" + EDT_Nombre.Text + "', '" + EDT_ApellidoP.Text + "', '" + EDT_ApellidoM.Text + "', '" + EDT_Edad.Text + "', '" + COMBO_Sexo.SelectedIndex + "', '" + COMBO_TipoSangre.SelectedValue + "', '" + EDT_Telefono.Text + "', '" + EDT_TelefonoEm.Text + "', '" + EDT_Direccion.Text + "')";
+                cmd.CommandText = "SELECT MAX(Matricula) FROM PACIENTES";
+                NuevoCodigo = Glo.CodigoRegistro(Convert.ToInt16(cmd.ExecuteScalar()));
+                cmd.CommandText = "Insert Into PACIENTES(Matricula, Nombre, ApellidoP, ApellidoM, Edad, Sexo, Id_Sangre, Telefono, Tel_Emergencia, Direccion) " +
+                    "Values('" + NuevoCodigo + "', '" + EDT_Nombre.Text + "', '" + EDT_ApellidoP.Text + "', '" + EDT_ApellidoM.Text + "', '" + EDT_Edad.Text + "', '" + COMBO_Sexo.SelectedIndex + "', '" + COMBO_TipoSangre.SelectedValue + "', '" + EDT_Telefono.Text + "', '" + EDT_TelefonoEm.Text + "', '" + EDT_Direccion.Text + "')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro agregado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
