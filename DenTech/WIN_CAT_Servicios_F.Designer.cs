@@ -43,7 +43,9 @@
             this.EDT_Precio.Location = new System.Drawing.Point(314, 108);
             this.EDT_Precio.Name = "EDT_Precio";
             this.EDT_Precio.Size = new System.Drawing.Size(100, 25);
-            this.EDT_Precio.TabIndex = 10;
+            this.EDT_Precio.TabIndex = 2;
+            this.EDT_Precio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EDT_Precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionNumeros);
             // 
             // STC_Precio
             // 
@@ -59,9 +61,10 @@
             // 
             this.EDT_Servicio.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Servicio.Location = new System.Drawing.Point(116, 77);
+            this.EDT_Servicio.MaxLength = 100;
             this.EDT_Servicio.Name = "EDT_Servicio";
             this.EDT_Servicio.Size = new System.Drawing.Size(298, 25);
-            this.EDT_Servicio.TabIndex = 9;
+            this.EDT_Servicio.TabIndex = 1;
             // 
             // STC_Servicio
             // 
@@ -82,7 +85,7 @@
             this.BTN_Cancelar.Location = new System.Drawing.Point(362, 148);
             this.BTN_Cancelar.Name = "BTN_Cancelar";
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cancelar.TabIndex = 14;
+            this.BTN_Cancelar.TabIndex = 4;
             this.BTN_Cancelar.UseVisualStyleBackColor = false;
             this.BTN_Cancelar.Click += new System.EventHandler(this.BTN_Cancelar_Click);
             // 
@@ -95,7 +98,7 @@
             this.BTN_Aceptar.Location = new System.Drawing.Point(304, 148);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Aceptar.TabIndex = 13;
+            this.BTN_Aceptar.TabIndex = 3;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 
@@ -105,6 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(429, 210);
             this.Controls.Add(this.BTN_Cancelar);
             this.Controls.Add(this.BTN_Aceptar);

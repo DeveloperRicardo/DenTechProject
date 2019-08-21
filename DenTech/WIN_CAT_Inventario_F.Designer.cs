@@ -53,7 +53,7 @@
             this.BTN_Cerrar.Location = new System.Drawing.Point(306, 249);
             this.BTN_Cerrar.Name = "BTN_Cerrar";
             this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cerrar.TabIndex = 32;
+            this.BTN_Cerrar.TabIndex = 7;
             this.BTN_Cerrar.UseVisualStyleBackColor = false;
             this.BTN_Cerrar.Click += new System.EventHandler(this.BTN_Cerrar_Click);
             // 
@@ -66,7 +66,7 @@
             this.BTN_Aceptar.Location = new System.Drawing.Point(248, 249);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Aceptar.TabIndex = 31;
+            this.BTN_Aceptar.TabIndex = 6;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 
@@ -114,9 +114,10 @@
             // 
             this.EDT_Nombre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Nombre.Location = new System.Drawing.Point(126, 84);
+            this.EDT_Nombre.MaxLength = 100;
             this.EDT_Nombre.Name = "EDT_Nombre";
             this.EDT_Nombre.Size = new System.Drawing.Size(232, 25);
-            this.EDT_Nombre.TabIndex = 23;
+            this.EDT_Nombre.TabIndex = 1;
             // 
             // DT_FechaInicio
             // 
@@ -124,7 +125,7 @@
             this.DT_FechaInicio.Location = new System.Drawing.Point(126, 178);
             this.DT_FechaInicio.Name = "DT_FechaInicio";
             this.DT_FechaInicio.Size = new System.Drawing.Size(232, 25);
-            this.DT_FechaInicio.TabIndex = 33;
+            this.DT_FechaInicio.TabIndex = 4;
             this.DT_FechaInicio.Value = new System.DateTime(2019, 6, 24, 0, 0, 0, 0);
             // 
             // DT_FechaFinal
@@ -133,7 +134,7 @@
             this.DT_FechaFinal.Location = new System.Drawing.Point(126, 209);
             this.DT_FechaFinal.Name = "DT_FechaFinal";
             this.DT_FechaFinal.Size = new System.Drawing.Size(232, 25);
-            this.DT_FechaFinal.TabIndex = 34;
+            this.DT_FechaFinal.TabIndex = 5;
             // 
             // NUD_Cantidad
             // 
@@ -142,7 +143,7 @@
             this.NUD_Cantidad.Name = "NUD_Cantidad";
             this.NUD_Cantidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.NUD_Cantidad.Size = new System.Drawing.Size(55, 25);
-            this.NUD_Cantidad.TabIndex = 35;
+            this.NUD_Cantidad.TabIndex = 2;
             this.NUD_Cantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
@@ -166,7 +167,7 @@
             this.COMBO_Opcion.Location = new System.Drawing.Point(126, 147);
             this.COMBO_Opcion.Name = "COMBO_Opcion";
             this.COMBO_Opcion.Size = new System.Drawing.Size(232, 25);
-            this.COMBO_Opcion.TabIndex = 38;
+            this.COMBO_Opcion.TabIndex = 3;
             // 
             // WIN_CAT_Inventario_F
             // 

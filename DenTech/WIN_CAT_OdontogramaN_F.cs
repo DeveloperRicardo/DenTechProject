@@ -17,6 +17,7 @@ namespace DenTech
         ConexionSQL BD = new ConexionSQL();
         MetodosGlobales Glo = new MetodosGlobales();
         int gnIdPaciente = 0;
+
         public WIN_CAT_OdontogramaN_F(int IdPaciente = 0)
         {
             InitializeComponent();
@@ -26,32 +27,47 @@ namespace DenTech
         // Método que verifica si los campos tienen información
         private bool ValidarCampos()
         {
-            // Verifica que el campo Nombre tenga información
-            if (EDT_Descripcion.TextLength == 0 || EDT_Descripcion.Text == "")
+            bool Regresar = true;
+            try
             {
-                // Marca error y te regresa al campo
-                Glo.Mensajes(3);
-                EDT_Descripcion.Focus();
-                return false;
+                // Verifica que el campo Nombre tenga información
+                if (EDT_Descripcion.TextLength == 0 || EDT_Descripcion.Text == "")
+                {
+                    // Marca error y te regresa al campo
+                    Glo.Mensajes(3, "Descripción");
+                    EDT_Descripcion.Focus();
+                    Regresar = false;
+                }
             }
-            return true;
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+                Regresar = false;
+            }
+            return Regresar;
         }
 
         private void BTN_Aceptar_Click(object sender, EventArgs e)
         {
-            if (ValidarCampos() == true)
+            try
             {
-                if (BD.Conexion(true))
+                if (ValidarCampos())
                 {
-                    // Se abre la conexión y se estructura el query para agregar el registro
-                    SqlCommand cmd = BD.conexion.CreateCommand();
-                    cmd.CommandText = "INSERT INTO ODONTOGRAMA VALUES(" + gnIdPaciente + ",'" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day + "','" + EDT_Descripcion.Text + "');";
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro agregado con éxito.", "Dentech", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Se cierra la ventana
+                    if (BD.Conexion(true))
+                    {
+                        // Se abre la conexión y se estructura el query para agregar el registro
+                        SqlCommand cmd = BD.conexion.CreateCommand();
+                        cmd.CommandText = "INSERT INTO ODONTOGRAMA VALUES(" + gnIdPaciente + ",'" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day + "','" + EDT_Descripcion.Text + "');";
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro agregado con éxito.", "Dentech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close(); // Se cierra la ventana
+                    }
                 }
             }
-
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
         }
 
         private void BTN_Cancelar_Click(object sender, EventArgs e)

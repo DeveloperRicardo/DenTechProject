@@ -13,6 +13,7 @@ namespace DenTech
         string conexion = "";
         string path = Environment.CurrentDirectory + @"\ConexionDenTech.ini";
         MetodosGlobales Glo = new MetodosGlobales();
+
         public WIN_GLO_Login_F(bool Mod = false)
         {
             Modificar = Mod;
@@ -23,97 +24,139 @@ namespace DenTech
         #region Validar Campos
         private bool ValidarCampos()
         {
-            if (EDT_Usuario.Text == "" || EDT_Contrasena.Text == "" || EDT_Servidor.Text == "" || EDT_BaseDatos.Text == "")
+            bool Regresar = true;
+            try
             {
-                return false;
+                if (EDT_Usuario.TextLength == 0 || EDT_Usuario.Text == "")
+                {
+                    Glo.Mensajes(3, "Usuario");
+                    EDT_Usuario.Focus();
+                    Regresar = false;
+                }
+                if (EDT_Contrasena.TextLength == 0 || EDT_Contrasena.Text == "")
+                {
+                    Glo.Mensajes(3, "Contraseña");
+                    EDT_Contrasena.Focus();
+                    Regresar = false;
+                }
+                if (EDT_Servidor.TextLength == 0 || EDT_Servidor.Text == "")
+                {
+                    Glo.Mensajes(3, "Servidor");
+                    EDT_Servidor.Focus();
+                    Regresar = false;
+                }
+                if (EDT_BaseDatos.TextLength == 0 || EDT_BaseDatos.Text == "")
+                {
+                    Glo.Mensajes(3, "Base de Datos");
+                    EDT_Usuario.Focus();
+                    Regresar = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return true;
+                Glo.Mensajes(10, ex.Message);
+                Regresar = false;
             }
+            return Regresar;
         }
         #endregion
 
         #region ProbarConexion
         private void BTN_ProbarConexion_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
+            try
             {
-                Glo.Mensajes(3);
-                return;
+                if (ValidarCampos())
+                {
+                    conexion = @"user id=" + EDT_Usuario.Text +
+                                   ";password=" + EDT_Contrasena.Text +
+                                   ";server=" + EDT_Servidor.Text +
+                                   ";database=" + EDT_BaseDatos.Text + ";";
+                    Glo.ProbarConexion(conexion);
+                }
             }
-            conexion = @"user id=" + EDT_Usuario.Text +
-                           ";password=" + EDT_Contrasena.Text +
-                           ";server=" + EDT_Servidor.Text +
-                           ";database=" + EDT_BaseDatos.Text + ";";
-            Glo.ProbarConexion(conexion);
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
         }
         #endregion
 
         #region Guardar INI
         private void BTN_Aceptar_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
+            try
             {
-                Glo.Mensajes(3);
-                return;
+                if (ValidarCampos())
+                {
+                    conexion = @"user id=" + EDT_Usuario.Text +
+                                           ";password=" + EDT_Contrasena.Text +
+                                           ";server=" + EDT_Servidor.Text +
+                                           ";database=" + EDT_BaseDatos.Text + ";";
+                    if (File.Exists(path))
+                    {
+                        File.WriteAllText(path, conexion);
+                    }
+                    else
+                    {
+                        FileStream archivo = File.Create(path);
+                        Byte[] info = new UTF8Encoding(true).GetBytes(conexion);
+                        archivo.Write(info, 0, info.Length);
+                        archivo.Close();
+                    }
+                    Glo.Mensajes(6);
+                    Settings.Default.ConexionGuardada = true;
+                    //Se prueba la conexion con los parametros de archivo
+                    if (Glo.ProbarConexion(File.ReadAllText(path)))
+                    {
+                        Settings.Default.ConexionValida = true;
+                        Glo.VerificarTablas(File.ReadAllText(path));
+                    }
+                }
             }
-            conexion = @"user id=" + EDT_Usuario.Text +
-                       ";password=" + EDT_Contrasena.Text +
-                       ";server=" + EDT_Servidor.Text +
-                       ";database=" + EDT_BaseDatos.Text + ";";
-            if (File.Exists(path))
+            catch (Exception ex)
             {
-                File.WriteAllText(path, conexion);
-            }
-            else
-            {
-                FileStream archivo = File.Create(path);
-                Byte[] info = new UTF8Encoding(true).GetBytes(conexion);
-                archivo.Write(info, 0, info.Length);
-                archivo.Close();
-            }
-            Glo.Mensajes(6);
-            Settings.Default.ConexionGuardada = true;
-            //Se prueba la conexion con los parametros de archivo
-            if (Glo.ProbarConexion(File.ReadAllText(path)))
-            {
-                Settings.Default.ConexionValida = true;
-                Glo.VerificarTablas(File.ReadAllText(path));
-            }          
+                Glo.Mensajes(10, ex.Message);
+            }    
         }
         #endregion
 
         #region Cargar Informacion
         private void CargarInformacion()
         {
-            if (File.Exists(path))
+            try
             {
-                string datos = File.ReadAllText(path);
-                string[] parametros = datos.Split(Convert.ToChar(";"));
-                for (int i = 0; i < 4; i++)
+                if (File.Exists(path))
                 {
-                    switch (i)
+                    string datos = File.ReadAllText(path);
+                    string[] parametros = datos.Split(Convert.ToChar(";"));
+                    for (int i = 0; i < 4; i++)
                     {
-                        case 0:
-                            parametros[i] = parametros[i].Remove(0, 8);
-                            break;
-                        case 1:
-                            parametros[i] = parametros[i].Remove(0, 9);
-                            break;
-                        case 2:
-                            parametros[i] = parametros[i].Remove(0, 7);
-                            break;
-                        case 3:
-                            parametros[i] = parametros[i].Remove(0, 9);
-                            break;
+                        switch (i)
+                        {
+                            case 0:
+                                parametros[i] = parametros[i].Remove(0, 8);
+                                break;
+                            case 1:
+                                parametros[i] = parametros[i].Remove(0, 9);
+                                break;
+                            case 2:
+                                parametros[i] = parametros[i].Remove(0, 7);
+                                break;
+                            case 3:
+                                parametros[i] = parametros[i].Remove(0, 9);
+                                break;
+                        }
                     }
+                    EDT_Usuario.Text = parametros[0];
+                    EDT_Contrasena.Text = parametros[1];
+                    EDT_Servidor.Text = parametros[2];
+                    EDT_BaseDatos.Text = parametros[3];
                 }
-                EDT_Usuario.Text = parametros[0];
-                EDT_Contrasena.Text = parametros[1];
-                EDT_Servidor.Text = parametros[2];
-                EDT_BaseDatos.Text = parametros[3];
-
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
             }
         }
         #endregion
@@ -131,14 +174,21 @@ namespace DenTech
         }
         private void ValidarLogin()
         {
-            if (Modificar == false)
+            try
             {
-                if (Settings.Default.ConexionGuardada == true && Settings.Default.ConexionValida == true)
+                if (Modificar == false)
                 {
-                    WIN_GLO_Login Login = new WIN_GLO_Login();
-                    if (Modificar == false)
-                        Login.Show();
+                    if (Settings.Default.ConexionGuardada == true && Settings.Default.ConexionValida == true)
+                    {
+                        WIN_GLO_Login Login = new WIN_GLO_Login();
+                        if (Modificar == false)
+                            Login.Show();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
             }
         }
 

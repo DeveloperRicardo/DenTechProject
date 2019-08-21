@@ -83,7 +83,7 @@
             this.BTN_Paciente.Location = new System.Drawing.Point(454, 115);
             this.BTN_Paciente.Name = "BTN_Paciente";
             this.BTN_Paciente.Size = new System.Drawing.Size(29, 25);
-            this.BTN_Paciente.TabIndex = 46;
+            this.BTN_Paciente.TabIndex = 2;
             this.BTN_Paciente.UseVisualStyleBackColor = false;
             this.BTN_Paciente.Click += new System.EventHandler(this.BTN_Paciente_Click);
             // 
@@ -119,7 +119,7 @@
             this.BTN_Odontologo.Location = new System.Drawing.Point(454, 84);
             this.BTN_Odontologo.Name = "BTN_Odontologo";
             this.BTN_Odontologo.Size = new System.Drawing.Size(29, 25);
-            this.BTN_Odontologo.TabIndex = 42;
+            this.BTN_Odontologo.TabIndex = 1;
             this.BTN_Odontologo.UseVisualStyleBackColor = false;
             this.BTN_Odontologo.Click += new System.EventHandler(this.BTN_Odontologo_Click);
             // 
@@ -151,7 +151,7 @@
             this.EDT_Fecha.Location = new System.Drawing.Point(135, 177);
             this.EDT_Fecha.Name = "EDT_Fecha";
             this.EDT_Fecha.Size = new System.Drawing.Size(112, 25);
-            this.EDT_Fecha.TabIndex = 49;
+            this.EDT_Fecha.TabIndex = 4;
             this.EDT_Fecha.Value = new System.DateTime(2019, 7, 28, 0, 0, 0, 0);
             // 
             // STC_Fecha
@@ -174,7 +174,7 @@
             this.button1.Location = new System.Drawing.Point(432, 219);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 52);
-            this.button1.TabIndex = 51;
+            this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -187,7 +187,7 @@
             this.BTN_Aceptar.Location = new System.Drawing.Point(374, 219);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Aceptar.TabIndex = 50;
+            this.BTN_Aceptar.TabIndex = 5;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 
@@ -233,7 +233,7 @@
             this.BTN_Servicio.Location = new System.Drawing.Point(454, 146);
             this.BTN_Servicio.Name = "BTN_Servicio";
             this.BTN_Servicio.Size = new System.Drawing.Size(29, 25);
-            this.BTN_Servicio.TabIndex = 53;
+            this.BTN_Servicio.TabIndex = 3;
             this.BTN_Servicio.UseVisualStyleBackColor = false;
             this.BTN_Servicio.Click += new System.EventHandler(this.BTN_Servicio_Click);
             // 

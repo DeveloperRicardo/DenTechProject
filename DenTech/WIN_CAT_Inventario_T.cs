@@ -14,8 +14,9 @@ namespace DenTech
 {
     public partial class WIN_CAT_Inventario_T : WIN_Template_T
     {
-        WIN_GLO_Principal Principal = new WIN_GLO_Principal();
+        MetodosGlobales Glo = new MetodosGlobales();
         ConexionSQL BD = new ConexionSQL();
+
         public WIN_CAT_Inventario_T()
         {
             InitializeComponent();
@@ -23,75 +24,114 @@ namespace DenTech
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
-            //WIN_CAT_Inventario_F window = new WIN_CAT_Inventario_F();
-            //window.ShowDialog();
-            var form = Application.OpenForms.OfType<WIN_CAT_Inventario_F>().FirstOrDefault();
-            WIN_CAT_Inventario_F frm = form ?? new WIN_CAT_Inventario_F();
-            frm.MdiParent = Principal.PNL_Ventanas.MdiForm;
-            frm.ShowDialog();
-            Refrescar();
+            try
+            {
+                WIN_CAT_Inventario_F window = new WIN_CAT_Inventario_F();
+                window.ShowDialog();
+                Refrescar();
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
         }
 
         // Método que refresca el data grid view
         private void Refrescar()
         {
-            BD.conexion.CreateCommand();
-            SqlCommand cmd = BD.conexion.CreateCommand();
-            string query = "SELECT Id_Inventario, Descripcion, Cantidad, Fecha_Inicio, Fecha_Final FROM INVENTARIO"; 
-            switch (Settings.Default.TipoUsuario)
+            try
             {
-                case 1:
+                BD.conexion.CreateCommand();
+                SqlCommand cmd = BD.conexion.CreateCommand();
+                string query = "SELECT Id_Inventario, Descripcion, Cantidad, Fecha_Inicio, Fecha_Final FROM INVENTARIO";
+                switch (Settings.Default.TipoUsuario)
+                {
+                    case 1:
+                        query += " WHERE Tipo_Producto = '0'";
+                        break;
+                    case 3:
+                        query += " WHERE Tipo_Producto = '1'";
+                        break;
+                }
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter Adaptador = new SqlDataAdapter();
+                Adaptador.SelectCommand = cmd;
+                var Data = new DataTable();
+                Adaptador.Fill(Data);
+                DGV_TablaProducto.DataSource = Data;
+                if (Settings.Default.TipoUsuario != 0 && Settings.Default.TipoUsuario != 4)
+                {
                     BTN_Agregar.Visible = false;
+                    BTN_Modificar.Visible = false;
                     BTN_Eliminar.Visible = false;
-                    query += " WHERE Tipo_Producto = '0'";
-                    break;
-                case 3:
-                    BTN_Agregar.Visible = false;
-                    BTN_Eliminar.Visible = false;
-                    query += " WHERE Tipo_Producto = '1'";
-                    break;
+                    DGV_TablaProducto.Columns[3].Visible = false;
+                    DGV_TablaProducto.Columns[4].Visible = false;
+                }
+                if ((int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
+                {
+                    BTN_Disminuir.Enabled = false;
+                }
+                else
+                {
+                    if (Settings.Default.TipoUsuario == 0 || Settings.Default.TipoUsuario == 3 || Settings.Default.TipoUsuario == 4)
+                    {
+                        BTN_Disminuir.Enabled = true;
+                    }
+                }
             }
-            cmd.CommandText = query;
-            cmd.ExecuteNonQuery();
-            SqlDataAdapter Adaptador = new SqlDataAdapter();
-            Adaptador.SelectCommand = cmd;
-            var Data = new DataTable();
-            Adaptador.Fill(Data);
-            DGV_TablaProducto.DataSource = Data;
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
         }
 
         private void BTN_Modificar_Click(object sender, EventArgs e)
         {
-            if (DGV_TablaProducto.RowCount == 0)
+            try
             {
-                return;
+                if (DGV_TablaProducto.RowCount == 0)
+                {
+                    return;
+                }
+                else
+                {
+                    WIN_CAT_Inventario_F window = new WIN_CAT_Inventario_F((int)DGV_TablaProducto.CurrentRow.Cells[0].Value);
+                    window.ShowDialog();
+                    Refrescar();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                WIN_CAT_Inventario_F window = new WIN_CAT_Inventario_F((int)DGV_TablaProducto.CurrentRow.Cells[0].Value);
-                window.ShowDialog();
-                Refrescar();
+                Glo.Mensajes(10, ex.Message);
             }
         }
 
         private void BTN_Eliminar_Click(object sender, EventArgs e)
         {
-            if (DGV_TablaProducto.RowCount == 0)
+            try
             {
-                return;
-            }
-            else
-            {
-                // Se verifica la respuesta
-                if (MessageBox.Show("¿Desea eliminar el registro seleccionado?", "DenTech", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (DGV_TablaProducto.RowCount == 0)
                 {
-                    // Se estructura el query para eliminar el registro
-                    SqlCommand cmd = BD.conexion.CreateCommand();
-                    cmd.CommandText = "Delete From INVENTARIO Where Id_Inventario = " + (int)DGV_TablaProducto.CurrentRow.Cells[0].Value;
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro eliminado con éxito.", "Dentech", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Refrescar();
+                    return;
                 }
+                else
+                {
+                    // Se verifica la respuesta
+                    if (MessageBox.Show("¿Desea eliminar el registro seleccionado?", "DenTech", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        // Se estructura el query para eliminar el registro
+                        SqlCommand cmd = BD.conexion.CreateCommand();
+                        cmd.CommandText = "Delete From INVENTARIO Where Id_Inventario = " + (int)DGV_TablaProducto.CurrentRow.Cells[0].Value;
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro eliminado con éxito.", "Dentech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Refrescar();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
             }
         }
 
@@ -102,9 +142,74 @@ namespace DenTech
 
         private void WIN_CAT_Inventario_T_Load(object sender, EventArgs e)
         {
-            // Verifica qe la conexión sea exitosa
-            if (BD.Conexion(true))
+            try
+            {
+                // Verifica qe la conexión sea exitosa
+                if (BD.Conexion(true))
+                    Refrescar();
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
+        }
+
+        private void BTN_Aumentar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DGV_TablaProducto.RowCount == 0)
+                {
+                    return;
+                }
+                // Se abre conexión y se estructura el query para modificar el registro
+                SqlCommand cmd = BD.conexion.CreateCommand();
+                cmd.CommandText = "Update INVENTARIO " +
+                    "Set Cantidad = Cantidad + 1 WHERE Id_Inventario = " + (int)DGV_TablaProducto.CurrentRow.Cells[0].Value;
+                cmd.ExecuteNonQuery();
+                BTN_Disminuir.Enabled = true;
                 Refrescar();
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
+        }
+
+        private void BTN_Disminuir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DGV_TablaProducto.RowCount == 0)
+                {
+                    return;
+                }
+                // Se abre conexión y se estructura el query para modificar el registro
+                SqlCommand cmd = BD.conexion.CreateCommand();
+                cmd.CommandText = "Update INVENTARIO " +
+                    "Set Cantidad = Cantidad - 1 WHERE Id_Inventario = " + (int)DGV_TablaProducto.CurrentRow.Cells[0].Value;
+                cmd.ExecuteNonQuery();
+                Refrescar();
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
+        }
+
+        private void DGV_TablaProducto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
+            {
+                BTN_Disminuir.Enabled = false;
+            }
+            else
+            {
+                if (Settings.Default.TipoUsuario == 0 || Settings.Default.TipoUsuario == 3 || Settings.Default.TipoUsuario == 4)
+                {
+                    BTN_Disminuir.Enabled = true;
+                }
+            }
         }
     }
 }

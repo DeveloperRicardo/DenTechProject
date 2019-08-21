@@ -49,9 +49,10 @@
             // 
             this.EDT_Descripcion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Descripcion.Location = new System.Drawing.Point(101, 75);
+            this.EDT_Descripcion.MaxLength = 100;
             this.EDT_Descripcion.Name = "EDT_Descripcion";
             this.EDT_Descripcion.Size = new System.Drawing.Size(550, 25);
-            this.EDT_Descripcion.TabIndex = 106;
+            this.EDT_Descripcion.TabIndex = 1;
             // 
             // BTN_Cancelar
             // 
@@ -62,7 +63,7 @@
             this.BTN_Cancelar.Location = new System.Drawing.Point(599, 106);
             this.BTN_Cancelar.Name = "BTN_Cancelar";
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cancelar.TabIndex = 108;
+            this.BTN_Cancelar.TabIndex = 3;
             this.BTN_Cancelar.UseVisualStyleBackColor = false;
             this.BTN_Cancelar.Click += new System.EventHandler(this.BTN_Cancelar_Click);
             // 
@@ -75,7 +76,7 @@
             this.BTN_Aceptar.Location = new System.Drawing.Point(541, 106);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Aceptar.TabIndex = 107;
+            this.BTN_Aceptar.TabIndex = 2;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 

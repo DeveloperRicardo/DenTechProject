@@ -22,7 +22,7 @@ namespace DenTech
                     MessageBox.Show("Conexión no exitosa.\n\nDetalles del error:\n"+Excepcion, "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 3:
-                    MessageBox.Show("Los campos no pueden estar vacíos.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El campo '"+ Excepcion + "' no puede estar vacío.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 4:
                     MessageBox.Show("Ya existen todas las tablas.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -37,7 +37,7 @@ namespace DenTech
                     MessageBox.Show("No se pudo cerrar la conexión con la base de datos.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 8:
-                    MessageBox.Show("Contraseña incorrecta.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Usuario o contraseña incorrecta.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 9:
                     MessageBox.Show("Se han creado los métodos faltantes.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -155,7 +155,7 @@ namespace DenTech
                         }
                         if (!ExistePACIENTES)
                         {
-                            QryTablas += "CREATE TABLE PACIENTES(Id_Paciente int primary key identity, Id_Sangre int foreign key references SANGRE(Id_Sangre) on update cascade on delete cascade," +
+                            QryTablas += "CREATE TABLE PACIENTES(Id_Paciente int primary key identity, " +
                                          "Matricula varchar(6), Nombre varchar(20),ApellidoP varchar(12),ApellidoM varchar(12), Edad int,Sexo int, Direccion varchar(100),Telefono varchar(10),Tel_Emergencia varchar(10));";
                             tablas += "-PACIENTES\n";
                         }
@@ -175,7 +175,8 @@ namespace DenTech
                         if (!ExisteEXPEDIENTE)
                         {
                             QryTablas += "CREATE TABLE EXPEDIENTE(Id_Expediente int primary key identity, Id_Empleado int foreign key references EMPLEADOS(Id_Empleado) on update cascade on delete cascade," +
-                                         "Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade, Enfermedad varchar(100), Alergia varchar(100), Fecha date);";
+                                         "Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade, "+
+                                         "Id_Sangre int foreign key references SANGRE(Id_Sangre) on update cascade on delete cascade, Enfermedad varchar(100), Alergia varchar(100), Fecha date);";
                             tablas += "-EXPEDIENTE\n";
                         }
                         if (!ExisteRECETA)
@@ -192,7 +193,8 @@ namespace DenTech
                         }
                         if (!ExisteARCHIVOS)
                         {
-                            QryTablas += "CREATE TABLE ARCHIVOSADJUNTOS(Id int primary key identity, Nombre varchar(100),RutaLogica varchar(500));";
+                            QryTablas += "CREATE TABLE ARCHIVOSADJUNTOS(Id int primary key identity, Id_Paciente int foreign key references PACIENTES(Id_Paciente) on update cascade on delete cascade," +
+                                         "Nombre varchar(100),RutaLogica varchar(500));";
                             tablas += "-ARCHIVOSADJUNTOS\n";
                         }
                         if (!ExisteODONTOGRAMA)
@@ -215,17 +217,17 @@ namespace DenTech
                         }
                         if (!ExisteTRATAMIENTO)
                         {
-                            QryTablas += "CREATE TABLE TRATAMIENTO(Id_Tratamiento int primary key identity, Descripcion varchar(100), Precio int);";
+                            QryTablas += "CREATE TABLE TRATAMIENTO(Id_Tratamiento int primary key identity, Descripcion varchar(100), Precio decimal(10,2));";
                             tablas += "-TRATAMIENTO\n";
                         }
                         if (!ExisteIMPLANTE)
                         {
-                            QryTablas += "CREATE TABLE IMPLANTE(Id_Implante int primary key identity, Descripcion varchar(100), Precio int);";
+                            QryTablas += "CREATE TABLE IMPLANTE(Id_Implante int primary key identity, Descripcion varchar(100), Precio decimal(10,2));";
                             tablas += "-IMPLANTE\n";
                         }
                         if (!ExisteEXTRACCION)
                         {
-                            QryTablas += "CREATE TABLE EXTRACCION(Id_Extraccion int primary key identity, Descripcion varchar(100), Precio int);";
+                            QryTablas += "CREATE TABLE EXTRACCION(Id_Extraccion int primary key identity, Descripcion varchar(100), Precio decimal(10,2));";
                             tablas += "-EXTRACCION\n";
                         }
                         if (!ExisteTRATADIENTE)

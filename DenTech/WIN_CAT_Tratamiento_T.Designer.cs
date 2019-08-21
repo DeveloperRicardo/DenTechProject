@@ -37,10 +37,10 @@
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.DGV_TablaTratamiento = new System.Windows.Forms.DataGridView();
-            this.BTN_Seleccionar = new System.Windows.Forms.Button();
             this.COL_IdTratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BTN_Seleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaTratamiento)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             this.BTN_Eliminar.Location = new System.Drawing.Point(677, 190);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Eliminar.TabIndex = 41;
+            this.BTN_Eliminar.TabIndex = 4;
             this.BTN_Eliminar.Text = "Eliminar";
             this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Eliminar.UseVisualStyleBackColor = false;
@@ -87,7 +87,7 @@
             this.BTN_Modificar.Location = new System.Drawing.Point(677, 152);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Modificar.TabIndex = 40;
+            this.BTN_Modificar.TabIndex = 3;
             this.BTN_Modificar.Text = "Modificar";
             this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Modificar.UseVisualStyleBackColor = false;
@@ -105,7 +105,7 @@
             this.BTN_Agregar.Location = new System.Drawing.Point(677, 114);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Agregar.TabIndex = 39;
+            this.BTN_Agregar.TabIndex = 2;
             this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Agregar.UseVisualStyleBackColor = false;
@@ -155,23 +155,6 @@
             this.DGV_TablaTratamiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaTratamiento.Size = new System.Drawing.Size(658, 239);
             this.DGV_TablaTratamiento.TabIndex = 38;
-            this.DGV_TablaTratamiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_TablaTratamiento_CellContentClick);
-            // 
-            // BTN_Seleccionar
-            // 
-            this.BTN_Seleccionar.BackColor = System.Drawing.Color.White;
-            this.BTN_Seleccionar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Seleccionar.FlatAppearance.BorderSize = 2;
-            this.BTN_Seleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Seleccionar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Seleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Seleccionar.Location = new System.Drawing.Point(677, 76);
-            this.BTN_Seleccionar.Name = "BTN_Seleccionar";
-            this.BTN_Seleccionar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Seleccionar.TabIndex = 43;
-            this.BTN_Seleccionar.Text = "Seleccionar";
-            this.BTN_Seleccionar.UseVisualStyleBackColor = false;
-            this.BTN_Seleccionar.Click += new System.EventHandler(this.BTN_Seleccionar_Click);
             // 
             // COL_IdTratamiento
             // 
@@ -199,6 +182,22 @@
             this.COL_Precio.Name = "COL_Precio";
             this.COL_Precio.ReadOnly = true;
             this.COL_Precio.Width = 150;
+            // 
+            // BTN_Seleccionar
+            // 
+            this.BTN_Seleccionar.BackColor = System.Drawing.Color.White;
+            this.BTN_Seleccionar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Seleccionar.FlatAppearance.BorderSize = 2;
+            this.BTN_Seleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Seleccionar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Seleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Seleccionar.Location = new System.Drawing.Point(677, 76);
+            this.BTN_Seleccionar.Name = "BTN_Seleccionar";
+            this.BTN_Seleccionar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Seleccionar.TabIndex = 1;
+            this.BTN_Seleccionar.Text = "Seleccionar";
+            this.BTN_Seleccionar.UseVisualStyleBackColor = false;
+            this.BTN_Seleccionar.Click += new System.EventHandler(this.BTN_Seleccionar_Click);
             // 
             // WIN_CAT_Tratamiento_T
             // 

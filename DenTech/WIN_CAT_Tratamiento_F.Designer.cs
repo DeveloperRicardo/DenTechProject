@@ -46,7 +46,7 @@
             this.BTN_Cancelar.Location = new System.Drawing.Point(601, 139);
             this.BTN_Cancelar.Name = "BTN_Cancelar";
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cancelar.TabIndex = 112;
+            this.BTN_Cancelar.TabIndex = 4;
             this.BTN_Cancelar.UseVisualStyleBackColor = false;
             this.BTN_Cancelar.Click += new System.EventHandler(this.BTN_Cancelar_Click);
             // 
@@ -59,7 +59,7 @@
             this.BTN_Aceptar.Location = new System.Drawing.Point(543, 139);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Aceptar.TabIndex = 111;
+            this.BTN_Aceptar.TabIndex = 3;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 
@@ -67,9 +67,10 @@
             // 
             this.EDT_Descripcion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Descripcion.Location = new System.Drawing.Point(103, 75);
+            this.EDT_Descripcion.MaxLength = 100;
             this.EDT_Descripcion.Name = "EDT_Descripcion";
             this.EDT_Descripcion.Size = new System.Drawing.Size(550, 25);
-            this.EDT_Descripcion.TabIndex = 110;
+            this.EDT_Descripcion.TabIndex = 1;
             // 
             // STC_Campo
             // 
@@ -87,7 +88,9 @@
             this.EDT_Precio.Location = new System.Drawing.Point(553, 108);
             this.EDT_Precio.Name = "EDT_Precio";
             this.EDT_Precio.Size = new System.Drawing.Size(100, 25);
-            this.EDT_Precio.TabIndex = 113;
+            this.EDT_Precio.TabIndex = 2;
+            this.EDT_Precio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EDT_Precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionNumeros);
             // 
             // STC_Precio
             // 

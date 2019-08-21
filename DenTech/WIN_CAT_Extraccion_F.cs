@@ -16,6 +16,7 @@ namespace DenTech
         // Variables y objetos globales
         ConexionSQL BD = new ConexionSQL();
         MetodosGlobales Glo = new MetodosGlobales();
+        Validacion Val = new Validacion();
 
         int gnIdExtraccion = 0;
         public WIN_CAT_Extraccion_F(int IdExtraccion = 0)
@@ -31,83 +32,114 @@ namespace DenTech
 
         private void WIN_CAT_Extraccion_F_Load(object sender, EventArgs e)
         {
-            // Verifica si se puede conectar con la base de datos
-            if (BD.Conexion(true))
+            try
             {
-                // Verifica que tenga información de un usuario existente
-                if (gnIdExtraccion != 0)
+                // Verifica si se puede conectar con la base de datos
+                if (BD.Conexion(true))
                 {
-                    // Se estructura el query
-                    SqlCommand cmd = BD.conexion.CreateCommand();
-                    cmd.CommandText = "Select " +
-                        "Descripcion, " +
-                        "Precio " +
-                        "From EXTRACCION " +
-                        "Where Id_Extraccion = " + gnIdExtraccion;
-
-                    // Ejecuta el query y almacena los datos consultados
-                    SqlDataReader Reader = cmd.ExecuteReader();
-                    Reader.Read();
-
-                    // Revisa si cuenta con información
-                    if (Reader.HasRows)
+                    // Verifica que tenga información de un usuario existente
+                    if (gnIdExtraccion != 0)
                     {
-                        // Inserta la información a los controles
-                        EDT_Descripcion.Text = Reader[0].ToString();
-                        EDT_Precio.Text = Reader[1].ToString();
+                        // Se estructura el query
+                        SqlCommand cmd = BD.conexion.CreateCommand();
+                        cmd.CommandText = "Select " +
+                            "Descripcion, " +
+                            "Precio " +
+                            "From EXTRACCION " +
+                            "Where Id_Extraccion = " + gnIdExtraccion;
+
+                        // Ejecuta el query y almacena los datos consultados
+                        SqlDataReader Reader = cmd.ExecuteReader();
+                        Reader.Read();
+
+                        // Revisa si cuenta con información
+                        if (Reader.HasRows)
+                        {
+                            // Inserta la información a los controles
+                            EDT_Descripcion.Text = Reader[0].ToString();
+                            EDT_Precio.Text = Reader[1].ToString();
+                        }
+                        Reader.Close(); // Se libera
                     }
-                    Reader.Close(); // Se libera
                 }
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
             }
         }
 
-        private void ValidarCampos()
+        private bool ValidarCampos()
         {
-            // Verifica que el campo Usuario tenga información
-            if (EDT_Descripcion.TextLength == 0 || EDT_Descripcion.Text == "")
+            bool Regresar = true;
+            try
             {
-                // Marca error y te regresa al campo
-                Glo.Mensajes(3);
-                EDT_Descripcion.Focus();
-                return;
-            }
+                // Verifica que el campo Usuario tenga información
+                if (EDT_Descripcion.TextLength == 0 || EDT_Descripcion.Text == "")
+                {
+                    // Marca error y te regresa al campo
+                    Glo.Mensajes(3, "Descripción");
+                    EDT_Descripcion.Focus();
+                    Regresar = false;
+                }
 
-            // Verifica que el campo Nombre tenga información
-            if (EDT_Precio.TextLength == 0 || EDT_Precio.Text == "")
-            {
-                // Marca error y te regresa al campo
-                Glo.Mensajes(3);
-                EDT_Precio.Focus();
-                return;
+                // Verifica que el campo Nombre tenga información
+                if (EDT_Precio.TextLength == 0 || EDT_Precio.Text == "")
+                {
+                    // Marca error y te regresa al campo
+                    Glo.Mensajes(3, "Precio");
+                    EDT_Precio.Focus();
+                    Regresar = false;
+                }
             }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+                Regresar = false;
+            }
+            return Regresar;
         }
 
         private void BTN_Aceptar_Click(object sender, EventArgs e)
         {
-            ValidarCampos();
-            SqlCommand cmd = BD.conexion.CreateCommand();
-            // Verifica si el registro se creará o se modificará
-            if (gnIdExtraccion == 0)
+            try
             {
-                // Se estructura query para agregar el registro a la base de datos
-                cmd.CommandText = "Insert Into EXTRACCION " +
-                    "Values('" + EDT_Descripcion.Text + "', " + EDT_Precio.Text + ")";
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro agregado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (ValidarCampos())
+                {
+                    SqlCommand cmd = BD.conexion.CreateCommand();
+                    // Verifica si el registro se creará o se modificará
+                    if (gnIdExtraccion == 0)
+                    {
+                        // Se estructura query para agregar el registro a la base de datos
+                        cmd.CommandText = "Insert Into EXTRACCION " +
+                            "Values('" + EDT_Descripcion.Text + "', " + EDT_Precio.Text + ")";
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro agregado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else // Registro existente, se modificará
+                    {
+                        // Se abre la conexión y se estructura el query para agregar el registro
+
+                        cmd.CommandText = "Update EXTRACCION " +
+                            "Set Descripcion = '" + EDT_Descripcion.Text + "', Precio = " + EDT_Precio.Text +
+                            " Where Id_Extraccion = " + gnIdExtraccion;
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro modificado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    // Cierra la ventana
+                    this.Close();
+                }
             }
-            else // Registro existente, se modificará
+            catch (Exception ex)
             {
-                // Se abre la conexión y se estructura el query para agregar el registro
+                Glo.Mensajes(10, ex.Message);
+            }        
+        }
 
-                cmd.CommandText = "Update EXTRACCION " +
-                    "Set Descripcion = '" + EDT_Descripcion.Text + "', Precio = " + EDT_Precio.Text +
-                    " Where Id_Extraccion = " + gnIdExtraccion;
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro modificado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            // Cierra la ventana
-            this.Close();
+        private void ValidacionNumeros(object sender, KeyPressEventArgs e)
+        {
+            Val.soloNumeros(e);
         }
     }
 }

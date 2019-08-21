@@ -38,7 +38,6 @@
             this.DGV_TablaPacientes = new System.Windows.Forms.DataGridView();
             this.COL_IdPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_TipoSangre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_TelEmergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,7 +118,6 @@
             this.DGV_TablaPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_IdPaciente,
             this.COL_Edad,
-            this.COL_TipoSangre,
             this.COL_Telefono,
             this.COL_TelEmergencia,
             this.COL_Matricula,
@@ -168,15 +166,6 @@
             this.COL_Edad.ReadOnly = true;
             this.COL_Edad.Visible = false;
             this.COL_Edad.Width = 50;
-            // 
-            // COL_TipoSangre
-            // 
-            this.COL_TipoSangre.DataPropertyName = "Tipo";
-            this.COL_TipoSangre.HeaderText = "Tipo Sangre";
-            this.COL_TipoSangre.Name = "COL_TipoSangre";
-            this.COL_TipoSangre.ReadOnly = true;
-            this.COL_TipoSangre.Visible = false;
-            this.COL_TipoSangre.Width = 110;
             // 
             // COL_Telefono
             // 
@@ -246,7 +235,6 @@
         private System.Windows.Forms.DataGridView DGV_TablaPacientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdPaciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_TipoSangre;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_TelEmergencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Matricula;

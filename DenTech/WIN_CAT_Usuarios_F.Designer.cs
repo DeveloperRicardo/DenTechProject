@@ -49,9 +49,10 @@
             // 
             this.EDT_Usuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Usuario.Location = new System.Drawing.Point(124, 79);
+            this.EDT_Usuario.MaxLength = 30;
             this.EDT_Usuario.Name = "EDT_Usuario";
             this.EDT_Usuario.Size = new System.Drawing.Size(232, 25);
-            this.EDT_Usuario.TabIndex = 7;
+            this.EDT_Usuario.TabIndex = 1;
             // 
             // STC_Usuario
             // 
@@ -67,33 +68,40 @@
             // 
             this.EDT_Nombre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Nombre.Location = new System.Drawing.Point(124, 110);
+            this.EDT_Nombre.MaxLength = 20;
             this.EDT_Nombre.Name = "EDT_Nombre";
             this.EDT_Nombre.Size = new System.Drawing.Size(232, 25);
-            this.EDT_Nombre.TabIndex = 8;
+            this.EDT_Nombre.TabIndex = 2;
+            this.EDT_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionLetras);
             // 
             // EDT_ApellidoP
             // 
             this.EDT_ApellidoP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_ApellidoP.Location = new System.Drawing.Point(124, 141);
+            this.EDT_ApellidoP.MaxLength = 12;
             this.EDT_ApellidoP.Name = "EDT_ApellidoP";
             this.EDT_ApellidoP.Size = new System.Drawing.Size(232, 25);
-            this.EDT_ApellidoP.TabIndex = 9;
+            this.EDT_ApellidoP.TabIndex = 3;
+            this.EDT_ApellidoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionLetras);
             // 
             // EDT_ApellidoM
             // 
             this.EDT_ApellidoM.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_ApellidoM.Location = new System.Drawing.Point(124, 172);
+            this.EDT_ApellidoM.MaxLength = 12;
             this.EDT_ApellidoM.Name = "EDT_ApellidoM";
             this.EDT_ApellidoM.Size = new System.Drawing.Size(232, 25);
-            this.EDT_ApellidoM.TabIndex = 10;
+            this.EDT_ApellidoM.TabIndex = 4;
+            this.EDT_ApellidoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionLetras);
             // 
             // EDT_Password
             // 
             this.EDT_Password.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Password.Location = new System.Drawing.Point(124, 203);
+            this.EDT_Password.MaxLength = 20;
             this.EDT_Password.Name = "EDT_Password";
             this.EDT_Password.Size = new System.Drawing.Size(232, 25);
-            this.EDT_Password.TabIndex = 11;
+            this.EDT_Password.TabIndex = 5;
             this.EDT_Password.UseSystemPasswordChar = true;
             // 
             // STC_Nombre
@@ -145,7 +153,7 @@
             this.button1.Location = new System.Drawing.Point(304, 274);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 52);
-            this.button1.TabIndex = 17;
+            this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -158,7 +166,7 @@
             this.BTN_Aceptar.Location = new System.Drawing.Point(246, 274);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Aceptar.TabIndex = 16;
+            this.BTN_Aceptar.TabIndex = 7;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 
@@ -176,7 +184,7 @@
             this.COMBO_TipoUsuario.Location = new System.Drawing.Point(124, 234);
             this.COMBO_TipoUsuario.Name = "COMBO_TipoUsuario";
             this.COMBO_TipoUsuario.Size = new System.Drawing.Size(232, 25);
-            this.COMBO_TipoUsuario.TabIndex = 18;
+            this.COMBO_TipoUsuario.TabIndex = 6;
             // 
             // STC_TipoUsuario
             // 

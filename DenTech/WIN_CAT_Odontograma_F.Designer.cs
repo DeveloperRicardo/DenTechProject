@@ -113,7 +113,7 @@
             this.BTN_Diente11.Location = new System.Drawing.Point(463, 136);
             this.BTN_Diente11.Name = "BTN_Diente11";
             this.BTN_Diente11.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente11.TabIndex = 39;
+            this.BTN_Diente11.TabIndex = 9;
             this.BTN_Diente11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente11.UseVisualStyleBackColor = false;
             this.BTN_Diente11.Click += new System.EventHandler(this.BTN_Diente11_Click);
@@ -131,7 +131,7 @@
             this.BTN_Diente12.Location = new System.Drawing.Point(397, 136);
             this.BTN_Diente12.Name = "BTN_Diente12";
             this.BTN_Diente12.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente12.TabIndex = 40;
+            this.BTN_Diente12.TabIndex = 8;
             this.BTN_Diente12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente12.UseVisualStyleBackColor = false;
             this.BTN_Diente12.Click += new System.EventHandler(this.BTN_Diente12_Click);
@@ -149,7 +149,7 @@
             this.BTN_Diente13.Location = new System.Drawing.Point(333, 136);
             this.BTN_Diente13.Name = "BTN_Diente13";
             this.BTN_Diente13.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente13.TabIndex = 41;
+            this.BTN_Diente13.TabIndex = 7;
             this.BTN_Diente13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente13.UseVisualStyleBackColor = false;
             this.BTN_Diente13.Click += new System.EventHandler(this.BTN_Diente13_Click);
@@ -167,7 +167,7 @@
             this.BTN_Diente14.Location = new System.Drawing.Point(269, 136);
             this.BTN_Diente14.Name = "BTN_Diente14";
             this.BTN_Diente14.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente14.TabIndex = 42;
+            this.BTN_Diente14.TabIndex = 6;
             this.BTN_Diente14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente14.UseVisualStyleBackColor = false;
             this.BTN_Diente14.Click += new System.EventHandler(this.BTN_Diente14_Click);
@@ -185,7 +185,7 @@
             this.BTN_Diente15.Location = new System.Drawing.Point(205, 136);
             this.BTN_Diente15.Name = "BTN_Diente15";
             this.BTN_Diente15.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente15.TabIndex = 43;
+            this.BTN_Diente15.TabIndex = 5;
             this.BTN_Diente15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente15.UseVisualStyleBackColor = false;
             this.BTN_Diente15.Click += new System.EventHandler(this.BTN_Diente15_Click);
@@ -203,7 +203,7 @@
             this.BTN_Diente16.Location = new System.Drawing.Point(141, 136);
             this.BTN_Diente16.Name = "BTN_Diente16";
             this.BTN_Diente16.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente16.TabIndex = 44;
+            this.BTN_Diente16.TabIndex = 4;
             this.BTN_Diente16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente16.UseVisualStyleBackColor = false;
             this.BTN_Diente16.Click += new System.EventHandler(this.BTN_Diente16_Click);
@@ -221,7 +221,7 @@
             this.BTN_Diente17.Location = new System.Drawing.Point(77, 136);
             this.BTN_Diente17.Name = "BTN_Diente17";
             this.BTN_Diente17.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente17.TabIndex = 45;
+            this.BTN_Diente17.TabIndex = 3;
             this.BTN_Diente17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente17.UseVisualStyleBackColor = false;
             this.BTN_Diente17.Click += new System.EventHandler(this.BTN_Diente17_Click);
@@ -239,7 +239,7 @@
             this.BTN_Diente18.Location = new System.Drawing.Point(12, 136);
             this.BTN_Diente18.Name = "BTN_Diente18";
             this.BTN_Diente18.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente18.TabIndex = 46;
+            this.BTN_Diente18.TabIndex = 2;
             this.BTN_Diente18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente18.UseVisualStyleBackColor = false;
             this.BTN_Diente18.Click += new System.EventHandler(this.BTN_Diente18_Click);
@@ -417,7 +417,7 @@
             this.BTN_Diente21.Location = new System.Drawing.Point(538, 136);
             this.BTN_Diente21.Name = "BTN_Diente21";
             this.BTN_Diente21.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente21.TabIndex = 62;
+            this.BTN_Diente21.TabIndex = 10;
             this.BTN_Diente21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente21.UseVisualStyleBackColor = false;
             this.BTN_Diente21.Click += new System.EventHandler(this.BTN_Diente21_Click);
@@ -435,7 +435,7 @@
             this.BTN_Diente22.Location = new System.Drawing.Point(602, 136);
             this.BTN_Diente22.Name = "BTN_Diente22";
             this.BTN_Diente22.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente22.TabIndex = 61;
+            this.BTN_Diente22.TabIndex = 11;
             this.BTN_Diente22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente22.UseVisualStyleBackColor = false;
             this.BTN_Diente22.Click += new System.EventHandler(this.BTN_Diente22_Click);
@@ -453,7 +453,7 @@
             this.BTN_Diente23.Location = new System.Drawing.Point(666, 136);
             this.BTN_Diente23.Name = "BTN_Diente23";
             this.BTN_Diente23.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente23.TabIndex = 60;
+            this.BTN_Diente23.TabIndex = 12;
             this.BTN_Diente23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente23.UseVisualStyleBackColor = false;
             this.BTN_Diente23.Click += new System.EventHandler(this.BTN_Diente23_Click);
@@ -471,7 +471,7 @@
             this.BTN_Diente24.Location = new System.Drawing.Point(730, 136);
             this.BTN_Diente24.Name = "BTN_Diente24";
             this.BTN_Diente24.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente24.TabIndex = 59;
+            this.BTN_Diente24.TabIndex = 13;
             this.BTN_Diente24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente24.UseVisualStyleBackColor = false;
             this.BTN_Diente24.Click += new System.EventHandler(this.BTN_Diente24_Click);
@@ -489,7 +489,7 @@
             this.BTN_Diente25.Location = new System.Drawing.Point(794, 136);
             this.BTN_Diente25.Name = "BTN_Diente25";
             this.BTN_Diente25.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente25.TabIndex = 58;
+            this.BTN_Diente25.TabIndex = 14;
             this.BTN_Diente25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente25.UseVisualStyleBackColor = false;
             this.BTN_Diente25.Click += new System.EventHandler(this.BTN_Diente25_Click);
@@ -507,7 +507,7 @@
             this.BTN_Diente26.Location = new System.Drawing.Point(858, 136);
             this.BTN_Diente26.Name = "BTN_Diente26";
             this.BTN_Diente26.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente26.TabIndex = 57;
+            this.BTN_Diente26.TabIndex = 15;
             this.BTN_Diente26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente26.UseVisualStyleBackColor = false;
             this.BTN_Diente26.Click += new System.EventHandler(this.BTN_Diente26_Click);
@@ -525,7 +525,7 @@
             this.BTN_Diente27.Location = new System.Drawing.Point(922, 136);
             this.BTN_Diente27.Name = "BTN_Diente27";
             this.BTN_Diente27.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente27.TabIndex = 56;
+            this.BTN_Diente27.TabIndex = 16;
             this.BTN_Diente27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente27.UseVisualStyleBackColor = false;
             this.BTN_Diente27.Click += new System.EventHandler(this.BTN_Diente27_Click);
@@ -543,7 +543,7 @@
             this.BTN_Diente28.Location = new System.Drawing.Point(986, 136);
             this.BTN_Diente28.Name = "BTN_Diente28";
             this.BTN_Diente28.Size = new System.Drawing.Size(59, 193);
-            this.BTN_Diente28.TabIndex = 55;
+            this.BTN_Diente28.TabIndex = 17;
             this.BTN_Diente28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente28.UseVisualStyleBackColor = false;
             this.BTN_Diente28.Click += new System.EventHandler(this.BTN_Diente28_Click);
@@ -641,7 +641,7 @@
             this.BTN_Diente31.Location = new System.Drawing.Point(539, 344);
             this.BTN_Diente31.Name = "BTN_Diente31";
             this.BTN_Diente31.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente31.TabIndex = 94;
+            this.BTN_Diente31.TabIndex = 26;
             this.BTN_Diente31.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente31.UseVisualStyleBackColor = false;
             this.BTN_Diente31.Click += new System.EventHandler(this.BTN_Diente31_Click);
@@ -659,7 +659,7 @@
             this.BTN_Diente32.Location = new System.Drawing.Point(603, 344);
             this.BTN_Diente32.Name = "BTN_Diente32";
             this.BTN_Diente32.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente32.TabIndex = 93;
+            this.BTN_Diente32.TabIndex = 27;
             this.BTN_Diente32.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente32.UseVisualStyleBackColor = false;
             this.BTN_Diente32.Click += new System.EventHandler(this.BTN_Diente32_Click);
@@ -677,7 +677,7 @@
             this.BTN_Diente33.Location = new System.Drawing.Point(667, 344);
             this.BTN_Diente33.Name = "BTN_Diente33";
             this.BTN_Diente33.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente33.TabIndex = 92;
+            this.BTN_Diente33.TabIndex = 28;
             this.BTN_Diente33.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente33.UseVisualStyleBackColor = false;
             this.BTN_Diente33.Click += new System.EventHandler(this.BTN_Diente33_Click);
@@ -695,7 +695,7 @@
             this.BTN_Diente34.Location = new System.Drawing.Point(731, 344);
             this.BTN_Diente34.Name = "BTN_Diente34";
             this.BTN_Diente34.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente34.TabIndex = 91;
+            this.BTN_Diente34.TabIndex = 29;
             this.BTN_Diente34.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente34.UseVisualStyleBackColor = false;
             this.BTN_Diente34.Click += new System.EventHandler(this.BTN_Diente34_Click);
@@ -713,7 +713,7 @@
             this.BTN_Diente35.Location = new System.Drawing.Point(795, 344);
             this.BTN_Diente35.Name = "BTN_Diente35";
             this.BTN_Diente35.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente35.TabIndex = 90;
+            this.BTN_Diente35.TabIndex = 30;
             this.BTN_Diente35.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente35.UseVisualStyleBackColor = false;
             this.BTN_Diente35.Click += new System.EventHandler(this.BTN_Diente35_Click);
@@ -731,7 +731,7 @@
             this.BTN_Diente36.Location = new System.Drawing.Point(859, 344);
             this.BTN_Diente36.Name = "BTN_Diente36";
             this.BTN_Diente36.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente36.TabIndex = 89;
+            this.BTN_Diente36.TabIndex = 31;
             this.BTN_Diente36.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente36.UseVisualStyleBackColor = false;
             this.BTN_Diente36.Click += new System.EventHandler(this.BTN_Diente36_Click);
@@ -749,7 +749,7 @@
             this.BTN_Diente37.Location = new System.Drawing.Point(923, 344);
             this.BTN_Diente37.Name = "BTN_Diente37";
             this.BTN_Diente37.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente37.TabIndex = 88;
+            this.BTN_Diente37.TabIndex = 32;
             this.BTN_Diente37.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente37.UseVisualStyleBackColor = false;
             this.BTN_Diente37.Click += new System.EventHandler(this.BTN_Diente37_Click);
@@ -767,7 +767,7 @@
             this.BTN_Diente38.Location = new System.Drawing.Point(987, 344);
             this.BTN_Diente38.Name = "BTN_Diente38";
             this.BTN_Diente38.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente38.TabIndex = 87;
+            this.BTN_Diente38.TabIndex = 33;
             this.BTN_Diente38.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente38.UseVisualStyleBackColor = false;
             this.BTN_Diente38.Click += new System.EventHandler(this.BTN_Diente38_Click);
@@ -865,7 +865,7 @@
             this.BTN_Diente48.Location = new System.Drawing.Point(14, 344);
             this.BTN_Diente48.Name = "BTN_Diente48";
             this.BTN_Diente48.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente48.TabIndex = 78;
+            this.BTN_Diente48.TabIndex = 18;
             this.BTN_Diente48.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente48.UseVisualStyleBackColor = false;
             this.BTN_Diente48.Click += new System.EventHandler(this.BTN_Diente48_Click);
@@ -883,7 +883,7 @@
             this.BTN_Diente47.Location = new System.Drawing.Point(78, 344);
             this.BTN_Diente47.Name = "BTN_Diente47";
             this.BTN_Diente47.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente47.TabIndex = 77;
+            this.BTN_Diente47.TabIndex = 19;
             this.BTN_Diente47.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente47.UseVisualStyleBackColor = false;
             this.BTN_Diente47.Click += new System.EventHandler(this.BTN_Diente47_Click);
@@ -901,7 +901,7 @@
             this.BTN_Diente46.Location = new System.Drawing.Point(142, 344);
             this.BTN_Diente46.Name = "BTN_Diente46";
             this.BTN_Diente46.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente46.TabIndex = 76;
+            this.BTN_Diente46.TabIndex = 20;
             this.BTN_Diente46.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente46.UseVisualStyleBackColor = false;
             this.BTN_Diente46.Click += new System.EventHandler(this.BTN_Diente46_Click);
@@ -919,7 +919,7 @@
             this.BTN_Diente45.Location = new System.Drawing.Point(206, 344);
             this.BTN_Diente45.Name = "BTN_Diente45";
             this.BTN_Diente45.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente45.TabIndex = 75;
+            this.BTN_Diente45.TabIndex = 21;
             this.BTN_Diente45.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente45.UseVisualStyleBackColor = false;
             this.BTN_Diente45.Click += new System.EventHandler(this.BTN_Diente45_Click);
@@ -937,7 +937,7 @@
             this.BTN_Diente44.Location = new System.Drawing.Point(270, 344);
             this.BTN_Diente44.Name = "BTN_Diente44";
             this.BTN_Diente44.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente44.TabIndex = 74;
+            this.BTN_Diente44.TabIndex = 22;
             this.BTN_Diente44.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente44.UseVisualStyleBackColor = false;
             this.BTN_Diente44.Click += new System.EventHandler(this.BTN_Diente44_Click);
@@ -955,7 +955,7 @@
             this.BTN_Diente43.Location = new System.Drawing.Point(334, 344);
             this.BTN_Diente43.Name = "BTN_Diente43";
             this.BTN_Diente43.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente43.TabIndex = 73;
+            this.BTN_Diente43.TabIndex = 23;
             this.BTN_Diente43.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente43.UseVisualStyleBackColor = false;
             this.BTN_Diente43.Click += new System.EventHandler(this.BTN_Diente43_Click);
@@ -973,7 +973,7 @@
             this.BTN_Diente42.Location = new System.Drawing.Point(398, 344);
             this.BTN_Diente42.Name = "BTN_Diente42";
             this.BTN_Diente42.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente42.TabIndex = 72;
+            this.BTN_Diente42.TabIndex = 24;
             this.BTN_Diente42.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente42.UseVisualStyleBackColor = false;
             this.BTN_Diente42.Click += new System.EventHandler(this.BTN_Diente42_Click);
@@ -991,7 +991,7 @@
             this.BTN_Diente41.Location = new System.Drawing.Point(464, 344);
             this.BTN_Diente41.Name = "BTN_Diente41";
             this.BTN_Diente41.Size = new System.Drawing.Size(58, 193);
-            this.BTN_Diente41.TabIndex = 71;
+            this.BTN_Diente41.TabIndex = 25;
             this.BTN_Diente41.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTN_Diente41.UseVisualStyleBackColor = false;
             this.BTN_Diente41.Click += new System.EventHandler(this.BTN_Diente41_Click);
@@ -1000,9 +1000,10 @@
             // 
             this.EDT_Descripcion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Descripcion.Location = new System.Drawing.Point(100, 77);
+            this.EDT_Descripcion.MaxLength = 100;
             this.EDT_Descripcion.Name = "EDT_Descripcion";
             this.EDT_Descripcion.Size = new System.Drawing.Size(745, 25);
-            this.EDT_Descripcion.TabIndex = 104;
+            this.EDT_Descripcion.TabIndex = 1;
             // 
             // STC_Campo
             // 
@@ -1023,7 +1024,7 @@
             this.BTN_Cancelar.Location = new System.Drawing.Point(993, 561);
             this.BTN_Cancelar.Name = "BTN_Cancelar";
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cancelar.TabIndex = 106;
+            this.BTN_Cancelar.TabIndex = 35;
             this.BTN_Cancelar.UseVisualStyleBackColor = false;
             this.BTN_Cancelar.Click += new System.EventHandler(this.BTN_Cancelar_Click);
             // 
@@ -1036,7 +1037,7 @@
             this.BTN_Aceptar.Location = new System.Drawing.Point(935, 561);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Aceptar.TabIndex = 105;
+            this.BTN_Aceptar.TabIndex = 34;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 

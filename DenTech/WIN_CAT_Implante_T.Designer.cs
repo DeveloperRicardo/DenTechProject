@@ -38,14 +38,14 @@
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.DGV_TablaImplante = new System.Windows.Forms.DataGridView();
+            this.COL_IdImplante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GP_Opciones = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.RADIO_Pendiente = new System.Windows.Forms.RadioButton();
             this.RADIO_Realizado = new System.Windows.Forms.RadioButton();
-            this.COL_IdImplante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaImplante)).BeginInit();
             this.GP_Opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,7 +63,7 @@
             this.BTN_Seleccionar.Location = new System.Drawing.Point(677, 76);
             this.BTN_Seleccionar.Name = "BTN_Seleccionar";
             this.BTN_Seleccionar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Seleccionar.TabIndex = 49;
+            this.BTN_Seleccionar.TabIndex = 1;
             this.BTN_Seleccionar.Text = "Seleccionar";
             this.BTN_Seleccionar.UseVisualStyleBackColor = false;
             this.BTN_Seleccionar.Click += new System.EventHandler(this.BTN_Seleccionar_Click);
@@ -77,7 +77,7 @@
             this.BTN_Cerrar.Location = new System.Drawing.Point(736, 329);
             this.BTN_Cerrar.Name = "BTN_Cerrar";
             this.BTN_Cerrar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cerrar.TabIndex = 48;
+            this.BTN_Cerrar.TabIndex = 7;
             this.BTN_Cerrar.UseVisualStyleBackColor = false;
             this.BTN_Cerrar.Click += new System.EventHandler(this.BTN_Cerrar_Click);
             // 
@@ -93,7 +93,7 @@
             this.BTN_Eliminar.Location = new System.Drawing.Point(677, 190);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Eliminar.TabIndex = 47;
+            this.BTN_Eliminar.TabIndex = 4;
             this.BTN_Eliminar.Text = "Eliminar";
             this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Eliminar.UseVisualStyleBackColor = false;
@@ -111,7 +111,7 @@
             this.BTN_Modificar.Location = new System.Drawing.Point(677, 152);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Modificar.TabIndex = 46;
+            this.BTN_Modificar.TabIndex = 3;
             this.BTN_Modificar.Text = "Modificar";
             this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Modificar.UseVisualStyleBackColor = false;
@@ -129,7 +129,7 @@
             this.BTN_Agregar.Location = new System.Drawing.Point(677, 114);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Agregar.TabIndex = 45;
+            this.BTN_Agregar.TabIndex = 2;
             this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Agregar.UseVisualStyleBackColor = false;
@@ -180,6 +180,33 @@
             this.DGV_TablaImplante.Size = new System.Drawing.Size(658, 239);
             this.DGV_TablaImplante.TabIndex = 44;
             // 
+            // COL_IdImplante
+            // 
+            this.COL_IdImplante.DataPropertyName = "Id_Implante";
+            this.COL_IdImplante.Frozen = true;
+            this.COL_IdImplante.HeaderText = "IdImplante";
+            this.COL_IdImplante.Name = "COL_IdImplante";
+            this.COL_IdImplante.ReadOnly = true;
+            this.COL_IdImplante.Visible = false;
+            this.COL_IdImplante.Width = 300;
+            // 
+            // COL_Descripción
+            // 
+            this.COL_Descripción.DataPropertyName = "Descripcion";
+            this.COL_Descripción.Frozen = true;
+            this.COL_Descripción.HeaderText = "Descripción";
+            this.COL_Descripción.Name = "COL_Descripción";
+            this.COL_Descripción.ReadOnly = true;
+            this.COL_Descripción.Width = 505;
+            // 
+            // COL_Precio
+            // 
+            this.COL_Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.COL_Precio.DataPropertyName = "Precio";
+            this.COL_Precio.HeaderText = "Precio";
+            this.COL_Precio.Name = "COL_Precio";
+            this.COL_Precio.ReadOnly = true;
+            // 
             // GP_Opciones
             // 
             this.GP_Opciones.Controls.Add(this.pictureBox3);
@@ -224,7 +251,7 @@
             this.RADIO_Pendiente.Location = new System.Drawing.Point(152, 26);
             this.RADIO_Pendiente.Name = "RADIO_Pendiente";
             this.RADIO_Pendiente.Size = new System.Drawing.Size(118, 23);
-            this.RADIO_Pendiente.TabIndex = 11;
+            this.RADIO_Pendiente.TabIndex = 6;
             this.RADIO_Pendiente.TabStop = true;
             this.RADIO_Pendiente.Text = "        Pendiente";
             this.RADIO_Pendiente.UseVisualStyleBackColor = false;
@@ -239,37 +266,10 @@
             this.RADIO_Realizado.Location = new System.Drawing.Point(5, 26);
             this.RADIO_Realizado.Name = "RADIO_Realizado";
             this.RADIO_Realizado.Size = new System.Drawing.Size(115, 23);
-            this.RADIO_Realizado.TabIndex = 10;
+            this.RADIO_Realizado.TabIndex = 5;
             this.RADIO_Realizado.TabStop = true;
             this.RADIO_Realizado.Text = "        Realizado";
             this.RADIO_Realizado.UseVisualStyleBackColor = false;
-            // 
-            // COL_IdImplante
-            // 
-            this.COL_IdImplante.DataPropertyName = "Id_Implante";
-            this.COL_IdImplante.Frozen = true;
-            this.COL_IdImplante.HeaderText = "IdImplante";
-            this.COL_IdImplante.Name = "COL_IdImplante";
-            this.COL_IdImplante.ReadOnly = true;
-            this.COL_IdImplante.Visible = false;
-            this.COL_IdImplante.Width = 300;
-            // 
-            // COL_Descripción
-            // 
-            this.COL_Descripción.DataPropertyName = "Descripcion";
-            this.COL_Descripción.Frozen = true;
-            this.COL_Descripción.HeaderText = "Descripción";
-            this.COL_Descripción.Name = "COL_Descripción";
-            this.COL_Descripción.ReadOnly = true;
-            this.COL_Descripción.Width = 505;
-            // 
-            // COL_Precio
-            // 
-            this.COL_Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.COL_Precio.DataPropertyName = "Precio";
-            this.COL_Precio.HeaderText = "Precio";
-            this.COL_Precio.Name = "COL_Precio";
-            this.COL_Precio.ReadOnly = true;
             // 
             // WIN_CAT_Implante_T
             // 

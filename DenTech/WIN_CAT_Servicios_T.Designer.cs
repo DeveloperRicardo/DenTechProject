@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Servicios_T));
             this.DGV_TablaServicios = new System.Windows.Forms.DataGridView();
-            this.BTN_Eliminar = new System.Windows.Forms.Button();
-            this.BTN_Modificar = new System.Windows.Forms.Button();
-            this.BTN_Agregar = new System.Windows.Forms.Button();
             this.COL_IdServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BTN_Eliminar = new System.Windows.Forms.Button();
+            this.BTN_Modificar = new System.Windows.Forms.Button();
+            this.BTN_Agregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaServicios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,60 +87,6 @@
             this.DGV_TablaServicios.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaServicios.TabIndex = 33;
             // 
-            // BTN_Eliminar
-            // 
-            this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
-            this.BTN_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Eliminar.FlatAppearance.BorderSize = 2;
-            this.BTN_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
-            this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(967, 209);
-            this.BTN_Eliminar.Name = "BTN_Eliminar";
-            this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Eliminar.TabIndex = 36;
-            this.BTN_Eliminar.Text = "Eliminar";
-            this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Eliminar.UseVisualStyleBackColor = false;
-            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
-            // 
-            // BTN_Modificar
-            // 
-            this.BTN_Modificar.BackColor = System.Drawing.Color.White;
-            this.BTN_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Modificar.FlatAppearance.BorderSize = 2;
-            this.BTN_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
-            this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Modificar.Location = new System.Drawing.Point(967, 171);
-            this.BTN_Modificar.Name = "BTN_Modificar";
-            this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Modificar.TabIndex = 35;
-            this.BTN_Modificar.Text = "Modificar";
-            this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Modificar.UseVisualStyleBackColor = false;
-            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
-            // 
-            // BTN_Agregar
-            // 
-            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
-            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
-            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
-            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(967, 133);
-            this.BTN_Agregar.Name = "BTN_Agregar";
-            this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Agregar.TabIndex = 34;
-            this.BTN_Agregar.Text = "Agregar";
-            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Agregar.UseVisualStyleBackColor = false;
-            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
-            // 
             // COL_IdServicio
             // 
             this.COL_IdServicio.DataPropertyName = "Id_Servicios";
@@ -165,6 +111,60 @@
             this.COL_Precio.Name = "COL_Precio";
             this.COL_Precio.ReadOnly = true;
             this.COL_Precio.Width = 150;
+            // 
+            // BTN_Eliminar
+            // 
+            this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
+            this.BTN_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Eliminar.FlatAppearance.BorderSize = 2;
+            this.BTN_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
+            this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Eliminar.Location = new System.Drawing.Point(967, 209);
+            this.BTN_Eliminar.Name = "BTN_Eliminar";
+            this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Eliminar.TabIndex = 3;
+            this.BTN_Eliminar.Text = "Eliminar";
+            this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Eliminar.UseVisualStyleBackColor = false;
+            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
+            // 
+            // BTN_Modificar
+            // 
+            this.BTN_Modificar.BackColor = System.Drawing.Color.White;
+            this.BTN_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Modificar.FlatAppearance.BorderSize = 2;
+            this.BTN_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Modificar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Modificar.Image")));
+            this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Modificar.Location = new System.Drawing.Point(967, 171);
+            this.BTN_Modificar.Name = "BTN_Modificar";
+            this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Modificar.TabIndex = 2;
+            this.BTN_Modificar.Text = "Modificar";
+            this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Modificar.UseVisualStyleBackColor = false;
+            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
+            // 
+            // BTN_Agregar
+            // 
+            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
+            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
+            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
+            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Agregar.Location = new System.Drawing.Point(967, 133);
+            this.BTN_Agregar.Name = "BTN_Agregar";
+            this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Agregar.TabIndex = 1;
+            this.BTN_Agregar.Text = "Agregar";
+            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Agregar.UseVisualStyleBackColor = false;
+            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
             // WIN_CAT_Servicios_T
             // 

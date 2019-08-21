@@ -47,17 +47,17 @@
             this.STC_Telefono = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.BTN_Aceptar = new System.Windows.Forms.Button();
-            this.STC_TipoSangre = new System.Windows.Forms.Label();
-            this.COMBO_TipoSangre = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // EDT_Nombre
             // 
             this.EDT_Nombre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Nombre.Location = new System.Drawing.Point(123, 79);
+            this.EDT_Nombre.MaxLength = 20;
             this.EDT_Nombre.Name = "EDT_Nombre";
             this.EDT_Nombre.Size = new System.Drawing.Size(194, 25);
-            this.EDT_Nombre.TabIndex = 0;
+            this.EDT_Nombre.TabIndex = 1;
+            this.EDT_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionLetras);
             // 
             // STC_Nombre
             // 
@@ -73,9 +73,11 @@
             // 
             this.EDT_ApellidoP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_ApellidoP.Location = new System.Drawing.Point(123, 110);
+            this.EDT_ApellidoP.MaxLength = 12;
             this.EDT_ApellidoP.Name = "EDT_ApellidoP";
             this.EDT_ApellidoP.Size = new System.Drawing.Size(194, 25);
-            this.EDT_ApellidoP.TabIndex = 1;
+            this.EDT_ApellidoP.TabIndex = 2;
+            this.EDT_ApellidoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionLetras);
             // 
             // STC_ApellidoP
             // 
@@ -91,9 +93,11 @@
             // 
             this.EDT_ApellidoM.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_ApellidoM.Location = new System.Drawing.Point(123, 141);
+            this.EDT_ApellidoM.MaxLength = 12;
             this.EDT_ApellidoM.Name = "EDT_ApellidoM";
             this.EDT_ApellidoM.Size = new System.Drawing.Size(194, 25);
-            this.EDT_ApellidoM.TabIndex = 2;
+            this.EDT_ApellidoM.TabIndex = 3;
+            this.EDT_ApellidoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionLetras);
             // 
             // STC_ApellidoM
             // 
@@ -121,7 +125,9 @@
             this.EDT_Edad.Location = new System.Drawing.Point(464, 79);
             this.EDT_Edad.Name = "EDT_Edad";
             this.EDT_Edad.Size = new System.Drawing.Size(45, 25);
-            this.EDT_Edad.TabIndex = 3;
+            this.EDT_Edad.TabIndex = 5;
+            this.EDT_Edad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EDT_Edad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionNumeros);
             // 
             // STC_Sexo
             // 
@@ -144,7 +150,7 @@
             this.COMBO_Sexo.Location = new System.Drawing.Point(464, 110);
             this.COMBO_Sexo.Name = "COMBO_Sexo";
             this.COMBO_Sexo.Size = new System.Drawing.Size(45, 25);
-            this.COMBO_Sexo.TabIndex = 4;
+            this.COMBO_Sexo.TabIndex = 6;
             // 
             // STC_Direccion
             // 
@@ -160,6 +166,7 @@
             // 
             this.EDT_Direccion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Direccion.Location = new System.Drawing.Point(123, 203);
+            this.EDT_Direccion.MaxLength = 30;
             this.EDT_Direccion.Multiline = true;
             this.EDT_Direccion.Name = "EDT_Direccion";
             this.EDT_Direccion.Size = new System.Drawing.Size(535, 56);
@@ -169,7 +176,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 174);
+            this.label1.Location = new System.Drawing.Point(330, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 18;
@@ -179,17 +186,23 @@
             // 
             this.EDT_Telefono.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Telefono.Location = new System.Drawing.Point(123, 172);
+            this.EDT_Telefono.MaxLength = 10;
             this.EDT_Telefono.Name = "EDT_Telefono";
             this.EDT_Telefono.Size = new System.Drawing.Size(194, 25);
-            this.EDT_Telefono.TabIndex = 6;
+            this.EDT_Telefono.TabIndex = 4;
+            this.EDT_Telefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EDT_Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionNumeros);
             // 
             // EDT_TelefonoEm
             // 
             this.EDT_TelefonoEm.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EDT_TelefonoEm.Location = new System.Drawing.Point(464, 172);
+            this.EDT_TelefonoEm.Location = new System.Drawing.Point(464, 143);
+            this.EDT_TelefonoEm.MaxLength = 10;
             this.EDT_TelefonoEm.Name = "EDT_TelefonoEm";
             this.EDT_TelefonoEm.Size = new System.Drawing.Size(194, 25);
             this.EDT_TelefonoEm.TabIndex = 7;
+            this.EDT_TelefonoEm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EDT_TelefonoEm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionNumeros);
             // 
             // STC_Telefono
             // 
@@ -227,38 +240,14 @@
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 
-            // STC_TipoSangre
-            // 
-            this.STC_TipoSangre.AutoSize = true;
-            this.STC_TipoSangre.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_TipoSangre.Location = new System.Drawing.Point(330, 143);
-            this.STC_TipoSangre.Name = "STC_TipoSangre";
-            this.STC_TipoSangre.Size = new System.Drawing.Size(92, 20);
-            this.STC_TipoSangre.TabIndex = 24;
-            this.STC_TipoSangre.Text = "Tipo Sangre:";
-            // 
-            // COMBO_TipoSangre
-            // 
-            this.COMBO_TipoSangre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.COMBO_TipoSangre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COMBO_TipoSangre.FormattingEnabled = true;
-            this.COMBO_TipoSangre.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.COMBO_TipoSangre.Location = new System.Drawing.Point(464, 141);
-            this.COMBO_TipoSangre.Name = "COMBO_TipoSangre";
-            this.COMBO_TipoSangre.Size = new System.Drawing.Size(45, 25);
-            this.COMBO_TipoSangre.TabIndex = 5;
-            // 
             // WIN_CAT_Pacientes_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(675, 337);
-            this.Controls.Add(this.COMBO_TipoSangre);
-            this.Controls.Add(this.STC_TipoSangre);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_Aceptar);
             this.Controls.Add(this.STC_Telefono);
@@ -301,8 +290,6 @@
             this.Controls.SetChildIndex(this.STC_Telefono, 0);
             this.Controls.SetChildIndex(this.BTN_Aceptar, 0);
             this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.STC_TipoSangre, 0);
-            this.Controls.SetChildIndex(this.COMBO_TipoSangre, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,7 +314,5 @@
         private System.Windows.Forms.Label STC_Telefono;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BTN_Aceptar;
-        private System.Windows.Forms.Label STC_TipoSangre;
-        private System.Windows.Forms.ComboBox COMBO_TipoSangre;
     }
 }

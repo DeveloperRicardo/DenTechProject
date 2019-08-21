@@ -113,7 +113,7 @@
             this.BTN_Seleccionar.Location = new System.Drawing.Point(342, 76);
             this.BTN_Seleccionar.Name = "BTN_Seleccionar";
             this.BTN_Seleccionar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Seleccionar.TabIndex = 35;
+            this.BTN_Seleccionar.TabIndex = 1;
             this.BTN_Seleccionar.Text = "Seleccionar";
             this.BTN_Seleccionar.UseVisualStyleBackColor = false;
             this.BTN_Seleccionar.Click += new System.EventHandler(this.BTN_Seleccionar_Click);
@@ -127,7 +127,7 @@
             this.button1.Location = new System.Drawing.Point(401, 416);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 52);
-            this.button1.TabIndex = 36;
+            this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -137,6 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(464, 473);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_Seleccionar);

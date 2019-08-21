@@ -119,6 +119,7 @@
             // 
             this.EDT_Contrasena.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.EDT_Contrasena.Location = new System.Drawing.Point(12, 392);
+            this.EDT_Contrasena.MaxLength = 20;
             this.EDT_Contrasena.Name = "EDT_Contrasena";
             this.EDT_Contrasena.Size = new System.Drawing.Size(322, 43);
             this.EDT_Contrasena.TabIndex = 2;
@@ -128,6 +129,7 @@
             // 
             this.EDT_Usuario.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.EDT_Usuario.Location = new System.Drawing.Point(12, 279);
+            this.EDT_Usuario.MaxLength = 30;
             this.EDT_Usuario.Name = "EDT_Usuario";
             this.EDT_Usuario.Size = new System.Drawing.Size(322, 43);
             this.EDT_Usuario.TabIndex = 1;

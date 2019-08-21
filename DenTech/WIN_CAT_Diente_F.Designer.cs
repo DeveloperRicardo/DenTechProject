@@ -58,6 +58,9 @@
             this.BTN_Implante = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.DGV_TablaTratamiento = new System.Windows.Forms.DataGridView();
+            this.COL_IdTratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.Menu_Implante = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -66,9 +69,6 @@
             this.Menu_Extraccion = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.OP_ExSeleccionar = new System.Windows.Forms.ToolStripMenuItem();
             this.OP_ExNinguno = new System.Windows.Forms.ToolStripMenuItem();
-            this.COL_IdTratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_LateralAbajo)).BeginInit();
             this.GP_Opciones.SuspendLayout();
@@ -132,6 +132,7 @@
             this.BTN_SuperiorArriba.Name = "BTN_SuperiorArriba";
             this.BTN_SuperiorArriba.Size = new System.Drawing.Size(45, 45);
             this.BTN_SuperiorArriba.TabIndex = 1;
+            this.BTN_SuperiorArriba.TabStop = false;
             this.BTN_SuperiorArriba.UseVisualStyleBackColor = false;
             this.BTN_SuperiorArriba.Click += new System.EventHandler(this.BTN_SuperiorArriba_Click);
             // 
@@ -147,6 +148,7 @@
             this.BTN_SuperiorIzq.Name = "BTN_SuperiorIzq";
             this.BTN_SuperiorIzq.Size = new System.Drawing.Size(45, 45);
             this.BTN_SuperiorIzq.TabIndex = 2;
+            this.BTN_SuperiorIzq.TabStop = false;
             this.BTN_SuperiorIzq.UseVisualStyleBackColor = false;
             this.BTN_SuperiorIzq.Click += new System.EventHandler(this.BTN_SuperiorIzq_Click);
             // 
@@ -162,6 +164,7 @@
             this.BTN_SuperiorCentro.Name = "BTN_SuperiorCentro";
             this.BTN_SuperiorCentro.Size = new System.Drawing.Size(45, 45);
             this.BTN_SuperiorCentro.TabIndex = 3;
+            this.BTN_SuperiorCentro.TabStop = false;
             this.BTN_SuperiorCentro.UseVisualStyleBackColor = false;
             this.BTN_SuperiorCentro.Click += new System.EventHandler(this.BTN_SuperiorCentro_Click);
             // 
@@ -177,6 +180,7 @@
             this.BTN_SuperiorDer.Name = "BTN_SuperiorDer";
             this.BTN_SuperiorDer.Size = new System.Drawing.Size(45, 45);
             this.BTN_SuperiorDer.TabIndex = 4;
+            this.BTN_SuperiorDer.TabStop = false;
             this.BTN_SuperiorDer.UseVisualStyleBackColor = false;
             this.BTN_SuperiorDer.Click += new System.EventHandler(this.BTN_SuperiorDer_Click);
             // 
@@ -192,6 +196,7 @@
             this.BTN_SuperiorAbajo.Name = "BTN_SuperiorAbajo";
             this.BTN_SuperiorAbajo.Size = new System.Drawing.Size(45, 45);
             this.BTN_SuperiorAbajo.TabIndex = 5;
+            this.BTN_SuperiorAbajo.TabStop = false;
             this.BTN_SuperiorAbajo.UseVisualStyleBackColor = false;
             this.BTN_SuperiorAbajo.Click += new System.EventHandler(this.BTN_SuperiorAbajo_Click);
             // 
@@ -207,6 +212,7 @@
             this.BTN_LateralArriba.Name = "BTN_LateralArriba";
             this.BTN_LateralArriba.Size = new System.Drawing.Size(172, 33);
             this.BTN_LateralArriba.TabIndex = 6;
+            this.BTN_LateralArriba.TabStop = false;
             this.BTN_LateralArriba.UseVisualStyleBackColor = false;
             this.BTN_LateralArriba.Click += new System.EventHandler(this.BTN_LateralArriba_Click);
             // 
@@ -219,7 +225,7 @@
             this.BTN_Cancelar.Location = new System.Drawing.Point(832, 535);
             this.BTN_Cancelar.Name = "BTN_Cancelar";
             this.BTN_Cancelar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Cancelar.TabIndex = 14;
+            this.BTN_Cancelar.TabIndex = 10;
             this.BTN_Cancelar.UseVisualStyleBackColor = false;
             this.BTN_Cancelar.Click += new System.EventHandler(this.BTN_Cancelar_Click);
             // 
@@ -232,7 +238,7 @@
             this.BTN_Aceptar.Location = new System.Drawing.Point(774, 535);
             this.BTN_Aceptar.Name = "BTN_Aceptar";
             this.BTN_Aceptar.Size = new System.Drawing.Size(52, 52);
-            this.BTN_Aceptar.TabIndex = 13;
+            this.BTN_Aceptar.TabIndex = 9;
             this.BTN_Aceptar.UseVisualStyleBackColor = false;
             this.BTN_Aceptar.Click += new System.EventHandler(this.BTN_Aceptar_Click);
             // 
@@ -252,10 +258,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.EDT_Descripcion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EDT_Descripcion.Location = new System.Drawing.Point(207, 106);
+            this.EDT_Descripcion.MaxLength = 510;
             this.EDT_Descripcion.Multiline = true;
             this.EDT_Descripcion.Name = "EDT_Descripcion";
             this.EDT_Descripcion.Size = new System.Drawing.Size(677, 204);
-            this.EDT_Descripcion.TabIndex = 7;
+            this.EDT_Descripcion.TabIndex = 1;
             // 
             // RADIO_Realizado
             // 
@@ -267,7 +274,7 @@
             this.RADIO_Realizado.Location = new System.Drawing.Point(5, 26);
             this.RADIO_Realizado.Name = "RADIO_Realizado";
             this.RADIO_Realizado.Size = new System.Drawing.Size(115, 23);
-            this.RADIO_Realizado.TabIndex = 10;
+            this.RADIO_Realizado.TabIndex = 6;
             this.RADIO_Realizado.TabStop = true;
             this.RADIO_Realizado.Text = "        Realizado";
             this.RADIO_Realizado.UseVisualStyleBackColor = false;
@@ -328,7 +335,7 @@
             this.RADIO_Ninguno.Location = new System.Drawing.Point(315, 26);
             this.RADIO_Ninguno.Name = "RADIO_Ninguno";
             this.RADIO_Ninguno.Size = new System.Drawing.Size(111, 23);
-            this.RADIO_Ninguno.TabIndex = 12;
+            this.RADIO_Ninguno.TabIndex = 8;
             this.RADIO_Ninguno.TabStop = true;
             this.RADIO_Ninguno.Text = "        Ninguno";
             this.RADIO_Ninguno.UseVisualStyleBackColor = false;
@@ -343,7 +350,7 @@
             this.RADIO_Pendiente.Location = new System.Drawing.Point(152, 26);
             this.RADIO_Pendiente.Name = "RADIO_Pendiente";
             this.RADIO_Pendiente.Size = new System.Drawing.Size(118, 23);
-            this.RADIO_Pendiente.TabIndex = 11;
+            this.RADIO_Pendiente.TabIndex = 7;
             this.RADIO_Pendiente.TabStop = true;
             this.RADIO_Pendiente.Text = "        Pendiente";
             this.RADIO_Pendiente.UseVisualStyleBackColor = false;
@@ -360,7 +367,7 @@
             this.BTN_Extraccion.Location = new System.Drawing.Point(324, 487);
             this.BTN_Extraccion.Name = "BTN_Extraccion";
             this.BTN_Extraccion.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Extraccion.TabIndex = 9;
+            this.BTN_Extraccion.TabIndex = 5;
             this.BTN_Extraccion.Text = "Extracción";
             this.BTN_Extraccion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Extraccion.UseVisualStyleBackColor = false;
@@ -378,7 +385,7 @@
             this.BTN_Implante.Location = new System.Drawing.Point(207, 487);
             this.BTN_Implante.Name = "BTN_Implante";
             this.BTN_Implante.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Implante.TabIndex = 8;
+            this.BTN_Implante.TabIndex = 4;
             this.BTN_Implante.Text = "Implante";
             this.BTN_Implante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Implante.UseVisualStyleBackColor = false;
@@ -439,6 +446,33 @@
             this.DGV_TablaTratamiento.Size = new System.Drawing.Size(563, 126);
             this.DGV_TablaTratamiento.TabIndex = 46;
             // 
+            // COL_IdTratamiento
+            // 
+            this.COL_IdTratamiento.DataPropertyName = "Id_TrataDiente";
+            this.COL_IdTratamiento.Frozen = true;
+            this.COL_IdTratamiento.HeaderText = "IdTratamiento";
+            this.COL_IdTratamiento.Name = "COL_IdTratamiento";
+            this.COL_IdTratamiento.ReadOnly = true;
+            this.COL_IdTratamiento.Visible = false;
+            // 
+            // COL_Descripción
+            // 
+            this.COL_Descripción.DataPropertyName = "Descripcion";
+            this.COL_Descripción.Frozen = true;
+            this.COL_Descripción.HeaderText = "Descripción";
+            this.COL_Descripción.Name = "COL_Descripción";
+            this.COL_Descripción.ReadOnly = true;
+            this.COL_Descripción.Width = 450;
+            // 
+            // COL_Precio
+            // 
+            this.COL_Precio.DataPropertyName = "Precio";
+            this.COL_Precio.Frozen = true;
+            this.COL_Precio.HeaderText = "Precio";
+            this.COL_Precio.Name = "COL_Precio";
+            this.COL_Precio.ReadOnly = true;
+            this.COL_Precio.Width = 150;
+            // 
             // BTN_Eliminar
             // 
             this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
@@ -451,7 +485,7 @@
             this.BTN_Eliminar.Location = new System.Drawing.Point(776, 375);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Eliminar.TabIndex = 55;
+            this.BTN_Eliminar.TabIndex = 3;
             this.BTN_Eliminar.Text = "Eliminar";
             this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Eliminar.UseVisualStyleBackColor = false;
@@ -469,7 +503,7 @@
             this.BTN_Agregar.Location = new System.Drawing.Point(776, 337);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Agregar.TabIndex = 54;
+            this.BTN_Agregar.TabIndex = 2;
             this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Agregar.UseVisualStyleBackColor = false;
@@ -518,33 +552,6 @@
             this.OP_ExNinguno.Size = new System.Drawing.Size(134, 22);
             this.OP_ExNinguno.Text = "Ninguno";
             this.OP_ExNinguno.Click += new System.EventHandler(this.OP_ExNinguno_Click);
-            // 
-            // COL_IdTratamiento
-            // 
-            this.COL_IdTratamiento.DataPropertyName = "Id_TrataDiente";
-            this.COL_IdTratamiento.Frozen = true;
-            this.COL_IdTratamiento.HeaderText = "IdTratamiento";
-            this.COL_IdTratamiento.Name = "COL_IdTratamiento";
-            this.COL_IdTratamiento.ReadOnly = true;
-            this.COL_IdTratamiento.Visible = false;
-            // 
-            // COL_Descripción
-            // 
-            this.COL_Descripción.DataPropertyName = "Descripcion";
-            this.COL_Descripción.Frozen = true;
-            this.COL_Descripción.HeaderText = "Descripción";
-            this.COL_Descripción.Name = "COL_Descripción";
-            this.COL_Descripción.ReadOnly = true;
-            this.COL_Descripción.Width = 450;
-            // 
-            // COL_Precio
-            // 
-            this.COL_Precio.DataPropertyName = "Precio";
-            this.COL_Precio.Frozen = true;
-            this.COL_Precio.HeaderText = "Precio";
-            this.COL_Precio.Name = "COL_Precio";
-            this.COL_Precio.ReadOnly = true;
-            this.COL_Precio.Width = 150;
             // 
             // WIN_CAT_Diente_F
             // 

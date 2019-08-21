@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Inventario_T));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.DGV_TablaProducto = new System.Windows.Forms.DataGridView();
-            this.PANEL_Botones = new System.Windows.Forms.FlowLayoutPanel();
             this.COL_Inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_FechaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PANEL_Botones = new System.Windows.Forms.FlowLayoutPanel();
+            this.BTN_Aumentar = new System.Windows.Forms.Button();
+            this.BTN_Disminuir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaProducto)).BeginInit();
             this.PANEL_Botones.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +60,7 @@
             this.BTN_Eliminar.Location = new System.Drawing.Point(3, 79);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Eliminar.TabIndex = 43;
+            this.BTN_Eliminar.TabIndex = 3;
             this.BTN_Eliminar.Text = "Eliminar";
             this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Eliminar.UseVisualStyleBackColor = false;
@@ -76,7 +78,7 @@
             this.BTN_Modificar.Location = new System.Drawing.Point(3, 41);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Modificar.TabIndex = 42;
+            this.BTN_Modificar.TabIndex = 2;
             this.BTN_Modificar.Text = "Modificar";
             this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Modificar.UseVisualStyleBackColor = false;
@@ -94,7 +96,7 @@
             this.BTN_Agregar.Location = new System.Drawing.Point(3, 3);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Agregar.TabIndex = 41;
+            this.BTN_Agregar.TabIndex = 1;
             this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Agregar.UseVisualStyleBackColor = false;
@@ -107,14 +109,14 @@
             this.DGV_TablaProducto.AllowUserToOrderColumns = true;
             this.DGV_TablaProducto.BackgroundColor = System.Drawing.Color.White;
             this.DGV_TablaProducto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_TablaProducto.ColumnHeadersHeight = 30;
             this.DGV_TablaProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COL_Inventario,
@@ -128,34 +130,25 @@
             this.DGV_TablaProducto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_TablaProducto.Name = "DGV_TablaProducto";
             this.DGV_TablaProducto.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TablaProducto.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TablaProducto.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_TablaProducto.RowHeadersVisible = false;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_TablaProducto.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_TablaProducto.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_TablaProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaProducto.Size = new System.Drawing.Size(940, 368);
             this.DGV_TablaProducto.TabIndex = 45;
-            // 
-            // PANEL_Botones
-            // 
-            this.PANEL_Botones.Controls.Add(this.BTN_Agregar);
-            this.PANEL_Botones.Controls.Add(this.BTN_Modificar);
-            this.PANEL_Botones.Controls.Add(this.BTN_Eliminar);
-            this.PANEL_Botones.Location = new System.Drawing.Point(964, 130);
-            this.PANEL_Botones.Name = "PANEL_Botones";
-            this.PANEL_Botones.Size = new System.Drawing.Size(117, 115);
-            this.PANEL_Botones.TabIndex = 46;
+            this.DGV_TablaProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_TablaProducto_CellClick);
             // 
             // COL_Inventario
             // 
@@ -199,6 +192,54 @@
             this.COL_Cantidad.Name = "COL_Cantidad";
             this.COL_Cantidad.ReadOnly = true;
             // 
+            // PANEL_Botones
+            // 
+            this.PANEL_Botones.Controls.Add(this.BTN_Agregar);
+            this.PANEL_Botones.Controls.Add(this.BTN_Modificar);
+            this.PANEL_Botones.Controls.Add(this.BTN_Eliminar);
+            this.PANEL_Botones.Controls.Add(this.BTN_Aumentar);
+            this.PANEL_Botones.Controls.Add(this.BTN_Disminuir);
+            this.PANEL_Botones.Location = new System.Drawing.Point(964, 130);
+            this.PANEL_Botones.Name = "PANEL_Botones";
+            this.PANEL_Botones.Size = new System.Drawing.Size(117, 191);
+            this.PANEL_Botones.TabIndex = 46;
+            // 
+            // BTN_Aumentar
+            // 
+            this.BTN_Aumentar.BackColor = System.Drawing.Color.White;
+            this.BTN_Aumentar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Aumentar.FlatAppearance.BorderSize = 2;
+            this.BTN_Aumentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Aumentar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Aumentar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Aumentar.Image")));
+            this.BTN_Aumentar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Aumentar.Location = new System.Drawing.Point(3, 117);
+            this.BTN_Aumentar.Name = "BTN_Aumentar";
+            this.BTN_Aumentar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Aumentar.TabIndex = 4;
+            this.BTN_Aumentar.Text = "Aumentar";
+            this.BTN_Aumentar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Aumentar.UseVisualStyleBackColor = false;
+            this.BTN_Aumentar.Click += new System.EventHandler(this.BTN_Aumentar_Click);
+            // 
+            // BTN_Disminuir
+            // 
+            this.BTN_Disminuir.BackColor = System.Drawing.Color.White;
+            this.BTN_Disminuir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Disminuir.FlatAppearance.BorderSize = 2;
+            this.BTN_Disminuir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Disminuir.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Disminuir.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Disminuir.Image")));
+            this.BTN_Disminuir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Disminuir.Location = new System.Drawing.Point(3, 155);
+            this.BTN_Disminuir.Name = "BTN_Disminuir";
+            this.BTN_Disminuir.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Disminuir.TabIndex = 5;
+            this.BTN_Disminuir.Text = "Disminuir";
+            this.BTN_Disminuir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Disminuir.UseVisualStyleBackColor = false;
+            this.BTN_Disminuir.Click += new System.EventHandler(this.BTN_Disminuir_Click);
+            // 
             // WIN_CAT_Inventario_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,5 +272,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_FechaFinal;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Cantidad;
+        private System.Windows.Forms.Button BTN_Aumentar;
+        private System.Windows.Forms.Button BTN_Disminuir;
     }
 }

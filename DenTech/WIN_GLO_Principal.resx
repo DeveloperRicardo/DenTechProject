@@ -156,7 +156,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BTN_Citas.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="BTN_Citas.Text" xml:space="preserve">
     <value>Citas</value>
@@ -270,7 +270,7 @@
     <value>100, 95</value>
   </data>
   <data name="BTN_Inventario.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="BTN_Inventario.Text" xml:space="preserve">
     <value>Inventario</value>
@@ -331,7 +331,7 @@
     <value>100, 95</value>
   </data>
   <data name="BTN_Empleados.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+    <value>1</value>
   </data>
   <data name="BTN_Empleados.Text" xml:space="preserve">
     <value>Usuarios</value>
@@ -356,63 +356,6 @@
   </metadata>
   <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;STC_Dia.Name" xml:space="preserve">
-    <value>STC_Dia</value>
-  </data>
-  <data name="&gt;&gt;STC_Dia.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STC_Dia.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;STC_Dia.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;STC_Hora.Name" xml:space="preserve">
-    <value>STC_Hora</value>
-  </data>
-  <data name="&gt;&gt;STC_Hora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STC_Hora.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;STC_Hora.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 721</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1253, 44</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -519,56 +462,32 @@
   <data name="&gt;&gt;STC_Hora.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Panel_General.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 721</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1253, 44</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Panel_General.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="Panel_General.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
-  </data>
-  <data name="&gt;&gt;BTN_Servicios.Name" xml:space="preserve">
-    <value>BTN_Servicios</value>
-  </data>
-  <data name="&gt;&gt;BTN_Servicios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BTN_Servicios.Parent" xml:space="preserve">
-    <value>Panel_General</value>
-  </data>
-  <data name="&gt;&gt;BTN_Servicios.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;BTN_Expediente.Name" xml:space="preserve">
-    <value>BTN_Expediente</value>
-  </data>
-  <data name="&gt;&gt;BTN_Expediente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BTN_Expediente.Parent" xml:space="preserve">
-    <value>Panel_General</value>
-  </data>
-  <data name="&gt;&gt;BTN_Expediente.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Panel_General.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 70</value>
-  </data>
-  <data name="Panel_General.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 642</value>
-  </data>
-  <data name="Panel_General.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="&gt;&gt;Panel_General.Name" xml:space="preserve">
-    <value>Panel_General</value>
-  </data>
-  <data name="&gt;&gt;Panel_General.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel_General.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Panel_General.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="BTN_Servicios.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
@@ -617,7 +536,7 @@
     <value>100, 95</value>
   </data>
   <data name="BTN_Servicios.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
+    <value>5</value>
   </data>
   <data name="BTN_Servicios.Text" xml:space="preserve">
     <value>Servicios</value>
@@ -675,7 +594,7 @@
     <value>100, 95</value>
   </data>
   <data name="BTN_Expediente.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
+    <value>6</value>
   </data>
   <data name="BTN_Expediente.Text" xml:space="preserve">
     <value>Expediente</value>
@@ -694,6 +613,88 @@
   </data>
   <data name="&gt;&gt;BTN_Expediente.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="BTN_Salir.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="BTN_Salir.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="BTN_Salir.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="BTN_Salir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAvBJREFUaEPtWStw20AQNSwMLCwsDAw7K6gwsLCwMDAwLLCwsLCwsKCSBQMLDQsL
+        ZXs6U5juO2/a1eYkn7QrW53Jm3mTyd1p7+3d7v28OAWaOpxvq+J2UxVf6G/d4mr5sSnDFTedD0j02W61
+        /NCUxc/tqng4RGr3G+1/1eElmzgNHurwYlOFm21ZNCmhhwhHtqvLOzZ3XGDU92GRFkdO/WiFT1l8T7YD
+        qR722PT02NXhdRSohdBMNGW4JjGvuGkLEBnrU6FG9o7iBMRB6BMBVfE1N6YRegidhI2am0wDjJAeecTx
+        pgzvuckg0Hdv93kgnJgyJzDK7c6I+6lPhkwOKKTeSXtwaJLVCaMlO2rR6ASWVGkP/3OVDxCzycSTNDih
+        7WMWUMbVduhp7qTBCaxO0hZmnKvsoBG5l8Z7OdIJnoV/CV0Vn7nKBiRUS2AORzqBZfTRBjmz5mIbssNH
+        c4QT5MCt+L7hYhv0CjGIA53QecDFNiTX/iEc4AQ2RPktF9sg43I0M52QxwskNBfb4OIAmOFEvARxe7ck
+        lkbN7HFCL6O7qvjEVTbEC4sUYWWHEzr+sfpxlQ1k6EoadqFyIu414oiOmXA70MXLi+zci8IJvdK5Huao
+        kzNp3JXkRGvzIrqOfhTfd5edhE4XmpOIpyXb5RidEo+pJeafSodynxP2S32X+M238AajoxPOhdQf9du7
+        yWWhTzzX40Xi6XOKhXTunzRsphRPe8x17NyKo4tHGNbhInZuhVk8vlXfp0g26dJ+eQd7sWMPWMXLA1c8
+        jNVhGc9O2JziE3u4QRnIzfzgKf7oeBZ/KowRT/Vriuf4xu/+5DcEcRcdOvK03LlsMh7QzyP/lXgSeC7F
+        5cQ8lfsvfWOhL+Y5CTsbB6JIKY6S8W95h3hwNg7o36JiLtAuSWHU/d4/q/g/9MMESIIx4o+cU/Iuk4IV
+        qZ3fAcsTuS/Ls3UAoZESrDlbByj+1ynBLc4pYTVwZUuJjo7hfEMr1GzFLxaLP5MkJaDhyVYPAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="BTN_Salir.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="BTN_Salir.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BTN_Salir.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 609</value>
+  </data>
+  <data name="BTN_Salir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 95</value>
+  </data>
+  <data name="BTN_Salir.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="BTN_Salir.Text" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="BTN_Salir.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="&gt;&gt;BTN_Salir.Name" xml:space="preserve">
+    <value>BTN_Salir</value>
+  </data>
+  <data name="&gt;&gt;BTN_Salir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTN_Salir.Parent" xml:space="preserve">
+    <value>Panel_General</value>
+  </data>
+  <data name="&gt;&gt;BTN_Salir.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Panel_General.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 70</value>
+  </data>
+  <data name="Panel_General.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 607</value>
+  </data>
+  <data name="Panel_General.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;Panel_General.Name" xml:space="preserve">
+    <value>Panel_General</value>
+  </data>
+  <data name="&gt;&gt;Panel_General.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel_General.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Panel_General.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2462,6 +2463,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PNL_Ventanas.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
 </root>

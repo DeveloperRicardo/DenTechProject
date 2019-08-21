@@ -96,6 +96,7 @@
       <DependentUpon>Receta_Reporte.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Validacion.cs" />
     <Compile Include="WIN_CAT_ArchivosAdjuntos_T.cs">
       <SubType>Form</SubType>
     </Compile>

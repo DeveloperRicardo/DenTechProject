@@ -16,6 +16,8 @@ namespace DenTech
     {
         int IdPaciente = 0;
         ConexionSQL BD = new ConexionSQL();
+        MetodosGlobales Glo = new MetodosGlobales();
+
         public WIN_CAT_Recetas_T(int Id_Paciente)
         {
             IdPaciente = Id_Paciente;
@@ -25,34 +27,55 @@ namespace DenTech
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
-            WIN_CAT_Recetas_F ventana = new WIN_CAT_Recetas_F();
-            ventana.ShowDialog();
+            try
+            {
+                WIN_CAT_Recetas_F ventana = new WIN_CAT_Recetas_F();
+                ventana.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
         }
         private void Refrescar()
         {
-            BD.conexion.CreateCommand();
-            SqlCommand cmd = BD.conexion.CreateCommand();
-            string query = "select Diagnostico,Medicamento,Tratamiento,Fecha_Inicio,Fecha_Final,Fecha_Diag from RECETA WHERE Id_Paciente = " + IdPaciente;
-            switch (Settings.Default.TipoUsuario)
+            try
             {
-                case 1:
-                    BTN_Agregar.Visible = false;
-                    break;
+                BD.conexion.CreateCommand();
+                SqlCommand cmd = BD.conexion.CreateCommand();
+                string query = "select Diagnostico,Medicamento,Tratamiento,Fecha_Inicio,Fecha_Final,Fecha_Diag from RECETA WHERE Id_Paciente = " + IdPaciente;
+                switch (Settings.Default.TipoUsuario)
+                {
+                    case 1:
+                        BTN_Agregar.Visible = false;
+                        break;
+                }
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter Adaptador = new SqlDataAdapter();
+                Adaptador.SelectCommand = cmd;
+                var Data = new DataTable();
+                Adaptador.Fill(Data);
+                DGV_TablaReceta.DataSource = Data;
             }
-            cmd.CommandText = query;
-            cmd.ExecuteNonQuery();
-            SqlDataAdapter Adaptador = new SqlDataAdapter();
-            Adaptador.SelectCommand = cmd;
-            var Data = new DataTable();
-            Adaptador.Fill(Data);
-            DGV_TablaReceta.DataSource = Data;
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
         }
 
         private void BTN_Boton_Click(object sender, EventArgs e)
         {
-            RecetaDataSet datos = Reportear();
-            WIN_CAT_Recetas_F frm = new WIN_CAT_Recetas_F(datos);
-            frm.Show();
+            try
+            {
+                RecetaDataSet datos = Reportear();
+                WIN_CAT_Recetas_F frm = new WIN_CAT_Recetas_F(datos);
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
         }
         private RecetaDataSet Reportear()
         {
@@ -72,9 +95,16 @@ namespace DenTech
         }
         private void WIN_CAT_Recetas_T_Load(object sender, EventArgs e)
         {
-            if (BD.Conexion(true))
+            try
             {
-                Refrescar();
+                if (BD.Conexion(true))
+                {
+                    Refrescar();
+                }
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
             }
         }
     }

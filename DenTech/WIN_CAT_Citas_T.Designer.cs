@@ -102,7 +102,7 @@
             this.BTN_FechaActual.Location = new System.Drawing.Point(79, 4);
             this.BTN_FechaActual.Name = "BTN_FechaActual";
             this.BTN_FechaActual.Size = new System.Drawing.Size(54, 36);
-            this.BTN_FechaActual.TabIndex = 43;
+            this.BTN_FechaActual.TabIndex = 2;
             this.BTN_FechaActual.Text = "Hoy";
             this.BTN_FechaActual.UseVisualStyleBackColor = false;
             this.BTN_FechaActual.Click += new System.EventHandler(this.BTN_FechaActual_Click);
@@ -118,7 +118,7 @@
             this.BTN_Adelante.Location = new System.Drawing.Point(139, 4);
             this.BTN_Adelante.Name = "BTN_Adelante";
             this.BTN_Adelante.Size = new System.Drawing.Size(40, 36);
-            this.BTN_Adelante.TabIndex = 42;
+            this.BTN_Adelante.TabIndex = 3;
             this.BTN_Adelante.Text = ">";
             this.BTN_Adelante.UseVisualStyleBackColor = false;
             this.BTN_Adelante.Click += new System.EventHandler(this.BTN_Adelante_Click);
@@ -134,7 +134,7 @@
             this.BTN_Atras.Location = new System.Drawing.Point(33, 4);
             this.BTN_Atras.Name = "BTN_Atras";
             this.BTN_Atras.Size = new System.Drawing.Size(40, 36);
-            this.BTN_Atras.TabIndex = 41;
+            this.BTN_Atras.TabIndex = 1;
             this.BTN_Atras.Text = "<";
             this.BTN_Atras.UseVisualStyleBackColor = false;
             this.BTN_Atras.Click += new System.EventHandler(this.BTN_Atras_Click);

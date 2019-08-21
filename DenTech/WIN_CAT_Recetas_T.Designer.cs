@@ -177,7 +177,7 @@
             this.BTN_Agregar.Location = new System.Drawing.Point(628, 76);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Agregar.TabIndex = 34;
+            this.BTN_Agregar.TabIndex = 1;
             this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Agregar.UseVisualStyleBackColor = false;
@@ -194,7 +194,7 @@
             this.BTN_Boton.Location = new System.Drawing.Point(628, 114);
             this.BTN_Boton.Name = "BTN_Boton";
             this.BTN_Boton.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Boton.TabIndex = 36;
+            this.BTN_Boton.TabIndex = 2;
             this.BTN_Boton.Text = "Reporte";
             this.BTN_Boton.UseVisualStyleBackColor = false;
             this.BTN_Boton.Click += new System.EventHandler(this.BTN_Boton_Click);
@@ -204,6 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Cerrar = true;
             this.ClientSize = new System.Drawing.Size(759, 371);
             this.Controls.Add(this.BTN_Boton);
             this.Controls.Add(this.BTN_Agregar);

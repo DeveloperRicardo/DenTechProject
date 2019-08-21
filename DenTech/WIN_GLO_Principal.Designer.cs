@@ -43,6 +43,7 @@
             this.BTN_Servicios = new System.Windows.Forms.Button();
             this.BTN_Expediente = new System.Windows.Forms.Button();
             this.PNL_Ventanas = new DenTech.FormsPanel();
+            this.BTN_Salir = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.Panel_General.SuspendLayout();
             this.SuspendLayout();
@@ -128,6 +129,7 @@
             this.Panel_General.Controls.Add(this.BTN_Inventario);
             this.Panel_General.Controls.Add(this.BTN_Servicios);
             this.Panel_General.Controls.Add(this.BTN_Expediente);
+            this.Panel_General.Controls.Add(this.BTN_Salir);
             this.Panel_General.Name = "Panel_General";
             // 
             // BTN_Servicios
@@ -156,6 +158,16 @@
             resources.ApplyResources(this.PNL_Ventanas, "PNL_Ventanas");
             this.PNL_Ventanas.Name = "PNL_Ventanas";
             this.PNL_Ventanas.Resize += new System.EventHandler(this.PNL_Ventanas_Resize);
+            // 
+            // BTN_Salir
+            // 
+            this.BTN_Salir.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.BTN_Salir, "BTN_Salir");
+            this.BTN_Salir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Salir.FlatAppearance.BorderSize = 2;
+            this.BTN_Salir.Name = "BTN_Salir";
+            this.BTN_Salir.UseVisualStyleBackColor = false;
+            this.BTN_Salir.Click += new System.EventHandler(this.BTN_Salir_Click);
             // 
             // WIN_GLO_Principal
             // 
@@ -191,5 +203,6 @@
         public FormsPanel PNL_Ventanas;
         private System.Windows.Forms.Button BTN_Servicios;
         private System.Windows.Forms.Button BTN_Expediente;
+        private System.Windows.Forms.Button BTN_Salir;
     }
 }

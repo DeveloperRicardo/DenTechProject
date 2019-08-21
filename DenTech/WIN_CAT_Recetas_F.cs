@@ -13,6 +13,8 @@ namespace DenTech
     public partial class WIN_CAT_Recetas_F : WIN_Template
     {
         RecetaDataSet _recetareporte;
+        MetodosGlobales Glo = new MetodosGlobales();
+
         public WIN_CAT_Recetas_F()
         {
             InitializeComponent();
@@ -29,10 +31,17 @@ namespace DenTech
 
         private void WIN_CAT_Recetas_F_Load(object sender, EventArgs e)
         {
-            Receta_Reporte _crt = new Receta_Reporte();
-            _crt.SetDataSource(_recetareporte);
-            crystalReportViewer1.ReportSource = null;
-            crystalReportViewer1.ReportSource = _crt;
+            try
+            {
+                Receta_Reporte _crt = new Receta_Reporte();
+                _crt.SetDataSource(_recetareporte);
+                crystalReportViewer1.ReportSource = null;
+                crystalReportViewer1.ReportSource = _crt;
+            }
+            catch (Exception ex)
+            {
+                Glo.Mensajes(10, ex.Message);
+            }
         }
     }
 }
