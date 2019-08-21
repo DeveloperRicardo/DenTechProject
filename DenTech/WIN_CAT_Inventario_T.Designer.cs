@@ -220,6 +220,7 @@
             this.BTN_Aumentar.Text = "Aumentar";
             this.BTN_Aumentar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Aumentar.UseVisualStyleBackColor = false;
+            this.BTN_Aumentar.Visible = false;
             this.BTN_Aumentar.Click += new System.EventHandler(this.BTN_Aumentar_Click);
             // 
             // BTN_Disminuir
