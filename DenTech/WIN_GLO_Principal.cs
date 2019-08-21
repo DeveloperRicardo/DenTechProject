@@ -217,6 +217,15 @@ namespace DenTech
 
         private void BTN_Salir_Click(object sender, EventArgs e)
         {
+            ventanas = PNL_Ventanas.MdiForm.MdiChildren.Count();
+            if (ventanas != 0)
+            {
+               for (int i = ventanas-1; i > -1; i--)
+               {
+                 PNL_Ventanas.MdiForm.MdiChildren[i].Close();
+               }
+            }
+            PNL_Ventanas.Refresh();
             Settings.Default.TipoUsuario = 0;
             Settings.Default.NombreUsuario = "";
             WIN_GLO_Login Login = new WIN_GLO_Login();

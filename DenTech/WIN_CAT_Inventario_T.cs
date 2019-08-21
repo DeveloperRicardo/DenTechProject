@@ -68,17 +68,20 @@ namespace DenTech
                     DGV_TablaProducto.Columns[3].Visible = false;
                     DGV_TablaProducto.Columns[4].Visible = false;
                 }
-                if ((int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
+                if (DGV_TablaProducto.RowCount != 0)
                 {
-                    BTN_Disminuir.Enabled = false;
-                }
-                else
-                {
-                    if (Settings.Default.TipoUsuario == 0 || Settings.Default.TipoUsuario == 3 || Settings.Default.TipoUsuario == 4)
+                    if ((int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
                     {
-                        BTN_Disminuir.Enabled = true;
+                        BTN_Disminuir.Enabled = false;
                     }
-                }
+                    else
+                    {
+                        if (Settings.Default.TipoUsuario == 0 || Settings.Default.TipoUsuario == 3 || Settings.Default.TipoUsuario == 4)
+                        {
+                            BTN_Disminuir.Enabled = true;
+                        }
+                    }
+                }         
             }
             catch (Exception ex)
             {
