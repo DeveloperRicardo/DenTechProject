@@ -49,7 +49,7 @@
             // 
             this.EDT_Ruta.Enabled = false;
             this.EDT_Ruta.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EDT_Ruta.Location = new System.Drawing.Point(241, 99);
+            this.EDT_Ruta.Location = new System.Drawing.Point(115, 86);
             this.EDT_Ruta.Name = "EDT_Ruta";
             this.EDT_Ruta.Size = new System.Drawing.Size(516, 25);
             this.EDT_Ruta.TabIndex = 48;
@@ -58,7 +58,7 @@
             // 
             this.STC_RutaArchivo.AutoSize = true;
             this.STC_RutaArchivo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STC_RutaArchivo.Location = new System.Drawing.Point(141, 100);
+            this.STC_RutaArchivo.Location = new System.Drawing.Point(15, 87);
             this.STC_RutaArchivo.Name = "STC_RutaArchivo";
             this.STC_RutaArchivo.Size = new System.Drawing.Size(96, 20);
             this.STC_RutaArchivo.TabIndex = 47;
@@ -72,7 +72,7 @@
             this.BTN_Lupa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Lupa.Font = new System.Drawing.Font("Rockwell", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Lupa.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Lupa.Image")));
-            this.BTN_Lupa.Location = new System.Drawing.Point(763, 99);
+            this.BTN_Lupa.Location = new System.Drawing.Point(637, 86);
             this.BTN_Lupa.Name = "BTN_Lupa";
             this.BTN_Lupa.Size = new System.Drawing.Size(29, 25);
             this.BTN_Lupa.TabIndex = 0;
@@ -101,7 +101,7 @@
             this.COL_RutaLogica});
             this.DGV_Tabla.EnableHeadersVisualStyles = false;
             this.DGV_Tabla.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_Tabla.Location = new System.Drawing.Point(143, 131);
+            this.DGV_Tabla.Location = new System.Drawing.Point(17, 118);
             this.DGV_Tabla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGV_Tabla.Name = "DGV_Tabla";
             this.DGV_Tabla.ReadOnly = true;
@@ -160,7 +160,7 @@
             this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
             this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(838, 465);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(712, 452);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Eliminar.TabIndex = 3;
@@ -178,7 +178,7 @@
             this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
             this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(798, 95);
+            this.BTN_Agregar.Location = new System.Drawing.Point(672, 82);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(151, 32);
             this.BTN_Agregar.TabIndex = 1;
@@ -195,7 +195,7 @@
             this.BTN_Descargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Descargar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Descargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Descargar.Location = new System.Drawing.Point(721, 465);
+            this.BTN_Descargar.Location = new System.Drawing.Point(595, 452);
             this.BTN_Descargar.Name = "BTN_Descargar";
             this.BTN_Descargar.Size = new System.Drawing.Size(111, 32);
             this.BTN_Descargar.TabIndex = 2;
@@ -209,7 +209,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Cerrar = true;
-            this.ClientSize = new System.Drawing.Size(1090, 590);
+            this.ClientSize = new System.Drawing.Size(838, 499);
             this.Controls.Add(this.BTN_Descargar);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Agregar);
