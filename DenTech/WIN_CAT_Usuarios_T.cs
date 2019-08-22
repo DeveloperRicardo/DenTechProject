@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DenTech.Properties;
 
 namespace DenTech
 {
@@ -139,6 +140,24 @@ namespace DenTech
 
                 // Se inserta la información en el DataGridView
                 DGV_TablaUsuarios.DataSource = Data;
+                try
+                {
+                    if (Convert.ToString(DGV_TablaUsuarios.CurrentRow.Cells[3].Value) == "Super-usuario" ||
+                        (int)DGV_TablaUsuarios.CurrentRow.Cells[0].Value == Settings.Default.IDUsuario)
+                    {
+                        BTN_Modificar.Enabled = false;
+                        BTN_Eliminar.Enabled = false;
+                    }
+                    else
+                    {
+                        BTN_Modificar.Enabled = true;
+                        BTN_Eliminar.Enabled = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Glo.Mensajes(10, ex.Message);
+                }
             }
             catch (Exception ex)
             {
@@ -151,15 +170,14 @@ namespace DenTech
         {
             try
             {
-                if (Convert.ToString(DGV_TablaUsuarios.CurrentRow.Cells[3].Value) == "Super-usuario")
+                if (Convert.ToString(DGV_TablaUsuarios.CurrentRow.Cells[3].Value) == "Super-usuario" ||
+                    (int)DGV_TablaUsuarios.CurrentRow.Cells[0].Value == Settings.Default.IDUsuario)
                 {
-                    BTN_Agregar.Enabled = false;
                     BTN_Modificar.Enabled = false;
                     BTN_Eliminar.Enabled = false;
                 }
                 else
                 {
-                    BTN_Agregar.Enabled = true;
                     BTN_Modificar.Enabled = true;
                     BTN_Eliminar.Enabled = true;
                 }

@@ -76,11 +76,35 @@ namespace DenTech
                     }
                     else
                     {
-                        if (Settings.Default.TipoUsuario == 0 || Settings.Default.TipoUsuario == 3 || Settings.Default.TipoUsuario == 4)
-                        {
-                            BTN_Disminuir.Enabled = true;
-                        }
+                        BTN_Disminuir.Enabled = true;
                     }
+                    //if (Settings.Default.TipoUsuario == 3 && (int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
+                    //{
+                    //    BTN_Disminuir.Enabled = false;
+                    //}
+                    //else
+                    //{
+                    //    if (Settings.Default.TipoUsuario == 1 && (int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
+                    //    {
+                    //        BTN_Disminuir.Enabled = false;
+                    //    }
+                    //    else
+                    //    {
+                    //        if (Settings.Default.TipoUsuario == 4 && (int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
+                    //        {
+                    //            BTN_Disminuir.Enabled = false;
+                    //        }
+                    //        else
+                    //        {
+                    //            BTN_Disminuir.Enabled = true;
+                    //        }
+                    //    }
+
+                    //    //if (Settings.Default.TipoUsuario == 0 || Settings.Default.TipoUsuario == 1 || Settings.Default.TipoUsuario == 3 || Settings.Default.TipoUsuario == 4)
+                    //    //{
+                    //    //    BTN_Disminuir.Enabled = true;
+                    //    //}
+                    //}
                 }         
             }
             catch (Exception ex)
@@ -202,17 +226,44 @@ namespace DenTech
 
         private void DGV_TablaProducto_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (DGV_TablaProducto.RowCount == 0)
+            {
+                return;
+            }
             if ((int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
             {
                 BTN_Disminuir.Enabled = false;
             }
             else
             {
-                if (Settings.Default.TipoUsuario == 0 || Settings.Default.TipoUsuario == 3 || Settings.Default.TipoUsuario == 4)
-                {
-                    BTN_Disminuir.Enabled = true;
-                }
+                BTN_Disminuir.Enabled = true;
             }
+            //if (Settings.Default.TipoUsuario == 3 && (int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
+            //{
+            //    BTN_Disminuir.Enabled = false;
+            //}
+            //else
+            //{
+            //    if (Settings.Default.TipoUsuario == 1 && (int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
+            //    {
+            //        BTN_Disminuir.Enabled = false;
+            //    }
+            //    else
+            //    {
+            //        if (Settings.Default.TipoUsuario == 4 && (int)DGV_TablaProducto.CurrentRow.Cells[2].Value == 0)
+            //        {
+            //            BTN_Disminuir.Enabled = false;
+            //        }
+            //        else
+            //        {
+            //            BTN_Disminuir.Enabled = true;
+            //        }
+            //    }
+            //if (Settings.Default.TipoUsuario == 0 || Settings.Default.TipoUsuario == 1 || Settings.Default.TipoUsuario == 3 || Settings.Default.TipoUsuario == 4)
+            //{
+            //    BTN_Disminuir.Enabled = true;
+            //}
+            //}
         }
     }
 }

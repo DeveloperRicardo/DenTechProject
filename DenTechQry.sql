@@ -57,7 +57,6 @@ Id_Tratamiento int foreign key references TRATAMIENTO(Id_Tratamiento) on update 
 CREATE TABLE EXTRACCIONDIENTE(Id_ExtraDiente int primary key identity, Id_Diente int foreign key references DIENTE(Id_Diente) on update cascade on delete cascade,
 Id_Extraccion int foreign key references EXTRACCION(Id_Extraccion) on update cascade on delete cascade);
 
-IF EXISTS(SELECT * FROM sys.triggers WHERE name = 'TR_Crear_Diente') SELECT 'true' ELSE SELECT 'false'
 
 create trigger TR_Crear_Diente
 on ODONTOGRAMA
@@ -112,19 +111,6 @@ as
 	INSERT INTO DETALLEDIENTE VALUES(@ID,6,0)
 	INSERT INTO DETALLEDIENTE VALUES(@ID,7,0);
 
-
-SELECT * FROM ODONTOGRAMA
-select * from DIENTE
-select * from DETALLEDIENTE
-
-DROP TABLE DETALLEDIENTE
-DROP TABLE DIENTE
-DROP TABLE ODONTOGRAMA
-
---TABLA DE ANTECEDENTES
-
---TABLA DE ARCHIVOS ADJUNTOS
-
 INSERT INTO SANGRE VALUES('A+');
 INSERT INTO SANGRE VALUES('A-');
 INSERT INTO SANGRE VALUES('B+');
@@ -133,7 +119,3 @@ INSERT INTO SANGRE VALUES('AB+');
 INSERT INTO SANGRE VALUES('AB-');
 INSERT INTO SANGRE VALUES('O+');
 INSERT INTO SANGRE VALUES('O-');
-
-
-SELECT Estatus, Descripcion FROM DETALLEDIENTE WHERE Id_Diente = 128 AND AreaDiente = 1
-

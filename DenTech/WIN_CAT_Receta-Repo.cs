@@ -17,6 +17,7 @@ namespace DenTech
         ConexionSQL BD = new ConexionSQL();
         public DateTime Fecha = DateTime.Today;
         int gnIdReceta = 0, gnIdPaciente = 0, gnIdEmpleado = 0;
+        
 
         private void BTN_Aceptar_Click(object sender, EventArgs e)
         {
@@ -94,6 +95,11 @@ namespace DenTech
                 {
                     Glo.Mensajes(3, "Fecha final");
                     EDT_FechaFinal.Focus();
+                    Regresar = false;
+                }
+                if (STC_NombreOdontologo.Text == string.Empty)
+                {
+                    Glo.Mensajes(3, "Nombre odontólogo");
                     Regresar = false;
                 }
             }
@@ -216,6 +222,7 @@ namespace DenTech
                     else
                     {
                         // Muestra los campos vacios
+                        STC_NombreOdontologo.Text = string.Empty;
                         EDT_FechaDiag.Value = new DateTime(Fecha.Year, Fecha.Month, Fecha.Day);
                     }
                 }

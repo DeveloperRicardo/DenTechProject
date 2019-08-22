@@ -53,6 +53,8 @@ namespace DenTech
                     {
                         comando.CommandText = "SELECT Tipo_Usuario FROM EMPLEADOS WHERE Usuario = '" + EDT_Usuario.Text + "'";
                         Settings.Default.TipoUsuario = Convert.ToInt16(comando.ExecuteScalar());
+                        comando.CommandText = "SELECT Id_Empleado FROM EMPLEADOS WHERE Usuario = '" + EDT_Usuario.Text + "'";
+                        Settings.Default.IDUsuario = Convert.ToInt16(comando.ExecuteScalar());
                         Settings.Default.NombreUsuario = EDT_Usuario.Text;
                         WIN_GLO_Principal Principal = new WIN_GLO_Principal();
                         Principal.Show();

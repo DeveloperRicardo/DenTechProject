@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DenTech.Properties;
 
 namespace DenTech
 {
@@ -113,6 +114,10 @@ namespace DenTech
                             "Where Id_Empleado = " + gnIdUsuario;
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Registro modificado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (gnIdUsuario == Settings.Default.IDUsuario)
+                        {
+                            Settings.Default.TipoUsuario = COMBO_TipoUsuario.SelectedIndex;
+                        }
                     }
 
                     // Cierra la ventana

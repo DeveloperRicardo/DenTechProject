@@ -179,8 +179,7 @@
             "Administrador",
             "Odontólogo",
             "Recepcionista",
-            "Intendente",
-            "Super-usuario"});
+            "Intendente"});
             this.COMBO_TipoUsuario.Location = new System.Drawing.Point(124, 234);
             this.COMBO_TipoUsuario.Name = "COMBO_TipoUsuario";
             this.COMBO_TipoUsuario.Size = new System.Drawing.Size(232, 25);

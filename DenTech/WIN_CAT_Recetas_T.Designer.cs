@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WIN_CAT_Recetas_T));
             this.DGV_TablaReceta = new System.Windows.Forms.DataGridView();
-            this.BTN_Agregar = new System.Windows.Forms.Button();
-            this.BTN_Boton = new System.Windows.Forms.Button();
             this.COL_IdTabla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Columna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +40,8 @@
             this.Fecha_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_Final = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_Diag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BTN_Agregar = new System.Windows.Forms.Button();
+            this.BTN_Boton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TablaReceta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,40 +94,6 @@
             this.DGV_TablaReceta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_TablaReceta.Size = new System.Drawing.Size(610, 284);
             this.DGV_TablaReceta.TabIndex = 33;
-            // 
-            // BTN_Agregar
-            // 
-            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
-            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
-            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
-            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(628, 76);
-            this.BTN_Agregar.Name = "BTN_Agregar";
-            this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Agregar.TabIndex = 1;
-            this.BTN_Agregar.Text = "Agregar";
-            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Agregar.UseVisualStyleBackColor = false;
-            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
-            // 
-            // BTN_Boton
-            // 
-            this.BTN_Boton.BackColor = System.Drawing.Color.White;
-            this.BTN_Boton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Boton.FlatAppearance.BorderSize = 2;
-            this.BTN_Boton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Boton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Boton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Boton.Location = new System.Drawing.Point(628, 114);
-            this.BTN_Boton.Name = "BTN_Boton";
-            this.BTN_Boton.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Boton.TabIndex = 2;
-            this.BTN_Boton.Text = "Reporte";
-            this.BTN_Boton.UseVisualStyleBackColor = false;
-            this.BTN_Boton.Click += new System.EventHandler(this.BTN_Boton_Click);
             // 
             // COL_IdTabla
             // 
@@ -199,6 +165,40 @@
             this.Fecha_Diag.Name = "Fecha_Diag";
             this.Fecha_Diag.ReadOnly = true;
             this.Fecha_Diag.Width = 125;
+            // 
+            // BTN_Agregar
+            // 
+            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
+            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
+            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
+            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Agregar.Location = new System.Drawing.Point(628, 76);
+            this.BTN_Agregar.Name = "BTN_Agregar";
+            this.BTN_Agregar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Agregar.TabIndex = 1;
+            this.BTN_Agregar.Text = "Agregar";
+            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Agregar.UseVisualStyleBackColor = false;
+            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
+            // 
+            // BTN_Boton
+            // 
+            this.BTN_Boton.BackColor = System.Drawing.Color.White;
+            this.BTN_Boton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Boton.FlatAppearance.BorderSize = 2;
+            this.BTN_Boton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Boton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Boton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Boton.Location = new System.Drawing.Point(628, 114);
+            this.BTN_Boton.Name = "BTN_Boton";
+            this.BTN_Boton.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Boton.TabIndex = 2;
+            this.BTN_Boton.Text = "Reporte";
+            this.BTN_Boton.UseVisualStyleBackColor = false;
+            this.BTN_Boton.Click += new System.EventHandler(this.BTN_Boton_Click);
             // 
             // WIN_CAT_Recetas_T
             // 

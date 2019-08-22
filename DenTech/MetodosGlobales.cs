@@ -360,25 +360,26 @@ namespace DenTech
         #region CodigoRegistro
         public string CodigoRegistro(int codigo){
             string Nuevocodigo = "";
+            codigo += 1;
             switch (codigo.ToString().Count())
             {
                 case 1:
-                    Nuevocodigo = "00000" + (codigo+1);
+                    Nuevocodigo = "00000" + (codigo);
                     break;
                 case 2:
-                    Nuevocodigo = "0000" + (codigo+1);
+                    Nuevocodigo = "0000" + (codigo);
                     break;
                 case 3:
-                    Nuevocodigo = "000" + (codigo+1);
+                    Nuevocodigo = "000" + (codigo);
                     break;
                 case 4:
-                    Nuevocodigo = "00" + (codigo+1);
+                    Nuevocodigo = "00" + (codigo);
                     break;
                 case 5:
-                    Nuevocodigo = "0" + (codigo+1);
+                    Nuevocodigo = "0" + (codigo);
                     break;
                 case 6:
-                    Nuevocodigo = Convert.ToString(codigo + 1);
+                    Nuevocodigo = Convert.ToString(codigo);
                     break;
                 default:
                     break;
