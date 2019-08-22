@@ -12,7 +12,7 @@ using System.IO;
 
 namespace DenTech
 {
-    public partial class WIN_CAT_ArchivosAdjuntos_T : WIN_Template_T
+    public partial class WIN_CAT_ArchivosAdjuntos_T : WIN_Template_F
     {
         // Objetos y vairables globales
         ConexionSQL BD = new ConexionSQL();
