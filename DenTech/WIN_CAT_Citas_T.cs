@@ -19,6 +19,7 @@ namespace DenTech
         List<FlowLayoutPanel> Lista = new List<FlowLayoutPanel>();
         DateTime FechaActual = DateTime.Today;
         int Id = 0;
+        int IdPaciente = 0;
         string FechaInicio = "";
 
         public WIN_CAT_Citas_T()
@@ -279,8 +280,8 @@ namespace DenTech
                     // Se pasa la información para agregar los Links
                     DateTime Fecha = DateTime.Parse(Row[4].ToString());
                     LinkLabel Zelda = new LinkLabel();
-                    Zelda.Tag = Row[0];
-                    Zelda.Name = $"Link_{Row[0]}";
+                    Zelda.Tag = Row[2];
+                    Zelda.Name = $"{Row[0]}";
                     Zelda.Text = Row[6].ToString();
                     Zelda.Click += new EventHandler(ModificarCita);
                     Lista[(Fecha.Day - 1) + (Inicio - 1)].Controls.Add(Zelda);
@@ -300,7 +301,7 @@ namespace DenTech
                 // Se instancia un objeto de tipo ventana para abrirla y refrescar la tabla
                 WIN_CAT_Citas_F Window = new WIN_CAT_Citas_F();
                 FlowLayoutPanel tag = (FlowLayoutPanel)sender;
-                int Dia = Int32.Parse(tag.Tag.ToString());
+                int Dia = Int32.Parse(tag.Name.ToString());
 
                 // Verifica que día tenga valor válido
                 if (Dia != 0)
@@ -324,7 +325,8 @@ namespace DenTech
             {
                 // Se transifere la información del Id para modificar su registro en la ventana
                 LinkLabel tag = (LinkLabel)sender;
-                this.Id = Int32.Parse(tag.Tag.ToString());
+                this.Id = Int32.Parse(tag.Name.ToString());
+                this.IdPaciente = Int32.Parse(tag.Tag.ToString());
                 Menu_ModEli.Show(tag, new Point(0, tag.Height));
             }
             catch (Exception ex)
@@ -339,14 +341,14 @@ namespace DenTech
             try
             {
                 // Abre la ventana
-                WIN_CAT_Citas_F Window = new WIN_CAT_Citas_F(Id);
+                WIN_CAT_Citas_F Window = new WIN_CAT_Citas_F(this.Id);
                 Window.ShowDialog();
                 MostrarFechaActual();
             }
             catch (Exception ex)
             {
                 Glo.Mensajes(10, ex.Message);
-            }   
+            }
         }
 
         // Evento de la opción Eliminar del Popup
@@ -360,7 +362,7 @@ namespace DenTech
                 {
                     // Se estructura el query para eliminar el registro
                     SqlCommand cmd = BD.conexion.CreateCommand();
-                    cmd.CommandText = "Delete From CITAS Where Id_Cita = " + Id;
+                    cmd.CommandText = "Delete From CITAS Where Id_Cita = " + this.Id;
                     cmd.ExecuteNonQuery(); // Se ejecuta
 
                     // Se confirma la eliminación del registro y se actualiza la información de la tabla
@@ -380,7 +382,7 @@ namespace DenTech
             try
             {
                 // Se instancia un objeto de tipo ventana para abrirla y refrescar la tabla
-                WIN_CAT_Recetas_T Window = new WIN_CAT_Recetas_T(this.Id);
+                WIN_CAT_Recetas_T Window = new WIN_CAT_Recetas_T(this.IdPaciente);
                 Window.ShowDialog();
                 MostrarFechaActual();
             }
