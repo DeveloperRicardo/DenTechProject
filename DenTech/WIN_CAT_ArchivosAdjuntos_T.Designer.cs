@@ -36,11 +36,12 @@
             this.STC_RutaArchivo = new System.Windows.Forms.Label();
             this.BTN_Lupa = new System.Windows.Forms.Button();
             this.DGV_Tabla = new System.Windows.Forms.DataGridView();
-            this.BTN_Eliminar = new System.Windows.Forms.Button();
-            this.BTN_Agregar = new System.Windows.Forms.Button();
             this.COL_IdTabla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL_RutaLogica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BTN_Eliminar = new System.Windows.Forms.Button();
+            this.BTN_Agregar = new System.Windows.Forms.Button();
+            this.BTN_Descargar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Tabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             this.BTN_Lupa.Location = new System.Drawing.Point(763, 148);
             this.BTN_Lupa.Name = "BTN_Lupa";
             this.BTN_Lupa.Size = new System.Drawing.Size(29, 25);
-            this.BTN_Lupa.TabIndex = 49;
+            this.BTN_Lupa.TabIndex = 0;
             this.BTN_Lupa.UseVisualStyleBackColor = false;
             this.BTN_Lupa.Click += new System.EventHandler(this.BTN_Lupa_Click);
             // 
@@ -123,42 +124,6 @@
             this.DGV_Tabla.Size = new System.Drawing.Size(806, 298);
             this.DGV_Tabla.TabIndex = 50;
             // 
-            // BTN_Eliminar
-            // 
-            this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
-            this.BTN_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Eliminar.FlatAppearance.BorderSize = 2;
-            this.BTN_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
-            this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Eliminar.Location = new System.Drawing.Point(838, 485);
-            this.BTN_Eliminar.Name = "BTN_Eliminar";
-            this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
-            this.BTN_Eliminar.TabIndex = 53;
-            this.BTN_Eliminar.Text = "Eliminar";
-            this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Eliminar.UseVisualStyleBackColor = false;
-            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
-            // 
-            // BTN_Agregar
-            // 
-            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
-            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
-            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
-            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Agregar.Location = new System.Drawing.Point(798, 144);
-            this.BTN_Agregar.Name = "BTN_Agregar";
-            this.BTN_Agregar.Size = new System.Drawing.Size(151, 32);
-            this.BTN_Agregar.TabIndex = 51;
-            this.BTN_Agregar.Text = "Cargar Archivo";
-            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Agregar.UseVisualStyleBackColor = false;
-            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
-            // 
             // COL_IdTabla
             // 
             this.COL_IdTabla.DataPropertyName = "Id";
@@ -186,11 +151,65 @@
             this.COL_RutaLogica.ReadOnly = true;
             this.COL_RutaLogica.Visible = false;
             // 
+            // BTN_Eliminar
+            // 
+            this.BTN_Eliminar.BackColor = System.Drawing.Color.White;
+            this.BTN_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Eliminar.FlatAppearance.BorderSize = 2;
+            this.BTN_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Eliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Eliminar.Image")));
+            this.BTN_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Eliminar.Location = new System.Drawing.Point(838, 485);
+            this.BTN_Eliminar.Name = "BTN_Eliminar";
+            this.BTN_Eliminar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Eliminar.TabIndex = 3;
+            this.BTN_Eliminar.Text = "Eliminar";
+            this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Eliminar.UseVisualStyleBackColor = false;
+            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
+            // 
+            // BTN_Agregar
+            // 
+            this.BTN_Agregar.BackColor = System.Drawing.Color.White;
+            this.BTN_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Agregar.FlatAppearance.BorderSize = 2;
+            this.BTN_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Agregar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Agregar.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Agregar.Image")));
+            this.BTN_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Agregar.Location = new System.Drawing.Point(798, 144);
+            this.BTN_Agregar.Name = "BTN_Agregar";
+            this.BTN_Agregar.Size = new System.Drawing.Size(151, 32);
+            this.BTN_Agregar.TabIndex = 1;
+            this.BTN_Agregar.Text = "Cargar Archivo";
+            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Agregar.UseVisualStyleBackColor = false;
+            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
+            // 
+            // BTN_Descargar
+            // 
+            this.BTN_Descargar.BackColor = System.Drawing.Color.White;
+            this.BTN_Descargar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BTN_Descargar.FlatAppearance.BorderSize = 2;
+            this.BTN_Descargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Descargar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Descargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Descargar.Location = new System.Drawing.Point(721, 485);
+            this.BTN_Descargar.Name = "BTN_Descargar";
+            this.BTN_Descargar.Size = new System.Drawing.Size(111, 32);
+            this.BTN_Descargar.TabIndex = 2;
+            this.BTN_Descargar.Text = "Abrir";
+            this.BTN_Descargar.UseVisualStyleBackColor = false;
+            this.BTN_Descargar.Visible = false;
+            this.BTN_Descargar.Click += new System.EventHandler(this.BTN_Descargar_Click);
+            // 
             // WIN_CAT_ArchivosAdjuntos_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 590);
+            this.Controls.Add(this.BTN_Descargar);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Agregar);
             this.Controls.Add(this.DGV_Tabla);
@@ -206,6 +225,7 @@
             this.Controls.SetChildIndex(this.DGV_Tabla, 0);
             this.Controls.SetChildIndex(this.BTN_Agregar, 0);
             this.Controls.SetChildIndex(this.BTN_Eliminar, 0);
+            this.Controls.SetChildIndex(this.BTN_Descargar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Tabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -223,5 +243,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_IdTabla;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL_RutaLogica;
+        private System.Windows.Forms.Button BTN_Descargar;
     }
 }

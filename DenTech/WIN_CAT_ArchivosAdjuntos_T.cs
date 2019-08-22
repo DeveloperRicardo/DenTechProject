@@ -17,7 +17,8 @@ namespace DenTech
         // Objetos y vairables globales
         ConexionSQL BD = new ConexionSQL();
         MetodosGlobales MG = new MetodosGlobales();
-        int gnIdPaciente = 0;
+        private int gnIdPaciente = 0;
+        private string Path = Environment.CurrentDirectory + "\\Archivos Adjuntos";
 
         public WIN_CAT_ArchivosAdjuntos_T(int pIdPaciente = 0)
         {
@@ -31,9 +32,8 @@ namespace DenTech
             try
             {
                 // Crea una carpeta que es donde se guardarán todos los archivos
-                string Path = Environment.CurrentDirectory + "\\Archivos Adjuntos";
-                if (!Directory.Exists(Path))
-                    Directory.CreateDirectory(Path);
+                if (!Directory.Exists(this.Path))
+                    Directory.CreateDirectory(this.Path);
 
                 // Verifica si se puede conectar a la base de datos
                 if (BD.Conexion(true))
@@ -56,7 +56,6 @@ namespace DenTech
                 OpenFileDialog Archivo = new OpenFileDialog();
 
                 // Filtramos el tipo de archivos que se pueden mostrar y cargar
-                //Archivo.Filter = "JPG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|All Files (*.*)|*.*";
                 Archivo.Title = "Seleccionar archivo.";
 
                 // Verifica que se haya clickeado el botón OK para mostrar la ruta en el control
@@ -108,21 +107,18 @@ namespace DenTech
                     // Se separan los nombres de los archivos para agregar el número de la copia
                     int Numero = (int)Data.Tables[0].Rows.Count;
                     string[] NombreDiv = Nombre.Split('.');
-                    Nombre = NombreDiv[0] + "(" + (Numero + 1) + ")";
+                    Nombre = NombreDiv[0] + "(" + (Numero) + ")";
                     Nombre += "." + NombreDiv[NombreDiv.Length - 1];
-                    Ruta = "";
-
-                    // Ciclo que cambiará el nombre de la ruta
-                    for (int i = 0; i < RutaDiv.Length - 1; i++)
-                        Ruta += RutaDiv[i] + '\\';
-                    Ruta += Nombre;
                 }
+                // Se realiza una copia en la carpeta donde se guardarán los archivos adjuntos
+                File.Copy(Ruta, this.Path + "\\" + Nombre, false);
 
                 // Se estructura query para crear el registro
                 cmd.CommandText = "Insert Into ARCHIVOSADJUNTOS(Id_Paciente, Nombre, RutaLogica) " + 
-                    "Values(" + gnIdPaciente + ", '" + Nombre + "', '" + Ruta + "')";
+                    "Values(" + gnIdPaciente + ", '" + Nombre + "', '" + this.Path + "\\" + Nombre + "')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro creado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EDT_Ruta.Text = "";
                 Refrescar();
             }
             catch (Exception ex)
@@ -150,10 +146,28 @@ namespace DenTech
                     cmd.CommandText = "Delete From ARCHIVOSADJUNTOS Where Id = " + (int)DGV_Tabla.CurrentRow.Cells[0].Value;
                     cmd.ExecuteNonQuery(); // Se ejecuta
 
+                    // Se elimina el archivo de la dirección
+                    File.Delete(this.Path + "\\" + DGV_Tabla.CurrentRow.Cells[1].Value.ToString());
+
                     // Se confirma la eliminación del registro y se actualiza la información de la tabla
                     MessageBox.Show("Registro eliminado con éxito.", "DenTech", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Refrescar();
                 }
+            }
+            catch (Exception ex)
+            {
+                // Se manda mensaje de error con la exception
+                MG.Mensajes(10, ex.Message);
+            }
+        }
+
+        // Evento del botón Descargar
+        private void BTN_Descargar_Click(object sender, EventArgs e)
+        {
+            // Valida el código mientras lo ejecuta
+            try
+            {
+
             }
             catch (Exception ex)
             {
@@ -189,6 +203,12 @@ namespace DenTech
 
                 // Se inserta la información en el DataGridView
                 DGV_Tabla.DataSource = Data;
+
+                // Verifica que la tabla tenga información
+                if (DGV_Tabla.RowCount == 0)
+                    BTN_Eliminar.Visible = false;
+                else
+                    BTN_Eliminar.Visible = true;
             }
             catch (Exception ex)
             {
