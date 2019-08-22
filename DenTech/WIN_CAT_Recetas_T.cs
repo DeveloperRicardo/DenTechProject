@@ -29,8 +29,9 @@ namespace DenTech
         {
             try
             {
-                WIN_CAT_Recetas_F ventana = new WIN_CAT_Recetas_F();
+                WIN_CAT_Receta_Repo ventana = new WIN_CAT_Receta_Repo(0,IdPaciente);
                 ventana.ShowDialog();
+                Refrescar();
             }
             catch (Exception ex)
             {
@@ -43,7 +44,7 @@ namespace DenTech
             {
                 BD.conexion.CreateCommand();
                 SqlCommand cmd = BD.conexion.CreateCommand();
-                string query = "select Diagnostico,Medicamento,Tratamiento,Fecha_Inicio,Fecha_Final,Fecha_Diag from RECETA WHERE Id_Paciente = " + IdPaciente;
+                string query = "select Diagnostico,Medicamento,Tratamiento,Fecha_Inicio,Fecha_Final,Fecha_Diag,Id_Receta from RECETA WHERE Id_Paciente = " + IdPaciente;
                 switch (Settings.Default.TipoUsuario)
                 {
                     case 1:
