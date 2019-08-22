@@ -301,7 +301,7 @@ namespace DenTech
                 // Se instancia un objeto de tipo ventana para abrirla y refrescar la tabla
                 WIN_CAT_Citas_F Window = new WIN_CAT_Citas_F();
                 FlowLayoutPanel tag = (FlowLayoutPanel)sender;
-                int Dia = Int32.Parse(tag.Name.ToString());
+                int Dia = Int32.Parse(tag.Tag.ToString());
 
                 // Verifica que día tenga valor válido
                 if (Dia != 0)
